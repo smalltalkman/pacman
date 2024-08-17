@@ -412,6 +412,29 @@ static int extract_single_file(alpm_handle_t *handle, struct archive *archive,
 	return errors;
 }
 
+static time_t get_install_time(void)
+{
+	time_t now;
+	char *source_date_epoch;
+	unsigned long long sde;
+	char *endptr;
+
+	source_date_epoch = getenv("SOURCE_DATE_EPOCH");
+	if (source_date_epoch) {
+		errno = 0;
+		sde = strtoull(source_date_epoch, &endptr, 10);
+		if (source_date_epoch == endptr || *endptr != '\0' || errno != 0) {
+			now = time(NULL);
+		} else {
+			now = sde;
+		}
+	} else {
+		now = time(NULL);
+	}
+
+	return now;
+}
+
 static int commit_single_pkg(alpm_handle_t *handle, alpm_pkg_t *newpkg,
 		size_t pkg_current, size_t pkg_count)
 {
@@ -591,7 +614,7 @@ static int commit_single_pkg(alpm_handle_t *handle, alpm_pkg_t *newpkg,
 	}
 
 	/* make an install date (in UTC) */
-	newpkg->installdate = time(NULL);
+	newpkg->installdate = get_install_time();
 
 	_alpm_log(handle, ALPM_LOG_DEBUG, "updating database\n");
 	_alpm_log(handle, ALPM_LOG_DEBUG, "adding database entry '%s'\n", newpkg->name);

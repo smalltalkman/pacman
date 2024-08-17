@@ -92,6 +92,7 @@ class pmtest(object):
             "fail": 0
         }
         self.args = ""
+        self.env = {}
         self.retcode = 0
         self.db = {
             "local": pmdb.pmdb("local", self.root)
@@ -299,7 +300,7 @@ class pmtest(object):
         # archives are made available more easily.
         time_start = time.time()
         self.retcode = subprocess.call(cmd, stdout=output, stderr=output,
-                cwd=os.path.join(self.root, util.TMPDIR), env={'LC_ALL': 'C'})
+                cwd=os.path.join(self.root, util.TMPDIR), env={'LC_ALL': 'C', **self.env})
         time_end = time.time()
         vprint("\ttime elapsed: %.2fs" % (time_end - time_start))
 
