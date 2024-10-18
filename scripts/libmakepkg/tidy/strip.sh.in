@@ -100,6 +100,7 @@ collect_debug_symbols() {
 			return
 		fi
 
+		safe_objcopy "$binary" --remove-section=.gnu_debuglink
 		safe_objcopy "$binary" --add-gnu-debuglink="$dbgdir/${binary#/}.debug"
 
 		# create any needed hardlinks
