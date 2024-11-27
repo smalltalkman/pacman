@@ -66,6 +66,14 @@ package_source_files() {
 	done < <(source_files "$binary")
 }
 
+safe_objcopy() {
+	local binary=$1; shift
+	local tempfile=$(mktemp "$binary.XXXXXX")
+	objcopy "$@" "$binary" "$tempfile"
+	cat "$tempfile" > "$binary"
+	rm "$tempfile"
+}
+
 collect_debug_symbols() {
 	local binary=$1; shift
 
@@ -92,10 +100,7 @@ collect_debug_symbols() {
 			return
 		fi
 
-		local tempfile=$(mktemp "$binary.XXXXXX")
-		objcopy --add-gnu-debuglink="$dbgdir/${binary#/}.debug" "$binary" "$tempfile"
-		cat "$tempfile" > "$binary"
-		rm "$tempfile"
+		safe_objcopy "$binary" --add-gnu-debuglink="$dbgdir/${binary#/}.debug"
 
 		# create any needed hardlinks
 		while IFS= read -rd '' file ; do
