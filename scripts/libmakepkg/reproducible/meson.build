@@ -2,6 +2,7 @@ libmakepkg_module = 'reproducible'
 
 sources = [
   'python.sh.in',
+  'source_date_epoch.sh.in',
 ]
 
 foreach src : sources
