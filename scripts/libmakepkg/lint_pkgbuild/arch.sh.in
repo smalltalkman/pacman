@@ -30,40 +30,51 @@ source "$MAKEPKG_LIBRARY/util/pkgbuild.sh"
 lint_pkgbuild_functions+=('lint_arch')
 
 
-lint_arch() {
-	local a name list ret=0
+validate_arch() {
+	local n="$1"; shift
+	local a=("$@")
 
-	if in_array "any" "${arch[@]}"; then
-		if (( ${#arch[@]} == 1 )); then
-			return 0;
+	if (( ${#a[@]} == 0 )); then
+		error "$(gettext "%s is not allowed to be empty.")" "arch"
+		ret=1
+	else
+		if in_array "any" "${a[@]}"; then
+			if (( ${#a[@]} != 1 )); then
+				error "$(gettext "Can not use '%s' architecture with other architectures")" "any"
+				ret=1
+			fi
 		else
-			error "$(gettext "Can not use '%s' architecture with other architectures")" "any"
-			return 1;
-		fi
-	fi
-
-	for a in "${arch[@]}"; do
-		if [[ $a = *[![:alnum:]_]* ]]; then
-			error "$(gettext "%s contains invalid characters: '%s'")" \
-					'arch' "${a//[[:alnum:]_]}"
-			ret=1
-		fi
-	done
-
-	if (( ! IGNOREARCH )) && ! in_array "$CARCH" "${arch[@]}"; then
-		error "$(gettext "%s is not available for the '%s' architecture.")" "$pkgbase" "$CARCH"
-		return 1
-	fi
-
-	for name in "${pkgname[@]}"; do
-		get_pkgbuild_attribute "$name" 'arch' 1 list
-		if [[ $list && $list != 'any' ]] && ! in_array $CARCH "${list[@]}"; then
-			if (( ! IGNOREARCH )); then
-				error "$(gettext "%s is not available for the '%s' architecture.")" "$name" "$CARCH"
+			if ! in_array "$CARCH" "${a[@]}"; then
+				error "$(gettext "%s is not available for the '%s' architecture.")" "$n" "$CARCH"
 				ret=1
 			fi
 		fi
-	done
+
+		for a in "${arch[@]}"; do
+			if [[ $a = *[![:alnum:]_]* ]]; then
+				error "$(gettext "%s contains invalid characters: '%s'")" \
+						'arch' "${a//[[:alnum:]_]}"
+				ret=1
+			fi
+		done
+	fi
+}
+
+lint_arch() {
+	local name list ret=0
+
+	if (( IGNOREARCH )); then
+		return 0;
+	fi
+
+	validate_arch "$pkgbase" "${arch[@]}"
+
+	if (( ret == 0 )); then
+		for name in "${pkgname[@]}"; do
+			get_pkgbuild_attribute "$name" 'arch' 1 list
+			validate_arch "$name" "${list[@]}"
+		done
+	fi
 
 	return $ret
 }
