@@ -126,7 +126,7 @@ collect_debug_symbols() {
 	fi
 }
 
-strip_file(){
+safe_strip_file(){
 	local binary=$1; shift
 	local tempfile=$(mktemp "$binary.XXXXXX")
 	if strip "$@" "$binary" -o "$tempfile"; then
@@ -135,7 +135,7 @@ strip_file(){
 	rm -f "$tempfile"
 }
 
-strip_lto() {
+safe_strip_lto() {
 	local binary=$1;
 
 	local tempfile=$(mktemp "$binary.XXXXXX")
@@ -193,10 +193,9 @@ tidy_strip() {
 					continue ;;
 			esac
 			(( ! STATICOBJ )) && collect_debug_symbols "$binary"
-			strip_file "$binary" ${strip_flags}
-			(( STATICOBJ )) && strip_lto "$binary"
+			safe_strip_file "$binary" ${strip_flags}
+			(( STATICOBJ )) && safe_strip_lto "$binary"
 		done
-
 	elif check_option "debug" "y"; then
 		msg2 "$(gettext "Copying source files needed for debug symbols...")"
 
