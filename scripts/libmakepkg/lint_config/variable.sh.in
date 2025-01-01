@@ -66,8 +66,5 @@ lint_config_variables() {
 		warning "$(gettext "PACKAGER should have the format 'Example Name <email@address.invalid>'")"
 	fi
 
-	# provide default value if NPROC is not set
-	[[ -z $NPROC ]] && NPROC=1
-
 	return $ret
 }
