@@ -60,11 +60,5 @@ lint_config_variables() {
 		fi
 	done
 
-	# pacman should be able to extract an email address from PACKAGER for WKD key lookup
-	local match='^([^<>]+ )?<[^<>]*>$'
-	if ! [[ $PACKAGER == "Unknown Packager" || $PACKAGER =~ $match ]]; then
-		warning "$(gettext "PACKAGER should have the format 'Example Name <email@address.invalid>'")"
-	fi
-
 	return $ret
 }
