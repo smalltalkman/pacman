@@ -11,8 +11,8 @@ Synopsis
 This manual page describes the format of a BUILDINFO file found in the root of
 a package created by makepkg. The file contains a description of the package's
 build environment. The information is formatted in key-value pairs separated by
-a '=', one value per line. Arrays are represented multiple keys with the same
-value.
+a '=', one value per line. Arrays are represented as multiple key-value pairs
+having the same key.
 
 
 Description
