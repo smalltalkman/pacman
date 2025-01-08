@@ -2257,6 +2257,12 @@ int alpm_option_set_remote_file_siglevel(alpm_handle_t *handle, int level);
  * @{
  */
 
+/** Get the download timeout state
+ * @param handle the context handle
+ * @return 0 for enabled, 1 for disabled
+*/
+int alpm_option_get_disable_dl_timeout(alpm_handle_t *handle);
+
 /** Enables/disables the download timeout.
  * @param handle the context handle
  * @param disable_dl_timeout 0 for enabled, 1 for disabled

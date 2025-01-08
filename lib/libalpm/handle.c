@@ -935,6 +935,12 @@ int SYMEXPORT alpm_option_get_remote_file_siglevel(alpm_handle_t *handle)
 	}
 }
 
+int SYMEXPORT alpm_option_get_disable_dl_timeout(alpm_handle_t *handle)
+{
+	CHECK_HANDLE(handle, return -1);
+	return handle->disable_dl_timeout;
+}
+
 int SYMEXPORT alpm_option_set_disable_dl_timeout(alpm_handle_t *handle,
 		unsigned short disable_dl_timeout)
 {
