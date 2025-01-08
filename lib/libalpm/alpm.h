@@ -2299,6 +2299,12 @@ int alpm_option_set_parallel_downloads(alpm_handle_t *handle, unsigned int num_s
  * @{
  */
 
+/** Get the sandbox state
+ * @param handle the context handle
+ * @return 0 for enabled, 1 for disabled
+ */
+int alpm_option_get_disable_sandbox(alpm_handle_t *handle);
+
 /** Enables/disables the sandbox.
  * @param handle the context handle
  * @param disable_sandbox 0 for enabled, 1 for disabled
