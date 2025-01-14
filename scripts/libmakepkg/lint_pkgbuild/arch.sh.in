@@ -58,6 +58,11 @@ validate_arch() {
 			fi
 		done
 	fi
+
+	if (( ${#arch[@]} != $(printf "%s\n" ${arch[@]} | sort -u | wc -l) )); then
+		error "$(gettext "%s can not contain duplicate values")" 'arch'
+		ret=1
+	fi
 }
 
 lint_arch() {
