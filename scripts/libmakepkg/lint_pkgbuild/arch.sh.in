@@ -44,9 +44,11 @@ validate_arch() {
 				ret=1
 			fi
 		else
-			if ! in_array "$CARCH" "${a[@]}"; then
-				error "$(gettext "%s is not available for the '%s' architecture.")" "$n" "$CARCH"
-				ret=1
+			if (( ! IGNOREARCH )); then
+				if ! in_array "$CARCH" "${a[@]}"; then
+					error "$(gettext "%s is not available for the '%s' architecture.")" "$n" "$CARCH"
+					ret=1
+				fi
 			fi
 		fi
 
@@ -67,10 +69,6 @@ validate_arch() {
 
 lint_arch() {
 	local name list ret=0
-
-	if (( IGNOREARCH )); then
-		return 0;
-	fi
 
 	validate_arch "$pkgbase" "${arch[@]}"
 
