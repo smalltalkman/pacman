@@ -51,8 +51,8 @@ library_depends() {
 
 				unset prefix
 				for libdir in ${LIB_DIRS[@]}; do
-					if [[ ${libdir/*:} == ${libpath} ]]; then
-						prefix=${libdir/:*}
+					if [[ ${libdir#*:} == ${libpath} ]]; then
+						prefix=${libdir%%:*}
 					fi
 				done
 

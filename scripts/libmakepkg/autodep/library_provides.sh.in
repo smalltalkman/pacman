@@ -28,8 +28,8 @@ autodep_functions+=('library_provides')
 library_provides() {
 	if check_option "autodeps" "y"; then
 		for lib in ${LIB_DIRS[@]}; do
-			dir=${lib/*:}
-			prefix=${lib/:*}
+			dir=${lib#*:}
+			prefix=${lib%%:*}
 
 			if [[ ! -d "$pkgdir/$dir" ]]; then
 				continue;
