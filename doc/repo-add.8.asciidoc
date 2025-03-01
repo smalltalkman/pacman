@@ -29,9 +29,10 @@ specified on the command line. Multiple packages to remove can be specified
 on the command line.
 
 A package database is a tar file, optionally compressed. Valid extensions are
-``.db'' followed by an archive extension of ``.tar'', ``.tar.gz'', ``.tar.bz2'',
-``.tar.xz'', or ``.tar.Z''. The file does not need to exist, but all parent
-directories must exist.
+``.db'' followed by an archive extension of ``.tar'', ``.tar.bz2'',
+``.tar.gz'', ``.tar.lrz'', ``.tar.lz'', ``.tar.lz4'', ``.tar.lzo'',
+``.tar.xz'', ``.tar.zst'' or ``.tar.Z''. The file does not need to exist, but
+all parent directories must exist.
 
 
 Common Options
