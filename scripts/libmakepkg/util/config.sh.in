@@ -37,7 +37,7 @@ source_makepkg_config() {
 	# Source the config file; fail if it is not found
 	if [[ -r $MAKEPKG_CONF ]]; then
 		source_safe "$MAKEPKG_CONF"
-		if [[ -d "$MAKEPKG_CONF.d" ]]; then
+		if [[ -d "$MAKEPKG_CONF.d" ]] && compgen -G "$MAKEPKG_CONF.d"/'*.conf' > /dev/null; then
 			for c in "$MAKEPKG_CONF.d"/*.conf; do
 				source_safe $c
 			done
