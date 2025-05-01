@@ -67,7 +67,6 @@ Multiple packages to add can be specified on the command line.\n")"
 		printf -- "\n"
 		printf -- "$(gettext "Options:\n")"
 		printf -- "$(gettext "  -n, --new         only add packages that are not already in the database\n")"
-		printf -- "$(gettext "  -R, --remove      remove old package file from disk after updating database\n")"
 		printf -- "$(gettext "  -p, --prevent-downgrade  do not add package to database if a newer version is already present\n")"
 	elif [[ $cmd == "repo-remove" ]] ; then
 		printf -- "$(gettext "Usage: repo-remove [options] <path-to-db> <packagename> ...\n")"
@@ -87,6 +86,7 @@ packages to remove can be specified on the command line.\n")"
 	printf -- "$(gettext "  -s, --sign        sign database with GnuPG after update\n")"
 	printf -- "$(gettext "  -k, --key <key>   use the specified key to sign the database\n")"
 	printf -- "$(gettext "  -v, --verify      verify database's signature before update\n")"
+	printf -- "$(gettext "  -R, --remove      remove old package file from disk after updating database\n")"
 	printf -- "$(gettext "  -w, --wait-for-lock  retry to acquire lock file until success\n")"
 	printf -- "$(gettext "\n\
 See %s(8) for more details and descriptions of the available options.\n")" $cmd
@@ -355,11 +355,21 @@ db_remove_entry() {
 	local pkgname=$1
 	local notfound=1
 	local pkgentry=$(find_pkgentry "$pkgname")
+	local repodir=${LOCKFILE%/*}/
 	while [[ -n $pkgentry ]]; do
 		notfound=0
 
 		msg2 "$(gettext "Removing existing entry '%s'...")" \
 		"${pkgentry##*/}"
+
+		if (( RMEXISTING )); then
+			local oldfilename="$(sed -n '/^%FILENAME%$/ {n;p;q;}' "$pkgentry/desc")"
+			local oldfile="$repodir/$oldfilename"
+
+			msg2 "$(gettext "Removing old package file '%s'")" "$oldfilename"
+			rm -f ${oldfile} ${oldfile}.sig
+		fi
+
 		rm -rf "$pkgentry"
 
 		# remove entries in "files" database
