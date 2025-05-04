@@ -203,7 +203,7 @@ int SYMEXPORT alpm_trans_commit(alpm_handle_t *handle, alpm_list_t **data)
 		RET_ERR(handle, ALPM_ERR_TRANS_HOOK_FAILED, -1);
 	}
 
-	trans->state = STATE_COMMITING;
+	trans->state = STATE_COMMITTING;
 
 	alpm_logaction(handle, ALPM_CALLER_PREFIX, "transaction started\n");
 	event.type = ALPM_EVENT_TRANSACTION_START;
@@ -239,7 +239,7 @@ int SYMEXPORT alpm_trans_commit(alpm_handle_t *handle, alpm_list_t **data)
 		}
 	}
 
-	trans->state = STATE_COMMITED;
+	trans->state = STATE_COMMITTED;
 
 	return 0;
 }
@@ -253,7 +253,7 @@ int SYMEXPORT alpm_trans_interrupt(alpm_handle_t *handle)
 
 	trans = handle->trans;
 	ASSERT(trans != NULL, RET_ERR_ASYNC_SAFE(handle, ALPM_ERR_TRANS_NULL, -1));
-	ASSERT(trans->state == STATE_COMMITING || trans->state == STATE_INTERRUPTED,
+	ASSERT(trans->state == STATE_COMMITTING || trans->state == STATE_INTERRUPTED,
 			RET_ERR_ASYNC_SAFE(handle, ALPM_ERR_TRANS_TYPE, -1));
 
 	trans->state = STATE_INTERRUPTED;

@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* special handling of package version for GIT */
+/* special handling of package version for Git */
 #if defined(GIT_VERSION)
 #undef PACKAGE_VERSION
 #define PACKAGE_VERSION GIT_VERSION

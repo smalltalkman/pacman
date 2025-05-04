@@ -309,11 +309,11 @@ static int _sync_get_validation(alpm_pkg_t *pkg)
 static const struct pkg_operations *get_sync_pkg_ops(void)
 {
 	static struct pkg_operations sync_pkg_ops;
-	static int sync_pkg_ops_initalized = 0;
-	if(!sync_pkg_ops_initalized) {
+	static int sync_pkg_ops_initialized = 0;
+	if(!sync_pkg_ops_initialized) {
 		sync_pkg_ops = default_pkg_ops;
 		sync_pkg_ops.get_validation = _sync_get_validation;
-		sync_pkg_ops_initalized = 1;
+		sync_pkg_ops_initialized = 1;
 	}
 	return &sync_pkg_ops;
 }

@@ -530,7 +530,7 @@ create_db() {
 		pushd "$tmpdir/$repo" >/dev/null
 		local files=(*)
 		if [[ ${files[*]} = '*' ]]; then
-			# we have no packages remaining? zip up some emptyness
+			# we have no packages remaining? zip up some emptiness
 			warning "$(gettext "No packages remain, creating empty database.")"
 			files=(-T /dev/null)
 		fi

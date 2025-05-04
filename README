@@ -352,7 +352,7 @@ API CHANGES BETWEEN 3.4 AND 3.5
      - alpm_db_get_pkg() for normal targets
      - alpm_find_dbs_satisfier() for versioned provisions
      - alpm_find_grp_pkgs() for groups
-- alpm_deptest() is replaced by the more flexibile alpm_find_satisfier()
+- alpm_deptest() is replaced by the more flexible alpm_find_satisfier()
 - size_t used for alpm_list_t sizes
   - return type for alpm_list_count()
   - parameter type in alpm_list_msort() and alpm_list_nth()
@@ -724,6 +724,7 @@ API CHANGES BETWEEN 6.0 AND 6.1
  - alpm_db_set_cache_servers()
  - alpm_db_add_cache_server()
 
+
 API CHANGES BETWEEN 6.1 AND 7.0
 ===============================
 
@@ -733,3 +734,11 @@ API CHANGES BETWEEN 6.1 AND 7.0
  - alpm_option_set_sandboxuser()
  - alpm_option_set_disable_sandbox()
  - alpm_sandbox_setup_child()
+
+
+API CHANGES BETWEEN 7.0 AND 7.1
+===============================
+
+[CHANGED]
+- error codes:
+    PM_ERR_TRANS_COMMITING renamed to PM_ERR_TRANS_COMMITTING
