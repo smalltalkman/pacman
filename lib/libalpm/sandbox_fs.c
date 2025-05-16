@@ -112,7 +112,7 @@ bool _alpm_sandbox_fs_restrict_writes_to(alpm_handle_t *handle, const char *path
 	if(abi < 0) {
 		/* Landlock is not supported/enabled in the kernel */
 		_alpm_log(handle, ALPM_LOG_ERROR, _("restricting filesystem access failed because Landlock is not supported by the kernel!\n"));
-		return true;
+		return false;
 	}
 #ifdef LANDLOCK_ACCESS_FS_REFER
 	if(abi < 2) {
