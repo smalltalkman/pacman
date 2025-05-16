@@ -136,6 +136,7 @@ bool _alpm_sandbox_syscalls_filter(alpm_handle_t *handle)
 	scmp_filter_ctx ctx = seccomp_init(SCMP_ACT_ALLOW);
 	int restrictedSyscallsCount = 0;
 	if(ctx == NULL) {
+		_alpm_log(handle, ALPM_LOG_ERROR, _("error initializing seccomp to filter system calls in the download sandbox!\n"));
 		return false;
 	}
 
