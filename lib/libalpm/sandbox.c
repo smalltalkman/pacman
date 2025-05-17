@@ -54,14 +54,14 @@ int SYMEXPORT alpm_sandbox_setup_child(alpm_handle_t *handle, const char* sandbo
 	ASSERT(getuid() == 0, return -1);
 	ASSERT((pw = getpwnam(sandboxuser)), return -1);
 	if(sandbox_path != NULL && !handle->disable_sandbox) {
-		_alpm_sandbox_fs_restrict_writes_to(handle, sandbox_path);
+		ASSERT(_alpm_sandbox_fs_restrict_writes_to(handle, sandbox_path), return -1);
 	}
 #if defined(HAVE_SYS_PRCTL_H) && defined(PR_SET_NO_NEW_PRIVS)
 	/* make sure that we cannot gain more privileges later, failure is fine */
 	prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0);
 #endif /* HAVE_SYS_PRCTL && PR_SET_NO_NEW_PRIVS */
 	if(restrict_syscalls && !handle->disable_sandbox) {
-		_alpm_sandbox_syscalls_filter(handle);
+		ASSERT(_alpm_sandbox_syscalls_filter(handle), return -1);
 	}
 	ASSERT(setgid(pw->pw_gid) == 0, return -1);
 	ASSERT(setgroups(0, NULL) == 0, return -1);
