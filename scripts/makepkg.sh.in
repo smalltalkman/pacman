@@ -493,7 +493,7 @@ write_pkginfo() {
 
 	write_kv_pair "pkgname" "$pkgname"
 	write_kv_pair "pkgbase" "$pkgbase"
-	write_kv_pair "xdata" "pkgtype=$pkgtype"
+	write_kv_pair "xdata" "pkgtype=$pkgtype" "${xdata[@]}"
 
 	local fullver=$(get_full_version)
 	write_kv_pair "pkgver" "$fullver"
