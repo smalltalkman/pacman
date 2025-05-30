@@ -1118,31 +1118,34 @@ static int finalize_download_locations(alpm_list_t *payloads, const char *localp
 			filename = payload->tempfile_name;
 		}
 
-		/* if neither file exists then the download failed and logged an error for us */
-		if(!filename) {
-			returnvalue = -1;
-			continue;
-		}
+		if(filename) {
+			int ret = move_file(filename, localpath);
 
-		int ret = move_file(filename, localpath);
-
-		if(ret == -1) {
-			/* ignore error if the file already existed - only signature file was downloaded */
-			if(payload->mtime_existing_file == 0) {
-				_alpm_log(payload->handle, ALPM_LOG_ERROR, _("could not move %s into %s (%s)\n"),
-						filename, localpath, strerror(errno));
-				returnvalue = -1;
+			if(ret == -1) {
+				if(payload->mtime_existing_file == 0) {
+					_alpm_log(payload->handle, ALPM_LOG_ERROR, _("could not move %s into %s (%s)\n"),
+							filename, localpath, strerror(errno));
+					returnvalue = -1;
+				}
 			}
 		}
 
 		if (payload->download_signature) {
-			const char sig_suffix[] = ".sig";
-			char *sig_filename = NULL;
-			size_t sig_filename_len = strlen(filename) + sizeof(sig_suffix);
-			MALLOC(sig_filename, sig_filename_len, continue);
-			snprintf(sig_filename, sig_filename_len, "%s%s", filename, sig_suffix);
-			move_file(sig_filename, localpath);
-			FREE(sig_filename);
+			char *sig_filename;
+			int ret;
+
+			filename = payload->destfile_name ? payload->destfile_name : payload->tempfile_name;
+			sig_filename = _alpm_get_fullpath("", filename, ".sig");
+			ASSERT(sig_filename, RET_ERR(payload->handle, ALPM_ERR_MEMORY, -1));
+			ret = move_file(sig_filename, localpath);
+			free(sig_filename);
+
+			if(ret == -1) {
+				sig_filename = _alpm_get_fullpath("", filename, ".sig.part");
+				ASSERT(sig_filename, RET_ERR(payload->handle, ALPM_ERR_MEMORY, -1));
+				move_file(sig_filename, localpath);
+				free(sig_filename);
+			}
 		}
 	}
 	return returnvalue;
