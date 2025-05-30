@@ -1299,7 +1299,7 @@ download_signature:
 	return ret;
 }
 
-static char *filecache_find_url(alpm_handle_t *handle, const char *url)
+static const char *url_basename(const char *url)
 {
 	const char *filebase = strrchr(url, '/');
 
@@ -1312,7 +1312,7 @@ static char *filecache_find_url(alpm_handle_t *handle, const char *url)
 		return NULL;
 	}
 
-	return _alpm_filecache_find(handle, filebase);
+	return filebase;
 }
 
 int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
@@ -1334,9 +1334,26 @@ int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
 
 	for(i = urls; i; i = i->next) {
 		char *url = i->data;
+		char *filepath = NULL;
+		const char *urlbase = url_basename(url);
 
-		/* attempt to find the file in our pkgcache */
-		char *filepath = filecache_find_url(handle, url);
+		if(urlbase) {
+			/* attempt to find the file in our pkgcache */
+			filepath = _alpm_filecache_find(handle, urlbase);
+
+			if(filepath && (handle->siglevel & ALPM_SIG_PACKAGE)) {
+				char *sig_filename = _alpm_get_fullpath("", urlbase, ".sig");
+
+				/* if there's no .sig file then forget about the pkg file and go for download */
+				if(!_alpm_filecache_exists(handle, sig_filename)) {
+					free(filepath);
+					filepath = NULL;
+				}
+
+				free(sig_filename);
+			}
+		}
+
 		if(filepath) {
 			/* the file is locally cached so add it to the output right away */
 			alpm_list_append(fetched, filepath);
