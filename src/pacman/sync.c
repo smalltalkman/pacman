@@ -84,7 +84,7 @@ static int sync_cleandb(const char *dbpath)
 
 		/* build the full path */
 		len = snprintf(path, PATH_MAX, "%s%s", dbpath, dname);
-		if(len > PATH_MAX) {
+		if(len >= PATH_MAX) {
 			pm_printf(ALPM_LOG_ERROR, _("could not remove %s%s: path exceeds PATH_MAX\n"),
 					dbpath, dname);
 		}
@@ -245,7 +245,7 @@ static int sync_cleancache(int level)
 
 			/* build the full filepath */
 			len=snprintf(path, PATH_MAX, "%s%s", cachedir, ent->d_name);
-			if(len > PATH_MAX) {
+			if(len >= PATH_MAX) {
 				pm_printf(ALPM_LOG_ERROR, _("skipping %s%s: path exceeds PATH_MAX\n"),
 						cachedir, ent->d_name);
 				continue;
