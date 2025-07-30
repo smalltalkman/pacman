@@ -109,8 +109,7 @@ config_t *config_new(void)
 	newconfig->logmask = ALPM_LOG_ERROR | ALPM_LOG_WARNING;
 	newconfig->configfile = strdup(CONFFILE);
 	if(alpm_capabilities() & ALPM_CAPABILITY_SIGNATURES) {
-		newconfig->siglevel = ALPM_SIG_PACKAGE | ALPM_SIG_PACKAGE_OPTIONAL |
-			ALPM_SIG_DATABASE | ALPM_SIG_DATABASE_OPTIONAL;
+		newconfig->siglevel = ALPM_SIG_PACKAGE | ALPM_SIG_DATABASE;
 		newconfig->localfilesiglevel = ALPM_SIG_USE_DEFAULT;
 		newconfig->remotefilesiglevel = ALPM_SIG_USE_DEFAULT;
 	}

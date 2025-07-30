@@ -115,6 +115,8 @@ def mkcfgfile(filename, root, option, db):
     data = ["[options]"]
     for key, value in option.items():
         data.extend(["%s = %s" % (key, j) for j in value])
+    if "SigLevel" not in option:
+        data.append("SigLevel = Never\n")
 
     # Repositories
     # sort by repo name so tests can predict repo order, rather than be

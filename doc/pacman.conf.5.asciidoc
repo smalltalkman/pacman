@@ -318,12 +318,12 @@ When to Check::
 	*Never*;;
 		All signature checking is suppressed, even if signatures are present.
 
-	*Optional* (default);;
+	*Optional*;;
 		Signatures are checked if present; absence of a signature is not an
 		error. An invalid signature is a fatal error, as is a signature from a
 		key not in the keyring.
 
-	*Required*;;
+	*Required* (default);;
 		Signatures are required; absence of a signature or an invalid signature
 		is a fatal error, as is a signature from a key not in the keyring.
 
@@ -349,7 +349,7 @@ level signatures for packages.
 The built-in default is the following:
 
 --------
-SigLevel = Optional TrustedOnly
+SigLevel = Required TrustedOnly
 --------
 
 

@@ -1,6 +1,7 @@
 self.description = 'download remote packages with -U with a URL filename'
 self.require_capability("gpg")
 self.require_capability("curl")
+self.option['SigLevel'] = ['Required']
 
 url = self.add_simple_http_server({
     # simple
