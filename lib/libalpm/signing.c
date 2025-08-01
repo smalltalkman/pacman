@@ -233,9 +233,14 @@ int _alpm_key_in_keychain(alpm_handle_t *handle, const char *fpr)
 		_alpm_log(handle, ALPM_LOG_DEBUG, "key lookup failed, unknown key\n");
 		ret = 0;
 	} else if(gpg_err_code(gpg_err) == GPG_ERR_NO_ERROR) {
-		_alpm_log(handle, ALPM_LOG_DEBUG, "key lookup success, key exists\n");
-		handle->known_keys = alpm_list_add(handle->known_keys, strdup(fpr));
-		ret = 1;
+		if(key->expired) {
+			_alpm_log(handle, ALPM_LOG_DEBUG, "key lookup success, but key is expired\n");
+			ret = 0;
+		} else {
+			_alpm_log(handle, ALPM_LOG_DEBUG, "key lookup success, key exists\n");
+			handle->known_keys = alpm_list_add(handle->known_keys, strdup(fpr));
+			ret = 1;
+		}
 	} else {
 		_alpm_log(handle, ALPM_LOG_DEBUG, "gpg error: %s\n", gpgme_strerror(gpg_err));
 	}
@@ -268,7 +273,7 @@ static int key_import_wkd(alpm_handle_t *handle, const char *email, const char *
 	CHECK_ERR();
 
 	mode = gpgme_get_keylist_mode(ctx);
-	mode |= GPGME_KEYLIST_MODE_LOCATE;
+	mode |= GPGME_KEYLIST_MODE_LOCATE_EXTERNAL;
 	gpg_err = gpgme_set_keylist_mode(ctx, mode);
 	CHECK_ERR();
 
@@ -279,7 +284,7 @@ static int key_import_wkd(alpm_handle_t *handle, const char *email, const char *
 		if(fpr && _alpm_key_in_keychain(handle, fpr)) {
 			ret = 0;
 		} else {
-			_alpm_log(handle, ALPM_LOG_DEBUG, "key lookup failed: WKD imported wrong fingerprint\n");
+			_alpm_log(handle, ALPM_LOG_DEBUG, "key lookup failed: WKD imported wrong fingerprint or key expired\n");
 		}
 	}
 	gpgme_key_unref(key);
@@ -898,7 +903,6 @@ int _alpm_process_siglist(alpm_handle_t *handle, const char *identifier,
 		const char *name = result->key.uid ? result->key.uid : result->key.fingerprint;
 		switch(result->status) {
 			case ALPM_SIGSTATUS_VALID:
-			case ALPM_SIGSTATUS_KEY_EXPIRED:
 				switch(result->validity) {
 					case ALPM_SIGVALIDITY_FULL:
 						break;
@@ -924,6 +928,16 @@ int _alpm_process_siglist(alpm_handle_t *handle, const char *identifier,
 								identifier, name);
 						break;
 				}
+				break;
+			case ALPM_SIGSTATUS_KEY_EXPIRED:
+				_alpm_log(handle, ALPM_LOG_ERROR,
+						_("%s: signature from \"%s\" is expired\n"),
+						identifier, name);
+
+				if(_alpm_key_import(handle, result->key.uid, result->key.fingerprint) == 0) {
+					retry = 1;
+				}
+
 				break;
 			case ALPM_SIGSTATUS_KEY_UNKNOWN:
 				/* ensure this key is still actually unknown; we may have imported it
