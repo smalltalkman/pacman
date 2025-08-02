@@ -17,7 +17,6 @@ sources = [
   'package_function.sh.in',
   'package_function_variable.sh.in',
   'pkgbase.sh.in',
-  'pkglist.sh.in',
   'pkgname.sh.in',
   'pkgrel.sh.in',
   'pkgver.sh.in',
