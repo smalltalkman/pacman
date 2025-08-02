@@ -1,6 +1,7 @@
 libmakepkg_module = 'lint_config'
 
 sources = [
+  'buildenv.sh.in',
   'ext.sh.in',
   'nproc.sh.in',
   'packager.sh.in',
