@@ -1322,7 +1322,7 @@ int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
 	char *temporary_cachedir = NULL;
 	alpm_list_t *payloads = NULL;
 	const alpm_list_t *i;
-	alpm_event_t event = {0};
+	alpm_event_t event;
 
 	CHECK_HANDLE(handle, return -1);
 	ASSERT(*fetched == NULL, RET_ERR(handle, ALPM_ERR_WRONG_ARGS, -1));

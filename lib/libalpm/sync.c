@@ -776,7 +776,7 @@ static int download_files(alpm_handle_t *handle)
 	char * temporary_cachedir = NULL;
 	alpm_list_t *i, *files = NULL;
 	int ret = 0;
-	alpm_event_t event = {0};
+	alpm_event_t event;
 	alpm_list_t *payloads = NULL;
 
 	cachedir = _alpm_filecache_setup(handle);
