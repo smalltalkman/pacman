@@ -364,6 +364,8 @@ static int sync_group(int level, alpm_list_t *syncs, alpm_list_t *targets)
 				}
 			}
 			if(!found) {
+				pm_printf(ALPM_LOG_ERROR,
+					_("package group '%s' was not found\n"), grpname);
 				ret = 1;
 			}
 		}
