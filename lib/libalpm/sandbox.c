@@ -27,6 +27,7 @@
 #endif /* HAVE_SYS_PRCTL_H */
 #include <sys/types.h>
 #include <unistd.h>
+#include <limits.h>
 
 #include "alpm.h"
 #include "log.h"
@@ -230,6 +231,7 @@ bool _alpm_sandbox_process_cb_download(alpm_handle_t *handle, int callback_pipe)
 	}
 
 	ASSERT(read_from_pipe(callback_pipe, &filename_size, sizeof(filename_size)) != -1, return false);;
+	ASSERT(filename_size < PATH_MAX, return false);
 
 	MALLOC(filename, filename_size + 1, return false);
 
