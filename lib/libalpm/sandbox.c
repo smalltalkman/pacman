@@ -183,8 +183,9 @@ bool _alpm_sandbox_process_cb_log(alpm_handle_t *handle, int callback_pipe) {
 
 	ASSERT(read_from_pipe(callback_pipe, &level, sizeof(level)) != -1, return false);
 	ASSERT(read_from_pipe(callback_pipe, &string_size, sizeof(string_size)) != -1, return false);
+	ASSERT(string_size > 0 && (size_t)string_size < SIZE_MAX, return false);
 
-	MALLOC(string, string_size + 1, return false);
+	MALLOC(string, (size_t)string_size + 1, return false);
 
 	ASSERT(read_from_pipe(callback_pipe, string, string_size) != -1, FREE(string); return false);
 	string[string_size] = '\0';
