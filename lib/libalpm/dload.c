@@ -1318,6 +1318,7 @@ static const char *url_basename(const char *url)
 int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
 	  alpm_list_t **fetched)
 {
+	alpm_siglevel_t siglevel = alpm_option_get_remote_file_siglevel(handle);
 	const char *cachedir;
 	char *temporary_cachedir = NULL;
 	alpm_list_t *payloads = NULL;
@@ -1341,7 +1342,7 @@ int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
 			/* attempt to find the file in our pkgcache */
 			filepath = _alpm_filecache_find(handle, urlbase);
 
-			if(filepath && (handle->siglevel & ALPM_SIG_PACKAGE)) {
+			if(filepath && (siglevel & ALPM_SIG_PACKAGE)) {
 				char *sig_filename = _alpm_get_fullpath("", urlbase, ".sig");
 
 				/* if there's no .sig file then forget about the pkg file and go for download */
@@ -1393,8 +1394,8 @@ int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
 			}
 
 			payload->handle = handle;
-			payload->download_signature = (handle->siglevel & ALPM_SIG_PACKAGE);
-			payload->signature_optional = (handle->siglevel & ALPM_SIG_PACKAGE_OPTIONAL);
+			payload->download_signature = (siglevel & ALPM_SIG_PACKAGE);
+			payload->signature_optional = (siglevel & ALPM_SIG_PACKAGE_OPTIONAL);
 			payloads = alpm_list_add(payloads, payload);
 		}
 	}
