@@ -21,6 +21,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <unistd.h>
+
 #ifdef HAVE_LIBCURL
 #include <curl/curl.h>
 #endif
@@ -70,6 +72,9 @@ alpm_handle_t SYMEXPORT *alpm_initialize(const char *root, const char *dbpath,
 		myerr = myhandle->pm_errno;
 		goto cleanup;
 	}
+
+	/* used for testing whether to enable features requiring root access */
+	myhandle->user = getuid();
 
 #ifdef HAVE_LIBCURL
 	curl_global_init(CURL_GLOBAL_ALL);

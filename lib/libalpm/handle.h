@@ -23,6 +23,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <regex.h>
+#include <unistd.h>
 
 #include "alpm_list.h"
 #include "alpm.h"
@@ -57,6 +58,7 @@ struct _alpm_handle_t {
 	alpm_list_t *dbs_sync;  /* List of (alpm_db_t *) */
 	FILE *logstream;        /* log file stream pointer */
 	alpm_trans_t *trans;
+	uid_t user;
 
 #ifdef HAVE_LIBCURL
 	/* libcurl handle */
