@@ -1152,6 +1152,9 @@ int SYMEXPORT alpm_extract_keyid(alpm_handle_t *handle, const char *identifier,
 			}
 		}
 
+		if(length_check(len, pos, 2, handle, identifier)) {
+			return -1;
+		}
 		if(sig[pos] != 4) {
 			/* only support version 4 signature packet format */
 			_alpm_log(handle, ALPM_LOG_ERROR,
