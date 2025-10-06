@@ -25,9 +25,6 @@
 #include <curl/curl.h>
 #endif
 
-#include <errno.h>
-#include <pwd.h>
-
 /* libalpm */
 #include "alpm.h"
 #include "alpm_list.h"
@@ -42,7 +39,6 @@ alpm_handle_t SYMEXPORT *alpm_initialize(const char *root, const char *dbpath,
 	const char *lf = "db.lck";
 	char *hookdir;
 	size_t hookdirlen, lockfilelen;
-	struct passwd const *pw = NULL;
 	alpm_handle_t *myhandle = _alpm_handle_new();
 
 	if(myhandle == NULL) {
@@ -82,10 +78,6 @@ alpm_handle_t SYMEXPORT *alpm_initialize(const char *root, const char *dbpath,
 
 	myhandle->parallel_downloads = 1;
 
-	/* set default sandboxuser */
-	ASSERT((pw = getpwuid(0)) != NULL, myerr = errno; goto cleanup);
-	STRDUP(myhandle->sandboxuser, pw->pw_name, goto nomem);
-	
 #ifdef ENABLE_NLS
 	bindtextdomain("libalpm", LOCALEDIR);
 #endif

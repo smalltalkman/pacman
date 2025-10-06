@@ -937,11 +937,7 @@ static int setup_libalpm(void)
 	alpm_option_set_architectures(handle, config->architectures);
 	alpm_option_set_checkspace(handle, config->checkspace);
 	alpm_option_set_usesyslog(handle, config->usesyslog);
-
-	if(config->sandboxuser) {
-		alpm_option_set_sandboxuser(handle, config->sandboxuser);
-	}
-
+	alpm_option_set_sandboxuser(handle, config->sandboxuser);
 	alpm_option_set_disable_sandbox(handle, config->disable_sandbox);
 
 	alpm_option_set_ignorepkgs(handle, config->ignorepkg);
