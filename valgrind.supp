@@ -57,6 +57,17 @@
    fun:SSL_library_init
 }
 {
+   openssl-3.6.0-init
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:CRYPTO_malloc
+   fun:CRYPTO_zalloc
+   ...
+   fun:CRYPTO_THREAD_run_once
+   fun:OPENSSL_init_crypto
+}
+{
    gpgme-static-get-engine-info
    Memcheck:Leak
    fun:malloc
