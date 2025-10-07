@@ -22,6 +22,8 @@
 
 #include <stdbool.h>
 
+/* utility function to test if sandboxing should be used */
+bool _alpm_use_sandbox(alpm_handle_t *handle);
 
 /* The type of callbacks that can happen during a sandboxed operation */
 typedef enum {

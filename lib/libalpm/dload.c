@@ -1209,7 +1209,7 @@ int _alpm_download(alpm_handle_t *handle,
 
 	if(handle->fetchcb == NULL) {
 #ifdef HAVE_LIBCURL
-		if(handle->sandboxuser) {
+		if(_alpm_use_sandbox(handle)) {
 			ret = curl_download_internal_sandboxed(handle, payloads, temporary_localpath, &childsig);
 		} else {
 			ret = curl_download_internal(handle, payloads);

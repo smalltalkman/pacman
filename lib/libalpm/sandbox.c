@@ -36,6 +36,16 @@
 #include "sandbox_syscalls.h"
 #include "util.h"
 
+bool _alpm_use_sandbox(alpm_handle_t *handle)
+{
+	if(handle->user == 0 && handle->sandboxuser != NULL && handle->disable_sandbox == 0)
+	{
+		return true;
+	}
+
+	return false;
+}
+
 int SYMEXPORT alpm_sandbox_setup_child(alpm_handle_t *handle, const char* sandboxuser, const char* sandbox_path, bool restrict_syscalls)
 {
 	struct passwd const *pw = NULL;
