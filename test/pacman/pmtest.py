@@ -133,12 +133,13 @@ class pmtest(object):
         tmpdir = os.path.join(self.root, util.TMPDIR)
         logdir = os.path.join(self.root, os.path.dirname(util.LOGFILE))
         etcdir = os.path.join(self.root, os.path.dirname(util.PACCONF))
+        hookdir = os.path.join(self.root, util.PM_HOOKDIR)
         bindir = os.path.join(self.root, "bin")
         ldconfig = os.path.basename(pacman["ldconfig"])
         ldconfigdir = os.path.join(self.root, os.path.dirname(pacman["ldconfig"][1:]))
         shell = pacman["scriptlet-shell"][1:]
         shelldir = os.path.join(self.root, os.path.dirname(shell))
-        sys_dirs = [dbdir, cachedir, syncdir, tmpdir, logdir, etcdir, bindir,
+        sys_dirs = [dbdir, cachedir, syncdir, tmpdir, logdir, etcdir, hookdir, bindir,
                     ldconfigdir, shelldir]
         for sys_dir in sys_dirs:
             if not os.path.isdir(sys_dir):
