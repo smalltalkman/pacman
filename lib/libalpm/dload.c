@@ -1203,9 +1203,11 @@ int _alpm_download(alpm_handle_t *handle,
 		const char *temporary_localpath)
 {
 	int ret;
-	int finalize_ret;
+	int finalize_ret = 0;
 	int childsig = 0;
-	prepare_resumable_downloads(payloads, localpath, handle->sandboxuser);
+	if(_alpm_use_sandbox(handle)) {
+		prepare_resumable_downloads(payloads, localpath, handle->sandboxuser);
+	}
 
 	if(handle->fetchcb == NULL) {
 #ifdef HAVE_LIBCURL
@@ -1285,8 +1287,10 @@ download_signature:
 		ret = updated ? 0 : 1;
 	}
 
-	finalize_ret = finalize_download_locations(payloads, localpath);
-	_alpm_remove_temporary_download_dir(temporary_localpath);
+	if(_alpm_use_sandbox(handle)) {
+		finalize_ret = finalize_download_locations(payloads, localpath);
+		_alpm_remove_temporary_download_dir(temporary_localpath);
+	}
 
 	/* propagate after finalizing so .part files get copied over */
 	if(childsig != 0) {
@@ -1330,7 +1334,7 @@ int SYMEXPORT alpm_fetch_pkgurl(alpm_handle_t *handle, const alpm_list_t *urls,
 
 	/* find a valid cache dir to download to */
 	cachedir = _alpm_filecache_setup(handle);
-	temporary_cachedir = _alpm_temporary_download_dir_setup(cachedir, handle->sandboxuser);
+	temporary_cachedir = _alpm_download_dir_setup(handle, cachedir);
 	ASSERT(temporary_cachedir != NULL, return -1);
 
 	for(i = urls; i; i = i->next) {
