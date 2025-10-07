@@ -407,7 +407,14 @@ static int parsearg_global(int opt)
 			}
 			break;
 		case OP_CACHEDIR:
-			config->cachedirs = alpm_list_add(config->cachedirs, strdup(optarg));
+			{
+				char *path = resolve_path(optarg, "--cachedir");
+				if(path != NULL) {
+					config->cachedirs = alpm_list_add(config->cachedirs, path);
+				} else {
+					return 2;
+				}
+			}
 			break;
 		case OP_COLOR:
 			if(strcmp("never", optarg) == 0) {
@@ -463,11 +470,25 @@ static int parsearg_global(int opt)
 			config->noprogressbar = 1;
 			break;
 		case OP_GPGDIR:
-			free(config->gpgdir);
-			config->gpgdir = strdup(optarg);
+			{
+				char *path = resolve_path(optarg, "--gpgdir");
+				if(path != NULL) {
+					free(config->gpgdir);
+					config->gpgdir = path;
+				} else {
+					return 2;
+				}
+			}
 			break;
 		case OP_HOOKDIR:
-			config->hookdirs = alpm_list_add(config->hookdirs, strdup(optarg));
+			{
+				char *path = resolve_path(optarg, "--hookdir");
+				if(path != NULL) {
+					config->hookdirs = alpm_list_add(config->hookdirs, path);
+				} else {
+					return 2;
+				}
+			}
 			break;
 		case OP_LOGFILE:
 			free(config->logfile);
@@ -481,17 +502,38 @@ static int parsearg_global(int opt)
 			break;
 		case OP_DBPATH:
 		case 'b':
-			free(config->dbpath);
-			config->dbpath = strdup(optarg);
+			{
+				char *path = resolve_path(optarg, "--dbpath");
+				if(path != NULL) {
+					free(config->dbpath);
+					config->dbpath = path;
+				} else {
+					return 2;
+				}
+			}
 			break;
 		case OP_ROOT:
 		case 'r':
-			free(config->rootdir);
-			config->rootdir = strdup(optarg);
+			{
+				char *path = resolve_path(optarg, "--root");
+				if(path != NULL) {
+					free(config->rootdir);
+					config->rootdir = path;
+				} else {
+					return 2;
+				}
+			}
 			break;
 		case OP_SYSROOT:
-			free(config->sysroot);
-			config->sysroot = strdup(optarg);
+			{
+				char *path = resolve_path(optarg, "--sysroot");
+				if(path != NULL) {
+					free(config->sysroot);
+					config->sysroot = path;
+				} else {
+					return 2;
+				}
+			}
 			break;
 		case OP_DISABLEDLTIMEOUT:
 			config->disable_dl_timeout = 1;
