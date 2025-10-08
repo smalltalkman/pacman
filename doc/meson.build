@@ -82,7 +82,6 @@ foreach page: manpages + sitepages
     command : [
       ASCIIDOC,
     ] + asciidoc_opts + [
-      '-a', 'linkcss',
       '-a', 'toc',
       '-a', 'icons',
       '-a', 'max-width=960px',
@@ -104,24 +103,6 @@ endforeach
 run_target('html',
            command : ['/bin/true'],
            depends : html_targets)
-
-custom_target(
-  'website.tar.gz',
-  command : [
-    'bsdtar', 'czf', '@OUTPUT@',
-    '-C', meson.current_build_dir(),
-  ] + html_files + [
-    '-C', '/etc/asciidoc/stylesheets/',
-    'asciidoc.css',
-    '-C', '/etc/asciidoc/javascripts/',
-    'asciidoc.js',
-    '-C', '/etc/asciidoc/',
-    'images',
-  ],
-  output : ['website.tar.gz'],
-  build_by_default : false,
-  depends : html_targets,
-)
 
 meson.add_install_script(MESON_MAKE_SYMLINK,
                          'repo-add.8',

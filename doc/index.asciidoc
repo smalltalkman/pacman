@@ -1,6 +1,6 @@
 Pacman Home Page
 ================
-:stylesheet: asciidoc.css
+:stylesheet: stylesheets/asciidoc.css
 :toc:
 
 A simple library-based package manager.
