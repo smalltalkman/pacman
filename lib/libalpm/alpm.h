@@ -2307,18 +2307,32 @@ int alpm_option_set_parallel_downloads(alpm_handle_t *handle, unsigned int num_s
  * @{
  */
 
-/** Get the sandbox state
+/** Get the state of the filesystem part of the sandbox
  * @param handle the context handle
  * @return 0 for enabled, 1 for disabled
  */
-int alpm_option_get_disable_sandbox(alpm_handle_t *handle);
+int alpm_option_get_disable_sandbox_filesystem(alpm_handle_t *handle);
 
-/** Enables/disables the sandbox.
+/** Enables/disables the filesystem part of the sandbox.
  * @param handle the context handle
- * @param disable_sandbox 0 for enabled, 1 for disabled
+ * @param disable_sandbox_filesystem 0 for enabled, 1 for disabled
  * @return 0 on success, -1 on error (pm_errno is set accordingly)
  */
-int alpm_option_set_disable_sandbox(alpm_handle_t *handle, unsigned short disable_sandbox);
+int alpm_option_set_disable_sandbox_filesystem(alpm_handle_t *handle, unsigned short disable_sandbox_filesystem);
+
+/** Get the state of the syscalls part of the sandbox
+ * @param handle the context handle
+ * @return 0 for enabled, 1 for disabled
+ */
+int alpm_option_get_disable_sandbox_syscalls(alpm_handle_t *handle);
+
+/** Enables/disables the syscalls part of the sandbox.
+ * @param handle the context handle
+ * @param disable_sandbox_syscalls 0 for enabled, 1 for disabled
+ * @return 0 on success, -1 on error (pm_errno is set accordingly)
+ */
+int alpm_option_set_disable_sandbox_syscalls(alpm_handle_t *handle, unsigned short disable_sandbox_syscalls);
+
 /* End of disable_sandbox accessors */
 /** @} */
 

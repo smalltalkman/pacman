@@ -67,7 +67,8 @@ struct _alpm_handle_t {
 #endif
 
 	unsigned short disable_dl_timeout;
-	unsigned short disable_sandbox;
+	unsigned short disable_sandbox_filesystem;
+	unsigned short disable_sandbox_syscalls;
 	unsigned int parallel_downloads; /* number of download streams */
 
 #ifdef HAVE_LIBGPGME

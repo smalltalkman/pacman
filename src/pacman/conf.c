@@ -629,7 +629,12 @@ static int _parse_options(const char *key, char *value,
 		} else if(strcmp(key, "DisableDownloadTimeout") == 0) {
 			config->disable_dl_timeout = 1;
 		} else if(strcmp(key, "DisableSandbox") == 0) {
-			config->disable_sandbox = 1;
+			config->disable_sandbox_filesystem = 1;
+			config->disable_sandbox_syscalls = 1;
+		} else if(strcmp(key, "DisableSandboxFilesystem") == 0) {
+			config->disable_sandbox_filesystem = 1;
+		} else if(strcmp(key, "DisableSandboxSyscalls") == 0) {
+			config->disable_sandbox_syscalls = 1;
 		} else {
 			pm_printf(ALPM_LOG_WARNING,
 					_("config file %s, line %d: directive '%s' in section '%s' not recognized.\n"),
@@ -938,7 +943,8 @@ static int setup_libalpm(void)
 	alpm_option_set_checkspace(handle, config->checkspace);
 	alpm_option_set_usesyslog(handle, config->usesyslog);
 	alpm_option_set_sandboxuser(handle, config->sandboxuser);
-	alpm_option_set_disable_sandbox(handle, config->disable_sandbox);
+	alpm_option_set_disable_sandbox_filesystem(handle, config->disable_sandbox_filesystem);
+	alpm_option_set_disable_sandbox_syscalls(handle, config->disable_sandbox_syscalls);
 
 	alpm_option_set_ignorepkgs(handle, config->ignorepkg);
 	alpm_option_set_ignoregroups(handle, config->ignoregrp);

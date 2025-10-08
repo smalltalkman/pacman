@@ -280,7 +280,8 @@ static void dump_config(void)
 	show_bool("DisableDownloadTimeout", config->disable_dl_timeout);
 	show_bool("ILoveCandy", config->chomp);
 	show_bool("NoProgressBar", config->noprogressbar);
-	show_bool("DisableSandbox", config->disable_sandbox);
+	show_bool("DisableSandboxFilesystem", config->disable_sandbox_filesystem);
+	show_bool("DisableSandboxSyscalls", config->disable_sandbox_syscalls);
 
 	show_int("ParallelDownloads", config->parallel_downloads);
 
@@ -399,7 +400,12 @@ static int list_directives(void)
 		} else if(strcasecmp(i->data, "NoProgressBar") == 0) {
 			show_bool("NoProgressBar", config->noprogressbar);
 		} else if(strcasecmp(i->data, "DisableSandbox") == 0) {
-			show_bool("DisableSandbox", config->disable_sandbox);
+			show_bool("DisableSandboxFilesystem", config->disable_sandbox_filesystem);
+			show_bool("DisableSandboxSyscalls", config->disable_sandbox_syscalls);
+		} else if(strcasecmp(i->data, "DisableSandbox") == 0) {
+			show_bool("DisableSandboxFilesystem", config->disable_sandbox_filesystem);
+		} else if(strcasecmp(i->data, "DisableSandboxSyscalls") == 0) {
+			show_bool("DisableSandboxSyscalls", config->disable_sandbox_syscalls);
 
 		} else if(strcasecmp(i->data, "ParallelDownloads") == 0) {
 			show_int("ParallelDownloads", config->parallel_downloads);

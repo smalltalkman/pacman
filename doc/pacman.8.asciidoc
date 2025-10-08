@@ -202,9 +202,21 @@ Options
 	modified.  This allows mounted guest systems to be properly operated on.
 
 *\--disable-sandbox*::
-	Disable the default sandbox applied to the process downloading files on Linux
-	systems. Useful if experiencing landlock related failures while downloading
-	files when running a Linux kernel that does not support this feature.
+	Completely disables the sandbox applied to the process of downloading files
+	on Linux systems.  Equivalent to jointly specifying
+	`--disable-sandbox-filesystem` and `--disable-sandbox-syscalls`.
+
+*\--disable-sandbox-filesystem*::
+	Disable the filesystem restrictions part of the sandbox applied to the process
+	downloading files on Linux systems. Useful if experiencing Landlock related
+	failures while downloading files when running a Linux kernel that does not
+	support this feature.
+
+*\--disable-sandbox-syscalls*::
+	Disable the syscall filtering part of the sandbox applied to the process
+	downloading files on Linux systems. Useful if experiencing seccomp related
+	failures while downloading files when running a Linux kernel that does not
+	support this feature.
 
 Transaction Options (apply to '-S', '-R' and '-U')
 --------------------------------------------------
