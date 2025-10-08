@@ -86,7 +86,6 @@ foreach page: manpages + sitepages
       '-a', 'toc',
       '-a', 'icons',
       '-a', 'max-width=960px',
-      '-a', 'stylesheet=asciidoc-override.css',
       '-o', '@OUTPUT@',
       '@INPUT@',
     ],
@@ -94,7 +93,6 @@ foreach page: manpages + sitepages
     output : [htmlpage],
     depend_files : [
       asciidoc_conf,
-      'asciidoc-override.css',
     ] + page.get('extra_depends', []),
     build_by_default : false,
     install : false,
@@ -113,8 +111,6 @@ custom_target(
     'bsdtar', 'czf', '@OUTPUT@',
     '-C', meson.current_build_dir(),
   ] + html_files + [
-    '-C', meson.current_source_dir(),
-    'asciidoc-override.css',
     '-C', '/etc/asciidoc/stylesheets/',
     'asciidoc.css',
     '-C', '/etc/asciidoc/javascripts/',
