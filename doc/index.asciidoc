@@ -38,6 +38,9 @@ list operations.
 
 Version 6.0 added support for parallel downloads.
 
+Version 7.0 added support for performing downloads in a separate sandboxed
+process.
+
 == Documentation
 
 
