@@ -68,7 +68,7 @@ Multiple packages to add can be specified on the command line.\n")"
 		printf -- "$(gettext "Options:\n")"
 		printf -- "$(gettext "  -n, --new         only add packages that are not already in the database\n")"
 		printf -- "$(gettext "  -p, --prevent-downgrade  do not add package to database if a newer version is already present\n")"
-		printf -- "$(gettext "  --include-sigs    Include package PGP signatures in the repository database (if available)")
+		printf -- "$(gettext "  --include-sigs    include package PGP signatures in the repository database (if available)\n")"
 	elif [[ $cmd == "repo-remove" ]] ; then
 		printf -- "$(gettext "Usage: repo-remove [options] <path-to-db> <packagename> ...\n")"
 		printf -- "\n"
