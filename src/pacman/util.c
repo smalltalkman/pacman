@@ -1970,3 +1970,14 @@ void console_erase_line(void)
 {
 	printf("\x1B[K");
 }
+
+char *resolve_path(const char *path, const char *option)
+{
+	char *resolved = realpath(path, NULL);
+
+	if(resolved == NULL) {
+		pm_printf(ALPM_LOG_ERROR, "'failed to resolve path '%s' passed to '%s': %s\n", path, option, strerror(errno));
+	}
+
+	return resolved;
+}
