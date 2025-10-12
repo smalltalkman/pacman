@@ -37,7 +37,7 @@ pkgbuild_schema_strings=(changelog epoch install pkgbase pkgdesc pkgrel pkgver
                          url)
 
 pkgbuild_schema_arch_arrays=(checkdepends conflicts depends makedepends
-                             optdepends provides replaces source
+                             optdepends options provides replaces source
                              "${known_hash_algos[@]/%/sums}")
 
 pkgbuild_schema_package_overrides=(pkgdesc arch url license groups depends

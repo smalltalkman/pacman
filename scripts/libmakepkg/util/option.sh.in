@@ -82,7 +82,8 @@ check_opt_array() {
 #          127 - not found
 ##
 check_option() {
-	check_opt_array "$@" "${OPTIONS[@]}" "${options[@]}"
+	declare -n options_arch=options_$CARCH
+	check_opt_array "$@" "${OPTIONS[@]}" "${options[@]}" "${options_arch[@]}"
 }
 
 
