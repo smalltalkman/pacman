@@ -942,7 +942,12 @@ static int setup_libalpm(void)
 	alpm_option_set_architectures(handle, config->architectures);
 	alpm_option_set_checkspace(handle, config->checkspace);
 	alpm_option_set_usesyslog(handle, config->usesyslog);
-	alpm_option_set_sandboxuser(handle, config->sandboxuser);
+
+	if((ret = alpm_option_set_sandboxuser(handle, config->sandboxuser)) != 0) {
+		pm_printf(ALPM_LOG_ERROR, _("problem setting DownloadUser '%s' (user does not exist)\n"),
+					config->sandboxuser);
+		return ret;
+	}
 	alpm_option_set_disable_sandbox_filesystem(handle, config->disable_sandbox_filesystem);
 	alpm_option_set_disable_sandbox_syscalls(handle, config->disable_sandbox_syscalls);
 

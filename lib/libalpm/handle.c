@@ -28,6 +28,7 @@
 #include <syslog.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <pwd.h>
 
 /* libalpm */
 #include "handle.h"
@@ -604,9 +605,18 @@ int SYMEXPORT alpm_option_set_gpgdir(alpm_handle_t *handle, const char *gpgdir)
 
 int SYMEXPORT alpm_option_set_sandboxuser(alpm_handle_t *handle, const char *sandboxuser)
 {
+	struct passwd const *pw = NULL;
 	CHECK_HANDLE(handle, return -1);
 	if(handle->sandboxuser) {
 		FREE(handle->sandboxuser);
+	}
+
+	if(sandboxuser != NULL) {
+		pw = getpwnam(sandboxuser);
+		if(pw == NULL) {
+			_alpm_log(handle, ALPM_LOG_DEBUG, "'sandboxuser' (%s) does not exist", sandboxuser);
+			return 1;
+		}
 	}
 
 	STRDUP(handle->sandboxuser, sandboxuser, RET_ERR(handle, ALPM_ERR_MEMORY, -1));
