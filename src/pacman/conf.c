@@ -653,9 +653,19 @@ static int _parse_options(const char *key, char *value,
 		} else if(strcmp(key, "HoldPkg") == 0) {
 			setrepeatingoption(value, "HoldPkg", &(config->holdpkg));
 		} else if(strcmp(key, "CacheDir") == 0) {
-			setrepeatingoption(value, "CacheDir", &(config->cachedirs));
+			char *path = resolve_path(value, "CacheDir");
+			if(path != NULL) {
+				setrepeatingoption(path, "CacheDir", &(config->cachedirs));
+			} else {
+				return 1;
+			}
 		} else if(strcmp(key, "HookDir") == 0) {
-			setrepeatingoption(value, "HookDir", &(config->hookdirs));
+			char *path = resolve_path(value, "HookDir");
+			if(path != NULL) {
+				setrepeatingoption(path, "HookDir", &(config->hookdirs));
+			} else {
+				return 1;
+			}
 		} else if(strcmp(key, "Architecture") == 0) {
 			alpm_list_t *i, *arches = NULL;
 			setrepeatingoption(value, "Architecture", &arches);
@@ -666,19 +676,34 @@ static int _parse_options(const char *key, char *value,
 		} else if(strcmp(key, "DBPath") == 0) {
 			/* don't overwrite a path specified on the command line */
 			if(!config->dbpath) {
-				config->dbpath = strdup(value);
-				pm_printf(ALPM_LOG_DEBUG, "config: dbpath: %s\n", value);
+				char *path = resolve_path(value, "DBPath");
+				if(path != NULL) {
+					config->dbpath = path;
+				} else {
+					return 1;
+				}
+				pm_printf(ALPM_LOG_DEBUG, "config: dbpath: %s\n", path);
 			}
 		} else if(strcmp(key, "RootDir") == 0) {
 			/* don't overwrite a path specified on the command line */
 			if(!config->rootdir) {
-				config->rootdir = strdup(value);
-				pm_printf(ALPM_LOG_DEBUG, "config: rootdir: %s\n", value);
+				char *path = resolve_path(value, "RootDir");
+				if(path != NULL) {
+					config->rootdir = path;
+				} else {
+					return 1;
+				}
+				pm_printf(ALPM_LOG_DEBUG, "config: rootdir: %s\n", path);
 			}
 		} else if(strcmp(key, "GPGDir") == 0) {
 			if(!config->gpgdir) {
-				config->gpgdir = strdup(value);
-				pm_printf(ALPM_LOG_DEBUG, "config: gpgdir: %s\n", value);
+				char *path = resolve_path(value, "GPGDir");
+				if(path != NULL) {
+					config->gpgdir = path;
+				} else {
+					return 1;
+				}
+				pm_printf(ALPM_LOG_DEBUG, "config: gpgdir: %s\n", path);
 			}
 		} else if(strcmp(key, "LogFile") == 0) {
 			if(!config->logfile) {
