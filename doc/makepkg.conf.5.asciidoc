@@ -220,7 +220,7 @@ Options
 	Options to be used when stripping static libraries. See linkman:strip[1]
 	for details.
 
-**MAN_DIRS=(**{usr{,/local}{,/share},opt/*}/{man,info} ...**)**::
+**MAN_DIRS=(**usr{,/local}{,/share}/{man,info} ...**)**::
 	If `zipman` is specified in the `OPTIONS` array, this variable will
 	instruct makepkg where to look to compress manual (man and info)
 	pages. If you build packages that are located in opt/, you may need
