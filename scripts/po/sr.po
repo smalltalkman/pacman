@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2024-07-14 19:10+1000\n"
+"POT-Creation-Date: 2025-10-14 22:09+1000\n"
 "PO-Revision-Date: 2011-08-08 22:35+0000\n"
 "Last-Translator: Mladen Pejaković, 2013\n"
 "Language-Team: Serbian (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -24,42 +24,50 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: scripts/makepkg.sh.in:141
+#: scripts/makepkg.sh.in:137
 msgid "Cleaning up..."
 msgstr "Чистим..."
 
-#: scripts/makepkg.sh.in:188
+#: scripts/makepkg.sh.in:184
+#, sh-printf-format
 msgid "Entering %s environment..."
 msgstr "Улазим у %s окружење..."
 
-#: scripts/makepkg.sh.in:195 scripts/makepkg.sh.in:421
+#: scripts/makepkg.sh.in:191 scripts/makepkg.sh.in:417
+#, sh-printf-format
 msgid "Starting %s()..."
 msgstr "Покрећем %s()"
 
-#: scripts/makepkg.sh.in:201
+#: scripts/makepkg.sh.in:197
+#, sh-printf-format
 msgid "pkgver() generated an invalid version: %s"
 msgstr "pkgver() створи неисправну верзију: %s"
 
-#: scripts/makepkg.sh.in:211
+#: scripts/makepkg.sh.in:207
+#, sh-printf-format
 msgid "Failed to update %s from %s to %s"
 msgstr "Неуспело ажурирање %s из %s у %s"
 
-#: scripts/makepkg.sh.in:217
+#: scripts/makepkg.sh.in:213
+#, sh-printf-format
 msgid "Updated version: %s"
 msgstr "Ажурирана верзија: %s"
 
-#: scripts/makepkg.sh.in:219
+#: scripts/makepkg.sh.in:215
+#, sh-printf-format
 msgid "%s is not writeable -- pkgver will not be updated"
 msgstr "%s се не може уписати - верзија пакета неће бити ажурирана"
 
-#: scripts/makepkg.sh.in:227
+#: scripts/makepkg.sh.in:223
+#, sh-printf-format
 msgid "Unable to find source file %s."
 msgstr "Не могу да нађем изворни фајл %s."
 
-#: scripts/makepkg.sh.in:228 scripts/makepkg.sh.in:370
-#: scripts/makepkg.sh.in:582 scripts/makepkg.sh.in:1080
-#: scripts/makepkg.sh.in:1085 scripts/makepkg.sh.in:1090
-#: scripts/makepkg.sh.in:1096 scripts/makepkg.sh.in:1106
+#: scripts/makepkg.sh.in:224 scripts/makepkg.sh.in:366
+#: scripts/makepkg.sh.in:578 scripts/makepkg.sh.in:1077
+#: scripts/makepkg.sh.in:1082 scripts/makepkg.sh.in:1087
+#: scripts/makepkg.sh.in:1093 scripts/makepkg.sh.in:1103
+#: scripts/libmakepkg/executable/vcs.sh.in:46
 #: scripts/libmakepkg/integrity/generate_checksum.sh.in:62
 #: scripts/libmakepkg/source/bzr.sh.in:55
 #: scripts/libmakepkg/source/bzr.sh.in:86
@@ -67,302 +75,338 @@ msgstr "Не могу да нађем изворни фајл %s."
 #: scripts/libmakepkg/source/bzr.sh.in:106
 #: scripts/libmakepkg/source/file.sh.in:75
 #: scripts/libmakepkg/source/file.sh.in:145
-#: scripts/libmakepkg/source/git.sh.in:54
-#: scripts/libmakepkg/source/git.sh.in:66
-#: scripts/libmakepkg/source/git.sh.in:102
-#: scripts/libmakepkg/source/git.sh.in:108
-#: scripts/libmakepkg/source/git.sh.in:125
-#: scripts/libmakepkg/source/git.sh.in:134
-#: scripts/libmakepkg/source/git.sh.in:142
+#: scripts/libmakepkg/source/fossil.sh.in:53
+#: scripts/libmakepkg/source/fossil.sh.in:60
+#: scripts/libmakepkg/source/fossil.sh.in:90
+#: scripts/libmakepkg/source/fossil.sh.in:96
+#: scripts/libmakepkg/source/fossil.sh.in:101
+#: scripts/libmakepkg/source/fossil.sh.in:115
+#: scripts/libmakepkg/source/fossil.sh.in:122
+#: scripts/libmakepkg/source/git.sh.in:56
+#: scripts/libmakepkg/source/git.sh.in:68
+#: scripts/libmakepkg/source/git.sh.in:104
+#: scripts/libmakepkg/source/git.sh.in:110
+#: scripts/libmakepkg/source/git.sh.in:127
+#: scripts/libmakepkg/source/git.sh.in:136
+#: scripts/libmakepkg/source/git.sh.in:144
 #: scripts/libmakepkg/source/hg.sh.in:52 scripts/libmakepkg/source/hg.sh.in:94
 #: scripts/libmakepkg/source/hg.sh.in:103
 #: scripts/libmakepkg/source/hg.sh.in:108
 #: scripts/libmakepkg/source/svn.sh.in:63
 #: scripts/libmakepkg/source/svn.sh.in:73
+#: scripts/libmakepkg/util/config.sh.in:47
 #: scripts/libmakepkg/util/source.sh.in:162
 #: scripts/libmakepkg/util/source.sh.in:171
 #: scripts/libmakepkg/util/util.sh.in:81
 msgid "Aborting..."
 msgstr "Одустајем..."
 
-#: scripts/makepkg.sh.in:253
+#: scripts/makepkg.sh.in:249
 msgid "Pacman is currently in use, please wait..."
 msgstr ""
 
-#: scripts/makepkg.sh.in:274
+#: scripts/makepkg.sh.in:270
+#, sh-printf-format
 msgid "'%s' returned a fatal error (%i): %s"
 msgstr "%s врати фаталну грешку (%i): %s"
 
-#: scripts/makepkg.sh.in:293
+#: scripts/makepkg.sh.in:289
 msgid "Installing missing dependencies..."
 msgstr "Инсталирам недостајуће зависности..."
 
-#: scripts/makepkg.sh.in:296
+#: scripts/makepkg.sh.in:292
+#, sh-printf-format
 msgid "'%s' failed to install missing dependencies."
 msgstr "„%s“ не успе да инсталира недостајуће зависности."
 
-#: scripts/makepkg.sh.in:331
+#: scripts/makepkg.sh.in:327
 msgid "Missing dependencies:"
 msgstr "Недостајуће зависности:"
 
-#: scripts/makepkg.sh.in:347 scripts/makepkg.sh.in:361
+#: scripts/makepkg.sh.in:343 scripts/makepkg.sh.in:357
 msgid "Failed to remove installed dependencies."
 msgstr "Неуспело уклањање инсталираних зависности."
 
-#: scripts/makepkg.sh.in:369
+#: scripts/makepkg.sh.in:365
+#, sh-printf-format
 msgid "A failure occurred in %s()."
 msgstr "До грешке је дошло у %s()."
 
-#: scripts/makepkg.sh.in:482
+#: scripts/makepkg.sh.in:478
+#, sh-printf-format
 msgid "Invalid value for %s: %s"
 msgstr "Неисправна вредност за %s: %s"
 
-#: scripts/makepkg.sh.in:581
+#: scripts/makepkg.sh.in:577
+#, sh-printf-format
 msgid "Missing %s directory."
 msgstr "Недостаје %s фасцикла."
 
-#: scripts/makepkg.sh.in:587
+#: scripts/makepkg.sh.in:583
+#, sh-printf-format
 msgid "Creating package \"%s\"..."
 msgstr "Правим пакет „%s“..."
 
-#: scripts/makepkg.sh.in:590 scripts/makepkg.sh.in:592
-#: scripts/makepkg.sh.in:680
+#: scripts/makepkg.sh.in:586 scripts/makepkg.sh.in:588
+#: scripts/makepkg.sh.in:676
+#, sh-printf-format
 msgid "Generating %s file..."
 msgstr "Стварам %s фајл...."
 
-#: scripts/makepkg.sh.in:600
+#: scripts/makepkg.sh.in:596
+#, sh-printf-format
 msgid "Adding %s file..."
 msgstr "Додајем фајл %s..."
 
-#: scripts/makepkg.sh.in:602
+#: scripts/makepkg.sh.in:598
+#, sh-printf-format
 msgid "Failed to add %s file to package."
 msgstr "Неуспело додавање фајла %s у пакет."
 
-#: scripts/makepkg.sh.in:620
+#: scripts/makepkg.sh.in:616
 msgid "Generating .MTREE file..."
 msgstr "Стварам .MTREE фајл...."
 
-#: scripts/makepkg.sh.in:626
+#: scripts/makepkg.sh.in:622
 msgid "Compressing package..."
 msgstr "Компресујем пакет..."
 
-#: scripts/makepkg.sh.in:635
+#: scripts/makepkg.sh.in:631
 msgid "Failed to create package file."
 msgstr "Неуспело прављење пакета."
 
-#: scripts/makepkg.sh.in:671
+#: scripts/makepkg.sh.in:667
 msgid "Creating source package..."
 msgstr "Правим пакет извора..."
 
-#: scripts/makepkg.sh.in:677 scripts/makepkg.sh.in:690
+#: scripts/makepkg.sh.in:673 scripts/makepkg.sh.in:686
+#, sh-printf-format
 msgid "Adding %s..."
 msgstr "Додајем %s..."
 
-#: scripts/makepkg.sh.in:711
+#: scripts/makepkg.sh.in:707
+#, sh-printf-format
 msgid "Adding %s file (%s)..."
 msgstr "Додајем фајл %s (%s)..."
 
-#: scripts/makepkg.sh.in:732
+#: scripts/makepkg.sh.in:728
 msgid "Compressing source package..."
 msgstr "Компресујем пакет извора..."
 
-#: scripts/makepkg.sh.in:742
+#: scripts/makepkg.sh.in:739
 msgid "Failed to create source package file."
 msgstr "Неуспело прављење фајла пакета извора."
 
-#: scripts/makepkg.sh.in:757
+#: scripts/makepkg.sh.in:754
+#, sh-printf-format
 msgid "Installing package %s with %s..."
 msgstr "Инсталирам пакет %s помоћу %s..."
 
-#: scripts/makepkg.sh.in:759
+#: scripts/makepkg.sh.in:756
+#, sh-printf-format
 msgid "Installing %s package group with %s..."
 msgstr "Инсталирам групу пакета %s помоћу %s..."
 
-#: scripts/makepkg.sh.in:777
+#: scripts/makepkg.sh.in:774
 msgid "Failed to install built package(s)."
 msgstr "Неуспело инсталирање изграђених пакета."
 
-#: scripts/makepkg.sh.in:790
+#: scripts/makepkg.sh.in:787
 msgid "A package has already been built, installing existing package..."
 msgstr "Пакет је већ изграђен; инсталирам постојећи пакет..."
 
-#: scripts/makepkg.sh.in:794
+#: scripts/makepkg.sh.in:791
+#, sh-printf-format
 msgid "A package has already been built. (use %s to overwrite)"
 msgstr "Пакет је већ изграђен (употребите %s да га препишете)."
 
-#: scripts/makepkg.sh.in:813
+#: scripts/makepkg.sh.in:810
 msgid ""
 "The package group has already been built, installing existing packages..."
 msgstr "Група пакета је већ изграђена; инсталирам постојеће пакете..."
 
-#: scripts/makepkg.sh.in:817
+#: scripts/makepkg.sh.in:814
+#, sh-printf-format
 msgid "The package group has already been built. (use %s to overwrite)"
 msgstr "Група пакета је већ изграђена (употребите %s да је препишете)."
 
-#: scripts/makepkg.sh.in:822
+#: scripts/makepkg.sh.in:819
+#, sh-printf-format
 msgid "Part of the package group has already been built. (use %s to overwrite)"
 msgstr "Део групе пакета је већ изграђен (употребите %s да га препишете)."
 
-#: scripts/makepkg.sh.in:876
+#: scripts/makepkg.sh.in:873
 msgid "Make packages compatible for use with pacman"
 msgstr "Ствара пакете сагласне са пакменом"
 
-#: scripts/makepkg.sh.in:878 scripts/pacman-db-upgrade.sh.in:41
+#: scripts/makepkg.sh.in:875 scripts/pacman-db-upgrade.sh.in:41
+#, sh-printf-format
 msgid "Usage: %s [options]"
 msgstr "Употреба: %s [опције]"
 
-#: scripts/makepkg.sh.in:880 scripts/pacman-key.sh.in:82
+#: scripts/makepkg.sh.in:877 scripts/pacman-key.sh.in:82
 msgid "Options:"
 msgstr "Опције:"
 
-#: scripts/makepkg.sh.in:881
+#: scripts/makepkg.sh.in:878
+#, sh-printf-format
 msgid "  -A, --ignorearch Ignore incomplete %s field in %s"
 msgstr "  -A, --ignorearch игнориши непотпуно поље %s у %s"
 
-#: scripts/makepkg.sh.in:882
+#: scripts/makepkg.sh.in:879
 msgid "  -c, --clean      Clean up work files after build"
 msgstr "  -c, --clean      Уклања радне фајлове након градње"
 
-#: scripts/makepkg.sh.in:883
+#: scripts/makepkg.sh.in:880
+#, sh-printf-format
 msgid "  -C, --cleanbuild Remove %s dir before building the package"
 msgstr "  -C, --cleanbuild Уклања фасциклу %s пре градње пакета"
 
-#: scripts/makepkg.sh.in:884
+#: scripts/makepkg.sh.in:881
 msgid "  -d, --nodeps     Skip all dependency checks"
 msgstr "  -d, --nodeps     Прескаче све провере зависности"
 
-#: scripts/makepkg.sh.in:885
+#: scripts/makepkg.sh.in:882
 msgid "  -D, --dir <dir>  Change to directory <dir> before processing PKGBUILD"
 msgstr ""
 
-#: scripts/makepkg.sh.in:886
+#: scripts/makepkg.sh.in:883
+#, sh-printf-format
 msgid "  -e, --noextract  Do not extract source files (use existing %s dir)"
 msgstr ""
 "  -e, --noextract  Не распакуј изворне фајлове (користи постојећу %s "
 "фасциклу)"
 
-#: scripts/makepkg.sh.in:887
+#: scripts/makepkg.sh.in:884
 msgid "  -f, --force      Overwrite existing package"
 msgstr "  -f, --force      Преписује постојећи пакет"
 
-#: scripts/makepkg.sh.in:888
+#: scripts/makepkg.sh.in:885
 msgid "  -g, --geninteg   Generate integrity checks for source files"
 msgstr "  -g, --geninteg   Ствара провере интегритета фајлова извора"
 
-#: scripts/makepkg.sh.in:889
+#: scripts/makepkg.sh.in:886
 msgid "  -h, --help       Show this help message and exit"
 msgstr "  -h, --help       Прикажи ову поруку помоћи и изађи"
 
-#: scripts/makepkg.sh.in:890
+#: scripts/makepkg.sh.in:887
 msgid "  -i, --install    Install package after successful build"
 msgstr "  -i, --install    Инсталира пакете након успешне градње"
 
-#: scripts/makepkg.sh.in:891
+#: scripts/makepkg.sh.in:888
 msgid "  -L, --log        Log package build process"
 msgstr "  -L, --log        Води дневник процеса градње"
 
-#: scripts/makepkg.sh.in:892
+#: scripts/makepkg.sh.in:889
 msgid "  -m, --nocolor    Disable colorized output messages"
 msgstr "  -m, --nocolor    Онемогућава обојене излазне поруке"
 
-#: scripts/makepkg.sh.in:893
+#: scripts/makepkg.sh.in:890
 msgid "  -o, --nobuild    Download and extract files only"
 msgstr "  -o, --nobuild    Само преузима и распакује фајлове"
 
-#: scripts/makepkg.sh.in:894
+#: scripts/makepkg.sh.in:891
+#, sh-printf-format
 msgid "  -p <file>        Use an alternate build script (instead of '%s')"
 msgstr ""
 "  -p <фајл>        Користи алтернативну инсталациону скрипту (уместо „%s“)"
 
-#: scripts/makepkg.sh.in:895
+#: scripts/makepkg.sh.in:892
 msgid ""
 "  -r, --rmdeps     Remove installed dependencies after a successful build"
 msgstr "  -r, --rmdeps     Уклања инсталиране зависности након успешне градње"
 
-#: scripts/makepkg.sh.in:896
+#: scripts/makepkg.sh.in:893
 msgid "  -R, --repackage  Repackage contents of the package without rebuilding"
 msgstr "  -R, --repackage  Препакује садржај пакета без поновне градње"
 
-#: scripts/makepkg.sh.in:897
+#: scripts/makepkg.sh.in:894
+#, sh-printf-format
 msgid "  -s, --syncdeps   Install missing dependencies with %s"
 msgstr "  -s, --syncdeps   Инсталирај недостајуће зависности помоћу %s"
 
-#: scripts/makepkg.sh.in:898
+#: scripts/makepkg.sh.in:895
 msgid ""
 "  -S, --source     Generate a source-only tarball without downloaded sources"
 msgstr ""
 "  -S, --source     Generate a source-only tarball without downloaded sources"
 
-#: scripts/makepkg.sh.in:899
+#: scripts/makepkg.sh.in:896
 msgid "  -V, --version    Show version information and exit"
 msgstr "  -V, --version    Прикажи верзију и изађи"
 
-#: scripts/makepkg.sh.in:900
+#: scripts/makepkg.sh.in:897
 msgid ""
 "  --allsource      Generate a source-only tarball including downloaded "
 "sources"
 msgstr "  --allsource      Ствара  архиву извора укључујући и преузете изворе"
 
-#: scripts/makepkg.sh.in:901
+#: scripts/makepkg.sh.in:898
+#, sh-printf-format
 msgid "  --check          Run the %s function in the %s"
 msgstr "  --check          Покрени функцију %s у %s"
 
-#: scripts/makepkg.sh.in:902
+#: scripts/makepkg.sh.in:899
+#, sh-printf-format
 msgid "  --config <file>  Use an alternate config file (instead of '%s')"
 msgstr "  --config <фајл>  Користи алтернативни фајл поставки (уместо „%s“)"
 
-#: scripts/makepkg.sh.in:903
+#: scripts/makepkg.sh.in:900
 msgid "  --holdver        Do not update VCS sources"
 msgstr "  --holdver        Не ажурирај ВЦС изворе"
 
-#: scripts/makepkg.sh.in:904
+#: scripts/makepkg.sh.in:901
+#, sh-printf-format
 msgid ""
 "  --key <key>      Specify a key to use for %s signing instead of the default"
 msgstr ""
 "  --key <кључ>      Назначи кључ за потписивање %s уместо подразумеваног"
 
-#: scripts/makepkg.sh.in:905
+#: scripts/makepkg.sh.in:902
 msgid "  --noarchive      Do not create package archive"
 msgstr "  --noarchive      Не стварај архиву пакета"
 
-#: scripts/makepkg.sh.in:906
+#: scripts/makepkg.sh.in:903
+#, sh-printf-format
 msgid "  --nocheck        Do not run the %s function in the %s"
 msgstr "  --nocheck        Не покрећи функцију %s у %s"
 
-#: scripts/makepkg.sh.in:907
+#: scripts/makepkg.sh.in:904
+#, sh-printf-format
 msgid "  --noprepare      Do not run the %s function in the %s"
 msgstr "  --noprepare      Не покрећи функцију %s у %s"
 
-#: scripts/makepkg.sh.in:908
+#: scripts/makepkg.sh.in:905
 msgid "  --nosign         Do not create a signature for the package"
 msgstr "  --nosign         Не потписуј пакет"
 
-#: scripts/makepkg.sh.in:909
+#: scripts/makepkg.sh.in:906
 msgid "  --packagelist    Only list package filepaths that would be produced"
 msgstr ""
 
-#: scripts/makepkg.sh.in:910
+#: scripts/makepkg.sh.in:907
 msgid "  --printsrcinfo   Print the generated SRCINFO and exit"
 msgstr " --printsrcinfo  Штампа створени SRCINFO и напушта"
 
-#: scripts/makepkg.sh.in:911
+#: scripts/makepkg.sh.in:908
+#, sh-printf-format
 msgid "  --sign           Sign the resulting package with %s"
 msgstr "  --sign           Потпиши резултујуће пакет путем %s"
 
-#: scripts/makepkg.sh.in:912
+#: scripts/makepkg.sh.in:909
 msgid "  --skipchecksums  Do not verify checksums of the source files"
 msgstr "  --skipchecksums  Не оверавај суме за проверу изворних фајлова"
 
-#: scripts/makepkg.sh.in:913
+#: scripts/makepkg.sh.in:910
 msgid ""
 "  --skipinteg      Do not perform any verification checks on source files"
 msgstr "  --skipinteg      Уопште не оверавај изворне фајлове"
 
-#: scripts/makepkg.sh.in:914
+#: scripts/makepkg.sh.in:911
 msgid "  --skippgpcheck   Do not verify source files with PGP signatures"
 msgstr "  --skippgpcheck   Не оверавај изворне фајлове путем ПГП потписа"
 
-#: scripts/makepkg.sh.in:915
+#: scripts/makepkg.sh.in:912
 msgid ""
 "  --verifysource   Download source files (if needed) and perform integrity "
 "checks"
@@ -370,44 +414,48 @@ msgstr ""
 "  --verifysource    Преузима фајлове извора (ако је потребно) и врши провере "
 "исправности"
 
-#: scripts/makepkg.sh.in:917
+#: scripts/makepkg.sh.in:914
+#, sh-printf-format
 msgid "These options can be passed to %s:"
 msgstr "Ове опције се могу проследити у %s:"
 
-#: scripts/makepkg.sh.in:919
+#: scripts/makepkg.sh.in:916
 msgid "  --asdeps         Install packages as non-explicitly installed"
 msgstr "  --asdeps         Пакети ће бити инсталирани не.експлицитно"
 
-#: scripts/makepkg.sh.in:920
+#: scripts/makepkg.sh.in:917
 msgid ""
 "  --needed         Do not reinstall the targets that are already up to date"
 msgstr "  --needed         Не инсталира већ ажурне циљеве"
 
-#: scripts/makepkg.sh.in:921
+#: scripts/makepkg.sh.in:918
 msgid ""
 "  --noconfirm      Do not ask for confirmation when resolving dependencies"
 msgstr "  --noconfirm      Не тражи потврде при разрешавању зависности"
 
-#: scripts/makepkg.sh.in:922
+#: scripts/makepkg.sh.in:919
 msgid "  --noprogressbar  Do not show a progress bar when downloading files"
 msgstr "  --noprogressbar  Не приказује траку напретка при преузимању фајлова"
 
-#: scripts/makepkg.sh.in:924
+#: scripts/makepkg.sh.in:921
+#, sh-printf-format
 msgid "If %s is not specified, %s will look for '%s'"
 msgstr "Уколико %s није одређено, %s ће тражити „%s“"
 
-#: scripts/makepkg.sh.in:933 scripts/pacman-db-upgrade.sh.in:57
-#: scripts/pacman-key.sh.in:99 scripts/repo-add.sh.in:104
+#: scripts/makepkg.sh.in:930 scripts/pacman-db-upgrade.sh.in:57
+#: scripts/pacman-key.sh.in:99 scripts/repo-add.sh.in:107
 msgid ""
 "This is free software; see the source for copying conditions.\\nThere is NO "
 "WARRANTY, to the extent permitted by law.\\n"
 msgstr ""
 
-#: scripts/makepkg.sh.in:1042 scripts/repo-add.sh.in:602
+#: scripts/makepkg.sh.in:1039 scripts/repo-add.sh.in:627
+#, sh-printf-format
 msgid "%s signal caught. Exiting..."
 msgstr "Ухваћен је %s сигнал. Излазим..."
 
-#: scripts/makepkg.sh.in:1112
+#: scripts/makepkg.sh.in:1109
+#, sh-printf-format
 msgid ""
 "Running %s as root is not allowed as it can cause permanent,\\ncatastrophic "
 "damage to your system."
@@ -415,84 +463,96 @@ msgstr ""
 "Није дозвољено окретати %s као корени корисник, јер то може\n"
 "узроковати трајну, катастрофалну штету на систему."
 
-#: scripts/makepkg.sh.in:1118
+#: scripts/makepkg.sh.in:1115
+#, sh-printf-format
 msgid "Do not use the %s option. This option is only for internal use by %s."
 msgstr ""
 "Не користите опцију %s. Намењена је само за интерну употребу од стране %s."
 
-#: scripts/makepkg.sh.in:1133
+#: scripts/makepkg.sh.in:1130
+#, sh-printf-format
 msgid "%s does not exist."
 msgstr "%s не постоји."
 
-#: scripts/makepkg.sh.in:1138
+#: scripts/makepkg.sh.in:1135
+#, sh-printf-format
 msgid "%s contains %s characters and cannot be sourced."
 msgstr "%s садржи %s знакове и не може се учитати."
 
-#: scripts/makepkg.sh.in:1143
+#: scripts/makepkg.sh.in:1140
+#, sh-printf-format
 msgid "%s must be in the current working directory."
 msgstr "%s мора бити у тренутној радној фасцикли."
 
-#: scripts/makepkg.sh.in:1239 scripts/makepkg.sh.in:1254
+#: scripts/makepkg.sh.in:1236 scripts/makepkg.sh.in:1251
+#, sh-printf-format
 msgid "Leaving %s environment."
 msgstr "Напуштам %s окружење."
 
-#: scripts/makepkg.sh.in:1266
+#: scripts/makepkg.sh.in:1263
+#, sh-printf-format
 msgid "The key %s does not exist in your keyring."
 msgstr "Кључ %s не постоји у вашем привеску."
 
-#: scripts/makepkg.sh.in:1268 scripts/repo-add.sh.in:148
+#: scripts/makepkg.sh.in:1265 scripts/repo-add.sh.in:151
 msgid "There is no key in your keyring."
 msgstr "Не постоји кључ у вашем привеску."
 
-#: scripts/makepkg.sh.in:1274
+#: scripts/makepkg.sh.in:1271
+#, sh-printf-format
 msgid "Making package: %s"
 msgstr "Правим пакет: %s"
 
-#: scripts/makepkg.sh.in:1280
+#: scripts/makepkg.sh.in:1277
+#, sh-printf-format
 msgid "A source package has already been built. (use %s to overwrite)"
 msgstr "Пакет извора је већ изграђен (употребите %s да га препишете)."
 
-#: scripts/makepkg.sh.in:1300
+#: scripts/makepkg.sh.in:1297
 msgid "Signing package..."
 msgstr "Потписујем пакет..."
 
-#: scripts/makepkg.sh.in:1304
+#: scripts/makepkg.sh.in:1301
+#, sh-printf-format
 msgid "Source package created: %s"
 msgstr "Направих пакет извора: %s"
 
-#: scripts/makepkg.sh.in:1310
+#: scripts/makepkg.sh.in:1307
 msgid "Skipping dependency checks."
 msgstr "Прескачем провере зависности."
 
-#: scripts/makepkg.sh.in:1318
+#: scripts/makepkg.sh.in:1315
 msgid "Checking runtime dependencies..."
 msgstr "Проверавам радне зависности..."
 
-#: scripts/makepkg.sh.in:1325
+#: scripts/makepkg.sh.in:1323
 msgid "Checking buildtime dependencies..."
 msgstr "Проверавам зависности градње..."
 
-#: scripts/makepkg.sh.in:1337
+#: scripts/makepkg.sh.in:1336
 msgid "Could not resolve all dependencies."
 msgstr "Не могу да разрешим све зависности."
 
-#: scripts/makepkg.sh.in:1348
+#: scripts/makepkg.sh.in:1347
+#, sh-printf-format
 msgid "Using existing %s tree"
 msgstr "Користим постојеће %s стабло"
 
-#: scripts/makepkg.sh.in:1355 scripts/makepkg.sh.in:1386
+#: scripts/makepkg.sh.in:1354 scripts/makepkg.sh.in:1385
+#, sh-printf-format
 msgid "Removing existing %s directory..."
 msgstr "Уклањам постојећу %s фасциклу..."
 
-#: scripts/makepkg.sh.in:1381
+#: scripts/makepkg.sh.in:1380
 msgid "Sources are ready."
 msgstr "Извори су припремљени."
 
-#: scripts/makepkg.sh.in:1408
+#: scripts/makepkg.sh.in:1407
 msgid "Package directory is ready."
 msgstr "Фасцикла пакета је спремна."
 
-#: scripts/makepkg.sh.in:1412
+#: scripts/makepkg.sh.in:1411
+#, sh-printf-format
 msgid "Finished making: %s"
 msgstr "Заврших градњу: %s"
 
@@ -528,11 +588,13 @@ msgstr "  --config <путања>  поставља алтернативни ф�
 msgid "  --nocolor            disable colorized output messages"
 msgstr "  --nocolor            bez obojenih izlaznih poruka"
 
-#: scripts/pacman-db-upgrade.sh.in:122 scripts/repo-add.sh.in:396
+#: scripts/pacman-db-upgrade.sh.in:122 scripts/repo-add.sh.in:409
+#, sh-printf-format
 msgid "%s does not exist or is not a directory."
 msgstr "%s не постоји или није у фасцикли."
 
 #: scripts/pacman-db-upgrade.sh.in:126
+#, sh-printf-format
 msgid "%s is not a pacman database directory."
 msgstr "%s није фасцикла пакменове базе."
 
@@ -559,11 +621,13 @@ msgid "Pre-4.2 database format detected - upgrading..."
 msgstr "Нађена је база у пре-4.2 формату — надограђујем..."
 
 #: scripts/pacman-db-upgrade.sh.in:185
+#, sh-printf-format
 msgid "symlink '%s' points outside pacman root, manual repair required"
 msgstr ""
 "симболичка веза „%s“ води изван пакменовог корена, потребна је ручна поправка"
 
 #: scripts/pacman-key.sh.in:58
+#, sh-printf-format
 msgid "Usage: %s [options] operation [targets]"
 msgstr "Употреба: %s [опције] операција [мете]"
 
@@ -628,8 +692,8 @@ msgid ""
 "  --import-trustdb          Imports ownertrust values from trustdb.gpg in "
 "dir(s)"
 msgstr ""
-"  --import-trustdb          Увози вредности власничког поверења из trustdb."
-"gpg из фасцикле(и)"
+"  --import-trustdb          Увози вредности власничког поверења из "
+"trustdb.gpg из фасцикле(и)"
 
 #: scripts/pacman-key.sh.in:74
 msgid "  --init                    Ensure the keyring is properly initialized"
@@ -644,6 +708,7 @@ msgid "  --lsign-key               Locally sign the specified keyid"
 msgstr "  --lsign-key               Локално потписује наведени ИД кључа"
 
 #: scripts/pacman-key.sh.in:77
+#, sh-printf-format
 msgid ""
 "  --populate                Reload the default keys from the (given) "
 "keyrings\\n                            in '%s'"
@@ -663,6 +728,7 @@ msgid "  --verbose                 Show extra information"
 msgstr ""
 
 #: scripts/pacman-key.sh.in:83
+#, sh-printf-format
 msgid ""
 "  --config <file>           Use an alternate config file (instead "
 "of\\n                            '%s')"
@@ -671,6 +737,7 @@ msgstr ""
 "уместо\\n                            „%s“)"
 
 #: scripts/pacman-key.sh.in:85
+#, sh-printf-format
 msgid ""
 "  --gpgdir <dir>            Set an alternate directory for GnuPG "
 "(instead\\n                            of '%s')"
@@ -679,6 +746,7 @@ msgstr ""
 "(уместо\\n                            „%s“)"
 
 #: scripts/pacman-key.sh.in:87
+#, sh-printf-format
 msgid ""
 "  --populate-from <dir>     Set an alternate directory for --populate "
 "(instead\\n                            of '%s')"
@@ -711,6 +779,7 @@ msgid "Generating pacman master key. This may take some time."
 msgstr ""
 
 #: scripts/pacman-key.sh.in:187
+#, sh-printf-format
 msgid "The key identified by %s could not be found locally."
 msgstr "Кључ идентификован путем %s се не може локално наћи."
 
@@ -724,10 +793,12 @@ msgid "flags"
 msgstr ""
 
 #: scripts/pacman-key.sh.in:264
+#, sh-printf-format
 msgid "You do not have sufficient permissions to read the %s keyring."
 msgstr "Немате одговарајуће дозволе да би читали привезак %s."
 
 #: scripts/pacman-key.sh.in:265
+#, sh-printf-format
 msgid "Use '%s' to correct the keyring permissions."
 msgstr "Употребите „%s“ да би исправили дозволе за привезак."
 
@@ -740,18 +811,22 @@ msgid "There is no secret key available to sign with."
 msgstr "Не постоји тајни кључ за потписивање."
 
 #: scripts/pacman-key.sh.in:277
+#, sh-printf-format
 msgid "Use '%s' to generate a default secret key."
 msgstr "Употребите „%s“ да направите подразумевани тајни кључ."
 
 #: scripts/pacman-key.sh.in:295
+#, sh-printf-format
 msgid "No keyring files exist in %s."
 msgstr "Не постоје фајлови привеска у %s."
 
 #: scripts/pacman-key.sh.in:302
+#, sh-printf-format
 msgid "The keyring file %s does not exist."
 msgstr "Фајл привеске %s не постоји."
 
 #: scripts/pacman-key.sh.in:317
+#, sh-printf-format
 msgid "Appending keys from %s.gpg..."
 msgstr "Додајем кључеве из %s.gpg..."
 
@@ -768,10 +843,12 @@ msgid "Disabling revoked keys in keyring..."
 msgstr "Онемогућавам опозване кључеве у привеску..."
 
 #: scripts/pacman-key.sh.in:372
+#, sh-printf-format
 msgid "Disabling key %s..."
 msgstr "Онемогућавам кључ %s..."
 
 #: scripts/pacman-key.sh.in:378
+#, sh-printf-format
 msgid "Disabled %s key."
 msgid_plural "Disabled %s keys."
 msgstr[0] ""
@@ -787,6 +864,7 @@ msgid "A specified key could not be removed from the keyring."
 msgstr "Назначени кључ не може бити уклоњен из привеска."
 
 #: scripts/pacman-key.sh.in:403
+#, sh-printf-format
 msgid "The key identified by %s could not be edited."
 msgstr "Кључ идентификован путем %s се не може уређивати."
 
@@ -799,10 +877,12 @@ msgid "The fingerprint of a specified key could not be determined."
 msgstr "Отисак назначеног кључа не може бити одређен."
 
 #: scripts/pacman-key.sh.in:436 scripts/pacman-key.sh.in:455
+#, sh-printf-format
 msgid "%s could not be imported."
 msgstr "%s се не може увести."
 
 #: scripts/pacman-key.sh.in:440 scripts/pacman-key.sh.in:459
+#, sh-printf-format
 msgid "File %s does not exist and could not be imported."
 msgstr "Фајл %s не постоји и не може се увести."
 
@@ -815,14 +895,17 @@ msgid "A specified signature could not be listed."
 msgstr "Назначени потпис не може бити излистан."
 
 #: scripts/pacman-key.sh.in:491
+#, sh-printf-format
 msgid "Locally signing key %s..."
 msgstr "Локално потписујем кључ%s..."
 
 #: scripts/pacman-key.sh.in:496
+#, sh-printf-format
 msgid "%s could not be locally signed."
 msgstr "%s се не може локално потписати."
 
 #: scripts/pacman-key.sh.in:506
+#, sh-printf-format
 msgid "Locally signed %s key."
 msgid_plural "Locally signed %s keys."
 msgstr[0] ""
@@ -838,18 +921,22 @@ msgid "Remote key not fetched correctly from keyserver."
 msgstr "Удаљени кључ се не може преузети са сервера кључева."
 
 #: scripts/pacman-key.sh.in:566
+#, sh-printf-format
 msgid "Could not update key: %s"
 msgstr ""
 
-#: scripts/pacman-key.sh.in:587 scripts/repo-add.sh.in:268
+#: scripts/pacman-key.sh.in:587 scripts/repo-add.sh.in:271
+#, sh-printf-format
 msgid "Cannot use armored signatures for packages: %s"
 msgstr "Не могу користити ојачане потписе за пакете: %s"
 
 #: scripts/pacman-key.sh.in:595
+#, sh-printf-format
 msgid "The signature verification for %s failed."
 msgstr ""
 
 #: scripts/pacman-key.sh.in:601
+#, sh-printf-format
 msgid "The signature %s is not trusted."
 msgstr ""
 
@@ -862,14 +949,17 @@ msgid "Trust database could not be updated."
 msgstr "База поверљивих не може бити ажурирана."
 
 #: scripts/pacman-key.sh.in:690
+#, sh-printf-format
 msgid "Cannot find the %s binary required for all %s operations."
 msgstr "Не могу да нађем извршни фајл %s неопходан за све %s радње."
 
 #: scripts/pacman-key.sh.in:695
+#, sh-printf-format
 msgid "%s needs to be run as root for this operation."
 msgstr "%s мора бити корени корисник за ову операцију."
 
 #: scripts/pacman-key.sh.in:701
+#, sh-printf-format
 msgid "%s configuration file '%s' not found."
 msgstr "%s фајл поставки „%s“ није нађен."
 
@@ -882,6 +972,7 @@ msgid "Multiple operations specified."
 msgstr "Наведено је више операција."
 
 #: scripts/pacman-key.sh.in:730
+#, sh-printf-format
 msgid "Please run %s with each operation separately."
 msgstr "Покрените %s са сваком операцијом појединачно."
 
@@ -889,11 +980,11 @@ msgstr "Покрените %s са сваком операцијом појед�
 msgid "No targets specified"
 msgstr "Нису одређени циљеви"
 
-#: scripts/repo-add.sh.in:61
+#: scripts/repo-add.sh.in:62
 msgid "Usage: repo-add [options] <path-to-db> <package> ...\\n"
 msgstr ""
 
-#: scripts/repo-add.sh.in:63
+#: scripts/repo-add.sh.in:64
 msgid ""
 "repo-add will update a package database by reading a package file."
 "\\nMultiple packages to add can be specified on the command line.\\n"
@@ -901,21 +992,14 @@ msgstr ""
 "repo-add ће ажурурати ризницу пакета читањем фајла пакета.\\nВишеструки "
 "фајлови се могу додати набрајањем у командној линији.\\n"
 
-#: scripts/repo-add.sh.in:67 scripts/repo-add.sh.in:79
+#: scripts/repo-add.sh.in:68 scripts/repo-add.sh.in:80
 msgid "Options:\\n"
 msgstr "Опције:\\n"
 
-#: scripts/repo-add.sh.in:68
+#: scripts/repo-add.sh.in:69
 msgid ""
 "  -n, --new         only add packages that are not already in the database\\n"
 msgstr "  -n, --new         само пакети који нису већ у бази\\n"
-
-#: scripts/repo-add.sh.in:69
-msgid ""
-"  -R, --remove      remove old package file from disk after updating "
-"database\\n"
-msgstr ""
-"  -R, --remove      уклања стари фајл пакета са диска након ажурирања базе\\n"
 
 #: scripts/repo-add.sh.in:70
 msgid ""
@@ -923,11 +1007,17 @@ msgid ""
 "is already present\\n"
 msgstr ""
 
-#: scripts/repo-add.sh.in:72
+#: scripts/repo-add.sh.in:71
+msgid ""
+"  --include-sigs    include package PGP signatures in the repository "
+"database (if available)\\n"
+msgstr ""
+
+#: scripts/repo-add.sh.in:73
 msgid "Usage: repo-remove [options] <path-to-db> <packagename> ...\\n"
 msgstr ""
 
-#: scripts/repo-add.sh.in:74
+#: scripts/repo-add.sh.in:75
 msgid ""
 "repo-remove will update a package database by removing the package "
 "name\\nspecified on the command line from the given repo database. "
@@ -937,185 +1027,328 @@ msgstr ""
 "командној линији из задате ризнице. Вишеструки\\пакети за уклањање се моги "
 "набројати у командној линији.\\n"
 
-#: scripts/repo-add.sh.in:81
+#: scripts/repo-add.sh.in:82
 msgid "Please move along, there is nothing to see here.\\n"
 msgstr "Продужите, овде нема ничег занимљивог.\\n"
 
-#: scripts/repo-add.sh.in:84
+#: scripts/repo-add.sh.in:85
 msgid "  --nocolor         turn off color in output\\n"
 msgstr "  --nocolor        без обојеног излаза\\n"
 
-#: scripts/repo-add.sh.in:85
+#: scripts/repo-add.sh.in:86
 msgid "  -q, --quiet       minimize output\\n"
 msgstr "  -q, --quiet       смањи доживљај\\n"
 
-#: scripts/repo-add.sh.in:86
+#: scripts/repo-add.sh.in:87
 msgid "  -s, --sign        sign database with GnuPG after update\\n"
 msgstr "  -s, --sign        потпиши базу помоћу ГнуПГ након ажурирања\\n"
 
-#: scripts/repo-add.sh.in:87
+#: scripts/repo-add.sh.in:88
 msgid "  -k, --key <key>   use the specified key to sign the database\\n"
 msgstr "  -k, --key <key>   користи наведени кључ за потписивање базе\\n"
 
-#: scripts/repo-add.sh.in:88
+#: scripts/repo-add.sh.in:89
 msgid "  -v, --verify      verify database's signature before update\\n"
 msgstr "  -v, --verify      овери потпис базе пре ажурирања\\n"
 
-#: scripts/repo-add.sh.in:89
+#: scripts/repo-add.sh.in:90
+msgid ""
+"  -R, --remove      remove old package file from disk after updating "
+"database\\n"
+msgstr ""
+"  -R, --remove      уклања стари фајл пакета са диска након ажурирања базе\\n"
+
+#: scripts/repo-add.sh.in:91
+msgid "  -w, --wait-for-lock  retry to acquire lock file until success\\n"
+msgstr ""
+
+#: scripts/repo-add.sh.in:92
+#, sh-printf-format
 msgid ""
 "\\nSee %s(8) for more details and descriptions of the available options.\\n"
 msgstr "\\nПогледајте %s(8) за више детаља и описе доступних опција.\\n"
 
-#: scripts/repo-add.sh.in:93
+#: scripts/repo-add.sh.in:96
 msgid ""
 "Example:  repo-add /path/to/repo.db.tar.gz pacman-3.0.0-1-i686.pkg.tar.gz\\n"
 msgstr ""
-"Пример:  repo-add /путања/до/ризница.db.tar.gz pacman-3.0.0-1-i686.pkg.tar."
-"gz\\n"
+"Пример:  repo-add /путања/до/ризница.db.tar.gz pacman-3.0.0-1-"
+"i686.pkg.tar.gz\\n"
 
-#: scripts/repo-add.sh.in:95
+#: scripts/repo-add.sh.in:98
 msgid "Example:  repo-remove /path/to/repo.db.tar.gz kernel26\\n"
 msgstr "Example:  repo-remove /путања/до/ризница.db.tar.gz kernel26\\n"
 
-#: scripts/repo-add.sh.in:139
+#: scripts/repo-add.sh.in:142
 msgid "Cannot find the gpg binary! Is GnuPG installed?"
 msgstr "Не могу да нађем извршни фајл gpg. Да ли је ГнуПГ инсталиран?"
 
-#: scripts/repo-add.sh.in:160
+#: scripts/repo-add.sh.in:163
+#, sh-printf-format
 msgid "Signing database '%s'..."
 msgstr "Потписујем базу „%s“..."
 
-#: scripts/repo-add.sh.in:169
+#: scripts/repo-add.sh.in:172
+#, sh-printf-format
 msgid "Created signature file '%s'"
 msgstr "Направљен је фајл потписа „%s“"
 
-#: scripts/repo-add.sh.in:171
+#: scripts/repo-add.sh.in:174
+#, sh-printf-format
 msgid "Failed to sign package database file '%s'"
 msgstr "Неуспело потписивање фајла базе пакета „%s“"
 
-#: scripts/repo-add.sh.in:180
+#: scripts/repo-add.sh.in:183
 msgid "Verifying database signature..."
 msgstr "Оверавам потпис базе..."
 
-#: scripts/repo-add.sh.in:183
+#: scripts/repo-add.sh.in:186
 msgid "No existing signature found, skipping verification."
 msgstr "Потпис не постоји, прескачем оверу."
 
-#: scripts/repo-add.sh.in:188
+#: scripts/repo-add.sh.in:191
 msgid "Database signature file verified."
 msgstr "Фајл потписа базе је оверен."
 
-#: scripts/repo-add.sh.in:190
+#: scripts/repo-add.sh.in:193
 msgid "Database signature was NOT valid!"
 msgstr "Фајл потписа базе НИЈЕ исправан!"
 
-#: scripts/repo-add.sh.in:201
+#: scripts/repo-add.sh.in:204
+#, sh-printf-format
 msgid "'%s' does not have a valid database archive extension."
 msgstr "„%s“ нема исправну екстензију архиве базе."
 
-#: scripts/repo-add.sh.in:238
+#: scripts/repo-add.sh.in:241
+#, sh-printf-format
 msgid "Invalid package file '%s'."
 msgstr "Неисправан фајл пакета „%s“."
 
-#: scripts/repo-add.sh.in:243
+#: scripts/repo-add.sh.in:246
+#, sh-printf-format
 msgid "An entry for '%s' already existed"
 msgstr "Унос за „%s“ је већ постојао"
 
-#: scripts/repo-add.sh.in:253
+#: scripts/repo-add.sh.in:256
+#, sh-printf-format
 msgid "A newer version for '%s' is already present in database"
 msgstr ""
 
-#: scripts/repo-add.sh.in:273
+#: scripts/repo-add.sh.in:276
+#, sh-printf-format
 msgid "Invalid package signature file '%s'."
 msgstr "Неисправан фајл потписа пакета „%s“."
 
-#: scripts/repo-add.sh.in:276
+#: scripts/repo-add.sh.in:279
 msgid "Adding package signature..."
 msgstr "Додајем потпис пакета..."
 
-#: scripts/repo-add.sh.in:283
+#: scripts/repo-add.sh.in:286
 msgid "Computing checksums..."
 msgstr "Рачунам суме за проверу..."
 
-#: scripts/repo-add.sh.in:296 scripts/repo-add.sh.in:335
+#: scripts/repo-add.sh.in:299 scripts/repo-add.sh.in:338
+#, sh-printf-format
 msgid "Creating '%s' db entry..."
 msgstr "Стварам унос базе „%s“..."
 
-#: scripts/repo-add.sh.in:341
+#: scripts/repo-add.sh.in:344 scripts/repo-add.sh.in:370
+#, sh-printf-format
 msgid "Removing old package file '%s'"
 msgstr "Уклањам стари фајл пакета „%s“"
 
-#: scripts/repo-add.sh.in:359
+#: scripts/repo-add.sh.in:363
+#, sh-printf-format
 msgid "Removing existing entry '%s'..."
 msgstr "Уклањам постојећи унос „%s“..."
 
-#: scripts/repo-add.sh.in:404
+#: scripts/repo-add.sh.in:420
+#, fuzzy, sh-printf-format
+msgid "Failed to acquire lockfile: %s. Retrying in 3 seconds."
+msgstr "Грешка при добијању фајла браве: %s."
+
+#: scripts/repo-add.sh.in:428
+#, sh-printf-format
 msgid "Failed to acquire lockfile: %s."
 msgstr "Грешка при добијању фајла браве: %s."
 
-#: scripts/repo-add.sh.in:405
+#: scripts/repo-add.sh.in:429
+#, sh-printf-format
 msgid "Held by process %s"
 msgstr "Задржано процесом %s"
 
-#: scripts/repo-add.sh.in:418
+#: scripts/repo-add.sh.in:443
+#, sh-printf-format
 msgid "Repository file '%s' is not a proper pacman database."
 msgstr "Фајл ризнице „%s“ није исправна пакменова база."
 
-#: scripts/repo-add.sh.in:423
+#: scripts/repo-add.sh.in:448
+#, sh-printf-format
 msgid "Extracting %s to a temporary location..."
 msgstr ""
 
-#: scripts/repo-add.sh.in:431
+#: scripts/repo-add.sh.in:456
+#, sh-printf-format
 msgid "Repository file '%s' was not found."
 msgstr "Није нађен фајл ризнице „%s“."
 
-#: scripts/repo-add.sh.in:438
+#: scripts/repo-add.sh.in:463
+#, sh-printf-format
 msgid "Repository file '%s' could not be created."
 msgstr "Не могу да направим фајл ризнице „%s“."
 
-#: scripts/repo-add.sh.in:450
+#: scripts/repo-add.sh.in:475
+#, sh-printf-format
 msgid "File '%s' not found."
 msgstr "Није пронађен фајл „%s“."
 
-#: scripts/repo-add.sh.in:456
+#: scripts/repo-add.sh.in:481
+#, sh-printf-format
 msgid "'%s' is not a package file, skipping"
 msgstr "„%s“ није фајл пакета; прескачем"
 
-#: scripts/repo-add.sh.in:460
+#: scripts/repo-add.sh.in:485
+#, sh-printf-format
 msgid "Adding package '%s'"
 msgstr "Додајем пакет „%s“"
 
-#: scripts/repo-add.sh.in:467
+#: scripts/repo-add.sh.in:492
+#, sh-printf-format
 msgid "Searching for package '%s'..."
 msgstr "Тражим пакет „%s“..."
 
-#: scripts/repo-add.sh.in:470
+#: scripts/repo-add.sh.in:495
+#, sh-printf-format
 msgid "Package matching '%s' not found."
 msgstr "Нема пакета који се поклапају са „%s“."
 
-#: scripts/repo-add.sh.in:534
+#: scripts/repo-add.sh.in:559
 msgid "No packages remain, creating empty database."
 msgstr "Није преостао ниједан пакет; правим празну базу."
 
-#: scripts/repo-add.sh.in:588
+#: scripts/repo-add.sh.in:613
+#, sh-printf-format
 msgid "Invalid command name '%s' specified."
 msgstr "Наведено је неисправно име наредбе „%s“."
 
-#: scripts/repo-add.sh.in:593
+#: scripts/repo-add.sh.in:618
 msgid "Cannot create temp directory for database building."
 msgstr "Не могу да направим привремену фасциклу за градњу базе."
 
-#: scripts/repo-add.sh.in:704
+#: scripts/repo-add.sh.in:732
 msgid "Package database was not modified due to errors."
 msgstr ""
 
-#: scripts/repo-add.sh.in:709
+#: scripts/repo-add.sh.in:737
+#, sh-printf-format
 msgid "Creating updated database file '%s'"
 msgstr "Стварам ажурни фајл базе „%s“"
 
-#: scripts/repo-add.sh.in:713
+#: scripts/repo-add.sh.in:741
 msgid "No changes made to package database."
 msgstr ""
+
+#: scripts/libmakepkg/executable/ccache.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for compiler cache usage."
+msgstr ""
+
+#: scripts/libmakepkg/executable/checksum.sh.in:38
+#, sh-printf-format
+msgid ""
+"Cannot find the %s binary required for source file checksums operations."
+msgstr ""
+
+#: scripts/libmakepkg/executable/debugedit.sh.in:35
+#, sh-printf-format
+msgid ""
+"Cannot find the %s binary required for including source files in debug "
+"packages."
+msgstr ""
+
+#: scripts/libmakepkg/executable/distcc.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for distributed compilation."
+msgstr ""
+
+#: scripts/libmakepkg/executable/fakeroot.sh.in:33
+#, sh-printf-format
+msgid "Cannot find the %s binary."
+msgstr ""
+
+#: scripts/libmakepkg/executable/gpg.sh.in:36
+#, sh-printf-format
+msgid "Cannot find the %s binary required for signing packages."
+msgstr ""
+
+#: scripts/libmakepkg/executable/gpg.sh.in:43
+#, sh-printf-format
+msgid "Cannot find the %s binary required for verifying source files."
+msgstr ""
+
+#: scripts/libmakepkg/executable/gzip.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for compressing man and info pages."
+msgstr ""
+
+#: scripts/libmakepkg/executable/pacman.sh.in:33
+#, sh-printf-format
+msgid "Cannot find the %s binary required for dependency operations."
+msgstr ""
+
+#: scripts/libmakepkg/executable/strip.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for object file stripping."
+msgstr ""
+
+#: scripts/libmakepkg/executable/sudo.sh.in:33
+#, sh-printf-format
+msgid "Cannot find the %s binary. Will use %s to acquire root privileges."
+msgstr ""
+
+#: scripts/libmakepkg/executable/vcs.sh.in:45
+#: scripts/libmakepkg/util/source.sh.in:161
+#, sh-printf-format
+msgid "Unknown download protocol: %s"
+msgstr "Непознат протокол за преузимање: %s"
+
+#: scripts/libmakepkg/executable/vcs.sh.in:62
+#, sh-printf-format
+msgid "Cannot find the %s binary needed to check VCS source requirements."
+msgstr ""
+
+#: scripts/libmakepkg/executable/vcs.sh.in:90
+#, fuzzy, sh-printf-format
+msgid "Cannot find the %s package needed to handle %s sources."
+msgstr "Не могу да нађем извршни фајл %s неопходан за све %s радње."
+
+#: scripts/libmakepkg/integrity/generate_checksum.sh.in:61
+#, sh-printf-format
+msgid "Failure while calculating %s %s checksum"
+msgstr ""
+
+#: scripts/libmakepkg/integrity/generate_checksum.sh.in:92
+msgid "Generating checksums for source files..."
+msgstr "Стварам суму за проверу изворних фајлова..."
+
+#: scripts/libmakepkg/integrity/generate_checksum.sh.in:104
+#, sh-printf-format
+msgid "Invalid integrity algorithm '%s' specified."
+msgstr "Наведен је неисправан алгоритам провере исправности „%s“."
+
+#: scripts/libmakepkg/integrity/generate_signature.sh.in:41
+#, sh-printf-format
+msgid "Created signature file %s."
+msgstr "Направих фајл потписа %s."
+
+#: scripts/libmakepkg/integrity/generate_signature.sh.in:43
+#, sh-printf-format
+msgid "Failed to sign package file %s."
+msgstr ""
+
+#: scripts/libmakepkg/integrity/generate_signature.sh.in:58
+msgid "Signing package(s)..."
+msgstr "Потписујем пакет(е)..."
 
 #: scripts/libmakepkg/integrity.sh.in:34
 msgid "Skipping all source file integrity checks."
@@ -1129,31 +1362,8 @@ msgstr "Прескачем оверу контролних сума изворн
 msgid "Skipping verification of source file PGP signatures."
 msgstr "Прескачем оверу ПГП потписа изворних фајлова."
 
-#: scripts/libmakepkg/integrity/generate_checksum.sh.in:61
-msgid "Failure while calculating %s %s checksum"
-msgstr ""
-
-#: scripts/libmakepkg/integrity/generate_checksum.sh.in:92
-msgid "Generating checksums for source files..."
-msgstr "Стварам суму за проверу изворних фајлова..."
-
-#: scripts/libmakepkg/integrity/generate_checksum.sh.in:104
-msgid "Invalid integrity algorithm '%s' specified."
-msgstr "Наведен је неисправан алгоритам провере исправности „%s“."
-
-#: scripts/libmakepkg/integrity/generate_signature.sh.in:41
-msgid "Created signature file %s."
-msgstr "Направих фајл потписа %s."
-
-#: scripts/libmakepkg/integrity/generate_signature.sh.in:43
-msgid "Failed to sign package file %s."
-msgstr ""
-
-#: scripts/libmakepkg/integrity/generate_signature.sh.in:58
-msgid "Signing package(s)..."
-msgstr "Потписујем пакет(е)..."
-
 #: scripts/libmakepkg/integrity/verify_checksum.sh.in:66
+#, sh-printf-format
 msgid "Integrity checks are missing for: %s"
 msgstr "Недостају провере интегритета за: %s"
 
@@ -1174,6 +1384,7 @@ msgid "Passed"
 msgstr "Успех"
 
 #: scripts/libmakepkg/integrity/verify_checksum.sh.in:114
+#, sh-printf-format
 msgid "Validating %s files with %s..."
 msgstr "Оверавам %s фајлова путем %s..."
 
@@ -1182,11 +1393,13 @@ msgid "One or more files did not pass the validity check!"
 msgstr "Један или више фајлова нису прошли проверу исправности!"
 
 #: scripts/libmakepkg/integrity/verify_checksum.sh.in:125
+#, sh-printf-format
 msgid "Integrity checks (%s) differ in size from the source array."
 msgstr ""
 "Провере интегритета (%s) се разликују величином у односу на одељак извора."
 
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:39
+#, sh-printf-format
 msgid "Verifying source file signatures with %s..."
 msgstr "Оверавам исправност потписа изворних фајлова помоћу %s..."
 
@@ -1195,6 +1408,7 @@ msgid "unknown public key"
 msgstr "непознат јавни кључ"
 
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:79
+#, sh-printf-format
 msgid "public key %s has been revoked"
 msgstr "јавни кључ %s је опозван"
 
@@ -1207,6 +1421,7 @@ msgid "error during signature verification"
 msgstr "грешка током провере потписа"
 
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:91
+#, sh-printf-format
 msgid "the public key %s is not trusted"
 msgstr "јавни кључ %s није поверљив"
 
@@ -1217,6 +1432,7 @@ msgstr "неисправан јавни кључ"
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:100
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:104
 #: scripts/libmakepkg/util/message.sh.in:79
+#, sh-printf-format
 msgid "WARNING:"
 msgstr "УПОЗОРЕЊЕ:"
 
@@ -1249,9 +1465,32 @@ msgstr "ПОТПИС НИЈЕ ПРОНАЂЕН"
 msgid "SOURCE FILE NOT FOUND"
 msgstr "ИЗВОРНИ ФАЈЛ НИЈЕ ПРОНАЂЕН"
 
+#: scripts/libmakepkg/lint_config/buildenv.sh.in:43
+#: scripts/libmakepkg/lint_config/buildenv.sh.in:54
+#: scripts/libmakepkg/lint_pkgbuild/options.sh.in:52
+#, sh-printf-format
+msgid "%s array contains unknown option '%s'"
+msgstr "Област %s садржи непознату опцију „%s“"
+
+#: scripts/libmakepkg/lint_config/ext.sh.in:38
+#, sh-printf-format
+msgid "%s does not contain a valid package suffix (needs '%s', got '%s')"
+msgstr ""
+
+#: scripts/libmakepkg/lint_config/nproc.sh.in:36
+#: scripts/libmakepkg/lint_config/source_date_epoch.sh.in:33
+#, fuzzy, sh-printf-format
+msgid "%s contains invalid characters: %s"
+msgstr "%s садржи недозвољене знакове: „%s“"
+
+#: scripts/libmakepkg/lint_config/packager.sh.in:35
+msgid "PACKAGER should have the format 'Example Name <email@address.invalid>'"
+msgstr ""
+
 #: scripts/libmakepkg/lint_config/paths.sh.in:39
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:47
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:57
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:53
+#, sh-printf-format
 msgid "%s contains invalid characters: '%s'"
 msgstr "%s садржи недозвољене знакове: „%s“"
 
@@ -1260,28 +1499,24 @@ msgstr "%s садржи недозвољене знакове: „%s“"
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:52
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:72
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:82
+#, sh-printf-format
 msgid "%s should be an array"
 msgstr "%s би требало да буде област"
 
 #: scripts/libmakepkg/lint_config/variable.sh.in:57
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:62
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:90
+#, sh-printf-format
 msgid "%s should not be an array"
 msgstr "%s не би смело да буде област"
 
-#: scripts/libmakepkg/lint_config/variable.sh.in:66
-msgid "PACKAGER should have the format 'Example Name <email@address.invalid>'"
-msgstr ""
-
-#: scripts/libmakepkg/lint_package.sh.in:41
-msgid "Checking for packaging issues..."
-msgstr "Проверавам проблеме у пакирању."
-
 #: scripts/libmakepkg/lint_package/build_references.sh.in:36
+#, sh-printf-format
 msgid "Package contains reference to %s"
 msgstr "Пакет садржи референцу ка %s"
 
 #: scripts/libmakepkg/lint_package/dotfiles.sh.in:38
+#, sh-printf-format
 msgid "Dotfile found in package root '%s'"
 msgstr "Нађен је фајл са тачком у корену пакета „%s“"
 
@@ -1290,80 +1525,116 @@ msgid "Package contains paths with newlines"
 msgstr "Пакет саджи путање са новим редовима"
 
 #: scripts/libmakepkg/lint_package/missing_backup.sh.in:35
+#, sh-printf-format
 msgid "%s entry file not in package : %s"
 msgstr "%s фајл уноса није у пакету : %s"
 
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:40
-msgid "Can not use '%s' architecture with other architectures"
-msgstr ""
+#: scripts/libmakepkg/lint_package.sh.in:41
+msgid "Checking for packaging issues..."
+msgstr "Проверавам проблеме у пакирању."
 
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:54
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:62
-msgid "%s is not available for the '%s' architecture."
-msgstr "%s није доступан за архитектуру „%s“."
-
-#: scripts/libmakepkg/lint_pkgbuild/backup.sh.in:45
-msgid "%s entry should not contain leading slash : %s"
-msgstr "унос %s не сме да садржи уводну косу црту: %s"
-
-#: scripts/libmakepkg/lint_pkgbuild/epoch.sh.in:36
-msgid "%s must be an integer, not %s."
-msgstr "%s мора бити цео број, не %s."
-
-#: scripts/libmakepkg/lint_pkgbuild/options.sh.in:52
-msgid "%s array contains unknown option '%s'"
-msgstr "Област %s садржи непознату опцију „%s“"
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:38
-msgid "Conflicting %s and %s functions in %s"
-msgstr ""
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:41
-msgid "Missing %s function in %s"
-msgstr "Функција %s недостаје у %s"
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:46
-msgid "Extra %s function for split package '%s'"
-msgstr ""
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:51
-msgid "Missing %s function for split package '%s'"
-msgstr "Недостаје функција %s за дељење пакета „%s“"
-
-#: scripts/libmakepkg/lint_pkgbuild/pkglist.sh.in:38
-msgid "Requested package %s is not provided in %s"
-msgstr "Захтевани пакет %s није достављен са %s"
-
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:38
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:37
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:65
 #: scripts/libmakepkg/lint_pkgbuild/pkgrel.sh.in:35
 #: scripts/libmakepkg/lint_pkgbuild/pkgver.sh.in:36
+#, sh-printf-format
 msgid "%s is not allowed to be empty."
 msgstr "%s не сме бити празно."
 
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:43
+#, sh-printf-format
+msgid "Can not use '%s' architecture with other architectures"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:49
+#, sh-printf-format
+msgid "%s is not available for the '%s' architecture."
+msgstr "%s није доступан за архитектуру „%s“."
+
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:65
+#, sh-printf-format
+msgid "%s can not contain duplicate values"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:43
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:65
+#, sh-printf-format
+msgid ""
+"Can not provide architecture specific variables for the '%s' architecture: %s"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:53
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:74
+#, sh-printf-format
+msgid "%s can not be architecture specific: %s"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/backup.sh.in:45
+#, sh-printf-format
+msgid "%s entry should not contain leading slash : %s"
+msgstr "унос %s не сме да садржи уводну косу црту: %s"
+
+#: scripts/libmakepkg/lint_pkgbuild/epoch.sh.in:36
+#, sh-printf-format
+msgid "%s must be an integer, not %s."
+msgstr "%s мора бити цео број, не %s."
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:38
+#, sh-printf-format
+msgid "Conflicting %s and %s functions in %s"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:41
+#, sh-printf-format
+msgid "Missing %s function in %s"
+msgstr "Функција %s недостаје у %s"
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:46
+#, sh-printf-format
+msgid "Extra %s function for split package '%s'"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:51
+#, sh-printf-format
+msgid "Missing %s function for split package '%s'"
+msgstr "Недостаје функција %s за дељење пакета „%s“"
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function_variable.sh.in:46
+#: scripts/libmakepkg/lint_pkgbuild/package_function_variable.sh.in:55
+#, sh-printf-format
+msgid "%s can not be set inside a package function"
+msgstr ""
+
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:41
+#, sh-printf-format
 msgid "%s is not allowed to start with a hyphen."
 msgstr "%s не сме почињати цртицом."
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:45
+#, sh-printf-format
 msgid "%s is not allowed to start with a dot."
 msgstr "Није дозвољено да %s започиње тачком."
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:49
 #: scripts/libmakepkg/lint_pkgbuild/pkgver.sh.in:46
+#, sh-printf-format
 msgid "%s may only contain ascii characters."
 msgstr ""
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgrel.sh.in:40
+#, sh-printf-format
 msgid "%s must be of the form 'integer[.integer]', not %s."
 msgstr ""
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgver.sh.in:41
+#, sh-printf-format
 msgid ""
 "%s is not allowed to contain colons, forward slashes, hyphens or whitespace."
 msgstr "%s не може садржати усправне и косе црте, цртице и празна места."
 
 #: scripts/libmakepkg/lint_pkgbuild/provides.sh.in:46
+#, sh-printf-format
 msgid "%s array cannot contain comparison (< or >) operators."
 msgstr "Област %s не сме да садржи оператере поређења (< или >)."
 
@@ -1372,12 +1643,162 @@ msgid "Sparse arrays are not allowed for source"
 msgstr "Проређени низови нису дозвољени за извор"
 
 #: scripts/libmakepkg/lint_pkgbuild/util.sh.in:34
+#, sh-printf-format
 msgid "%s file (%s) does not exist or is not a regular file."
 msgstr "Фајл %s (%s) не постоји или није уобичајен фајл."
 
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:108
+#, sh-printf-format
 msgid "%s does not allow empty values."
 msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/xdata.sh.in:44
+#, sh-printf-format
+msgid "%s array: Entries must contain exactly one equal sign, e.g. key=value."
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/xdata.sh.in:48
+#, sh-printf-format
+msgid "%s array: The key part of an entry must not be empty."
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/xdata.sh.in:52
+#, sh-printf-format
+msgid "%s array: The key 'pkgtype' is reserved for makepkg."
+msgstr ""
+
+#: scripts/libmakepkg/source/bzr.sh.in:52
+#, sh-printf-format
+msgid "Branching %s..."
+msgstr "Гранам %s."
+
+#: scripts/libmakepkg/source/bzr.sh.in:54
+#, sh-printf-format
+msgid "Failure while branching %s"
+msgstr "Неуспешно гранање %s"
+
+#: scripts/libmakepkg/source/bzr.sh.in:59
+#, sh-printf-format
+msgid "Pulling %s..."
+msgstr "Шаљем %s..."
+
+#: scripts/libmakepkg/source/bzr.sh.in:63
+#, sh-printf-format
+msgid "Failure while pulling %s"
+msgstr "Неуспешно довлачење %s"
+
+#: scripts/libmakepkg/source/bzr.sh.in:85
+#: scripts/libmakepkg/source/fossil.sh.in:114
+#: scripts/libmakepkg/source/git.sh.in:126
+#: scripts/libmakepkg/source/hg.sh.in:93 scripts/libmakepkg/source/svn.sh.in:62
+#, sh-printf-format
+msgid "Unrecognized reference: %s"
+msgstr "Непозната референцa: %s"
+
+#: scripts/libmakepkg/source/bzr.sh.in:94
+#: scripts/libmakepkg/source/fossil.sh.in:82
+#: scripts/libmakepkg/source/git.sh.in:95 scripts/libmakepkg/source/hg.sh.in:79
+#: scripts/libmakepkg/source/svn.sh.in:95
+#, sh-printf-format
+msgid "Creating working copy of %s %s repo..."
+msgstr "Стварам радну копију %s %s ризнице..."
+
+#: scripts/libmakepkg/source/bzr.sh.in:100
+#: scripts/libmakepkg/source/git.sh.in:103
+#: scripts/libmakepkg/source/hg.sh.in:102
+#, sh-printf-format
+msgid "Failure while updating working copy of %s %s repo"
+msgstr "Неуспешно освежавање радне копије %s %s ризнице"
+
+#: scripts/libmakepkg/source/bzr.sh.in:105
+#: scripts/libmakepkg/source/fossil.sh.in:100
+#: scripts/libmakepkg/source/fossil.sh.in:121
+#: scripts/libmakepkg/source/git.sh.in:109
+#: scripts/libmakepkg/source/git.sh.in:143
+#: scripts/libmakepkg/source/hg.sh.in:107
+#, sh-printf-format
+msgid "Failure while creating working copy of %s %s repo"
+msgstr "Неуспешно стварање радне копије %s %s ризнице"
+
+#: scripts/libmakepkg/source/file.sh.in:36
+#: scripts/libmakepkg/source/local.sh.in:36
+#, sh-printf-format
+msgid "Found %s"
+msgstr "Нађох %s"
+
+#: scripts/libmakepkg/source/file.sh.in:55
+#, sh-printf-format
+msgid "Downloading %s..."
+msgstr "Преузимам %s..."
+
+#: scripts/libmakepkg/source/file.sh.in:74
+#, sh-printf-format
+msgid "Failure while downloading %s"
+msgstr "Грешка при преузимању %s"
+
+#: scripts/libmakepkg/source/file.sh.in:136
+#, sh-printf-format
+msgid "Extracting %s with %s"
+msgstr "Распакујем %s помоћу %s"
+
+#: scripts/libmakepkg/source/file.sh.in:144
+#, sh-printf-format
+msgid "Failed to extract %s"
+msgstr "Неуспело распакивање %s"
+
+#: scripts/libmakepkg/source/file.sh.in:159
+msgid "NOT FOUND"
+msgstr "НИЈЕ НАЂЕН"
+
+#: scripts/libmakepkg/source/fossil.sh.in:50
+#: scripts/libmakepkg/source/git.sh.in:53 scripts/libmakepkg/source/hg.sh.in:49
+#: scripts/libmakepkg/source/svn.sh.in:69
+#, sh-printf-format
+msgid "Cloning %s %s repo..."
+msgstr "Клонирам %s %s ризницу..."
+
+#: scripts/libmakepkg/source/fossil.sh.in:52
+#: scripts/libmakepkg/source/git.sh.in:55 scripts/libmakepkg/source/hg.sh.in:51
+#: scripts/libmakepkg/source/svn.sh.in:72
+#, sh-printf-format
+msgid "Failure while downloading %s %s repo"
+msgstr "Неуспешно преузимање %s %s ризнице"
+
+#: scripts/libmakepkg/source/fossil.sh.in:59
+#: scripts/libmakepkg/source/git.sh.in:67
+#, sh-printf-format
+msgid "%s is not a clone of %s"
+msgstr "%s није клон %s"
+
+#: scripts/libmakepkg/source/fossil.sh.in:63
+#: scripts/libmakepkg/source/git.sh.in:71 scripts/libmakepkg/source/hg.sh.in:56
+#: scripts/libmakepkg/source/svn.sh.in:77
+#, sh-printf-format
+msgid "Updating %s %s repo..."
+msgstr "Освежавам %s %s ризницу..."
+
+#: scripts/libmakepkg/source/fossil.sh.in:66
+#: scripts/libmakepkg/source/git.sh.in:74 scripts/libmakepkg/source/hg.sh.in:60
+#: scripts/libmakepkg/source/svn.sh.in:81
+#, sh-printf-format
+msgid "Failure while updating %s %s repo"
+msgstr "Грешка при ажурирању %s %s ризнице"
+
+#: scripts/libmakepkg/source/fossil.sh.in:89
+#: scripts/libmakepkg/source/fossil.sh.in:95
+#, sh-printf-format
+msgid "%s is not a checkout of %s repo %s"
+msgstr ""
+
+#: scripts/libmakepkg/source/git.sh.in:135
+#, sh-printf-format
+msgid "Failure while checking out version %s, the git tag has been forged"
+msgstr "Неуспех при провери верзије %s, гит ознака је скована"
+
+#: scripts/libmakepkg/source/local.sh.in:39
+#, sh-printf-format
+msgid "%s was not found in the build directory and is not a URL."
+msgstr "%s не постоји у фасцикли градње, а није УРЛ."
 
 #: scripts/libmakepkg/source.sh.in:40
 msgid "Retrieving sources..."
@@ -1387,189 +1808,108 @@ msgstr "Добављам изворе..."
 msgid "Extracting sources..."
 msgstr "Распакујем изворе..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:52
-msgid "Branching %s..."
-msgstr "Гранам %s."
+#: scripts/libmakepkg/tidy/10-docs.sh.in:34
+msgid "Removing doc files..."
+msgstr "Уклањам фајлове документације..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:54
-msgid "Failure while branching %s"
-msgstr "Неуспешно гранање %s"
+#: scripts/libmakepkg/tidy/10-libtool.sh.in:35
+#, sh-printf-format
+msgid "Removing %s files..."
+msgstr "Уклањам %s фајлове..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:59
-msgid "Pulling %s..."
-msgstr "Шаљем %s..."
+#: scripts/libmakepkg/tidy/10-staticlibs.sh.in:35
+msgid "Removing static library files..."
+msgstr "Уклањам фајлове статичних библиотека..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:63
-msgid "Failure while pulling %s"
-msgstr "Неуспешно довлачење %s"
+#: scripts/libmakepkg/tidy/50-purge.sh.in:35
+msgid "Purging unwanted files..."
+msgstr "Уклањам нежељене фајлове..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:85
-#: scripts/libmakepkg/source/git.sh.in:124
-#: scripts/libmakepkg/source/hg.sh.in:93 scripts/libmakepkg/source/svn.sh.in:62
-msgid "Unrecognized reference: %s"
-msgstr "Непозната референцa: %s"
+#: scripts/libmakepkg/tidy/50-strip.sh.in:186
+msgid "Stripping unneeded symbols from binaries and libraries..."
+msgstr "Уклањам непотребне симболе из бинарних фајлова и библиотека..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:94
-#: scripts/libmakepkg/source/git.sh.in:93 scripts/libmakepkg/source/hg.sh.in:79
-#: scripts/libmakepkg/source/svn.sh.in:95
-msgid "Creating working copy of %s %s repo..."
-msgstr "Стварам радну копију %s %s ризнице..."
+#: scripts/libmakepkg/tidy/50-strip.sh.in:240
+msgid "Copying source files needed for debug symbols..."
+msgstr ""
 
-#: scripts/libmakepkg/source/bzr.sh.in:100
-#: scripts/libmakepkg/source/git.sh.in:101
-#: scripts/libmakepkg/source/hg.sh.in:102
-msgid "Failure while updating working copy of %s %s repo"
-msgstr "Неуспешно освежавање радне копије %s %s ризнице"
+#: scripts/libmakepkg/tidy/50-zipman.sh.in:35
+msgid "Compressing man and info pages..."
+msgstr "Компресујем ман и инфо странице..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:105
-#: scripts/libmakepkg/source/git.sh.in:107
-#: scripts/libmakepkg/source/git.sh.in:141
-#: scripts/libmakepkg/source/hg.sh.in:107
-msgid "Failure while creating working copy of %s %s repo"
-msgstr "Неуспешно стварање радне копије %s %s ризнице"
-
-#: scripts/libmakepkg/source/file.sh.in:36
-#: scripts/libmakepkg/source/local.sh.in:36
-msgid "Found %s"
-msgstr "Нађох %s"
-
-#: scripts/libmakepkg/source/file.sh.in:55
-msgid "Downloading %s..."
-msgstr "Преузимам %s..."
-
-#: scripts/libmakepkg/source/file.sh.in:74
-msgid "Failure while downloading %s"
-msgstr "Грешка при преузимању %s"
-
-#: scripts/libmakepkg/source/file.sh.in:136
-msgid "Extracting %s with %s"
-msgstr "Распакујем %s помоћу %s"
-
-#: scripts/libmakepkg/source/file.sh.in:144
-msgid "Failed to extract %s"
-msgstr "Неуспело распакивање %s"
-
-#: scripts/libmakepkg/source/file.sh.in:159
-msgid "NOT FOUND"
-msgstr "НИЈЕ НАЂЕН"
-
-#: scripts/libmakepkg/source/git.sh.in:51 scripts/libmakepkg/source/hg.sh.in:49
-#: scripts/libmakepkg/source/svn.sh.in:69
-msgid "Cloning %s %s repo..."
-msgstr "Клонирам %s %s ризницу..."
-
-#: scripts/libmakepkg/source/git.sh.in:53 scripts/libmakepkg/source/hg.sh.in:51
-#: scripts/libmakepkg/source/svn.sh.in:72
-msgid "Failure while downloading %s %s repo"
-msgstr "Неуспешно преузимање %s %s ризнице"
-
-#: scripts/libmakepkg/source/git.sh.in:65
-msgid "%s is not a clone of %s"
-msgstr "%s није клон %s"
-
-#: scripts/libmakepkg/source/git.sh.in:69 scripts/libmakepkg/source/hg.sh.in:56
-#: scripts/libmakepkg/source/svn.sh.in:77
-msgid "Updating %s %s repo..."
-msgstr "Освежавам %s %s ризницу..."
-
-#: scripts/libmakepkg/source/git.sh.in:72 scripts/libmakepkg/source/hg.sh.in:60
-#: scripts/libmakepkg/source/svn.sh.in:81
-msgid "Failure while updating %s %s repo"
-msgstr "Грешка при ажурирању %s %s ризнице"
-
-#: scripts/libmakepkg/source/git.sh.in:133
-msgid "Failure while checking out version %s, the git tag has been forged"
-msgstr "Неуспех при провери верзије %s, гит ознака је скована"
-
-#: scripts/libmakepkg/source/local.sh.in:39
-msgid "%s was not found in the build directory and is not a URL."
-msgstr "%s не постоји у фасцикли градње, а није УРЛ."
+#: scripts/libmakepkg/tidy/90-emptydirs.sh.in:35
+msgid "Removing empty directories..."
+msgstr "Уклањам празне фасцикле..."
 
 #: scripts/libmakepkg/tidy.sh.in:41
 msgid "Tidying install..."
 msgstr "Поспремам инсталацију..."
 
-#: scripts/libmakepkg/tidy/docs.sh.in:34
-msgid "Removing doc files..."
-msgstr "Уклањам фајлове документације..."
-
-#: scripts/libmakepkg/tidy/emptydirs.sh.in:35
-msgid "Removing empty directories..."
-msgstr "Уклањам празне фасцикле..."
-
-#: scripts/libmakepkg/tidy/libtool.sh.in:35
-msgid "Removing %s files..."
-msgstr "Уклањам %s фајлове..."
-
-#: scripts/libmakepkg/tidy/purge.sh.in:35
-msgid "Purging unwanted files..."
-msgstr "Уклањам нежељене фајлове..."
-
-#: scripts/libmakepkg/tidy/staticlibs.sh.in:35
-msgid "Removing static library files..."
-msgstr "Уклањам фајлове статичних библиотека..."
-
-#: scripts/libmakepkg/tidy/strip.sh.in:145
-msgid "Stripping unneeded symbols from binaries and libraries..."
-msgstr "Уклањам непотребне симболе из бинарних фајлова и библиотека..."
-
-#: scripts/libmakepkg/tidy/strip.sh.in:195
-msgid "Copying source files needed for debug symbols..."
-msgstr ""
-
-#: scripts/libmakepkg/tidy/zipman.sh.in:35
-msgid "Compressing man and info pages..."
-msgstr "Компресујем ман и инфо странице..."
-
 #: scripts/libmakepkg/util/compress.sh.in:38
+#, sh-printf-format
 msgid "'%s' is not a valid archive extension."
 msgstr "„%s“ није исправна екстензија архиве."
 
+#: scripts/libmakepkg/util/config.sh.in:46
+#, fuzzy, sh-printf-format
+msgid "%s not found."
+msgstr "Није пронађен фајл „%s“."
+
 #: scripts/libmakepkg/util/message.sh.in:84
+#, sh-printf-format
 msgid "ERROR:"
 msgstr "ГРЕШКА:"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:81
+#, sh-printf-format
 msgid "option '%s' is ambiguous; possibilities:"
 msgstr "опција „%s“ је двосмислена; могућности:"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:112
+#, sh-printf-format
 msgid "option requires an argument"
 msgstr "опција захтева аргумент"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:134
 #: scripts/libmakepkg/util/parseopts.sh.in:187
+#, sh-printf-format
 msgid "invalid option"
 msgstr "неисправна опција"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:148
+#, sh-printf-format
 msgid "option '%s' does not allow an argument"
 msgstr "опција „%s“ не дозвољава аргументе"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:166
+#, sh-printf-format
 msgid "option '%s' requires an argument"
 msgstr "опција „%s“ захтева аргумент"
 
-#: scripts/libmakepkg/util/source.sh.in:161
-msgid "Unknown download protocol: %s"
-msgstr "Непознат протокол за преузимање: %s"
-
 #: scripts/libmakepkg/util/source.sh.in:170
+#, sh-printf-format
 msgid "The download program %s is not installed."
 msgstr "Програм за преузимање %s није инсталиран."
 
 #: scripts/libmakepkg/util/util.sh.in:80
+#, sh-printf-format
 msgid "Failed to change to directory %s"
 msgstr "Неуспела промена фасцикле %s"
 
 #: scripts/libmakepkg/util/util.sh.in:93
+#, sh-printf-format
 msgid "Failed to create the directory $%s (%s)."
 msgstr "Неуспело прављење фасцикле $%s (%s)."
 
 #: scripts/libmakepkg/util/util.sh.in:96
+#, sh-printf-format
 msgid "You do not have write permission for the directory $%s (%s)."
 msgstr "Немате дозволе писања у фасциклу $%s (%s)."
 
 #: scripts/libmakepkg/util/util.sh.in:109
+#, sh-printf-format
 msgid "Failed to source %s"
 msgstr "­Неуспело добављање извора %s"
+
+#~ msgid "Requested package %s is not provided in %s"
+#~ msgstr "Захтевани пакет %s није достављен са %s"

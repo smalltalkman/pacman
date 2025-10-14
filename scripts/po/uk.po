@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2024-07-14 19:10+1000\n"
+"POT-Creation-Date: 2025-10-14 22:09+1000\n"
 "PO-Revision-Date: 2011-08-08 22:35+0000\n"
 "Last-Translator: Данило Коростіль <ted.korostiled@gmail.com>, 2016\n"
 "Language-Team: Ukrainian (http://app.transifex.com/toofishes/archlinux-"
@@ -26,42 +26,50 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: scripts/makepkg.sh.in:141
+#: scripts/makepkg.sh.in:137
 msgid "Cleaning up..."
 msgstr "Прибираємось..."
 
-#: scripts/makepkg.sh.in:188
+#: scripts/makepkg.sh.in:184
+#, sh-printf-format
 msgid "Entering %s environment..."
 msgstr "Входимо в середовище %s..."
 
-#: scripts/makepkg.sh.in:195 scripts/makepkg.sh.in:421
+#: scripts/makepkg.sh.in:191 scripts/makepkg.sh.in:417
+#, sh-printf-format
 msgid "Starting %s()..."
 msgstr "Починаємо %s()..."
 
-#: scripts/makepkg.sh.in:201
+#: scripts/makepkg.sh.in:197
+#, sh-printf-format
 msgid "pkgver() generated an invalid version: %s"
 msgstr "функція pkgver() згенерувала неприпустиму версію: %s"
 
-#: scripts/makepkg.sh.in:211
+#: scripts/makepkg.sh.in:207
+#, sh-printf-format
 msgid "Failed to update %s from %s to %s"
 msgstr "Не вдалося оновити %s з %s до %s"
 
-#: scripts/makepkg.sh.in:217
+#: scripts/makepkg.sh.in:213
+#, sh-printf-format
 msgid "Updated version: %s"
 msgstr "Оновлено до версії: %s"
 
-#: scripts/makepkg.sh.in:219
+#: scripts/makepkg.sh.in:215
+#, sh-printf-format
 msgid "%s is not writeable -- pkgver will not be updated"
 msgstr "%s не має прав запису -- pkgver не буде оновлено"
 
-#: scripts/makepkg.sh.in:227
+#: scripts/makepkg.sh.in:223
+#, sh-printf-format
 msgid "Unable to find source file %s."
 msgstr "Неможливо знайти файл початкового коду %s."
 
-#: scripts/makepkg.sh.in:228 scripts/makepkg.sh.in:370
-#: scripts/makepkg.sh.in:582 scripts/makepkg.sh.in:1080
-#: scripts/makepkg.sh.in:1085 scripts/makepkg.sh.in:1090
-#: scripts/makepkg.sh.in:1096 scripts/makepkg.sh.in:1106
+#: scripts/makepkg.sh.in:224 scripts/makepkg.sh.in:366
+#: scripts/makepkg.sh.in:578 scripts/makepkg.sh.in:1077
+#: scripts/makepkg.sh.in:1082 scripts/makepkg.sh.in:1087
+#: scripts/makepkg.sh.in:1093 scripts/makepkg.sh.in:1103
+#: scripts/libmakepkg/executable/vcs.sh.in:46
 #: scripts/libmakepkg/integrity/generate_checksum.sh.in:62
 #: scripts/libmakepkg/source/bzr.sh.in:55
 #: scripts/libmakepkg/source/bzr.sh.in:86
@@ -69,242 +77,272 @@ msgstr "Неможливо знайти файл початкового коду
 #: scripts/libmakepkg/source/bzr.sh.in:106
 #: scripts/libmakepkg/source/file.sh.in:75
 #: scripts/libmakepkg/source/file.sh.in:145
-#: scripts/libmakepkg/source/git.sh.in:54
-#: scripts/libmakepkg/source/git.sh.in:66
-#: scripts/libmakepkg/source/git.sh.in:102
-#: scripts/libmakepkg/source/git.sh.in:108
-#: scripts/libmakepkg/source/git.sh.in:125
-#: scripts/libmakepkg/source/git.sh.in:134
-#: scripts/libmakepkg/source/git.sh.in:142
+#: scripts/libmakepkg/source/fossil.sh.in:53
+#: scripts/libmakepkg/source/fossil.sh.in:60
+#: scripts/libmakepkg/source/fossil.sh.in:90
+#: scripts/libmakepkg/source/fossil.sh.in:96
+#: scripts/libmakepkg/source/fossil.sh.in:101
+#: scripts/libmakepkg/source/fossil.sh.in:115
+#: scripts/libmakepkg/source/fossil.sh.in:122
+#: scripts/libmakepkg/source/git.sh.in:56
+#: scripts/libmakepkg/source/git.sh.in:68
+#: scripts/libmakepkg/source/git.sh.in:104
+#: scripts/libmakepkg/source/git.sh.in:110
+#: scripts/libmakepkg/source/git.sh.in:127
+#: scripts/libmakepkg/source/git.sh.in:136
+#: scripts/libmakepkg/source/git.sh.in:144
 #: scripts/libmakepkg/source/hg.sh.in:52 scripts/libmakepkg/source/hg.sh.in:94
 #: scripts/libmakepkg/source/hg.sh.in:103
 #: scripts/libmakepkg/source/hg.sh.in:108
 #: scripts/libmakepkg/source/svn.sh.in:63
 #: scripts/libmakepkg/source/svn.sh.in:73
+#: scripts/libmakepkg/util/config.sh.in:47
 #: scripts/libmakepkg/util/source.sh.in:162
 #: scripts/libmakepkg/util/source.sh.in:171
 #: scripts/libmakepkg/util/util.sh.in:81
 msgid "Aborting..."
 msgstr "Припинення..."
 
-#: scripts/makepkg.sh.in:253
+#: scripts/makepkg.sh.in:249
 msgid "Pacman is currently in use, please wait..."
 msgstr "Pacman наразі використовується, будь ласка зачекайте..."
 
-#: scripts/makepkg.sh.in:274
+#: scripts/makepkg.sh.in:270
+#, sh-printf-format
 msgid "'%s' returned a fatal error (%i): %s"
 msgstr "\"%s\" повернув фатальну помилку (%i): %s"
 
-#: scripts/makepkg.sh.in:293
+#: scripts/makepkg.sh.in:289
 msgid "Installing missing dependencies..."
 msgstr "Встановлюємо відсутні залежності..."
 
-#: scripts/makepkg.sh.in:296
+#: scripts/makepkg.sh.in:292
+#, sh-printf-format
 msgid "'%s' failed to install missing dependencies."
 msgstr "\"%s\" не зміг встановити відсутні залежності."
 
-#: scripts/makepkg.sh.in:331
+#: scripts/makepkg.sh.in:327
 msgid "Missing dependencies:"
 msgstr "Відсутні залежності:"
 
-#: scripts/makepkg.sh.in:347 scripts/makepkg.sh.in:361
+#: scripts/makepkg.sh.in:343 scripts/makepkg.sh.in:357
 msgid "Failed to remove installed dependencies."
 msgstr "Не вдалося вилучити встановлені залежності."
 
-#: scripts/makepkg.sh.in:369
+#: scripts/makepkg.sh.in:365
+#, sh-printf-format
 msgid "A failure occurred in %s()."
 msgstr "Стався збій у %s()."
 
-#: scripts/makepkg.sh.in:482
+#: scripts/makepkg.sh.in:478
+#, sh-printf-format
 msgid "Invalid value for %s: %s"
 msgstr "Неприпустиме значення для %s: \"%s\""
 
-#: scripts/makepkg.sh.in:581
+#: scripts/makepkg.sh.in:577
+#, sh-printf-format
 msgid "Missing %s directory."
 msgstr "Відсутня тека %s."
 
-#: scripts/makepkg.sh.in:587
+#: scripts/makepkg.sh.in:583
+#, sh-printf-format
 msgid "Creating package \"%s\"..."
 msgstr "Створюємо пакунок \"%s\" ..."
 
-#: scripts/makepkg.sh.in:590 scripts/makepkg.sh.in:592
-#: scripts/makepkg.sh.in:680
+#: scripts/makepkg.sh.in:586 scripts/makepkg.sh.in:588
+#: scripts/makepkg.sh.in:676
+#, sh-printf-format
 msgid "Generating %s file..."
 msgstr "Створюємо файл %s..."
 
-#: scripts/makepkg.sh.in:600
+#: scripts/makepkg.sh.in:596
+#, sh-printf-format
 msgid "Adding %s file..."
 msgstr "Додаємо файл %s..."
 
-#: scripts/makepkg.sh.in:602
+#: scripts/makepkg.sh.in:598
+#, sh-printf-format
 msgid "Failed to add %s file to package."
 msgstr "Не вдалося додати файл %s до пакунку."
 
-#: scripts/makepkg.sh.in:620
+#: scripts/makepkg.sh.in:616
 msgid "Generating .MTREE file..."
 msgstr "Генеруємо файл .MTREE ..."
 
-#: scripts/makepkg.sh.in:626
+#: scripts/makepkg.sh.in:622
 msgid "Compressing package..."
 msgstr "Стискаємо пакунок..."
 
-#: scripts/makepkg.sh.in:635
+#: scripts/makepkg.sh.in:631
 msgid "Failed to create package file."
 msgstr "Не вдалося створити файл пакунка."
 
-#: scripts/makepkg.sh.in:671
+#: scripts/makepkg.sh.in:667
 msgid "Creating source package..."
 msgstr "Створюємо пакунок файлів початкового коду..."
 
-#: scripts/makepkg.sh.in:677 scripts/makepkg.sh.in:690
+#: scripts/makepkg.sh.in:673 scripts/makepkg.sh.in:686
+#, sh-printf-format
 msgid "Adding %s..."
 msgstr "Долучаємо %s..."
 
-#: scripts/makepkg.sh.in:711
+#: scripts/makepkg.sh.in:707
+#, sh-printf-format
 msgid "Adding %s file (%s)..."
 msgstr "Долучаємо файл %s (%s)..."
 
-#: scripts/makepkg.sh.in:732
+#: scripts/makepkg.sh.in:728
 msgid "Compressing source package..."
 msgstr "Стискаємо пакунок початкового коду..."
 
-#: scripts/makepkg.sh.in:742
+#: scripts/makepkg.sh.in:739
 msgid "Failed to create source package file."
 msgstr "Не вдалося створити файл пакунка початкового коду."
 
-#: scripts/makepkg.sh.in:757
+#: scripts/makepkg.sh.in:754
+#, sh-printf-format
 msgid "Installing package %s with %s..."
 msgstr "Встановлюємо файл пакунка %s за допомогою %s..."
 
-#: scripts/makepkg.sh.in:759
+#: scripts/makepkg.sh.in:756
+#, sh-printf-format
 msgid "Installing %s package group with %s..."
 msgstr "Встановлюємо групу пакунків %s за допомогою %s..."
 
-#: scripts/makepkg.sh.in:777
+#: scripts/makepkg.sh.in:774
 msgid "Failed to install built package(s)."
 msgstr "Не вдалося встановити зібрані пакунки."
 
-#: scripts/makepkg.sh.in:790
+#: scripts/makepkg.sh.in:787
 msgid "A package has already been built, installing existing package..."
 msgstr "Пакунок уже був зібраний, встановлюємо існуючий пакунок..."
 
-#: scripts/makepkg.sh.in:794
+#: scripts/makepkg.sh.in:791
+#, sh-printf-format
 msgid "A package has already been built. (use %s to overwrite)"
 msgstr "Пакунок вже зібраний. (використайте %s для перезапису)"
 
-#: scripts/makepkg.sh.in:813
+#: scripts/makepkg.sh.in:810
 msgid ""
 "The package group has already been built, installing existing packages..."
 msgstr "Група пакунків уже була зібрана, встановлюємо існуючі пакунки..."
 
-#: scripts/makepkg.sh.in:817
+#: scripts/makepkg.sh.in:814
+#, sh-printf-format
 msgid "The package group has already been built. (use %s to overwrite)"
 msgstr "Група пакунків вже зібрана (використайте %s для перезапису)"
 
-#: scripts/makepkg.sh.in:822
+#: scripts/makepkg.sh.in:819
+#, sh-printf-format
 msgid "Part of the package group has already been built. (use %s to overwrite)"
 msgstr "Частину групи пакунків вже зібрано. (використайте %s для перезапису)"
 
-#: scripts/makepkg.sh.in:876
+#: scripts/makepkg.sh.in:873
 msgid "Make packages compatible for use with pacman"
 msgstr "Збирає пакунки узгоджені для використання з pacman"
 
-#: scripts/makepkg.sh.in:878 scripts/pacman-db-upgrade.sh.in:41
+#: scripts/makepkg.sh.in:875 scripts/pacman-db-upgrade.sh.in:41
+#, sh-printf-format
 msgid "Usage: %s [options]"
 msgstr "Використання: %s [параметри]"
 
-#: scripts/makepkg.sh.in:880 scripts/pacman-key.sh.in:82
+#: scripts/makepkg.sh.in:877 scripts/pacman-key.sh.in:82
 msgid "Options:"
 msgstr "Параметри:"
 
-#: scripts/makepkg.sh.in:881
+#: scripts/makepkg.sh.in:878
+#, sh-printf-format
 msgid "  -A, --ignorearch Ignore incomplete %s field in %s"
 msgstr "  -A, --ignorearch Ігнорувати незаповнене поле %s у %s"
 
-#: scripts/makepkg.sh.in:882
+#: scripts/makepkg.sh.in:879
 msgid "  -c, --clean      Clean up work files after build"
 msgstr "  -c, --clean      Очистити робочі файли після побудови"
 
-#: scripts/makepkg.sh.in:883
+#: scripts/makepkg.sh.in:880
+#, sh-printf-format
 msgid "  -C, --cleanbuild Remove %s dir before building the package"
 msgstr "  -C, --cleanbuild Вилучати теку %s перед побудовою пакунка"
 
-#: scripts/makepkg.sh.in:884
+#: scripts/makepkg.sh.in:881
 msgid "  -d, --nodeps     Skip all dependency checks"
 msgstr "  -d, --nodeps     Пропускати всі перевірки залежностей"
 
-#: scripts/makepkg.sh.in:885
+#: scripts/makepkg.sh.in:882
 msgid "  -D, --dir <dir>  Change to directory <dir> before processing PKGBUILD"
 msgstr ""
 
-#: scripts/makepkg.sh.in:886
+#: scripts/makepkg.sh.in:883
+#, sh-printf-format
 msgid "  -e, --noextract  Do not extract source files (use existing %s dir)"
 msgstr ""
 "  -e, --noextract  Не витягувати файли початкового коду (використати існуючу "
 "теку %s)"
 
-#: scripts/makepkg.sh.in:887
+#: scripts/makepkg.sh.in:884
 msgid "  -f, --force      Overwrite existing package"
 msgstr "  -f, --force      Перезаписати існуючий пакунок"
 
-#: scripts/makepkg.sh.in:888
+#: scripts/makepkg.sh.in:885
 msgid "  -g, --geninteg   Generate integrity checks for source files"
 msgstr ""
 "  -g, --geninteg   Згенерувати дані перевірки цілісності для файлів "
 "початкового коду"
 
-#: scripts/makepkg.sh.in:889
+#: scripts/makepkg.sh.in:886
 msgid "  -h, --help       Show this help message and exit"
 msgstr "  -h, --help       Показати це повідомлення і вийти"
 
-#: scripts/makepkg.sh.in:890
+#: scripts/makepkg.sh.in:887
 msgid "  -i, --install    Install package after successful build"
 msgstr "  -i, --install    Встановити пакунок після успішної побудови"
 
-#: scripts/makepkg.sh.in:891
+#: scripts/makepkg.sh.in:888
 msgid "  -L, --log        Log package build process"
 msgstr "  -L, --log        Занотувати процес побудови пакунка"
 
-#: scripts/makepkg.sh.in:892
+#: scripts/makepkg.sh.in:889
 msgid "  -m, --nocolor    Disable colorized output messages"
 msgstr "  -m, --nocolor    Вимкнути кольорові повідомлення"
 
-#: scripts/makepkg.sh.in:893
+#: scripts/makepkg.sh.in:890
 msgid "  -o, --nobuild    Download and extract files only"
 msgstr "  -o, --nobuild    Тільки завантажити і витягти файли"
 
-#: scripts/makepkg.sh.in:894
+#: scripts/makepkg.sh.in:891
+#, sh-printf-format
 msgid "  -p <file>        Use an alternate build script (instead of '%s')"
 msgstr ""
 "  -p <файл>        Використати альтернативний скрипт побудови (замість "
 "\"%s\")"
 
-#: scripts/makepkg.sh.in:895
+#: scripts/makepkg.sh.in:892
 msgid ""
 "  -r, --rmdeps     Remove installed dependencies after a successful build"
 msgstr ""
 "  -r, --rmdeps     Вилучити встановлені залежності після успішної побудови"
 
-#: scripts/makepkg.sh.in:896
+#: scripts/makepkg.sh.in:893
 msgid "  -R, --repackage  Repackage contents of the package without rebuilding"
 msgstr "  -R, --repackage  Перепакувати вміст пакунка без побудови"
 
-#: scripts/makepkg.sh.in:897
+#: scripts/makepkg.sh.in:894
+#, sh-printf-format
 msgid "  -s, --syncdeps   Install missing dependencies with %s"
 msgstr "  -s, --syncdeps   Встановити пропущені залежності за допомогою %s"
 
-#: scripts/makepkg.sh.in:898
+#: scripts/makepkg.sh.in:895
 msgid ""
 "  -S, --source     Generate a source-only tarball without downloaded sources"
 msgstr ""
 "  -S, --source     Згенерувати архів tar без завантажених файлів (тільки з "
 "файлами початкового коду)"
 
-#: scripts/makepkg.sh.in:899
+#: scripts/makepkg.sh.in:896
 msgid "  -V, --version    Show version information and exit"
 msgstr "  -V, --version    Показати версію програми і вийти"
 
-#: scripts/makepkg.sh.in:900
+#: scripts/makepkg.sh.in:897
 msgid ""
 "  --allsource      Generate a source-only tarball including downloaded "
 "sources"
@@ -312,71 +350,77 @@ msgstr ""
 "  --allsource      Генерувати пакунок початкового коду, включно із "
 "завантаженими файлами"
 
-#: scripts/makepkg.sh.in:901
+#: scripts/makepkg.sh.in:898
+#, sh-printf-format
 msgid "  --check          Run the %s function in the %s"
 msgstr "  --check          Запустити функцію %s в %s"
 
-#: scripts/makepkg.sh.in:902
+#: scripts/makepkg.sh.in:899
+#, sh-printf-format
 msgid "  --config <file>  Use an alternate config file (instead of '%s')"
 msgstr "  --config <файл>  Використати інший файл налаштувань (замість \"%s\")"
 
-#: scripts/makepkg.sh.in:903
+#: scripts/makepkg.sh.in:900
 msgid "  --holdver        Do not update VCS sources"
 msgstr "  --holdver        Не оновлювати файли з VCS"
 
-#: scripts/makepkg.sh.in:904
+#: scripts/makepkg.sh.in:901
+#, sh-printf-format
 msgid ""
 "  --key <key>      Specify a key to use for %s signing instead of the default"
 msgstr ""
 "  --key <ключ>     Визначити ключ для використання для підпису %s замість "
 "типового ключа"
 
-#: scripts/makepkg.sh.in:905
+#: scripts/makepkg.sh.in:902
 msgid "  --noarchive      Do not create package archive"
 msgstr "  --noarchive      Не створювати архів пакунка"
 
-#: scripts/makepkg.sh.in:906
+#: scripts/makepkg.sh.in:903
+#, sh-printf-format
 msgid "  --nocheck        Do not run the %s function in the %s"
 msgstr "  --nocheck        Не запускати функцію %s в %s"
 
-#: scripts/makepkg.sh.in:907
+#: scripts/makepkg.sh.in:904
+#, sh-printf-format
 msgid "  --noprepare      Do not run the %s function in the %s"
 msgstr "  --noprepare      Не запускати функцію %s в %s"
 
-#: scripts/makepkg.sh.in:908
+#: scripts/makepkg.sh.in:905
 msgid "  --nosign         Do not create a signature for the package"
 msgstr "  --nosign         Не створювати підпис для пакунка"
 
-#: scripts/makepkg.sh.in:909
+#: scripts/makepkg.sh.in:906
 msgid "  --packagelist    Only list package filepaths that would be produced"
 msgstr ""
 "  --packagelist    Тільки вивести список зі шляхів до файлів пакунків, що "
 "будуть створені"
 
-#: scripts/makepkg.sh.in:910
+#: scripts/makepkg.sh.in:907
 msgid "  --printsrcinfo   Print the generated SRCINFO and exit"
 msgstr "  --printsrcinfo   Показати згенерований SRCINFO і вийти"
 
-#: scripts/makepkg.sh.in:911
+#: scripts/makepkg.sh.in:908
+#, sh-printf-format
 msgid "  --sign           Sign the resulting package with %s"
 msgstr "  --sign           Підписати вихідний пакунок за допомогою %s"
 
-#: scripts/makepkg.sh.in:912
+#: scripts/makepkg.sh.in:909
 msgid "  --skipchecksums  Do not verify checksums of the source files"
 msgstr ""
 "  --skipchecksums  Не перевіряти контрольні суми файлів початкового коду"
 
-#: scripts/makepkg.sh.in:913
+#: scripts/makepkg.sh.in:910
 msgid ""
 "  --skipinteg      Do not perform any verification checks on source files"
 msgstr ""
 "  --skipinteg      Не проводити жодної перевірки файлів початкового коду"
 
-#: scripts/makepkg.sh.in:914
+#: scripts/makepkg.sh.in:911
 msgid "  --skippgpcheck   Do not verify source files with PGP signatures"
 msgstr "  --skippgpcheck   Не перевіряти файли початкового коду підписами PGP"
 
-#: scripts/makepkg.sh.in:915
+#: scripts/makepkg.sh.in:912
 msgid ""
 "  --verifysource   Download source files (if needed) and perform integrity "
 "checks"
@@ -384,36 +428,38 @@ msgstr ""
 "  --verifysource   Завантажити файли початкового коду (якщо потрібно) і "
 "провести перевірку цілісності"
 
-#: scripts/makepkg.sh.in:917
+#: scripts/makepkg.sh.in:914
+#, sh-printf-format
 msgid "These options can be passed to %s:"
 msgstr "Ці параметри можуть бути передані до %s:"
 
-#: scripts/makepkg.sh.in:919
+#: scripts/makepkg.sh.in:916
 msgid "  --asdeps         Install packages as non-explicitly installed"
 msgstr "  --asdeps         Встановити пакунки як неявно встановлені"
 
-#: scripts/makepkg.sh.in:920
+#: scripts/makepkg.sh.in:917
 msgid ""
 "  --needed         Do not reinstall the targets that are already up to date"
 msgstr "  --needed         Не перевстановлювати вже оновлені пакунки"
 
-#: scripts/makepkg.sh.in:921
+#: scripts/makepkg.sh.in:918
 msgid ""
 "  --noconfirm      Do not ask for confirmation when resolving dependencies"
 msgstr ""
 "  --noconfirm      Не питати підтвердження під час розв'язання залежностей"
 
-#: scripts/makepkg.sh.in:922
+#: scripts/makepkg.sh.in:919
 msgid "  --noprogressbar  Do not show a progress bar when downloading files"
 msgstr ""
 "  --noprogressbar  Не показувати смужку прогресу під час завантаження файлів"
 
-#: scripts/makepkg.sh.in:924
+#: scripts/makepkg.sh.in:921
+#, sh-printf-format
 msgid "If %s is not specified, %s will look for '%s'"
 msgstr "Якщо %s не вказано, %s буде шукати \"%s\""
 
-#: scripts/makepkg.sh.in:933 scripts/pacman-db-upgrade.sh.in:57
-#: scripts/pacman-key.sh.in:99 scripts/repo-add.sh.in:104
+#: scripts/makepkg.sh.in:930 scripts/pacman-db-upgrade.sh.in:57
+#: scripts/pacman-key.sh.in:99 scripts/repo-add.sh.in:107
 msgid ""
 "This is free software; see the source for copying conditions.\\nThere is NO "
 "WARRANTY, to the extent permitted by law.\\n"
@@ -422,11 +468,13 @@ msgstr ""
 "розповсюдження.\\nНадається БЕЗ БУДЬ-ЯКОЇ ГАРАНТІЇ в межах, дозволених "
 "законом.\\n"
 
-#: scripts/makepkg.sh.in:1042 scripts/repo-add.sh.in:602
+#: scripts/makepkg.sh.in:1039 scripts/repo-add.sh.in:627
+#, sh-printf-format
 msgid "%s signal caught. Exiting..."
 msgstr "Отримано сигнал %s. Виходимо..."
 
-#: scripts/makepkg.sh.in:1112
+#: scripts/makepkg.sh.in:1109
+#, sh-printf-format
 msgid ""
 "Running %s as root is not allowed as it can cause permanent,\\ncatastrophic "
 "damage to your system."
@@ -434,85 +482,97 @@ msgstr ""
 "Запуск %s з привілеями суперкористувача недозволений, так як він може "
 "спричинити невідворотну,\\nкатастрофічну шкоду вашій системі."
 
-#: scripts/makepkg.sh.in:1118
+#: scripts/makepkg.sh.in:1115
+#, sh-printf-format
 msgid "Do not use the %s option. This option is only for internal use by %s."
 msgstr ""
 "Не використовуйте опцію %s. Ця опція доступна тільки для внутрішнього "
 "використання в %s."
 
-#: scripts/makepkg.sh.in:1133
+#: scripts/makepkg.sh.in:1130
+#, sh-printf-format
 msgid "%s does not exist."
 msgstr "%s не існує."
 
-#: scripts/makepkg.sh.in:1138
+#: scripts/makepkg.sh.in:1135
+#, sh-printf-format
 msgid "%s contains %s characters and cannot be sourced."
 msgstr "%s містить символи %s і не може бути оброблений."
 
-#: scripts/makepkg.sh.in:1143
+#: scripts/makepkg.sh.in:1140
+#, sh-printf-format
 msgid "%s must be in the current working directory."
 msgstr "%s повинен бути в поточній робочій теці."
 
-#: scripts/makepkg.sh.in:1239 scripts/makepkg.sh.in:1254
+#: scripts/makepkg.sh.in:1236 scripts/makepkg.sh.in:1251
+#, sh-printf-format
 msgid "Leaving %s environment."
 msgstr "Залишаємо середовище %s."
 
-#: scripts/makepkg.sh.in:1266
+#: scripts/makepkg.sh.in:1263
+#, sh-printf-format
 msgid "The key %s does not exist in your keyring."
 msgstr "Ключ %s відсутній у вашій в'язці ключів."
 
-#: scripts/makepkg.sh.in:1268 scripts/repo-add.sh.in:148
+#: scripts/makepkg.sh.in:1265 scripts/repo-add.sh.in:151
 msgid "There is no key in your keyring."
 msgstr "Немає жодного ключа у вашій в'язці ключів."
 
-#: scripts/makepkg.sh.in:1274
+#: scripts/makepkg.sh.in:1271
+#, sh-printf-format
 msgid "Making package: %s"
 msgstr "Створюємо пакунок: %s"
 
-#: scripts/makepkg.sh.in:1280
+#: scripts/makepkg.sh.in:1277
+#, sh-printf-format
 msgid "A source package has already been built. (use %s to overwrite)"
 msgstr "Пакунок початкового коду вже зібраний (використайте %s для перезапису)"
 
-#: scripts/makepkg.sh.in:1300
+#: scripts/makepkg.sh.in:1297
 msgid "Signing package..."
 msgstr "Підписуємо пакунок..."
 
-#: scripts/makepkg.sh.in:1304
+#: scripts/makepkg.sh.in:1301
+#, sh-printf-format
 msgid "Source package created: %s"
 msgstr "Пакунок початкового коду створено: %s"
 
-#: scripts/makepkg.sh.in:1310
+#: scripts/makepkg.sh.in:1307
 msgid "Skipping dependency checks."
 msgstr "Пропускаємо перевірки залежностей."
 
-#: scripts/makepkg.sh.in:1318
+#: scripts/makepkg.sh.in:1315
 msgid "Checking runtime dependencies..."
 msgstr "Перевіряємо залежності для запуску..."
 
-#: scripts/makepkg.sh.in:1325
+#: scripts/makepkg.sh.in:1323
 msgid "Checking buildtime dependencies..."
 msgstr "Перевіряємо залежності для створення пакунка..."
 
-#: scripts/makepkg.sh.in:1337
+#: scripts/makepkg.sh.in:1336
 msgid "Could not resolve all dependencies."
 msgstr "Неможливо розв'язати усі залежності."
 
-#: scripts/makepkg.sh.in:1348
+#: scripts/makepkg.sh.in:1347
+#, sh-printf-format
 msgid "Using existing %s tree"
 msgstr "Використовуємо існуюче дерево %s"
 
-#: scripts/makepkg.sh.in:1355 scripts/makepkg.sh.in:1386
+#: scripts/makepkg.sh.in:1354 scripts/makepkg.sh.in:1385
+#, sh-printf-format
 msgid "Removing existing %s directory..."
 msgstr "Видаляємо існуючу теку %s..."
 
-#: scripts/makepkg.sh.in:1381
+#: scripts/makepkg.sh.in:1380
 msgid "Sources are ready."
 msgstr "Файли початкового коду готові."
 
-#: scripts/makepkg.sh.in:1408
+#: scripts/makepkg.sh.in:1407
 msgid "Package directory is ready."
 msgstr "Тека пакунка готова."
 
-#: scripts/makepkg.sh.in:1412
+#: scripts/makepkg.sh.in:1411
+#, sh-printf-format
 msgid "Finished making: %s"
 msgstr "Закінчено створення: %s"
 
@@ -550,11 +610,13 @@ msgstr "  --config <файл>      використати альтернатив
 msgid "  --nocolor            disable colorized output messages"
 msgstr "  --nocolor            вимкнути кольорові повідомлення"
 
-#: scripts/pacman-db-upgrade.sh.in:122 scripts/repo-add.sh.in:396
+#: scripts/pacman-db-upgrade.sh.in:122 scripts/repo-add.sh.in:409
+#, sh-printf-format
 msgid "%s does not exist or is not a directory."
 msgstr "%s не існує, або не є текою."
 
 #: scripts/pacman-db-upgrade.sh.in:126
+#, sh-printf-format
 msgid "%s is not a pacman database directory."
 msgstr "%s не є текою бази даних pacman."
 
@@ -579,12 +641,14 @@ msgid "Pre-4.2 database format detected - upgrading..."
 msgstr "Виявлено формат бази даних версії меншої за 4.2 - оновлення..."
 
 #: scripts/pacman-db-upgrade.sh.in:185
+#, sh-printf-format
 msgid "symlink '%s' points outside pacman root, manual repair required"
 msgstr ""
 "символьне посилання \"%s\" провадить поза кореневу теку pacman, потрібне "
 "ручне втручання"
 
 #: scripts/pacman-key.sh.in:58
+#, sh-printf-format
 msgid "Usage: %s [options] operation [targets]"
 msgstr "Використання: %s [параметри] операція [цілі]"
 
@@ -676,6 +740,7 @@ msgstr ""
 "ідентифікатором"
 
 #: scripts/pacman-key.sh.in:77
+#, sh-printf-format
 msgid ""
 "  --populate                Reload the default keys from the (given) "
 "keyrings\\n                            in '%s'"
@@ -694,6 +759,7 @@ msgid "  --verbose                 Show extra information"
 msgstr "  --verbose                 Показувати надлишкову інформацію"
 
 #: scripts/pacman-key.sh.in:83
+#, sh-printf-format
 msgid ""
 "  --config <file>           Use an alternate config file (instead "
 "of\\n                            '%s')"
@@ -702,6 +768,7 @@ msgstr ""
 "(замість\\n                            \"%s\")"
 
 #: scripts/pacman-key.sh.in:85
+#, sh-printf-format
 msgid ""
 "  --gpgdir <dir>            Set an alternate directory for GnuPG "
 "(instead\\n                            of '%s')"
@@ -710,6 +777,7 @@ msgstr ""
 "(замість\\n                            \"%s\")"
 
 #: scripts/pacman-key.sh.in:87
+#, sh-printf-format
 msgid ""
 "  --populate-from <dir>     Set an alternate directory for --populate "
 "(instead\\n                            of '%s')"
@@ -740,6 +808,7 @@ msgid "Generating pacman master key. This may take some time."
 msgstr "Генерую головний ключ pacman. Це може зайняти деякий час."
 
 #: scripts/pacman-key.sh.in:187
+#, sh-printf-format
 msgid "The key identified by %s could not be found locally."
 msgstr "Не вдалося локально знайти ключ, з ідентифікатором %s."
 
@@ -753,10 +822,12 @@ msgid "flags"
 msgstr "flags"
 
 #: scripts/pacman-key.sh.in:264
+#, sh-printf-format
 msgid "You do not have sufficient permissions to read the %s keyring."
 msgstr "У Вас немає достатніх прав для читання в'язки ключів %s."
 
 #: scripts/pacman-key.sh.in:265
+#, sh-printf-format
 msgid "Use '%s' to correct the keyring permissions."
 msgstr "Використайте \"%s\" для виправлення прав доступу до в'язки ключів."
 
@@ -769,18 +840,22 @@ msgid "There is no secret key available to sign with."
 msgstr "Немає секретного ключа для підпису."
 
 #: scripts/pacman-key.sh.in:277
+#, sh-printf-format
 msgid "Use '%s' to generate a default secret key."
 msgstr "Використайте \"%s\" для створення типового секретного ключа."
 
 #: scripts/pacman-key.sh.in:295
+#, sh-printf-format
 msgid "No keyring files exist in %s."
 msgstr "Жодного файлу в'язки ключів не існує в %s."
 
 #: scripts/pacman-key.sh.in:302
+#, sh-printf-format
 msgid "The keyring file %s does not exist."
 msgstr "Файл в'язки ключів %s не існує."
 
 #: scripts/pacman-key.sh.in:317
+#, sh-printf-format
 msgid "Appending keys from %s.gpg..."
 msgstr "Додаємо ключі з %s.gpg..."
 
@@ -797,10 +872,12 @@ msgid "Disabling revoked keys in keyring..."
 msgstr "Відключаємо відкликані ключі у в'язці..."
 
 #: scripts/pacman-key.sh.in:372
+#, sh-printf-format
 msgid "Disabling key %s..."
 msgstr "Відключаємо ключ %s..."
 
 #: scripts/pacman-key.sh.in:378
+#, sh-printf-format
 msgid "Disabled %s key."
 msgid_plural "Disabled %s keys."
 msgstr[0] ""
@@ -817,6 +894,7 @@ msgid "A specified key could not be removed from the keyring."
 msgstr "Вказаний ключ неможливо вилучити з в'язки ключів."
 
 #: scripts/pacman-key.sh.in:403
+#, sh-printf-format
 msgid "The key identified by %s could not be edited."
 msgstr "Ключ з ідентифікатором %s неможливо відредагувати."
 
@@ -829,10 +907,12 @@ msgid "The fingerprint of a specified key could not be determined."
 msgstr "Відбиток зазначеного ключа неможливо визначити."
 
 #: scripts/pacman-key.sh.in:436 scripts/pacman-key.sh.in:455
+#, sh-printf-format
 msgid "%s could not be imported."
 msgstr "Не вдалося імпортувати %s."
 
 #: scripts/pacman-key.sh.in:440 scripts/pacman-key.sh.in:459
+#, sh-printf-format
 msgid "File %s does not exist and could not be imported."
 msgstr "Файл %s не існує, тож імпортувати його не вдалося."
 
@@ -845,14 +925,17 @@ msgid "A specified signature could not be listed."
 msgstr "Зазначений підпис неможливо показати."
 
 #: scripts/pacman-key.sh.in:491
+#, sh-printf-format
 msgid "Locally signing key %s..."
 msgstr "Локально підписуємо ключ %s..."
 
 #: scripts/pacman-key.sh.in:496
+#, sh-printf-format
 msgid "%s could not be locally signed."
 msgstr "%s неможливо локально підписати."
 
 #: scripts/pacman-key.sh.in:506
+#, sh-printf-format
 msgid "Locally signed %s key."
 msgid_plural "Locally signed %s keys."
 msgstr[0] ""
@@ -871,18 +954,22 @@ msgid "Remote key not fetched correctly from keyserver."
 msgstr "Віддалений ключ неможливо коректно отримати з сервера ключів."
 
 #: scripts/pacman-key.sh.in:566
+#, sh-printf-format
 msgid "Could not update key: %s"
 msgstr "Неможливо оновити ключ: %s"
 
-#: scripts/pacman-key.sh.in:587 scripts/repo-add.sh.in:268
+#: scripts/pacman-key.sh.in:587 scripts/repo-add.sh.in:271
+#, sh-printf-format
 msgid "Cannot use armored signatures for packages: %s"
 msgstr "Неможливо використати вживлені підписи для пакунків: %s"
 
 #: scripts/pacman-key.sh.in:595
+#, sh-printf-format
 msgid "The signature verification for %s failed."
 msgstr ""
 
 #: scripts/pacman-key.sh.in:601
+#, sh-printf-format
 msgid "The signature %s is not trusted."
 msgstr ""
 
@@ -895,14 +982,17 @@ msgid "Trust database could not be updated."
 msgstr "Базу даних довіри неможливо оновити."
 
 #: scripts/pacman-key.sh.in:690
+#, sh-printf-format
 msgid "Cannot find the %s binary required for all %s operations."
 msgstr "Не можу знайти виконавчий файл %s, який потрібен для всіх операцій %s."
 
 #: scripts/pacman-key.sh.in:695
+#, sh-printf-format
 msgid "%s needs to be run as root for this operation."
 msgstr "%s повинен мати права суперкористувача для цієї операції."
 
 #: scripts/pacman-key.sh.in:701
+#, sh-printf-format
 msgid "%s configuration file '%s' not found."
 msgstr "Файл налаштувань %s \"%s\" не знайдено."
 
@@ -915,6 +1005,7 @@ msgid "Multiple operations specified."
 msgstr "Вказано кілька операцій."
 
 #: scripts/pacman-key.sh.in:730
+#, sh-printf-format
 msgid "Please run %s with each operation separately."
 msgstr "Будь ласка, запустіть %s з кожною операцією окремо."
 
@@ -922,11 +1013,11 @@ msgstr "Будь ласка, запустіть %s з кожною операц�
 msgid "No targets specified"
 msgstr "Не вказано цілі"
 
-#: scripts/repo-add.sh.in:61
+#: scripts/repo-add.sh.in:62
 msgid "Usage: repo-add [options] <path-to-db> <package> ...\\n"
 msgstr "Використання: repo-add [параметри] <шлях-до-бд> <пакунок> ...\\n"
 
-#: scripts/repo-add.sh.in:63
+#: scripts/repo-add.sh.in:64
 msgid ""
 "repo-add will update a package database by reading a package file."
 "\\nMultiple packages to add can be specified on the command line.\\n"
@@ -934,22 +1025,14 @@ msgstr ""
 "repo-add оновить базу даних пакунків читаючи файл пакунку.\\nМожна додати "
 "кілька пакунків в одному командному рядку.\\n"
 
-#: scripts/repo-add.sh.in:67 scripts/repo-add.sh.in:79
+#: scripts/repo-add.sh.in:68 scripts/repo-add.sh.in:80
 msgid "Options:\\n"
 msgstr "Параметри:\\n"
 
-#: scripts/repo-add.sh.in:68
+#: scripts/repo-add.sh.in:69
 msgid ""
 "  -n, --new         only add packages that are not already in the database\\n"
 msgstr "  -n, --new         додати тільки пакунки, яких ще немає в базі\\n"
-
-#: scripts/repo-add.sh.in:69
-msgid ""
-"  -R, --remove      remove old package file from disk after updating "
-"database\\n"
-msgstr ""
-"  -R, --remove      вилучити старі файли пакунків з диску після оновлення "
-"бази даних\\n"
 
 #: scripts/repo-add.sh.in:70
 msgid ""
@@ -959,12 +1042,18 @@ msgstr ""
 "  -p, --prevent-downgrade  не додавати пакунок до бази даних якщо вже "
 "присутня новіша версія\\n"
 
-#: scripts/repo-add.sh.in:72
+#: scripts/repo-add.sh.in:71
+msgid ""
+"  --include-sigs    include package PGP signatures in the repository "
+"database (if available)\\n"
+msgstr ""
+
+#: scripts/repo-add.sh.in:73
 msgid "Usage: repo-remove [options] <path-to-db> <packagename> ...\\n"
 msgstr ""
 "Використання: repo-remove [параметри] <шлях-до-бд> <ім'я_пакунка> ...\\n"
 
-#: scripts/repo-add.sh.in:74
+#: scripts/repo-add.sh.in:75
 msgid ""
 "repo-remove will update a package database by removing the package "
 "name\\nspecified on the command line from the given repo database. "
@@ -974,187 +1063,331 @@ msgstr ""
 "\\nвказаного в командному рядку, з бази даних сховища пакунків. \\nМожна "
 "вказати кілька пакунків в одному командному рядку.\\n"
 
-#: scripts/repo-add.sh.in:81
+#: scripts/repo-add.sh.in:82
 msgid "Please move along, there is nothing to see here.\\n"
 msgstr "Проходьте повз, тут нема на що дивитись.\\n"
 
-#: scripts/repo-add.sh.in:84
+#: scripts/repo-add.sh.in:85
 msgid "  --nocolor         turn off color in output\\n"
 msgstr "  --nocolor         вимкнути кольорові повідомлення\\n"
 
-#: scripts/repo-add.sh.in:85
+#: scripts/repo-add.sh.in:86
 msgid "  -q, --quiet       minimize output\\n"
 msgstr "  -q, --quiet       зменшити обсяг вихідної інформації\\n"
 
-#: scripts/repo-add.sh.in:86
+#: scripts/repo-add.sh.in:87
 msgid "  -s, --sign        sign database with GnuPG after update\\n"
 msgstr ""
 "  -s, --sign        підписати базу даних за допомогою GnuPG після "
 "оновлення\\n"
 
-#: scripts/repo-add.sh.in:87
+#: scripts/repo-add.sh.in:88
 msgid "  -k, --key <key>   use the specified key to sign the database\\n"
 msgstr ""
 "  -k, --key <ключ>  використати вказаний ключ для підпису бази даних\\n"
 
-#: scripts/repo-add.sh.in:88
+#: scripts/repo-add.sh.in:89
 msgid "  -v, --verify      verify database's signature before update\\n"
 msgstr "  -v, --verify      перевірити підпис бази даних перед оновленням\\n"
 
-#: scripts/repo-add.sh.in:89
+#: scripts/repo-add.sh.in:90
+msgid ""
+"  -R, --remove      remove old package file from disk after updating "
+"database\\n"
+msgstr ""
+"  -R, --remove      вилучити старі файли пакунків з диску після оновлення "
+"бази даних\\n"
+
+#: scripts/repo-add.sh.in:91
+msgid "  -w, --wait-for-lock  retry to acquire lock file until success\\n"
+msgstr ""
+
+#: scripts/repo-add.sh.in:92
+#, sh-printf-format
 msgid ""
 "\\nSee %s(8) for more details and descriptions of the available options.\\n"
 msgstr "\\nДивіться %s(8) щодо деталей і описів доступних параметрів.\\n"
 
-#: scripts/repo-add.sh.in:93
+#: scripts/repo-add.sh.in:96
 msgid ""
 "Example:  repo-add /path/to/repo.db.tar.gz pacman-3.0.0-1-i686.pkg.tar.gz\\n"
 msgstr ""
 "Приклад:  repo-add /path/to/repo.db.tar.gz pacman-3.0.0-1-i686.pkg.tar.gz\\n"
 
-#: scripts/repo-add.sh.in:95
+#: scripts/repo-add.sh.in:98
 msgid "Example:  repo-remove /path/to/repo.db.tar.gz kernel26\\n"
 msgstr "Приклад:  repo-remove /path/to/repo.db.tar.gz kernel26\\n"
 
-#: scripts/repo-add.sh.in:139
+#: scripts/repo-add.sh.in:142
 msgid "Cannot find the gpg binary! Is GnuPG installed?"
 msgstr "Не можу знайти виконавчий файл gpg! Чи GnuPG встановлено?"
 
-#: scripts/repo-add.sh.in:160
+#: scripts/repo-add.sh.in:163
+#, sh-printf-format
 msgid "Signing database '%s'..."
 msgstr "Підписуємо базу даних \"%s\"..."
 
-#: scripts/repo-add.sh.in:169
+#: scripts/repo-add.sh.in:172
+#, sh-printf-format
 msgid "Created signature file '%s'"
 msgstr "Створено файл підпису \"%s\""
 
-#: scripts/repo-add.sh.in:171
+#: scripts/repo-add.sh.in:174
+#, sh-printf-format
 msgid "Failed to sign package database file '%s'"
 msgstr "Не вдалося підписати файл бази даних пакунків \"%s\""
 
-#: scripts/repo-add.sh.in:180
+#: scripts/repo-add.sh.in:183
 msgid "Verifying database signature..."
 msgstr "Перевіряємо підписи бази даних..."
 
-#: scripts/repo-add.sh.in:183
+#: scripts/repo-add.sh.in:186
 msgid "No existing signature found, skipping verification."
 msgstr "Не знайдено жодного підпису, пропускаємо перевірку."
 
-#: scripts/repo-add.sh.in:188
+#: scripts/repo-add.sh.in:191
 msgid "Database signature file verified."
 msgstr "Підпис бази даних перевірено."
 
-#: scripts/repo-add.sh.in:190
+#: scripts/repo-add.sh.in:193
 msgid "Database signature was NOT valid!"
 msgstr "Підпис бази даних НЕ дійсний!"
 
-#: scripts/repo-add.sh.in:201
+#: scripts/repo-add.sh.in:204
+#, sh-printf-format
 msgid "'%s' does not have a valid database archive extension."
 msgstr "\"%s\" не має коректного розширення архіву для бази даних."
 
-#: scripts/repo-add.sh.in:238
+#: scripts/repo-add.sh.in:241
+#, sh-printf-format
 msgid "Invalid package file '%s'."
 msgstr "Некоректний файл пакунка \"%s\"."
 
-#: scripts/repo-add.sh.in:243
+#: scripts/repo-add.sh.in:246
+#, sh-printf-format
 msgid "An entry for '%s' already existed"
 msgstr "Запис для \"%s\" вже існував"
 
-#: scripts/repo-add.sh.in:253
+#: scripts/repo-add.sh.in:256
+#, sh-printf-format
 msgid "A newer version for '%s' is already present in database"
 msgstr "Новіша версія \"%s\" вже присутня у базі даних"
 
-#: scripts/repo-add.sh.in:273
+#: scripts/repo-add.sh.in:276
+#, sh-printf-format
 msgid "Invalid package signature file '%s'."
 msgstr "Недійсний файл підпису пакунка \"%s\"."
 
-#: scripts/repo-add.sh.in:276
+#: scripts/repo-add.sh.in:279
 msgid "Adding package signature..."
 msgstr "Додаємо підпис пакунка..."
 
-#: scripts/repo-add.sh.in:283
+#: scripts/repo-add.sh.in:286
 msgid "Computing checksums..."
 msgstr "Обчислюємо контрольні суми..."
 
-#: scripts/repo-add.sh.in:296 scripts/repo-add.sh.in:335
+#: scripts/repo-add.sh.in:299 scripts/repo-add.sh.in:338
+#, sh-printf-format
 msgid "Creating '%s' db entry..."
 msgstr "Створюємо запис \"%s\" в базі даних..."
 
-#: scripts/repo-add.sh.in:341
+#: scripts/repo-add.sh.in:344 scripts/repo-add.sh.in:370
+#, sh-printf-format
 msgid "Removing old package file '%s'"
 msgstr "Вилучаємо старий файл пакунка \"%s\""
 
-#: scripts/repo-add.sh.in:359
+#: scripts/repo-add.sh.in:363
+#, sh-printf-format
 msgid "Removing existing entry '%s'..."
 msgstr "Вилучаємо існуючий запис \"%s\"..."
 
-#: scripts/repo-add.sh.in:404
+#: scripts/repo-add.sh.in:420
+#, fuzzy, sh-printf-format
+msgid "Failed to acquire lockfile: %s. Retrying in 3 seconds."
+msgstr "Не вдалося заволодіти файлом блокування: %s."
+
+#: scripts/repo-add.sh.in:428
+#, sh-printf-format
 msgid "Failed to acquire lockfile: %s."
 msgstr "Не вдалося заволодіти файлом блокування: %s."
 
-#: scripts/repo-add.sh.in:405
+#: scripts/repo-add.sh.in:429
+#, sh-printf-format
 msgid "Held by process %s"
 msgstr "Утримано процесом %s"
 
-#: scripts/repo-add.sh.in:418
+#: scripts/repo-add.sh.in:443
+#, sh-printf-format
 msgid "Repository file '%s' is not a proper pacman database."
 msgstr "Файл сховища \"%s\" не є коректною базою даних пакунків."
 
-#: scripts/repo-add.sh.in:423
+#: scripts/repo-add.sh.in:448
+#, sh-printf-format
 msgid "Extracting %s to a temporary location..."
 msgstr "Витягуємо файли з %s в тимчасове розміщення..."
 
-#: scripts/repo-add.sh.in:431
+#: scripts/repo-add.sh.in:456
+#, sh-printf-format
 msgid "Repository file '%s' was not found."
 msgstr "Файл сховища \"%s\" не знайдено."
 
-#: scripts/repo-add.sh.in:438
+#: scripts/repo-add.sh.in:463
+#, sh-printf-format
 msgid "Repository file '%s' could not be created."
 msgstr "Файл сховища \"%s\" неможливо створити."
 
-#: scripts/repo-add.sh.in:450
+#: scripts/repo-add.sh.in:475
+#, sh-printf-format
 msgid "File '%s' not found."
 msgstr "Файл \"%s\" не знайдено."
 
-#: scripts/repo-add.sh.in:456
+#: scripts/repo-add.sh.in:481
+#, sh-printf-format
 msgid "'%s' is not a package file, skipping"
 msgstr "\"%s\" не є файлом пакунка, пропускаємо"
 
-#: scripts/repo-add.sh.in:460
+#: scripts/repo-add.sh.in:485
+#, sh-printf-format
 msgid "Adding package '%s'"
 msgstr "Додаємо пакунок \"%s\""
 
-#: scripts/repo-add.sh.in:467
+#: scripts/repo-add.sh.in:492
+#, sh-printf-format
 msgid "Searching for package '%s'..."
 msgstr "Шукаємо пакунок \"%s\"..."
 
-#: scripts/repo-add.sh.in:470
+#: scripts/repo-add.sh.in:495
+#, sh-printf-format
 msgid "Package matching '%s' not found."
 msgstr "Пакунок, що відповідає \"%s\", не знайдено."
 
-#: scripts/repo-add.sh.in:534
+#: scripts/repo-add.sh.in:559
 msgid "No packages remain, creating empty database."
 msgstr "Не знайдено жодного пакунка, створення порожньої бази даних."
 
-#: scripts/repo-add.sh.in:588
+#: scripts/repo-add.sh.in:613
+#, sh-printf-format
 msgid "Invalid command name '%s' specified."
 msgstr "Вказана недійсна команда \"%s\"."
 
-#: scripts/repo-add.sh.in:593
+#: scripts/repo-add.sh.in:618
 msgid "Cannot create temp directory for database building."
 msgstr "Неможливо створити тимчасовий каталог для побудови бази даних."
 
-#: scripts/repo-add.sh.in:704
+#: scripts/repo-add.sh.in:732
 msgid "Package database was not modified due to errors."
 msgstr ""
 
-#: scripts/repo-add.sh.in:709
+#: scripts/repo-add.sh.in:737
+#, sh-printf-format
 msgid "Creating updated database file '%s'"
 msgstr "Створюємо поновлений файл бази даних \"%s\""
 
-#: scripts/repo-add.sh.in:713
+#: scripts/repo-add.sh.in:741
 msgid "No changes made to package database."
 msgstr ""
+
+#: scripts/libmakepkg/executable/ccache.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for compiler cache usage."
+msgstr ""
+
+#: scripts/libmakepkg/executable/checksum.sh.in:38
+#, sh-printf-format
+msgid ""
+"Cannot find the %s binary required for source file checksums operations."
+msgstr ""
+
+#: scripts/libmakepkg/executable/debugedit.sh.in:35
+#, sh-printf-format
+msgid ""
+"Cannot find the %s binary required for including source files in debug "
+"packages."
+msgstr ""
+
+#: scripts/libmakepkg/executable/distcc.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for distributed compilation."
+msgstr ""
+
+#: scripts/libmakepkg/executable/fakeroot.sh.in:33
+#, sh-printf-format
+msgid "Cannot find the %s binary."
+msgstr ""
+
+#: scripts/libmakepkg/executable/gpg.sh.in:36
+#, sh-printf-format
+msgid "Cannot find the %s binary required for signing packages."
+msgstr ""
+
+#: scripts/libmakepkg/executable/gpg.sh.in:43
+#, sh-printf-format
+msgid "Cannot find the %s binary required for verifying source files."
+msgstr ""
+
+#: scripts/libmakepkg/executable/gzip.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for compressing man and info pages."
+msgstr ""
+
+#: scripts/libmakepkg/executable/pacman.sh.in:33
+#, sh-printf-format
+msgid "Cannot find the %s binary required for dependency operations."
+msgstr ""
+
+#: scripts/libmakepkg/executable/strip.sh.in:34
+#, sh-printf-format
+msgid "Cannot find the %s binary required for object file stripping."
+msgstr ""
+
+#: scripts/libmakepkg/executable/sudo.sh.in:33
+#, sh-printf-format
+msgid "Cannot find the %s binary. Will use %s to acquire root privileges."
+msgstr ""
+
+#: scripts/libmakepkg/executable/vcs.sh.in:45
+#: scripts/libmakepkg/util/source.sh.in:161
+#, sh-printf-format
+msgid "Unknown download protocol: %s"
+msgstr "Невідомий протокол завантаження: %s"
+
+#: scripts/libmakepkg/executable/vcs.sh.in:62
+#, sh-printf-format
+msgid "Cannot find the %s binary needed to check VCS source requirements."
+msgstr ""
+
+#: scripts/libmakepkg/executable/vcs.sh.in:90
+#, fuzzy, sh-printf-format
+msgid "Cannot find the %s package needed to handle %s sources."
+msgstr "Не можу знайти виконавчий файл %s, який потрібен для всіх операцій %s."
+
+#: scripts/libmakepkg/integrity/generate_checksum.sh.in:61
+#, sh-printf-format
+msgid "Failure while calculating %s %s checksum"
+msgstr ""
+
+#: scripts/libmakepkg/integrity/generate_checksum.sh.in:92
+msgid "Generating checksums for source files..."
+msgstr "Генеруємо контрольні суми для файлів початкового коду..."
+
+#: scripts/libmakepkg/integrity/generate_checksum.sh.in:104
+#, sh-printf-format
+msgid "Invalid integrity algorithm '%s' specified."
+msgstr "Вказано недійсний алгоритм перевірки цілісності \"%s\"."
+
+#: scripts/libmakepkg/integrity/generate_signature.sh.in:41
+#, sh-printf-format
+msgid "Created signature file %s."
+msgstr "Створено файл підпису %s."
+
+#: scripts/libmakepkg/integrity/generate_signature.sh.in:43
+#, sh-printf-format
+msgid "Failed to sign package file %s."
+msgstr "Не вдалося підписати файл пакунка %s."
+
+#: scripts/libmakepkg/integrity/generate_signature.sh.in:58
+msgid "Signing package(s)..."
+msgstr "Підписуємо пакунок ..."
 
 #: scripts/libmakepkg/integrity.sh.in:34
 msgid "Skipping all source file integrity checks."
@@ -1168,31 +1401,8 @@ msgstr "Пропускаємо перевірки контрольних сум 
 msgid "Skipping verification of source file PGP signatures."
 msgstr "Пропускаємо перевірки PGP-підписів файлів початкового коду."
 
-#: scripts/libmakepkg/integrity/generate_checksum.sh.in:61
-msgid "Failure while calculating %s %s checksum"
-msgstr ""
-
-#: scripts/libmakepkg/integrity/generate_checksum.sh.in:92
-msgid "Generating checksums for source files..."
-msgstr "Генеруємо контрольні суми для файлів початкового коду..."
-
-#: scripts/libmakepkg/integrity/generate_checksum.sh.in:104
-msgid "Invalid integrity algorithm '%s' specified."
-msgstr "Вказано недійсний алгоритм перевірки цілісності \"%s\"."
-
-#: scripts/libmakepkg/integrity/generate_signature.sh.in:41
-msgid "Created signature file %s."
-msgstr "Створено файл підпису %s."
-
-#: scripts/libmakepkg/integrity/generate_signature.sh.in:43
-msgid "Failed to sign package file %s."
-msgstr "Не вдалося підписати файл пакунка %s."
-
-#: scripts/libmakepkg/integrity/generate_signature.sh.in:58
-msgid "Signing package(s)..."
-msgstr "Підписуємо пакунок ..."
-
 #: scripts/libmakepkg/integrity/verify_checksum.sh.in:66
+#, sh-printf-format
 msgid "Integrity checks are missing for: %s"
 msgstr "Відсутні дані перевірки цілісності для: %s"
 
@@ -1213,6 +1423,7 @@ msgid "Passed"
 msgstr "Пройдено"
 
 #: scripts/libmakepkg/integrity/verify_checksum.sh.in:114
+#, sh-printf-format
 msgid "Validating %s files with %s..."
 msgstr "Перевіряємо файли %s за допомогою %s..."
 
@@ -1221,12 +1432,14 @@ msgid "One or more files did not pass the validity check!"
 msgstr "Один чи кілька файлів не пройшли перевірку на відповідність!"
 
 #: scripts/libmakepkg/integrity/verify_checksum.sh.in:125
+#, sh-printf-format
 msgid "Integrity checks (%s) differ in size from the source array."
 msgstr ""
 "Кількість даних перевірки цілісності (%s) відрізняється від розміру масиву "
 "source."
 
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:39
+#, sh-printf-format
 msgid "Verifying source file signatures with %s..."
 msgstr "Перевіряємо підписи файлів початкового коду за допомогою %s..."
 
@@ -1235,6 +1448,7 @@ msgid "unknown public key"
 msgstr "невідомий публічний ключ"
 
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:79
+#, sh-printf-format
 msgid "public key %s has been revoked"
 msgstr "публічний ключ %s був відкликаний"
 
@@ -1247,6 +1461,7 @@ msgid "error during signature verification"
 msgstr "помилка під час перевірки підпису"
 
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:91
+#, sh-printf-format
 msgid "the public key %s is not trusted"
 msgstr "публічний ключ %s не має довіри"
 
@@ -1257,6 +1472,7 @@ msgstr "недійсний публічний ключ"
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:100
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:104
 #: scripts/libmakepkg/util/message.sh.in:79
+#, sh-printf-format
 msgid "WARNING:"
 msgstr "ПОПЕРЕДЖЕННЯ:"
 
@@ -1289,9 +1505,33 @@ msgstr "ПІДПИС НЕ ЗНАЙДЕНО"
 msgid "SOURCE FILE NOT FOUND"
 msgstr "ФАЙЛ ПОЧАТКОВОГО КОДУ НЕ ЗНАЙДЕНО"
 
+#: scripts/libmakepkg/lint_config/buildenv.sh.in:43
+#: scripts/libmakepkg/lint_config/buildenv.sh.in:54
+#: scripts/libmakepkg/lint_pkgbuild/options.sh.in:52
+#, sh-printf-format
+msgid "%s array contains unknown option '%s'"
+msgstr "Масив %s містить невідомий параметр \"%s\""
+
+#: scripts/libmakepkg/lint_config/ext.sh.in:38
+#, sh-printf-format
+msgid "%s does not contain a valid package suffix (needs '%s', got '%s')"
+msgstr ""
+
+#: scripts/libmakepkg/lint_config/nproc.sh.in:36
+#: scripts/libmakepkg/lint_config/source_date_epoch.sh.in:33
+#, fuzzy, sh-printf-format
+msgid "%s contains invalid characters: %s"
+msgstr "%s містить неприпустимі символи: \"%s\""
+
+#: scripts/libmakepkg/lint_config/packager.sh.in:35
+msgid "PACKAGER should have the format 'Example Name <email@address.invalid>'"
+msgstr ""
+"PACKAGER повинен мати формат \"Петрик П'яточкін <пошта@адреса.невірна>\""
+
 #: scripts/libmakepkg/lint_config/paths.sh.in:39
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:47
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:57
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:53
+#, sh-printf-format
 msgid "%s contains invalid characters: '%s'"
 msgstr "%s містить неприпустимі символи: \"%s\""
 
@@ -1300,29 +1540,24 @@ msgstr "%s містить неприпустимі символи: \"%s\""
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:52
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:72
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:82
+#, sh-printf-format
 msgid "%s should be an array"
 msgstr "%s мусить бути масивом"
 
 #: scripts/libmakepkg/lint_config/variable.sh.in:57
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:62
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:90
+#, sh-printf-format
 msgid "%s should not be an array"
 msgstr "%s не повинен бути масивом"
 
-#: scripts/libmakepkg/lint_config/variable.sh.in:66
-msgid "PACKAGER should have the format 'Example Name <email@address.invalid>'"
-msgstr ""
-"PACKAGER повинен мати формат \"Петрик П'яточкін <пошта@адреса.невірна>\""
-
-#: scripts/libmakepkg/lint_package.sh.in:41
-msgid "Checking for packaging issues..."
-msgstr "Перевіряємо пакет на наявність проблем..."
-
 #: scripts/libmakepkg/lint_package/build_references.sh.in:36
+#, sh-printf-format
 msgid "Package contains reference to %s"
 msgstr "Пакунок містить згадку про %s"
 
 #: scripts/libmakepkg/lint_package/dotfiles.sh.in:38
+#, sh-printf-format
 msgid "Dotfile found in package root '%s'"
 msgstr ""
 "Файл з ім'ям, що починається з крапки, знайдено в корені пакунка \"%s\""
@@ -1332,80 +1567,116 @@ msgid "Package contains paths with newlines"
 msgstr "Пакунок містить шлях із символами розриву рядка"
 
 #: scripts/libmakepkg/lint_package/missing_backup.sh.in:35
+#, sh-printf-format
 msgid "%s entry file not in package : %s"
 msgstr "Файл вказаний у %s не міститься в пакунку: %s"
 
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:40
-msgid "Can not use '%s' architecture with other architectures"
-msgstr "Неможливо використати архітектуру \"%s\" разом з іншими архітектурами"
+#: scripts/libmakepkg/lint_package.sh.in:41
+msgid "Checking for packaging issues..."
+msgstr "Перевіряємо пакет на наявність проблем..."
 
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:54
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:62
-msgid "%s is not available for the '%s' architecture."
-msgstr "%s відсутній для архітектури \"%s\"."
-
-#: scripts/libmakepkg/lint_pkgbuild/backup.sh.in:45
-msgid "%s entry should not contain leading slash : %s"
-msgstr "Запис %s не повинен містити слеш: %s"
-
-#: scripts/libmakepkg/lint_pkgbuild/epoch.sh.in:36
-msgid "%s must be an integer, not %s."
-msgstr "%s повинно бути цілим числом, а не %s."
-
-#: scripts/libmakepkg/lint_pkgbuild/options.sh.in:52
-msgid "%s array contains unknown option '%s'"
-msgstr "Масив %s містить невідомий параметр \"%s\""
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:38
-msgid "Conflicting %s and %s functions in %s"
-msgstr "Конфліктуючі функції %s та %s в %s"
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:41
-msgid "Missing %s function in %s"
-msgstr "Пропущено функцію %s в %s"
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:46
-msgid "Extra %s function for split package '%s'"
-msgstr "Надлишкова функція %s для поділу пакунка \"%s\""
-
-#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:51
-msgid "Missing %s function for split package '%s'"
-msgstr "Відсутня функція %s для поділу пакунка \"%s\""
-
-#: scripts/libmakepkg/lint_pkgbuild/pkglist.sh.in:38
-msgid "Requested package %s is not provided in %s"
-msgstr "Запитаний пакунок %s не міститься в %s"
-
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:38
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:37
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:65
 #: scripts/libmakepkg/lint_pkgbuild/pkgrel.sh.in:35
 #: scripts/libmakepkg/lint_pkgbuild/pkgver.sh.in:36
+#, sh-printf-format
 msgid "%s is not allowed to be empty."
 msgstr "%s не повинно бути порожнім."
 
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:43
+#, sh-printf-format
+msgid "Can not use '%s' architecture with other architectures"
+msgstr "Неможливо використати архітектуру \"%s\" разом з іншими архітектурами"
+
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:49
+#, sh-printf-format
+msgid "%s is not available for the '%s' architecture."
+msgstr "%s відсутній для архітектури \"%s\"."
+
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:65
+#, sh-printf-format
+msgid "%s can not contain duplicate values"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:43
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:65
+#, sh-printf-format
+msgid ""
+"Can not provide architecture specific variables for the '%s' architecture: %s"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:53
+#: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:74
+#, sh-printf-format
+msgid "%s can not be architecture specific: %s"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/backup.sh.in:45
+#, sh-printf-format
+msgid "%s entry should not contain leading slash : %s"
+msgstr "Запис %s не повинен містити слеш: %s"
+
+#: scripts/libmakepkg/lint_pkgbuild/epoch.sh.in:36
+#, sh-printf-format
+msgid "%s must be an integer, not %s."
+msgstr "%s повинно бути цілим числом, а не %s."
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:38
+#, sh-printf-format
+msgid "Conflicting %s and %s functions in %s"
+msgstr "Конфліктуючі функції %s та %s в %s"
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:41
+#, sh-printf-format
+msgid "Missing %s function in %s"
+msgstr "Пропущено функцію %s в %s"
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:46
+#, sh-printf-format
+msgid "Extra %s function for split package '%s'"
+msgstr "Надлишкова функція %s для поділу пакунка \"%s\""
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function.sh.in:51
+#, sh-printf-format
+msgid "Missing %s function for split package '%s'"
+msgstr "Відсутня функція %s для поділу пакунка \"%s\""
+
+#: scripts/libmakepkg/lint_pkgbuild/package_function_variable.sh.in:46
+#: scripts/libmakepkg/lint_pkgbuild/package_function_variable.sh.in:55
+#, sh-printf-format
+msgid "%s can not be set inside a package function"
+msgstr ""
+
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:41
+#, sh-printf-format
 msgid "%s is not allowed to start with a hyphen."
 msgstr "%s не повинно починатися з дефіса."
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:45
+#, sh-printf-format
 msgid "%s is not allowed to start with a dot."
 msgstr "%s не повинно починатись із крапки."
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:49
 #: scripts/libmakepkg/lint_pkgbuild/pkgver.sh.in:46
+#, sh-printf-format
 msgid "%s may only contain ascii characters."
 msgstr "%s може містити тільки символи ASCII."
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgrel.sh.in:40
+#, sh-printf-format
 msgid "%s must be of the form 'integer[.integer]', not %s."
 msgstr "%s повинно бути у формі \"ціле[.ціле]\", а не %s."
 
 #: scripts/libmakepkg/lint_pkgbuild/pkgver.sh.in:41
+#, sh-printf-format
 msgid ""
 "%s is not allowed to contain colons, forward slashes, hyphens or whitespace."
 msgstr "%s не може містити двокрапки, косі риски, тире або пробіли."
 
 #: scripts/libmakepkg/lint_pkgbuild/provides.sh.in:46
+#, sh-printf-format
 msgid "%s array cannot contain comparison (< or >) operators."
 msgstr "Масив %s не може містити оператори порівняння (< або >)."
 
@@ -1414,12 +1685,162 @@ msgid "Sparse arrays are not allowed for source"
 msgstr "Розкидані масиви не дозволені для джерел початкового коду"
 
 #: scripts/libmakepkg/lint_pkgbuild/util.sh.in:34
+#, sh-printf-format
 msgid "%s file (%s) does not exist or is not a regular file."
 msgstr "файл з %s (%s) не існує або не є звичайним файлом."
 
 #: scripts/libmakepkg/lint_pkgbuild/variable.sh.in:108
+#, sh-printf-format
 msgid "%s does not allow empty values."
 msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/xdata.sh.in:44
+#, sh-printf-format
+msgid "%s array: Entries must contain exactly one equal sign, e.g. key=value."
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/xdata.sh.in:48
+#, sh-printf-format
+msgid "%s array: The key part of an entry must not be empty."
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/xdata.sh.in:52
+#, sh-printf-format
+msgid "%s array: The key 'pkgtype' is reserved for makepkg."
+msgstr ""
+
+#: scripts/libmakepkg/source/bzr.sh.in:52
+#, sh-printf-format
+msgid "Branching %s..."
+msgstr "Розгалужуємо %s..."
+
+#: scripts/libmakepkg/source/bzr.sh.in:54
+#, sh-printf-format
+msgid "Failure while branching %s"
+msgstr "Помилка при розгалуженні %s"
+
+#: scripts/libmakepkg/source/bzr.sh.in:59
+#, sh-printf-format
+msgid "Pulling %s..."
+msgstr "Долучаємо %s..."
+
+#: scripts/libmakepkg/source/bzr.sh.in:63
+#, sh-printf-format
+msgid "Failure while pulling %s"
+msgstr "Помилка під час долучення %s"
+
+#: scripts/libmakepkg/source/bzr.sh.in:85
+#: scripts/libmakepkg/source/fossil.sh.in:114
+#: scripts/libmakepkg/source/git.sh.in:126
+#: scripts/libmakepkg/source/hg.sh.in:93 scripts/libmakepkg/source/svn.sh.in:62
+#, sh-printf-format
+msgid "Unrecognized reference: %s"
+msgstr "Нерозпізнана згадка про: %s"
+
+#: scripts/libmakepkg/source/bzr.sh.in:94
+#: scripts/libmakepkg/source/fossil.sh.in:82
+#: scripts/libmakepkg/source/git.sh.in:95 scripts/libmakepkg/source/hg.sh.in:79
+#: scripts/libmakepkg/source/svn.sh.in:95
+#, sh-printf-format
+msgid "Creating working copy of %s %s repo..."
+msgstr "Створюємо робочу копію %s з %s-сховища..."
+
+#: scripts/libmakepkg/source/bzr.sh.in:100
+#: scripts/libmakepkg/source/git.sh.in:103
+#: scripts/libmakepkg/source/hg.sh.in:102
+#, sh-printf-format
+msgid "Failure while updating working copy of %s %s repo"
+msgstr "Помилка оновлення робочої копії %s з %s-сховища"
+
+#: scripts/libmakepkg/source/bzr.sh.in:105
+#: scripts/libmakepkg/source/fossil.sh.in:100
+#: scripts/libmakepkg/source/fossil.sh.in:121
+#: scripts/libmakepkg/source/git.sh.in:109
+#: scripts/libmakepkg/source/git.sh.in:143
+#: scripts/libmakepkg/source/hg.sh.in:107
+#, sh-printf-format
+msgid "Failure while creating working copy of %s %s repo"
+msgstr "Помилка створення робочої копії %s з %s-сховища"
+
+#: scripts/libmakepkg/source/file.sh.in:36
+#: scripts/libmakepkg/source/local.sh.in:36
+#, sh-printf-format
+msgid "Found %s"
+msgstr "Знайдено %s"
+
+#: scripts/libmakepkg/source/file.sh.in:55
+#, sh-printf-format
+msgid "Downloading %s..."
+msgstr "Завантажуємо %s..."
+
+#: scripts/libmakepkg/source/file.sh.in:74
+#, sh-printf-format
+msgid "Failure while downloading %s"
+msgstr "Помилка під час завантаження %s"
+
+#: scripts/libmakepkg/source/file.sh.in:136
+#, sh-printf-format
+msgid "Extracting %s with %s"
+msgstr "Витягуємо файли з %s за допомогою %s"
+
+#: scripts/libmakepkg/source/file.sh.in:144
+#, sh-printf-format
+msgid "Failed to extract %s"
+msgstr "Не вдалося витягти файли з %s"
+
+#: scripts/libmakepkg/source/file.sh.in:159
+msgid "NOT FOUND"
+msgstr "НЕ ЗНАЙДЕНО"
+
+#: scripts/libmakepkg/source/fossil.sh.in:50
+#: scripts/libmakepkg/source/git.sh.in:53 scripts/libmakepkg/source/hg.sh.in:49
+#: scripts/libmakepkg/source/svn.sh.in:69
+#, sh-printf-format
+msgid "Cloning %s %s repo..."
+msgstr "Клонуємо %s з %s-сховища..."
+
+#: scripts/libmakepkg/source/fossil.sh.in:52
+#: scripts/libmakepkg/source/git.sh.in:55 scripts/libmakepkg/source/hg.sh.in:51
+#: scripts/libmakepkg/source/svn.sh.in:72
+#, sh-printf-format
+msgid "Failure while downloading %s %s repo"
+msgstr "Помилка під час завантаження %s з %s-сховища"
+
+#: scripts/libmakepkg/source/fossil.sh.in:59
+#: scripts/libmakepkg/source/git.sh.in:67
+#, sh-printf-format
+msgid "%s is not a clone of %s"
+msgstr "%s не є клоном %s"
+
+#: scripts/libmakepkg/source/fossil.sh.in:63
+#: scripts/libmakepkg/source/git.sh.in:71 scripts/libmakepkg/source/hg.sh.in:56
+#: scripts/libmakepkg/source/svn.sh.in:77
+#, sh-printf-format
+msgid "Updating %s %s repo..."
+msgstr "Оновлюємо %s з %s-сховища..."
+
+#: scripts/libmakepkg/source/fossil.sh.in:66
+#: scripts/libmakepkg/source/git.sh.in:74 scripts/libmakepkg/source/hg.sh.in:60
+#: scripts/libmakepkg/source/svn.sh.in:81
+#, sh-printf-format
+msgid "Failure while updating %s %s repo"
+msgstr "Помилка при оновленні %s з %s-сховища"
+
+#: scripts/libmakepkg/source/fossil.sh.in:89
+#: scripts/libmakepkg/source/fossil.sh.in:95
+#, sh-printf-format
+msgid "%s is not a checkout of %s repo %s"
+msgstr ""
+
+#: scripts/libmakepkg/source/git.sh.in:135
+#, sh-printf-format
+msgid "Failure while checking out version %s, the git tag has been forged"
+msgstr "Помилка під час перевірки версії %s, тег git підроблений"
+
+#: scripts/libmakepkg/source/local.sh.in:39
+#, sh-printf-format
+msgid "%s was not found in the build directory and is not a URL."
+msgstr "%s не було знайдено в теці побудови і це не посилання."
 
 #: scripts/libmakepkg/source.sh.in:40
 msgid "Retrieving sources..."
@@ -1429,189 +1850,108 @@ msgstr "Отримуємо файли початкового коду..."
 msgid "Extracting sources..."
 msgstr "Витягуємо файли початкового коду..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:52
-msgid "Branching %s..."
-msgstr "Розгалужуємо %s..."
+#: scripts/libmakepkg/tidy/10-docs.sh.in:34
+msgid "Removing doc files..."
+msgstr "Вилучаємо файли документації..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:54
-msgid "Failure while branching %s"
-msgstr "Помилка при розгалуженні %s"
+#: scripts/libmakepkg/tidy/10-libtool.sh.in:35
+#, sh-printf-format
+msgid "Removing %s files..."
+msgstr "Вилучаємо файли %s..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:59
-msgid "Pulling %s..."
-msgstr "Долучаємо %s..."
+#: scripts/libmakepkg/tidy/10-staticlibs.sh.in:35
+msgid "Removing static library files..."
+msgstr "Вилучаємо файли статичних бібліотек..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:63
-msgid "Failure while pulling %s"
-msgstr "Помилка під час долучення %s"
+#: scripts/libmakepkg/tidy/50-purge.sh.in:35
+msgid "Purging unwanted files..."
+msgstr "Прибираємо непотрібні файли..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:85
-#: scripts/libmakepkg/source/git.sh.in:124
-#: scripts/libmakepkg/source/hg.sh.in:93 scripts/libmakepkg/source/svn.sh.in:62
-msgid "Unrecognized reference: %s"
-msgstr "Нерозпізнана згадка про: %s"
+#: scripts/libmakepkg/tidy/50-strip.sh.in:186
+msgid "Stripping unneeded symbols from binaries and libraries..."
+msgstr "Вилучаємо непотрібні символи з виконавчих файлів та бібліотек..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:94
-#: scripts/libmakepkg/source/git.sh.in:93 scripts/libmakepkg/source/hg.sh.in:79
-#: scripts/libmakepkg/source/svn.sh.in:95
-msgid "Creating working copy of %s %s repo..."
-msgstr "Створюємо робочу копію %s з %s-сховища..."
+#: scripts/libmakepkg/tidy/50-strip.sh.in:240
+msgid "Copying source files needed for debug symbols..."
+msgstr ""
 
-#: scripts/libmakepkg/source/bzr.sh.in:100
-#: scripts/libmakepkg/source/git.sh.in:101
-#: scripts/libmakepkg/source/hg.sh.in:102
-msgid "Failure while updating working copy of %s %s repo"
-msgstr "Помилка оновлення робочої копії %s з %s-сховища"
+#: scripts/libmakepkg/tidy/50-zipman.sh.in:35
+msgid "Compressing man and info pages..."
+msgstr "Стискаємо сторінки man/info..."
 
-#: scripts/libmakepkg/source/bzr.sh.in:105
-#: scripts/libmakepkg/source/git.sh.in:107
-#: scripts/libmakepkg/source/git.sh.in:141
-#: scripts/libmakepkg/source/hg.sh.in:107
-msgid "Failure while creating working copy of %s %s repo"
-msgstr "Помилка створення робочої копії %s з %s-сховища"
-
-#: scripts/libmakepkg/source/file.sh.in:36
-#: scripts/libmakepkg/source/local.sh.in:36
-msgid "Found %s"
-msgstr "Знайдено %s"
-
-#: scripts/libmakepkg/source/file.sh.in:55
-msgid "Downloading %s..."
-msgstr "Завантажуємо %s..."
-
-#: scripts/libmakepkg/source/file.sh.in:74
-msgid "Failure while downloading %s"
-msgstr "Помилка під час завантаження %s"
-
-#: scripts/libmakepkg/source/file.sh.in:136
-msgid "Extracting %s with %s"
-msgstr "Витягуємо файли з %s за допомогою %s"
-
-#: scripts/libmakepkg/source/file.sh.in:144
-msgid "Failed to extract %s"
-msgstr "Не вдалося витягти файли з %s"
-
-#: scripts/libmakepkg/source/file.sh.in:159
-msgid "NOT FOUND"
-msgstr "НЕ ЗНАЙДЕНО"
-
-#: scripts/libmakepkg/source/git.sh.in:51 scripts/libmakepkg/source/hg.sh.in:49
-#: scripts/libmakepkg/source/svn.sh.in:69
-msgid "Cloning %s %s repo..."
-msgstr "Клонуємо %s з %s-сховища..."
-
-#: scripts/libmakepkg/source/git.sh.in:53 scripts/libmakepkg/source/hg.sh.in:51
-#: scripts/libmakepkg/source/svn.sh.in:72
-msgid "Failure while downloading %s %s repo"
-msgstr "Помилка під час завантаження %s з %s-сховища"
-
-#: scripts/libmakepkg/source/git.sh.in:65
-msgid "%s is not a clone of %s"
-msgstr "%s не є клоном %s"
-
-#: scripts/libmakepkg/source/git.sh.in:69 scripts/libmakepkg/source/hg.sh.in:56
-#: scripts/libmakepkg/source/svn.sh.in:77
-msgid "Updating %s %s repo..."
-msgstr "Оновлюємо %s з %s-сховища..."
-
-#: scripts/libmakepkg/source/git.sh.in:72 scripts/libmakepkg/source/hg.sh.in:60
-#: scripts/libmakepkg/source/svn.sh.in:81
-msgid "Failure while updating %s %s repo"
-msgstr "Помилка при оновленні %s з %s-сховища"
-
-#: scripts/libmakepkg/source/git.sh.in:133
-msgid "Failure while checking out version %s, the git tag has been forged"
-msgstr "Помилка під час перевірки версії %s, тег git підроблений"
-
-#: scripts/libmakepkg/source/local.sh.in:39
-msgid "%s was not found in the build directory and is not a URL."
-msgstr "%s не було знайдено в теці побудови і це не посилання."
+#: scripts/libmakepkg/tidy/90-emptydirs.sh.in:35
+msgid "Removing empty directories..."
+msgstr "Вилучаємо порожні теки..."
 
 #: scripts/libmakepkg/tidy.sh.in:41
 msgid "Tidying install..."
 msgstr "Прибираємось..."
 
-#: scripts/libmakepkg/tidy/docs.sh.in:34
-msgid "Removing doc files..."
-msgstr "Вилучаємо файли документації..."
-
-#: scripts/libmakepkg/tidy/emptydirs.sh.in:35
-msgid "Removing empty directories..."
-msgstr "Вилучаємо порожні теки..."
-
-#: scripts/libmakepkg/tidy/libtool.sh.in:35
-msgid "Removing %s files..."
-msgstr "Вилучаємо файли %s..."
-
-#: scripts/libmakepkg/tidy/purge.sh.in:35
-msgid "Purging unwanted files..."
-msgstr "Прибираємо непотрібні файли..."
-
-#: scripts/libmakepkg/tidy/staticlibs.sh.in:35
-msgid "Removing static library files..."
-msgstr "Вилучаємо файли статичних бібліотек..."
-
-#: scripts/libmakepkg/tidy/strip.sh.in:145
-msgid "Stripping unneeded symbols from binaries and libraries..."
-msgstr "Вилучаємо непотрібні символи з виконавчих файлів та бібліотек..."
-
-#: scripts/libmakepkg/tidy/strip.sh.in:195
-msgid "Copying source files needed for debug symbols..."
-msgstr ""
-
-#: scripts/libmakepkg/tidy/zipman.sh.in:35
-msgid "Compressing man and info pages..."
-msgstr "Стискаємо сторінки man/info..."
-
 #: scripts/libmakepkg/util/compress.sh.in:38
+#, sh-printf-format
 msgid "'%s' is not a valid archive extension."
 msgstr "\"%s\" не є коректним розширенням архіву."
 
+#: scripts/libmakepkg/util/config.sh.in:46
+#, fuzzy, sh-printf-format
+msgid "%s not found."
+msgstr "Файл \"%s\" не знайдено."
+
 #: scripts/libmakepkg/util/message.sh.in:84
+#, sh-printf-format
 msgid "ERROR:"
 msgstr "ПОМИЛКА:"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:81
+#, sh-printf-format
 msgid "option '%s' is ambiguous; possibilities:"
 msgstr "параметр \"%s\" неоднозначний; можливі варіанти:"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:112
+#, sh-printf-format
 msgid "option requires an argument"
 msgstr "параметр вимагає аргументу"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:134
 #: scripts/libmakepkg/util/parseopts.sh.in:187
+#, sh-printf-format
 msgid "invalid option"
 msgstr "недійсний параметр"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:148
+#, sh-printf-format
 msgid "option '%s' does not allow an argument"
 msgstr "параметр \"%s\" не дозволяє аргументу"
 
 #: scripts/libmakepkg/util/parseopts.sh.in:166
+#, sh-printf-format
 msgid "option '%s' requires an argument"
 msgstr "параметр \"%s\" вимагає аргументу"
 
-#: scripts/libmakepkg/util/source.sh.in:161
-msgid "Unknown download protocol: %s"
-msgstr "Невідомий протокол завантаження: %s"
-
 #: scripts/libmakepkg/util/source.sh.in:170
+#, sh-printf-format
 msgid "The download program %s is not installed."
 msgstr "Програму завантаження %s не встановлено."
 
 #: scripts/libmakepkg/util/util.sh.in:80
+#, sh-printf-format
 msgid "Failed to change to directory %s"
 msgstr "Не вдалося змінити теку на %s"
 
 #: scripts/libmakepkg/util/util.sh.in:93
+#, sh-printf-format
 msgid "Failed to create the directory $%s (%s)."
 msgstr "Не вдалося створити теку $%s (%s)."
 
 #: scripts/libmakepkg/util/util.sh.in:96
+#, sh-printf-format
 msgid "You do not have write permission for the directory $%s (%s)."
 msgstr "У Вас немає дозволу на запис до теки $%s (%s)."
 
 #: scripts/libmakepkg/util/util.sh.in:109
+#, sh-printf-format
 msgid "Failed to source %s"
 msgstr "Не вдалося включити %s"
+
+#~ msgid "Requested package %s is not provided in %s"
+#~ msgstr "Запитаний пакунок %s не міститься в %s"

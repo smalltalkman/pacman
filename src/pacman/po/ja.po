@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2024-07-14 19:10+1000\n"
+"POT-Creation-Date: 2025-10-14 15:13+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Satoru Abe <s@polamjag.info>, 2015\n"
 "Language-Team: Japanese (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -363,54 +363,54 @@ msgid "%jd altered file\n"
 msgid_plural "%jd altered files\n"
 msgstr[0] "変更されたファイル %jd\n"
 
-#: src/pacman/conf.c:102 src/pacman/conf.c:326
+#: src/pacman/conf.c:102 src/pacman/conf.c:325
 #, c-format
 msgid "malloc failure: could not allocate %zu byte\n"
 msgid_plural "malloc failure: could not allocate %zu bytes\n"
 msgstr[0] "malloc failure: %zu バイトのメモリを獲得できませんでした\n"
 
-#: src/pacman/conf.c:251
+#: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
 msgstr ""
 
-#: src/pacman/conf.c:349
+#: src/pacman/conf.c:348
 #, c-format
 msgid "could not get current working directory\n"
 msgstr "現在の作業ディレクトリを取得できませんでした\n"
 
-#: src/pacman/conf.c:354
+#: src/pacman/conf.c:353
 #, c-format
 msgid "could not chdir to download directory %s\n"
 msgstr "作業ディレクトリをダウンロードディレクトリ %s に変更できませんでした\n"
 
-#: src/pacman/conf.c:369
+#: src/pacman/conf.c:368
 #, c-format
 msgid "running XferCommand: fork failed!\n"
 msgstr "running XferCommand: フォークが失敗しました！\n"
 
-#: src/pacman/conf.c:381
+#: src/pacman/conf.c:380
 #, c-format
 msgid "could not rename %s to %s (%s)\n"
 msgstr "%s を %s に名前を変更できませんでした (%s)\n"
 
-#: src/pacman/conf.c:392
+#: src/pacman/conf.c:391
 #, c-format
 msgid "could not restore working directory (%s)\n"
 msgstr "作業ディレクトリを復帰できませんでした (%s)\n"
 
-#: src/pacman/conf.c:530 src/pacman/conf.c:579 src/pacman/conf.c:693
-#: src/pacman/conf.c:745
+#: src/pacman/conf.c:529 src/pacman/conf.c:578 src/pacman/conf.c:722
+#: src/pacman/conf.c:774
 #, c-format
 msgid "config file %s, line %d: invalid value for '%s' : '%s'\n"
 msgstr "設定ファイル %s, %d 行: '%s' の値が無効です : '%s'\n"
 
-#: src/pacman/conf.c:544
+#: src/pacman/conf.c:543
 #, c-format
 msgid "config file %s, line %d: '%s' option invalid, no signature support\n"
 msgstr "設定ファイル %s, %d 行: '%s' オプションは無効です\n"
 
-#: src/pacman/conf.c:636 src/pacman/conf.c:767 src/pacman/conf.c:1057
+#: src/pacman/conf.c:640 src/pacman/conf.c:796 src/pacman/conf.c:1092
 #, c-format
 msgid ""
 "config file %s, line %d: directive '%s' in section '%s' not recognized.\n"
@@ -418,38 +418,38 @@ msgstr ""
 "設定ファイル %s, %d 行: セクション '%s' のディレクティブ '%s' が実行できませ"
 "ん。\n"
 
-#: src/pacman/conf.c:752
+#: src/pacman/conf.c:781
 #, c-format
 msgid "config file %s, line %d: value for '%s' has to be positive : '%s'\n"
 msgstr "設定ファイル %s, %d 行: '%s' の値は正数でなければなりません : '%s'\n"
 
-#: src/pacman/conf.c:759
+#: src/pacman/conf.c:788
 #, c-format
 msgid "config file %s, line %d: value for '%s' is too large : '%s'\n"
 msgstr "設定ファイル %s, %d 行: '%s' の値が大きすぎます : '%s'\n"
 
-#: src/pacman/conf.c:779
+#: src/pacman/conf.c:808
 #, c-format
 msgid "mirror '%s' contains the '%s' variable, but no '%s' is defined.\n"
 msgstr ""
 "ミラー '%s' に '%s' 変数が含まれていますが、'%s' が定義されていません。\n"
 
-#: src/pacman/conf.c:824
+#: src/pacman/conf.c:853
 #, c-format
 msgid "could not register '%s' database (%s)\n"
 msgstr "'%s' データベースに登録できませんでした (%s)\n"
 
-#: src/pacman/conf.c:837
+#: src/pacman/conf.c:866
 #, c-format
 msgid "could not add cache server URL to database '%s': %s (%s)\n"
 msgstr ""
 
-#: src/pacman/conf.c:846
+#: src/pacman/conf.c:875
 #, c-format
 msgid "could not add server URL to database '%s': %s (%s)\n"
 msgstr "サーバー URL をデータベース '%s' に追加できません: %s (%s)\n"
 
-#: src/pacman/conf.c:873
+#: src/pacman/conf.c:902
 #, c-format
 msgid ""
 "failed to initialize alpm library:\n"
@@ -460,57 +460,62 @@ msgstr ""
 "(root: %s, dbpath: %s)\n"
 "%s\n"
 
-#: src/pacman/conf.c:876
+#: src/pacman/conf.c:905
 #, c-format
 msgid "try running pacman-db-upgrade\n"
 msgstr "pacman-db-upgrade を実行してください\n"
 
-#: src/pacman/conf.c:894
+#: src/pacman/conf.c:923
 #, c-format
 msgid "problem setting logfile '%s' (%s)\n"
 msgstr "ログファイル '%s' の設定に問題発生 (%s)\n"
 
-#: src/pacman/conf.c:903
+#: src/pacman/conf.c:932
 #, c-format
 msgid "problem setting gpgdir '%s' (%s)\n"
 msgstr "gpgdir '%s' の設定に問題発生 (%s)\n"
 
-#: src/pacman/conf.c:913
+#: src/pacman/conf.c:942
 #, c-format
 msgid "problem adding hookdir '%s' (%s)\n"
 msgstr "フックディレクトリ '%s' の追加に問題発生 (%s)\n"
 
-#: src/pacman/conf.c:935
+#: src/pacman/conf.c:964
 #, c-format
 msgid "no '%s' configured\n"
 msgstr "'%s' が設定されていません\n"
 
-#: src/pacman/conf.c:963
+#: src/pacman/conf.c:972
+#, c-format
+msgid "problem setting DownloadUser '%s' (user does not exist)\n"
+msgstr ""
+
+#: src/pacman/conf.c:998
 #, c-format
 msgid "Failed to pass %s entry to libalpm"
 msgstr "libalpm に %s エントリを設定できませんでした"
 
-#: src/pacman/conf.c:1003
+#: src/pacman/conf.c:1038
 #, c-format
 msgid "config file %s, line %d: '%s' option '%s' not recognized\n"
 msgstr "設定ファイル %s, %d 行: '%s' オプション '%s' は認識できません\n"
 
-#: src/pacman/conf.c:1023 src/pacman/conf.c:1181
+#: src/pacman/conf.c:1058 src/pacman/conf.c:1216
 #, c-format
 msgid "config file %s, line %d: directive '%s' needs a value\n"
 msgstr "設定ファイル %s, %d 行: ディレクティブ '%s' には値が必要です\n"
 
-#: src/pacman/conf.c:1188
+#: src/pacman/conf.c:1223
 #, c-format
 msgid "config parsing exceeded max recursion depth of %d.\n"
 msgstr "パースする設定が %d の最大再帰の深さを超えています。\n"
 
-#: src/pacman/conf.c:1236
+#: src/pacman/conf.c:1271
 #, c-format
 msgid "config file %s could not be read: %s\n"
 msgstr "設定ファイル %s を読み込めませんでした: %s\n"
 
-#: src/pacman/conf.c:1259
+#: src/pacman/conf.c:1294
 #, c-format
 msgid "config file %s, line %d: All directives must belong to a section.\n"
 msgstr ""
@@ -518,7 +523,7 @@ msgstr ""
 "す。\n"
 
 #: src/pacman/database.c:50 src/pacman/files.c:335 src/pacman/query.c:434
-#: src/pacman/remove.c:85 src/pacman/sync.c:970 src/pacman/upgrade.c:76
+#: src/pacman/remove.c:85 src/pacman/sync.c:972 src/pacman/upgrade.c:76
 #, c-format
 msgid "no targets specified (use -h for help)\n"
 msgstr "対象が指定されていません (-h を使ってヘルプを見て下さい)\n"
@@ -564,12 +569,12 @@ msgstr "無効な正規表現 '%s'\n"
 msgid "invalid package: '%s'\n"
 msgstr "不正なパッケージ: '%s'\n"
 
-#: src/pacman/files.c:285 src/pacman/query.c:488 src/pacman/sync.c:446
+#: src/pacman/files.c:285 src/pacman/query.c:488 src/pacman/sync.c:448
 #, c-format
 msgid "package '%s' was not found\n"
 msgstr "パッケージ '%s' は見つかりませんでした\n"
 
-#: src/pacman/files.c:321 src/pacman/sync.c:930
+#: src/pacman/files.c:321 src/pacman/sync.c:932
 #, c-format
 msgid "Synchronizing package databases...\n"
 msgstr "パッケージデータベースの同期中...\n"
@@ -609,7 +614,7 @@ msgstr "依存パッケージ"
 msgid "Description"
 msgstr "説明"
 
-#: src/pacman/package.c:106 src/pacman/util.c:891
+#: src/pacman/package.c:106 src/pacman/util.c:895
 #, c-format
 msgid "Download Size"
 msgstr "ダウンロード容量"
@@ -714,7 +719,7 @@ msgstr "検証方法"
 msgid "Version"
 msgstr "バージョン"
 
-#: src/pacman/package.c:174 src/pacman/util.c:1346
+#: src/pacman/package.c:174 src/pacman/util.c:1350
 #, c-format
 msgid " [installed]"
 msgstr " [インストール済み]"
@@ -735,8 +740,8 @@ msgid "Unknown"
 msgstr "不明"
 
 #: src/pacman/package.c:236 src/pacman/package.c:321 src/pacman/package.c:339
-#: src/pacman/util.c:557 src/pacman/util.c:745 src/pacman/util.c:785
-#: src/pacman/util.c:813
+#: src/pacman/util.c:561 src/pacman/util.c:749 src/pacman/util.c:789
+#: src/pacman/util.c:817
 #, c-format
 msgid "None"
 msgstr "なし"
@@ -1233,13 +1238,34 @@ msgstr ""
 "                       ダウンロード時のタイムアウトを無効化する\n"
 
 #: src/pacman/pacman.c:229
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "      --disable-sandbox\n"
-"                       disable the sandbox used for the downloader process\n"
+"                       disables all sandbox features used for the downloader "
+"process\n"
+msgstr ""
+"      --disable-download-timeout\n"
+"                       ダウンロード時のタイムアウトを無効化する\n"
+
+#: src/pacman/pacman.c:231
+#, fuzzy, c-format
+msgid ""
+"      --disable-sandbox-filesystem\n"
+"                       disables the filesystem part of the downloader "
+"process sandbox\n"
+msgstr ""
+"      --disable-download-timeout\n"
+"                       ダウンロード時のタイムアウトを無効化する\n"
+
+#: src/pacman/pacman.c:233
+#, c-format
+msgid ""
+"      --disable-sandbox-syscalls\n"
+"                       disables the syscalls part of the downloader process "
+"sandbox\n"
 msgstr ""
 
-#: src/pacman/pacman.c:249
+#: src/pacman/pacman.c:253
 #, c-format
 msgid ""
 "                       This program may be freely redistributed under\n"
@@ -1248,67 +1274,67 @@ msgstr ""
 "                       This program may be freely redistributed under\n"
 "                       the terms of the GNU General Public License.\n"
 
-#: src/pacman/pacman.c:282
+#: src/pacman/pacman.c:286
 #, c-format
 msgid "HTTP_USER_AGENT truncated\n"
 msgstr "HTTP_USER_AGENT は省略されました\n"
 
-#: src/pacman/pacman.c:315
+#: src/pacman/pacman.c:319
 #, c-format
 msgid "invalid option: '%s' and '%s' may not be used together\n"
 msgstr "無効なオプション: '%s' と '%s' を一緒に使うことはできません\n"
 
-#: src/pacman/pacman.c:416
+#: src/pacman/pacman.c:427
 #, c-format
 msgid "invalid argument '%s' for %s\n"
 msgstr "引数 '%s' は %s では無効です\n"
 
-#: src/pacman/pacman.c:438 src/pacman/pacman.c:451
+#: src/pacman/pacman.c:449 src/pacman/pacman.c:462
 #, c-format
 msgid "'%s' is not a valid debug level\n"
 msgstr "'%s' は無効なデバッグレベルです\n"
 
-#: src/pacman/pacman.c:1000
+#: src/pacman/pacman.c:1053
 #, c-format
 msgid "only one operation may be used at a time\n"
 msgstr "一度にできる操作はひとつだけです\n"
 
-#: src/pacman/pacman.c:1059
+#: src/pacman/pacman.c:1112
 #, c-format
 msgid "invalid option '-%c'\n"
 msgstr "無効なオプション '-%c'\n"
 
-#: src/pacman/pacman.c:1061
+#: src/pacman/pacman.c:1114
 #, c-format
 msgid "invalid option '--%s'\n"
 msgstr "無効なオプション '--%s'\n"
 
-#: src/pacman/pacman.c:1172
+#: src/pacman/pacman.c:1225
 #, c-format
 msgid "you cannot perform this operation unless you are root.\n"
 msgstr "root 権限がないとこの操作は実行できません。\n"
 
-#: src/pacman/pacman.c:1206
+#: src/pacman/pacman.c:1259
 #, c-format
 msgid "failed to read arguments from stdin: (%s)\n"
 msgstr "標準入力から引数を読み込みませんでした: (%s)\n"
 
-#: src/pacman/pacman.c:1211
+#: src/pacman/pacman.c:1264
 #, c-format
 msgid "failed to reopen stdin for reading: (%s)\n"
 msgstr "標準入力の再オープンに失敗しました: (%s)\n"
 
-#: src/pacman/pacman.c:1216
+#: src/pacman/pacman.c:1269
 #, c-format
 msgid "argument '-' specified with empty stdin\n"
 msgstr "引数 '-' が指定されましたが標準入力が空です\n"
 
-#: src/pacman/pacman.c:1221
+#: src/pacman/pacman.c:1274
 #, c-format
 msgid "argument '-' specified without input on stdin\n"
 msgstr "標準入力の入力なしで引数 '-' が指定されました\n"
 
-#: src/pacman/pacman.c:1298
+#: src/pacman/pacman.c:1351
 #, c-format
 msgid "no operation specified (use -h for help)\n"
 msgstr "オペレーションが指定されていません (-h を使ってヘルプを見て下さい)\n"
@@ -1358,17 +1384,17 @@ msgstr "パッケージ '%s' をロードできませんでした: %s\n"
 msgid "'%s' is a file, you might want to use %s.\n"
 msgstr "'%s' はファイルです。%s を使ってください。\n"
 
-#: src/pacman/remove.c:57 src/pacman/sync.c:574
+#: src/pacman/remove.c:57 src/pacman/sync.c:576
 #, c-format
 msgid "target not found: %s\n"
 msgstr "対象が見つかりませんでした: %s\n"
 
-#: src/pacman/remove.c:112 src/pacman/sync.c:770
+#: src/pacman/remove.c:112 src/pacman/sync.c:772
 #, c-format
 msgid "failed to prepare transaction (%s)\n"
 msgstr "処理の準備に失敗しました (%s)\n"
 
-#: src/pacman/remove.c:119 src/pacman/sync.c:756
+#: src/pacman/remove.c:119 src/pacman/sync.c:758
 #, c-format
 msgid "removing %s breaks dependency '%s' required by %s\n"
 msgstr "%s を削除すると '%s' が破壊され %s の依存関係が壊れます\n"
@@ -1383,7 +1409,7 @@ msgstr "%s は HoldPkg に指定されています。\n"
 msgid "HoldPkg was found in target list. Do you want to continue?"
 msgstr "対象の中に HoldPkg があります。続行しますか？"
 
-#: src/pacman/remove.c:151 src/pacman/sync.c:820
+#: src/pacman/remove.c:151 src/pacman/sync.c:822
 #, c-format
 msgid " there is nothing to do\n"
 msgstr " 何も行うことがありません\n"
@@ -1393,7 +1419,7 @@ msgstr " 何も行うことがありません\n"
 msgid "Do you want to remove these packages?"
 msgstr "以上のパッケージを削除しますか？"
 
-#: src/pacman/remove.c:169 src/pacman/sync.c:848
+#: src/pacman/remove.c:169 src/pacman/sync.c:850
 #, c-format
 msgid "failed to commit transaction (%s)\n"
 msgstr "処理を完了できませんでした (%s)\n"
@@ -1478,100 +1504,105 @@ msgstr "キャッシュディレクトリにアクセスできませんでした
 msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
-#: src/pacman/sync.c:441
+#: src/pacman/sync.c:368
+#, fuzzy, c-format
+msgid "package group '%s' was not found\n"
+msgstr "パッケージ '%s' は見つかりませんでした\n"
+
+#: src/pacman/sync.c:443
 #, c-format
 msgid "repository '%s' does not exist\n"
 msgstr "リポジトリ '%s' は存在しません\n"
 
-#: src/pacman/sync.c:487
+#: src/pacman/sync.c:489
 #, c-format
 msgid "repository \"%s\" was not found.\n"
 msgstr "リポジトリ \"%s\" は見つかりませんでした。\n"
 
-#: src/pacman/sync.c:589
+#: src/pacman/sync.c:591
 #, c-format
 msgid "There is %d member in group %s%s%s:\n"
 msgid_plural "There are %d members in group %s%s%s:\n"
 msgstr[0] "%d 個のパッケージがグループ %s%s%s に存在します:\n"
 
-#: src/pacman/sync.c:639
+#: src/pacman/sync.c:641
 #, c-format
 msgid "skipping target: %s\n"
 msgstr "対象をスキップ: %s\n"
 
-#: src/pacman/sync.c:668
+#: src/pacman/sync.c:670
 #, c-format
 msgid "database not found: %s\n"
 msgstr "データベースが見つかりませんでした: %s\n"
 
-#: src/pacman/sync.c:696
+#: src/pacman/sync.c:698
 #, c-format
 msgid "'%s' is a file, did you mean %s instead of %s?\n"
 msgstr ""
 "'%s' はファイルです、あなたが行いたいのは %s で %s ではありませんか？\n"
 
-#: src/pacman/sync.c:727
+#: src/pacman/sync.c:729
 #, c-format
 msgid "Starting full system upgrade...\n"
 msgstr "システム全体の更新を開始...\n"
 
-#: src/pacman/sync.c:748
+#: src/pacman/sync.c:750
 #, c-format
 msgid "unable to satisfy dependency '%s' required by %s\n"
 msgstr "'%s' を解決できないため %s の依存関係が満たされません\n"
 
-#: src/pacman/sync.c:752
+#: src/pacman/sync.c:754
 #, c-format
 msgid "installing %s (%s) breaks dependency '%s' required by %s\n"
 msgstr "%s (%s) をインストールすると '%s' が破壊され %s の依存関係が壊れます\n"
 
-#: src/pacman/sync.c:776
+#: src/pacman/sync.c:778
 #, c-format
 msgid "package %s does not have a valid architecture\n"
 msgstr "パッケージ %s は有効なアーキテクチャを持っていません\n"
 
-#: src/pacman/sync.c:791
+#: src/pacman/sync.c:793
 #, c-format
 msgid "%s-%s and %s-%s are in conflict\n"
 msgstr ""
 
-#: src/pacman/sync.c:798
+#: src/pacman/sync.c:800
 #, c-format
 msgid "%s-%s and %s-%s are in conflict (%s)\n"
 msgstr ""
 
-#: src/pacman/sync.c:836
+#: src/pacman/sync.c:838
 #, c-format
 msgid "Proceed with download?"
 msgstr "ダウンロードを行いますか？"
 
-#: src/pacman/sync.c:838
+#: src/pacman/sync.c:840
 #, c-format
 msgid "Proceed with installation?"
 msgstr "インストールを行いますか？"
 
-#: src/pacman/sync.c:856
+#: src/pacman/sync.c:858
 #, c-format
 msgid "%s exists in both '%s' and '%s'\n"
 msgstr "%s が '%s' と '%s' の両方に存在しています\n"
 
-#: src/pacman/sync.c:861
+#: src/pacman/sync.c:863
 #, c-format
 msgid "%s: %s exists in filesystem (owned by %s)\n"
 msgstr ""
 "%s: %s がファイルシステムに存在しています (%s によって所有されています)\n"
 
-#: src/pacman/sync.c:864
+#: src/pacman/sync.c:866
 #, c-format
 msgid "%s: %s exists in filesystem\n"
 msgstr "%s: %s がファイルシステムに存在しています\n"
 
-#: src/pacman/sync.c:877
+#: src/pacman/sync.c:879
 #, c-format
 msgid "%s is invalid or corrupted\n"
 msgstr "%s は無効または破損しています\n"
 
-#: src/pacman/sync.c:885
+#: src/pacman/sync.c:887
 #, c-format
 msgid "Errors occurred, no packages were upgraded.\n"
 msgstr "エラーが発生したため、パッケージは更新されませんでした。\n"
@@ -1620,202 +1651,202 @@ msgstr "データベース '%s' は無効です (%s)\n"
 msgid "failed to synchronize all databases (%s)\n"
 msgstr "全てのデータベースの同期に失敗しました (%s)\n"
 
-#: src/pacman/util.c:709
+#: src/pacman/util.c:713
 #, c-format
 msgid "insufficient columns available for table display\n"
 msgstr "テーブル表示をするのにカラムが不十分です\n"
 
-#: src/pacman/util.c:830
+#: src/pacman/util.c:834
 #, c-format
 msgid "Valid"
 msgstr "有効"
 
-#: src/pacman/util.c:833
+#: src/pacman/util.c:837
 #, c-format
 msgid "Key expired"
 msgstr "期限切れの鍵"
 
-#: src/pacman/util.c:836
+#: src/pacman/util.c:840
 #, c-format
 msgid "Expired"
 msgstr "期限切れ"
 
-#: src/pacman/util.c:839
+#: src/pacman/util.c:843
 #, c-format
 msgid "Invalid"
 msgstr "無効"
 
-#: src/pacman/util.c:842
+#: src/pacman/util.c:846
 #, c-format
 msgid "Key unknown"
 msgstr "不明な鍵"
 
-#: src/pacman/util.c:845
+#: src/pacman/util.c:849
 #, c-format
 msgid "Key disabled"
 msgstr "無効な鍵"
 
-#: src/pacman/util.c:848
+#: src/pacman/util.c:852
 #, c-format
 msgid "Signature error"
 msgstr "署名エラー"
 
-#: src/pacman/util.c:853
+#: src/pacman/util.c:857
 #, c-format
 msgid "full trust"
 msgstr "完全な信用"
 
-#: src/pacman/util.c:856
+#: src/pacman/util.c:860
 #, c-format
 msgid "marginal trust"
 msgstr "ある程度の信用"
 
-#: src/pacman/util.c:859
+#: src/pacman/util.c:863
 #, c-format
 msgid "never trust"
 msgstr "無期限の信用"
 
-#: src/pacman/util.c:863
+#: src/pacman/util.c:867
 #, c-format
 msgid "unknown trust"
 msgstr "不明な信用"
 
-#: src/pacman/util.c:867
+#: src/pacman/util.c:871
 #, c-format
 msgid "%s, %s from \"%s\""
 msgstr "%s, %s 名前 \"%s\""
 
-#: src/pacman/util.c:885
+#: src/pacman/util.c:889
 #, c-format
 msgid "Package"
 msgstr "パッケージ"
 
-#: src/pacman/util.c:888
+#: src/pacman/util.c:892
 #, c-format
 msgid "Old Version"
 msgstr "古いバージョン"
 
-#: src/pacman/util.c:889
+#: src/pacman/util.c:893
 #, c-format
 msgid "New Version"
 msgstr "新しいバージョン"
 
-#: src/pacman/util.c:890
+#: src/pacman/util.c:894
 #, c-format
 msgid "Net Change"
 msgstr "最終的な変化"
 
-#: src/pacman/util.c:988
+#: src/pacman/util.c:992
 #, c-format
 msgid "removal"
 msgstr "削除"
 
-#: src/pacman/util.c:994
+#: src/pacman/util.c:998
 #, c-format
 msgid "Packages"
 msgstr "パッケージ"
 
-#: src/pacman/util.c:1015
+#: src/pacman/util.c:1019
 #, c-format
 msgid "Total Download Size:"
 msgstr "合計ダウンロード容量:"
 
-#: src/pacman/util.c:1019
+#: src/pacman/util.c:1023
 #, c-format
 msgid "Total Installed Size:"
 msgstr "合計インストール容量:"
 
-#: src/pacman/util.c:1022
+#: src/pacman/util.c:1026
 #, c-format
 msgid "Total Removed Size:"
 msgstr "合計削除容量:"
 
-#: src/pacman/util.c:1026
+#: src/pacman/util.c:1030
 #, c-format
 msgid "Net Upgrade Size:"
 msgstr "最終的なアップグレード容量:"
 
-#: src/pacman/util.c:1348
+#: src/pacman/util.c:1352
 #, c-format
 msgid " [pending]"
 msgstr " [保留]"
 
-#: src/pacman/util.c:1372
+#: src/pacman/util.c:1376
 #, c-format
 msgid "New optional dependencies for %s\n"
 msgstr "%s の新しい提案パッケージ\n"
 
-#: src/pacman/util.c:1394
+#: src/pacman/util.c:1398
 #, c-format
 msgid "Optional dependencies for %s\n"
 msgstr "%s の提案パッケージ\n"
 
-#: src/pacman/util.c:1408
+#: src/pacman/util.c:1412
 #, c-format
 msgid "Repository %s%s\n"
 msgstr "リポジトリ %s%s\n"
 
-#: src/pacman/util.c:1449
+#: src/pacman/util.c:1453
 #, c-format
 msgid "invalid value: %d is not between %d and %d\n"
 msgstr "不正な値です: %d が %d と %d の間に収まっていません\n"
 
-#: src/pacman/util.c:1456
+#: src/pacman/util.c:1460
 #, c-format
 msgid "invalid number: %s\n"
 msgstr "不正な数値です: %s\n"
 
-#: src/pacman/util.c:1573
+#: src/pacman/util.c:1577
 #, c-format
 msgid "Enter a selection (default=all)"
 msgstr "選択して下さい (デフォルト=all)"
 
-#: src/pacman/util.c:1640
+#: src/pacman/util.c:1644
 #, c-format
 msgid "Enter a number (default=%d)"
 msgstr "数字を入力してください (デフォルト=%d)"
 
-#: src/pacman/util.c:1724
+#: src/pacman/util.c:1728
 #, c-format
 msgid "[Y/n]"
 msgstr "[Y/n]"
 
-#: src/pacman/util.c:1726
+#: src/pacman/util.c:1730
 #, c-format
 msgid "[y/N]"
 msgstr "[y/N]"
 
-#: src/pacman/util.c:1751
+#: src/pacman/util.c:1755
 #, c-format
 msgid "Y"
 msgstr "Y"
 
-#: src/pacman/util.c:1751
+#: src/pacman/util.c:1755
 #, c-format
 msgid "YES"
 msgstr "YES"
 
-#: src/pacman/util.c:1753
+#: src/pacman/util.c:1757
 #, c-format
 msgid "N"
 msgstr "N"
 
-#: src/pacman/util.c:1753
+#: src/pacman/util.c:1757
 #, c-format
 msgid "NO"
 msgstr "NO"
 
-#: src/pacman/util.c:1820
+#: src/pacman/util.c:1824
 #, c-format
 msgid "failed to allocate string\n"
 msgstr "文字列の割り当てに失敗しました\n"
 
-#: src/pacman/util.c:1857 src/pacman/util.c:1907 src/util/testpkg.c:35
+#: src/pacman/util.c:1861 src/pacman/util.c:1911 src/util/testpkg.c:35
 #, c-format
 msgid "error: "
 msgstr "エラー: "
 
-#: src/pacman/util.c:1861 src/pacman/util.c:1911 src/util/testpkg.c:36
+#: src/pacman/util.c:1865 src/pacman/util.c:1915 src/util/testpkg.c:36
 #, c-format
 msgid "warning: "
 msgstr "警告: "
@@ -1895,22 +1926,22 @@ msgstr ""
 msgid "error parsing '%s'\n"
 msgstr "'%s' のパースエラー\n"
 
-#: src/pacman/pacman-conf.c:314
+#: src/pacman/pacman-conf.c:315
 #, c-format
 msgid "error: repo '%s' not configured\n"
 msgstr "エラー: リポジトリ '%s' は設定されていません\n"
 
-#: src/pacman/pacman-conf.c:333 src/pacman/pacman-conf.c:418
+#: src/pacman/pacman-conf.c:334 src/pacman/pacman-conf.c:424
 #, c-format
 msgid "warning: '%s' directives cannot be queried\n"
 msgstr "警告: '%s' ディレクティブは確認できません\n"
 
-#: src/pacman/pacman-conf.c:336 src/pacman/pacman-conf.c:421
+#: src/pacman/pacman-conf.c:337 src/pacman/pacman-conf.c:427
 #, c-format
 msgid "warning: unknown directive '%s'\n"
 msgstr "警告: 未知のディレクティブ '%s'\n"
 
-#: src/pacman/pacman-conf.c:458
+#: src/pacman/pacman-conf.c:464
 #, c-format
 msgid "error: directives may not be specified with %s\n"
 msgstr "エラー: ディレクティブは %s で指定されていません\n"
