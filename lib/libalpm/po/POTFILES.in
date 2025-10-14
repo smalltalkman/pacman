@@ -21,12 +21,14 @@ lib/libalpm/graph.c
 lib/libalpm/group.c
 lib/libalpm/handle.c
 lib/libalpm/hook.c
-#lib/libalpm/ini.c
 lib/libalpm/log.c
 lib/libalpm/package.c
 lib/libalpm/pkghash.c
 #lib/libalpm/rawstr.c
 lib/libalpm/remove.c
+lib/libalpm/sandbox.c
+lib/libalpm/sandbox_fs.c
+lib/libalpm/sandbox_syscalls.c
 lib/libalpm/signing.c
 lib/libalpm/sync.c
 lib/libalpm/trans.c
