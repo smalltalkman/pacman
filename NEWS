@@ -1,5 +1,39 @@
 VERSION         DESCRIPTION
 -----------------------------------------------------------------------------
+7.1.0         - Set default SigLevel for databases and packages to Required
+              - Various improvements to the downloader sandbox
+                - Restrict syscalls
+                - Use NO_NEW_PRIVS flag
+                - Provide fine-grained control of sandboxing with options in
+                  pacman.conf and on the command line.
+                - Fix issues introduced by the sandboxing when running as
+                  non-root or on NFS filesystem
+                - Fix Landlock for older ABIs
+                - Improved error detection and reporting
+              - Improvements for (re)importing keys, particularly expired
+                key handling
+              - Reduce "dependency cycle" message to debug output
+              - Print error for -Sg with unknown group
+              - Resolve directory paths passes to pacman
+              - makepkg:
+                - Add NPROC configuration option to control parallel
+                  operations (in makepkg, not building)
+                - Parallelize stripping of files
+                - Fixes and improvements for generation of debuginfo files
+                - Add "xdata" field to PKGBUILDs for tracking generic data
+                - Implement "options_$arch" fields 
+                - Add support for architecture specific split packages
+                - Move PYTHON_HASHSEED handling to libmakepkg-dropins project
+                - Prevent repeated values in the 'arch' array
+                - Only use /etc/makepkg.d/gitconfig for git configuration
+                  (ignore system configuration)
+                - Handle when makepkg.conf.d directory is empty
+                - Ensure OPTIONS is not altered from within a PKGBUILD
+                - Improve reproducibility for source package tarballs
+                - Ensure "tidy" scripts run in the correct order 
+              - repo-add:
+                - Add --wait-for-lock option
+                - Add --remove option that deletes old package files
 7.0.0         - Add DownloadUser configuration option used to drop-privileges
                 when downloading files.
               - Download files to a temporary directory owned by DownloadUser
