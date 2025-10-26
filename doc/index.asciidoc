@@ -83,6 +83,7 @@ contain the biggest changes in a format more concise than the commit log.
 [frame="topbot",grid="none",options="header,autowidth"]
 !======
 !Version !Date
+!7.1.0  !2025-11-01
 !7.0.0  !2024-07-14
 !6.1.0  !2024-03-04
 !6.0.1  !2021-09-04
