@@ -753,6 +753,19 @@ API CHANGES BETWEEN 6.1 AND 7.0
 API CHANGES BETWEEN 7.0 AND 7.1
 ===============================
 
+[ADDED]
+Fine-grained sandbox controls:
+  - alpm_option_get_disable_sandbox_filesystem()
+  - alpm_option_set_disable_sandbox_filesystem()
+  - alpm_option_get_disable_sandbox_syscalls()
+  - alpm_option_set_disable_sandbox_syscalls()
+- Add missing accessors:
+  - alpm_option_get_disable_dl_timeout()
+  - alpm_option_get_disable_sandbox()
+- ALPM_ERR_RETRUEVE_PREPARE
+
 [CHANGED]
 - error codes:
     PM_ERR_TRANS_COMMITING renamed to PM_ERR_TRANS_COMMITTING
+- alpm_pubkey_t - removed pubkey_algo member
+- alpm_sandbox_setup_child() - added parameter to restrict syscalls
