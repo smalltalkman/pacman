@@ -129,4 +129,4 @@ pages:
       - build/doc
   publish: build/doc
   rules:
-    - if: $CI_COMMIT_BRANCH == "release/7.0.x"
+    - if: $CI_COMMIT_BRANCH == "release/7.1.x"
