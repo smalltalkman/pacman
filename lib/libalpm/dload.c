@@ -1151,14 +1151,15 @@ static int finalize_download_locations(alpm_list_t *payloads, const char *localp
 	return returnvalue;
 }
 
-static void prepare_resumable_downloads(alpm_list_t *payloads, const char *localpath,
-		const char *user)
+static void prepare_resumable_downloads(alpm_handle_t *handle, alpm_list_t *payloads,
+		const char *localpath)
 {
 	struct passwd const *pw = NULL;
+	ASSERT(handle != NULL, return);
 	ASSERT(payloads != NULL, return);
 	ASSERT(localpath != NULL, return);
-	if(user != NULL) {
-		ASSERT((pw = getpwnam(user)) != NULL, return);
+	if(_alpm_use_sandbox(handle)) {
+		ASSERT((pw = getpwnam(handle->sandboxuser)) != NULL, return);
 	}
 	alpm_list_t *p;
 	for(p = payloads; p; p = p->next) {
@@ -1172,7 +1173,7 @@ static void prepare_resumable_downloads(alpm_list_t *payloads, const char *local
 			}
 			FREE(dest);
 		}
-		if(!payload->tempfile_name) {
+		if(!payload->tempfile_name || !_alpm_use_sandbox(handle)) {
 			continue;
 		}
 		const char *filename = mbasename(payload->tempfile_name);
@@ -1205,9 +1206,7 @@ int _alpm_download(alpm_handle_t *handle,
 	int ret;
 	int finalize_ret = 0;
 	int childsig = 0;
-	if(_alpm_use_sandbox(handle)) {
-		prepare_resumable_downloads(payloads, localpath, handle->sandboxuser);
-	}
+	prepare_resumable_downloads(handle, payloads, localpath);
 
 	if(handle->fetchcb == NULL) {
 #ifdef HAVE_LIBCURL
