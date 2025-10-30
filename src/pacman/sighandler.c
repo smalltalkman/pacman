@@ -52,6 +52,7 @@ static void _reset_handler(int signum)
 static void soft_interrupt_handler(int signum)
 {
 	console_cursor_move_end();
+	fflush(stdout);
 
 	if(signum == SIGINT) {
 		const char msg[] = "\nInterrupt signal received\n";
