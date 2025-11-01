@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Panwar108 <caspian7pena@gmail.com>, 2018,2020-2021\n"
 "Language-Team: Hindi (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -1200,24 +1200,20 @@ msgstr ""
 "                       डाउनलोड हेतु समयसीमा समाप्ति निष्क्रिय\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       डाउनलोड हेतु समयसीमा समाप्ति निष्क्रिय\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       डाउनलोड हेतु समयसीमा समाप्ति निष्क्रिय\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1469,9 +1465,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "पैकेज '%s' नहीं मिला\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format

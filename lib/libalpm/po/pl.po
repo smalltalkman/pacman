@@ -13,15 +13,15 @@
 # megamann, 2014
 # megamann, 2014-2015
 # megamann, 2015
-# Piotr Strębski <strebski@gmail.com>, 2013,2017-2018,2022-2023
-# Piotr Strębski <strebski@gmail.com>, 2013
+# Piotr Strebski <strebski@gmail.com>, 2013,2017-2018,2022-2024
+# Piotr Strebski <strebski@gmail.com>, 2013
 # Sebastian Jakubiak, 2019
 # Sebastian Jakubiak, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Sebastian Jakubiak, 2019\n"
 "Language-Team: Polish (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -178,7 +178,7 @@ msgstr "zepsuty wpis w bazie danych '%s'\n"
 #: lib/libalpm/be_local.c:663
 #, c-format
 msgid "unknown install reason for package %s: %s\n"
-msgstr ""
+msgstr "nieznany powód instalacji pakietu %s: %s\n"
 
 #: lib/libalpm/be_local.c:743 lib/libalpm/be_local.c:856
 #: lib/libalpm/be_local.c:996 lib/libalpm/be_local.c:1102
@@ -206,12 +206,12 @@ msgstr "nieznany rodzaj walidacji dla pakietu %s: %s\n"
 #: lib/libalpm/be_local.c:841
 #, c-format
 msgid "%s: unknown key '%s' in local database\n"
-msgstr ""
+msgstr "%s: nieznany klucz „%s” w lokalnej bazie danych\n"
 
 #: lib/libalpm/be_package.c:255
 #, c-format
 msgid "%s: unknown key '%s' in package description\n"
-msgstr ""
+msgstr "%s: nieznany klucz „%s” w opisie pakietu\n"
 
 #: lib/libalpm/be_package.c:482 lib/libalpm/be_package.c:635
 #: lib/libalpm/be_package.c:647
@@ -293,7 +293,7 @@ msgstr "nieznana baza danych pliku: %s\n"
 #: lib/libalpm/be_sync.c:711
 #, c-format
 msgid "%s: unknown key '%s' in sync database\n"
-msgstr ""
+msgstr "%s: nieznany klucz „%s” w bazie danych synchronizacji\n"
 
 #: lib/libalpm/db.c:413
 #, c-format
@@ -378,18 +378,18 @@ msgstr "Partycja %s jest zamontowana tylko do odczytu\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "nie udało się stworzyć tymczasowego pliku pobierania\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
 msgid ""
 "too many errors from %s, skipping for the remainder of this transaction\n"
-msgstr ""
+msgstr "zbyt wiele błędów z %s, pominięcie pozostałej części tej transakcji\n"
 
 #: lib/libalpm/dload.c:218
 #, c-format
 msgid "fatal error from %s, skipping for the remainder of this transaction\n"
-msgstr ""
+msgstr "błąd krytyczny z %s, pomijanie pozostałej części tej transakcji\n"
 
 #: lib/libalpm/dload.c:313
 #, c-format
@@ -436,7 +436,7 @@ msgstr "błąd transferu curl: %d\n"
 #: lib/libalpm/dload.c:963
 #, c-format
 msgid "could not chdir to download directory %s\n"
-msgstr ""
+msgstr "nie można użyć polecenia chdir, aby pobrać katalog %s\n"
 
 #: lib/libalpm/dload.c:968
 #, c-format
@@ -444,16 +444,16 @@ msgid "switching to sandbox user '%s' failed!\n"
 msgstr ""
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "nie udało się zmienić nazwy %s na %s (%s)\n"
+msgstr ""
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "nie udało się pobrać niektórych plików\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "pobieranie zakończone pomyślnie, ale brak pliku w pamięci podręcznej\n"
@@ -689,9 +689,9 @@ msgid "conflicting files"
 msgstr "konfliktujące pliki"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "nie udało się stworzyć tymczasowego pliku pobierania\n"
+msgstr ""
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -747,7 +747,7 @@ msgstr "nie udało się usunąć pliku blokującego %s\n"
 #: lib/libalpm/hook.c:95
 #, c-format
 msgid "Missing trigger targets in hook: %s\n"
-msgstr ""
+msgstr "Brakujące cele wyzwalacza w haku: %s\n"
 
 #: lib/libalpm/hook.c:101
 #, c-format
@@ -839,7 +839,7 @@ msgstr "nie można w pełni załadować metadanych dla pakietu %s-%s\n"
 #: lib/libalpm/package.c:869
 #, c-format
 msgid "invalid package metadata (name or version missing)"
-msgstr ""
+msgstr "nieprawidłowe metadane pakietu (brak nazwy lub wersji)"
 
 #: lib/libalpm/package.c:874
 #, c-format
@@ -847,6 +847,8 @@ msgid ""
 "invalid metadata for package %s-%s (package name cannot start with '.' or "
 "'-')\n"
 msgstr ""
+"nieprawidłowe metadane pakietu %s-%s (nazwa pakietu nie może zaczynać się od "
+"„.” ani „-”)\n"
 
 #: lib/libalpm/package.c:878
 #, c-format
@@ -1128,7 +1130,7 @@ msgstr ""
 #: lib/libalpm/sync.c:1021 lib/libalpm/sync.c:1188
 #, c-format
 msgid "%s: could not find package in cache\n"
-msgstr ""
+msgstr "%s: nie można odnaleźć pakietu w pamięci podręcznej\n"
 
 #: lib/libalpm/sync.c:1067
 #, c-format

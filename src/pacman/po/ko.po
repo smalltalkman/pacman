@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Thomas Sungjin Kang <potopro@gmail.com>, 2013\n"
 "Language-Team: Korean (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -1235,24 +1235,20 @@ msgstr ""
 "                       다운로드에 시간 제한을 두지 않습니다\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       다운로드에 시간 제한을 두지 않습니다\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       다운로드에 시간 제한을 두지 않습니다\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1502,9 +1498,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "%s%s 건너뜀: 경로 길이가 PATH_MAX 값을 넘습니다\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "'%s' 꾸러미를 찾을 수 없습니다\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 20:25+1000\n"
 "PO-Revision-Date: 2011-08-08 22:35+0000\n"
 "Last-Translator: 35e31c1f7beb9a73365b56f93b1457f5_fbd83d3, 2014\n"
 "Language-Team: Slovenian (http://app.transifex.com/toofishes/archlinux-"
@@ -72,9 +72,9 @@ msgid "Unable to find source file %s."
 msgstr "Izvorne datoteke %s ni mogoče najti."
 
 #: scripts/makepkg.sh.in:224 scripts/makepkg.sh.in:366
-#: scripts/makepkg.sh.in:578 scripts/makepkg.sh.in:1077
-#: scripts/makepkg.sh.in:1082 scripts/makepkg.sh.in:1087
-#: scripts/makepkg.sh.in:1093 scripts/makepkg.sh.in:1103
+#: scripts/makepkg.sh.in:578 scripts/makepkg.sh.in:1087
+#: scripts/makepkg.sh.in:1092 scripts/makepkg.sh.in:1097
+#: scripts/makepkg.sh.in:1103 scripts/makepkg.sh.in:1113
 #: scripts/libmakepkg/executable/vcs.sh.in:46
 #: scripts/libmakepkg/integrity/generate_checksum.sh.in:62
 #: scripts/libmakepkg/source/bzr.sh.in:55
@@ -215,137 +215,137 @@ msgstr "Nameščanje paketa %s z %s..."
 msgid "Installing %s package group with %s..."
 msgstr "Nameščanje paketne skupine %s z %s..."
 
-#: scripts/makepkg.sh.in:774
+#: scripts/makepkg.sh.in:777
 msgid "Failed to install built package(s)."
 msgstr "Nameščanje izgrajenega paketa/paketov je spodletelo."
 
-#: scripts/makepkg.sh.in:787
+#: scripts/makepkg.sh.in:790
 msgid "A package has already been built, installing existing package..."
 msgstr "Paket je že bil izgrajen, nameščanje obstoječega paketa ..."
 
-#: scripts/makepkg.sh.in:791
+#: scripts/makepkg.sh.in:794
 #, sh-printf-format
 msgid "A package has already been built. (use %s to overwrite)"
 msgstr "Paket je že bil izgrajen. (uporabite %s za prepis)"
 
-#: scripts/makepkg.sh.in:810
+#: scripts/makepkg.sh.in:816
 msgid ""
 "The package group has already been built, installing existing packages..."
 msgstr ""
 "Ta paketna skupina je že bila izgrajena, nameščajo se obstoječi paketi ..."
 
-#: scripts/makepkg.sh.in:814
+#: scripts/makepkg.sh.in:820
 #, sh-printf-format
 msgid "The package group has already been built. (use %s to overwrite)"
 msgstr "Ta paketna skupina je že bila nameščena. (uporabite %s za prepis)"
 
-#: scripts/makepkg.sh.in:819
+#: scripts/makepkg.sh.in:825
 #, sh-printf-format
 msgid "Part of the package group has already been built. (use %s to overwrite)"
 msgstr "Del paketne skupine je že bil izgrajen. (uporabite %s za prepis)"
 
-#: scripts/makepkg.sh.in:873
+#: scripts/makepkg.sh.in:883
 msgid "Make packages compatible for use with pacman"
 msgstr "Ustvari pakete primerne za uporabo s Pacman"
 
-#: scripts/makepkg.sh.in:875 scripts/pacman-db-upgrade.sh.in:41
+#: scripts/makepkg.sh.in:885 scripts/pacman-db-upgrade.sh.in:41
 #, sh-printf-format
 msgid "Usage: %s [options]"
 msgstr "Uporaba: %s [možnosti]"
 
-#: scripts/makepkg.sh.in:877 scripts/pacman-key.sh.in:82
+#: scripts/makepkg.sh.in:887 scripts/pacman-key.sh.in:82
 msgid "Options:"
 msgstr "Možnosti:"
 
-#: scripts/makepkg.sh.in:878
+#: scripts/makepkg.sh.in:888
 #, sh-printf-format
 msgid "  -A, --ignorearch Ignore incomplete %s field in %s"
 msgstr "-A, --ignorearch Prezri nezaključena polja %s v %s"
 
-#: scripts/makepkg.sh.in:879
+#: scripts/makepkg.sh.in:889
 msgid "  -c, --clean      Clean up work files after build"
 msgstr "-c, --clean Po izgradnji počisti delovne datoteke"
 
-#: scripts/makepkg.sh.in:880
+#: scripts/makepkg.sh.in:890
 #, sh-printf-format
 msgid "  -C, --cleanbuild Remove %s dir before building the package"
 msgstr "-C, --cleanbuild Odstraniti %s mapo pred gradnjo paketa"
 
-#: scripts/makepkg.sh.in:881
+#: scripts/makepkg.sh.in:891
 msgid "  -d, --nodeps     Skip all dependency checks"
 msgstr "-d, --nodeps Prezri vsa preverjanja odvisnosti"
 
-#: scripts/makepkg.sh.in:882
+#: scripts/makepkg.sh.in:892
 msgid "  -D, --dir <dir>  Change to directory <dir> before processing PKGBUILD"
 msgstr ""
 
-#: scripts/makepkg.sh.in:883
+#: scripts/makepkg.sh.in:893
 #, sh-printf-format
 msgid "  -e, --noextract  Do not extract source files (use existing %s dir)"
 msgstr ""
 "-e, --noextract Ne razširi datotek izvorne kode (uporabi obstoječo mapo %s)"
 
-#: scripts/makepkg.sh.in:884
+#: scripts/makepkg.sh.in:894
 msgid "  -f, --force      Overwrite existing package"
 msgstr "-f, --force Prepiši obstoječi paket"
 
-#: scripts/makepkg.sh.in:885
+#: scripts/makepkg.sh.in:895
 msgid "  -g, --geninteg   Generate integrity checks for source files"
 msgstr ""
 "-g, --geninteg Ustvari preverjanja celovitosti za datoteke izvorne kode"
 
-#: scripts/makepkg.sh.in:886
+#: scripts/makepkg.sh.in:896
 msgid "  -h, --help       Show this help message and exit"
 msgstr "-h, --help Pokaži to sporočilo pomoči in končaj program"
 
-#: scripts/makepkg.sh.in:887
+#: scripts/makepkg.sh.in:897
 msgid "  -i, --install    Install package after successful build"
 msgstr "-i, --install Po uspešni izgradnji namesti paket"
 
-#: scripts/makepkg.sh.in:888
+#: scripts/makepkg.sh.in:898
 msgid "  -L, --log        Log package build process"
 msgstr "-L, --log Beleži proces izgradnje paketa"
 
-#: scripts/makepkg.sh.in:889
+#: scripts/makepkg.sh.in:899
 msgid "  -m, --nocolor    Disable colorized output messages"
 msgstr "-m, --nocolor Onemogoči barvna izhodna sporočila"
 
-#: scripts/makepkg.sh.in:890
+#: scripts/makepkg.sh.in:900
 msgid "  -o, --nobuild    Download and extract files only"
 msgstr "-o, --nobuild Datoteke zgolj prenesi in razširi"
 
-#: scripts/makepkg.sh.in:891
+#: scripts/makepkg.sh.in:901
 #, sh-printf-format
 msgid "  -p <file>        Use an alternate build script (instead of '%s')"
 msgstr "-p <datoteka> Uporabi alternativni skript (namesto '%s')"
 
-#: scripts/makepkg.sh.in:892
+#: scripts/makepkg.sh.in:902
 msgid ""
 "  -r, --rmdeps     Remove installed dependencies after a successful build"
 msgstr "-r, --rmdeps Po uspešni izgradnji odstrani nameščene odvisnosti"
 
-#: scripts/makepkg.sh.in:893
+#: scripts/makepkg.sh.in:903
 msgid "  -R, --repackage  Repackage contents of the package without rebuilding"
 msgstr ""
 "-R, --repackage Ponovno pakiraj vsebino paketa, a brez ponovne izgradnje"
 
-#: scripts/makepkg.sh.in:894
+#: scripts/makepkg.sh.in:904
 #, sh-printf-format
 msgid "  -s, --syncdeps   Install missing dependencies with %s"
 msgstr "-s, --syncdeps Namesti manjkajoče odvisnosti z %s"
 
-#: scripts/makepkg.sh.in:895
+#: scripts/makepkg.sh.in:905
 msgid ""
 "  -S, --source     Generate a source-only tarball without downloaded sources"
 msgstr ""
 "-S, --source Ustvari arhivsko datoteko zgolj izvorne kode, brez prenešenih "
 "virov"
 
-#: scripts/makepkg.sh.in:896
+#: scripts/makepkg.sh.in:906
 msgid "  -V, --version    Show version information and exit"
 msgstr "-V, --version Pokaži različico programa in izstopi"
 
-#: scripts/makepkg.sh.in:897
+#: scripts/makepkg.sh.in:907
 msgid ""
 "  --allsource      Generate a source-only tarball including downloaded "
 "sources"
@@ -353,22 +353,22 @@ msgstr ""
 "--allsource Ustvari arhivsko datoteko zgolj izvorne kode, vključno s "
 "prenešenimi viri"
 
-#: scripts/makepkg.sh.in:898
+#: scripts/makepkg.sh.in:908
 #, sh-printf-format
 msgid "  --check          Run the %s function in the %s"
 msgstr "--check Izvedi funkcijo %s v %s"
 
-#: scripts/makepkg.sh.in:899
+#: scripts/makepkg.sh.in:909
 #, sh-printf-format
 msgid "  --config <file>  Use an alternate config file (instead of '%s')"
 msgstr ""
 "--config <datoteka> Uporabi alternativno nastavitveno datoteko (namesto '%s')"
 
-#: scripts/makepkg.sh.in:900
+#: scripts/makepkg.sh.in:910
 msgid "  --holdver        Do not update VCS sources"
 msgstr "--holdver Ne posodobi VCS virov"
 
-#: scripts/makepkg.sh.in:901
+#: scripts/makepkg.sh.in:911
 #, sh-printf-format
 msgid ""
 "  --key <key>      Specify a key to use for %s signing instead of the default"
@@ -376,52 +376,52 @@ msgstr ""
 "--key <ključ> Navedite ključ, ki naj bo, namesto privzetega ključa, "
 "uporabljen za %s podpisovanje"
 
-#: scripts/makepkg.sh.in:902
+#: scripts/makepkg.sh.in:912
 msgid "  --noarchive      Do not create package archive"
 msgstr "--noarchive Ne ustvari arhiv paketa"
 
-#: scripts/makepkg.sh.in:903
+#: scripts/makepkg.sh.in:913
 #, sh-printf-format
 msgid "  --nocheck        Do not run the %s function in the %s"
 msgstr "--nocheck Ne izvedi %s funkcije v %s"
 
-#: scripts/makepkg.sh.in:904
+#: scripts/makepkg.sh.in:914
 #, sh-printf-format
 msgid "  --noprepare      Do not run the %s function in the %s"
 msgstr "--noprepare Ne izvedi %s funkcije v %s"
 
-#: scripts/makepkg.sh.in:905
+#: scripts/makepkg.sh.in:915
 msgid "  --nosign         Do not create a signature for the package"
 msgstr "--nosign Za paket ne ustvari podpisa"
 
-#: scripts/makepkg.sh.in:906
+#: scripts/makepkg.sh.in:916
 msgid "  --packagelist    Only list package filepaths that would be produced"
 msgstr ""
 "  --packagelist    Izpiši le tiste poti do datotek, ki bi bile ustvarjene"
 
-#: scripts/makepkg.sh.in:907
+#: scripts/makepkg.sh.in:917
 msgid "  --printsrcinfo   Print the generated SRCINFO and exit"
 msgstr "  --printsrcinfo   Izpiši generirani SRCINFO in končaj"
 
-#: scripts/makepkg.sh.in:908
+#: scripts/makepkg.sh.in:918
 #, sh-printf-format
 msgid "  --sign           Sign the resulting package with %s"
 msgstr "--sign Podpiši proizvedeni paket z %s"
 
-#: scripts/makepkg.sh.in:909
+#: scripts/makepkg.sh.in:919
 msgid "  --skipchecksums  Do not verify checksums of the source files"
 msgstr "--skipchecksums Ne preveri nadzorne vsote izvornih datotek"
 
-#: scripts/makepkg.sh.in:910
+#: scripts/makepkg.sh.in:920
 msgid ""
 "  --skipinteg      Do not perform any verification checks on source files"
 msgstr "--skipinteg Na izvornih datotekah ne izvedi nobenih preverjanj "
 
-#: scripts/makepkg.sh.in:911
+#: scripts/makepkg.sh.in:921
 msgid "  --skippgpcheck   Do not verify source files with PGP signatures"
 msgstr "--skippgpcheck  Ne preverjaj izvornih datotek z PGP podpisi"
 
-#: scripts/makepkg.sh.in:912
+#: scripts/makepkg.sh.in:922
 msgid ""
 "  --verifysource   Download source files (if needed) and perform integrity "
 "checks"
@@ -429,35 +429,35 @@ msgstr ""
 "--verifysource  Prenesi izvorne datoteke (če je potrebno) in opravi pregled "
 "celovitosti"
 
-#: scripts/makepkg.sh.in:914
+#: scripts/makepkg.sh.in:924
 #, sh-printf-format
 msgid "These options can be passed to %s:"
 msgstr "Te možnosti so lahko posredovane do %s:"
 
-#: scripts/makepkg.sh.in:916
+#: scripts/makepkg.sh.in:926
 msgid "  --asdeps         Install packages as non-explicitly installed"
 msgstr "--asdeps Namesti pakete kot neizrecno nameščene"
 
-#: scripts/makepkg.sh.in:917
+#: scripts/makepkg.sh.in:927
 msgid ""
 "  --needed         Do not reinstall the targets that are already up to date"
 msgstr "--needed Ne nameščaj ponovno paketov, ki so že posodobljeni"
 
-#: scripts/makepkg.sh.in:918
+#: scripts/makepkg.sh.in:928
 msgid ""
 "  --noconfirm      Do not ask for confirmation when resolving dependencies"
 msgstr "--noconfirm Ne sprašuj za potrditev pri razreševanju odvisnosti"
 
-#: scripts/makepkg.sh.in:919
+#: scripts/makepkg.sh.in:929
 msgid "  --noprogressbar  Do not show a progress bar when downloading files"
 msgstr "--noprogressbar Pri prenosu datotek ne pokaži vrstice napredka"
 
-#: scripts/makepkg.sh.in:921
+#: scripts/makepkg.sh.in:931
 #, sh-printf-format
 msgid "If %s is not specified, %s will look for '%s'"
 msgstr "Če %s ni podan, bo %s iskal '%s'"
 
-#: scripts/makepkg.sh.in:930 scripts/pacman-db-upgrade.sh.in:57
+#: scripts/makepkg.sh.in:940 scripts/pacman-db-upgrade.sh.in:57
 #: scripts/pacman-key.sh.in:99 scripts/repo-add.sh.in:107
 msgid ""
 "This is free software; see the source for copying conditions.\\nThere is NO "
@@ -466,12 +466,12 @@ msgstr ""
 "To je brezplačna programska oprema; glej vir za pogoje kopiranja.\\nBREZ "
 "JAMSTVA, v obsegu ki ga dovoljuje zakon.\\n"
 
-#: scripts/makepkg.sh.in:1039 scripts/repo-add.sh.in:627
+#: scripts/makepkg.sh.in:1049 scripts/repo-add.sh.in:627
 #, sh-printf-format
 msgid "%s signal caught. Exiting..."
 msgstr "Ujet je bil signala %s. Izhod..."
 
-#: scripts/makepkg.sh.in:1109
+#: scripts/makepkg.sh.in:1119
 #, sh-printf-format
 msgid ""
 "Running %s as root is not allowed as it can cause permanent,\\ncatastrophic "
@@ -480,94 +480,94 @@ msgstr ""
 "Začeti %s kot root ni dovoljeno, saj lahko povzroči trajne,\\nkatastrofalne "
 "poškodbe vašemu sistem."
 
-#: scripts/makepkg.sh.in:1115
+#: scripts/makepkg.sh.in:1125
 #, sh-printf-format
 msgid "Do not use the %s option. This option is only for internal use by %s."
 msgstr "Ne uporabite možnosti %s. Ta je zgolj za interno rabo s strani %s."
 
-#: scripts/makepkg.sh.in:1130
+#: scripts/makepkg.sh.in:1140
 #, sh-printf-format
 msgid "%s does not exist."
 msgstr "%s ne obstaja."
 
-#: scripts/makepkg.sh.in:1135
+#: scripts/makepkg.sh.in:1145
 #, sh-printf-format
 msgid "%s contains %s characters and cannot be sourced."
 msgstr ""
 
-#: scripts/makepkg.sh.in:1140
+#: scripts/makepkg.sh.in:1150
 #, sh-printf-format
 msgid "%s must be in the current working directory."
 msgstr "%s mora biti v trenutnem delovnem imeniku."
 
-#: scripts/makepkg.sh.in:1236 scripts/makepkg.sh.in:1251
+#: scripts/makepkg.sh.in:1246 scripts/makepkg.sh.in:1261
 #, sh-printf-format
 msgid "Leaving %s environment."
 msgstr "Zapuščanje okolja %s."
 
-#: scripts/makepkg.sh.in:1263
+#: scripts/makepkg.sh.in:1273
 #, sh-printf-format
 msgid "The key %s does not exist in your keyring."
 msgstr "Ključa %s ni v vašem obroču ključev."
 
-#: scripts/makepkg.sh.in:1265 scripts/repo-add.sh.in:151
+#: scripts/makepkg.sh.in:1275 scripts/repo-add.sh.in:151
 msgid "There is no key in your keyring."
 msgstr "V vašem obroču ključev ni nobenega ključa."
 
-#: scripts/makepkg.sh.in:1271
+#: scripts/makepkg.sh.in:1281
 #, sh-printf-format
 msgid "Making package: %s"
 msgstr "Izdelava paketa: %s"
 
-#: scripts/makepkg.sh.in:1277
+#: scripts/makepkg.sh.in:1287
 #, sh-printf-format
 msgid "A source package has already been built. (use %s to overwrite)"
 msgstr "Izvorni paket je bil že izgrajen. (uporabite %s za prepis)"
 
-#: scripts/makepkg.sh.in:1297
+#: scripts/makepkg.sh.in:1307
 msgid "Signing package..."
 msgstr "Podpisujem paket..."
 
-#: scripts/makepkg.sh.in:1301
+#: scripts/makepkg.sh.in:1311
 #, sh-printf-format
 msgid "Source package created: %s"
 msgstr "Ustvarjen je bil izvorni paket: %s"
 
-#: scripts/makepkg.sh.in:1307
+#: scripts/makepkg.sh.in:1317
 msgid "Skipping dependency checks."
 msgstr "Izpuščanje preverjanj odvisnosti."
 
-#: scripts/makepkg.sh.in:1315
+#: scripts/makepkg.sh.in:1325
 msgid "Checking runtime dependencies..."
 msgstr "Preverjanje izvajalne odvisnosti ..."
 
-#: scripts/makepkg.sh.in:1323
+#: scripts/makepkg.sh.in:1333
 msgid "Checking buildtime dependencies..."
 msgstr "Preverjanje izgradnih odvisnosti ..."
 
-#: scripts/makepkg.sh.in:1336
+#: scripts/makepkg.sh.in:1346
 msgid "Could not resolve all dependencies."
 msgstr "Ni bilo mogoče razrešiti vseh odvisnosti."
 
-#: scripts/makepkg.sh.in:1347
+#: scripts/makepkg.sh.in:1357
 #, sh-printf-format
 msgid "Using existing %s tree"
 msgstr "Uporaba obstoječega %s tree"
 
-#: scripts/makepkg.sh.in:1354 scripts/makepkg.sh.in:1385
+#: scripts/makepkg.sh.in:1364 scripts/makepkg.sh.in:1395
 #, sh-printf-format
 msgid "Removing existing %s directory..."
 msgstr "Odstranjevanje obstoječe mape %s ..."
 
-#: scripts/makepkg.sh.in:1380
+#: scripts/makepkg.sh.in:1390
 msgid "Sources are ready."
 msgstr "Viri so pripravljeni."
 
-#: scripts/makepkg.sh.in:1407
+#: scripts/makepkg.sh.in:1417
 msgid "Package directory is ready."
 msgstr "Paketna mapa je pripravjena."
 
-#: scripts/makepkg.sh.in:1411
+#: scripts/makepkg.sh.in:1421
 #, sh-printf-format
 msgid "Finished making: %s"
 msgstr "Zaključek izdelave: %s"
@@ -1488,7 +1488,7 @@ msgid "PACKAGER should have the format 'Example Name <email@address.invalid>'"
 msgstr ""
 
 #: scripts/libmakepkg/lint_config/paths.sh.in:39
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:57
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:50
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:53
 #, sh-printf-format
 msgid "%s contains invalid characters: '%s'"
@@ -1534,6 +1534,16 @@ msgid "Checking for packaging issues..."
 msgstr ""
 
 #: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:38
+#, sh-printf-format
+msgid "Can not use '%s' architecture with other architectures"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:44
+#, sh-printf-format
+msgid "%s can not contain duplicate values"
+msgstr ""
+
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:59
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:37
 #: scripts/libmakepkg/lint_pkgbuild/pkgname.sh.in:65
 #: scripts/libmakepkg/lint_pkgbuild/pkgrel.sh.in:35
@@ -1542,19 +1552,15 @@ msgstr ""
 msgid "%s is not allowed to be empty."
 msgstr "%s ne sme biti prazno."
 
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:43
-#, sh-printf-format
-msgid "Can not use '%s' architecture with other architectures"
-msgstr ""
-
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:49
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:66
 #, sh-printf-format
 msgid "%s is not available for the '%s' architecture."
 msgstr "%s ni na voljo za arhitekturo '%s'."
 
-#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:65
+#: scripts/libmakepkg/lint_pkgbuild/arch.sh.in:91
 #, sh-printf-format
-msgid "%s can not contain duplicate values"
+msgid ""
+"Overriden %s in package_%s() contains value not in global directive: '%s'"
 msgstr ""
 
 #: scripts/libmakepkg/lint_pkgbuild/arch_specific.sh.in:43

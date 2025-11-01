@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>, 2015-2016,2018-2020\n"
 "Language-Team: Asturian (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -23,12 +23,12 @@ msgstr ""
 #: src/pacman/callback.c:228
 #, c-format
 msgid "Running pre-transaction hooks...\n"
-msgstr ""
+msgstr "Executando los ganchos d'enantes de la instalación…\n"
 
 #: src/pacman/callback.c:230
 #, c-format
 msgid "Running post-transaction hooks...\n"
-msgstr ""
+msgstr "Executando los ganchos de dempués de la instalación…\n"
 
 #: src/pacman/callback.c:243
 #, c-format
@@ -184,7 +184,7 @@ msgstr ""
 #: src/pacman/callback.c:543
 #, c-format
 msgid "Import PGP key %s?"
-msgstr ""
+msgstr "¿Quies importar la clave PGP «%s»?"
 
 #: src/pacman/callback.c:546
 #, c-format
@@ -433,11 +433,15 @@ msgstr ""
 #, c-format
 msgid "config file %s, line %d: value for '%s' has to be positive : '%s'\n"
 msgstr ""
+"ficheru de configuración «%s», llinia %d: el valor de la opción «%s» tien de "
+"ser positivu: «%s»\n"
 
 #: src/pacman/conf.c:788
 #, c-format
 msgid "config file %s, line %d: value for '%s' is too large : '%s'\n"
 msgstr ""
+"el valor «%s» de la llinia %d del ficheru de configuración «%s» ye mui "
+"llargu: «%s»\n"
 
 #: src/pacman/conf.c:808
 #, c-format
@@ -561,17 +565,17 @@ msgstr "%s: la razón d'instalación afitóse a 'instaláu esplícitamente'\n"
 #: src/pacman/database.c:296
 #, c-format
 msgid "No database errors have been found!\n"
-msgstr ""
+msgstr "¡Nun s'atopó nengún error nes bases de datos!\n"
 
 #: src/pacman/files.c:55
 #, c-format
 msgid "%s is owned by %s%s/%s%s %s%s%s\n"
-msgstr ""
+msgstr "%s ye propiedá de: %s%s/%s%s %s%s%s\n"
 
 #: src/pacman/files.c:129
 #, c-format
 msgid "invalid regular expression '%s'\n"
-msgstr ""
+msgstr "la espresión regular «%s» ye inválida\n"
 
 #: src/pacman/files.c:253
 #, c-format
@@ -953,6 +957,10 @@ msgid ""
 "  -t, --unrequired     list packages not (optionally) required by any\n"
 "                       package (-tt to ignore optdepends) [filter]\n"
 msgstr ""
+"  -t, --unrequired     llista los paquetes que nengún paquete "
+"(opcionalmente) rique (usa la\n"
+"                       opción «-tt» pa inorar les dependencies opcionales) "
+"[peñera]\n"
 
 #: src/pacman/pacman.c:152
 #, c-format
@@ -1030,16 +1038,20 @@ msgid ""
 "  -k, --check          test local database for validity (-kk for sync "
 "databases)\n"
 msgstr ""
+"  -k, --check          comprueba la validez d'una base de datos llocal (la "
+"opción «-kk» sincroniza les bases de datos)\n"
 
 #: src/pacman/pacman.c:173
 #, c-format
 msgid "  -q, --quiet          suppress output of success messages\n"
 msgstr ""
+"  -q, --quiet          escarta la salida de los mensaxes d'aiciones "
+"correutes\n"
 
 #: src/pacman/pacman.c:182
 #, c-format
 msgid "  -x, --regex          enable searching using regular expressions\n"
-msgstr ""
+msgstr "  -x, --regex          activa la busca con espresiones regulares\n"
 
 #: src/pacman/pacman.c:185
 #, c-format
@@ -1064,6 +1076,9 @@ msgid ""
 "                       overwrite conflicting files (can be used more than "
 "once)\n"
 msgstr ""
+"      --overwrite <valor_global>\n"
+"                       sobrescribe los ficheros en conflictu (la opción pue "
+"usase más d'una vegada)\n"
 
 #: src/pacman/pacman.c:194
 #, c-format
@@ -1332,7 +1347,7 @@ msgstr "nun s'especificó denguna operación (usa -h p'ayuda)\n"
 #: src/pacman/query.c:87
 #, c-format
 msgid "%s is owned by %s%s %s%s%s\n"
-msgstr ""
+msgstr "«%s» pertenez a %s%s %s%s%s\n"
 
 #: src/pacman/query.c:149
 #, c-format
@@ -1495,9 +1510,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "nun s'alcontró'l paquete '%s'\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1554,12 +1569,12 @@ msgstr "el paquete %s nun tien una arquitectura válida\n"
 #: src/pacman/sync.c:793
 #, c-format
 msgid "%s-%s and %s-%s are in conflict\n"
-msgstr ""
+msgstr "%s-%s y %s-%s tán en conflictu\n"
 
 #: src/pacman/sync.c:800
 #, c-format
 msgid "%s-%s and %s-%s are in conflict (%s)\n"
-msgstr ""
+msgstr "%s-%s y %s-%s tán en conflictu (%s)\n"
 
 #: src/pacman/sync.c:838
 #, c-format
@@ -1638,7 +1653,7 @@ msgstr "la base de datos '%s' nun ye válida (%s)\n"
 #: src/pacman/util.c:175
 #, c-format
 msgid "failed to synchronize all databases (%s)\n"
-msgstr ""
+msgstr "hebo un fallu al sincronizar toles bases de datos (%s)\n"
 
 #: src/pacman/util.c:713
 #, c-format
@@ -1864,6 +1879,7 @@ msgstr "opciones:\n"
 #, c-format
 msgid "  -c, --config=<path>  set an alternate configuration file\n"
 msgstr ""
+"  -c, --config=<camín>  afita un ficheru de configuración alternativu\n"
 
 #: src/pacman/pacman-conf.c:46
 #, c-format
@@ -1879,11 +1895,13 @@ msgstr ""
 #, c-format
 msgid "  -r, --repo=<remote>  query options for a specific repo\n"
 msgstr ""
+"  -r, --repo=<llugar_remotu>  solicita les opciones d'un depósitu "
+"específicu\n"
 
 #: src/pacman/pacman-conf.c:49
 #, c-format
 msgid "  -v, --verbose        always show directive names\n"
-msgstr ""
+msgstr "  -v, --verbose        amuesa siempre los nomes de les direutives\n"
 
 #: src/pacman/pacman-conf.c:50
 #, c-format
@@ -1893,7 +1911,7 @@ msgstr "  -l, --repo-list      llista los depósitos configuraos\n"
 #: src/pacman/pacman-conf.c:51
 #, c-format
 msgid "  -h, --help           display this help information\n"
-msgstr ""
+msgstr "  -h, --help           amuesa esta información d'ayuda\n"
 
 #: src/pacman/pacman-conf.c:52
 #, c-format
@@ -1913,12 +1931,12 @@ msgstr ""
 #: src/pacman/pacman-conf.c:121
 #, c-format
 msgid "error parsing '%s'\n"
-msgstr ""
+msgstr "hebo un error al analizar «%s»\n"
 
 #: src/pacman/pacman-conf.c:315
 #, c-format
 msgid "error: repo '%s' not configured\n"
-msgstr ""
+msgstr "error: el depósitu «%s» nun ta configuráu\n"
 
 #: src/pacman/pacman-conf.c:334 src/pacman/pacman-conf.c:424
 #, c-format
@@ -1928,12 +1946,12 @@ msgstr ""
 #: src/pacman/pacman-conf.c:337 src/pacman/pacman-conf.c:427
 #, c-format
 msgid "warning: unknown directive '%s'\n"
-msgstr ""
+msgstr "alvertencia: desconozse la direutiva «%s»\n"
 
 #: src/pacman/pacman-conf.c:464
 #, c-format
 msgid "error: directives may not be specified with %s\n"
-msgstr ""
+msgstr "error: ye posible que les direutives nun s'especificaren con «%s»\n"
 
 #: src/util/testpkg.c:56
 #, c-format
@@ -1941,16 +1959,18 @@ msgid ""
 "Test a pacman package for validity.\n"
 "\n"
 msgstr ""
+"Prueba la validez d'un paquete de pacman.\n"
+"\n"
 
 #: src/util/testpkg.c:57
 #, c-format
 msgid "Usage: testpkg <package file>\n"
-msgstr ""
+msgstr "Usu: testpkg <ficheru d'un paquete>\n"
 
 #: src/util/testpkg.c:63
 #, c-format
 msgid "cannot initialize alpm: %s\n"
-msgstr ""
+msgstr "nun se pue aniciar ALPM: %s\n"
 
 #: src/util/testpkg.c:78
 #, c-format
@@ -1960,7 +1980,7 @@ msgstr "Nun pue atopase'l ficheru apurríu.\n"
 #: src/util/testpkg.c:81
 #, c-format
 msgid "Cannot open the given file.\n"
-msgstr ""
+msgstr "Nun se pue abrir el ficheru apurríu.\n"
 
 #: src/util/testpkg.c:85
 #, c-format
@@ -1970,7 +1990,7 @@ msgstr "El paquete ye válidu.\n"
 #: src/util/testpkg.c:88
 #, c-format
 msgid "libalpm error: %s\n"
-msgstr ""
+msgstr "error de libalpm: %s\n"
 
 #: src/util/testpkg.c:94
 #, c-format
@@ -1980,4 +2000,4 @@ msgstr "El paquete ye válidu.\n"
 #: src/util/testpkg.c:99
 #, c-format
 msgid "error releasing alpm\n"
-msgstr ""
+msgstr "hebo un fallu al lliberar a alpm\n"

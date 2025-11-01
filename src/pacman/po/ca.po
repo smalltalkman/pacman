@@ -9,15 +9,15 @@
 # Josep <jpreales@gmail.com>, 2011,2013-2014
 # Josep <jpreales@gmail.com>, 2011,2013
 # Josep <jpreales@gmail.com>, 2011
-# Davidmp <medipas@gmail.com>, 2015-2019,2021,2023-2024
+# Davidmp <medipas@gmail.com>, 2015-2019,2021,2023-2025
 # Ramon Buldó <rbuldo@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Davidmp <medipas@gmail.com>, 2015-2019,2021,2023-2024\n"
+"Last-Translator: Davidmp <medipas@gmail.com>, 2015-2019,2021,2023-2025\n"
 "Language-Team: Catalan (http://app.transifex.com/toofishes/archlinux-pacman/"
 "language/ca/)\n"
 "Language: ca\n"
@@ -387,7 +387,7 @@ msgstr[1] ""
 #: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr "ha fallat canviar a l'usuari d'entorn de proves %s!\n"
+msgstr "ha fallat canviar a l'usuari d'entorn controlat %s!\n"
 
 #: src/pacman/conf.c:348
 #, c-format
@@ -514,7 +514,7 @@ msgstr "\"%s\" sense configurar\n"
 #: src/pacman/conf.c:972
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
-msgstr ""
+msgstr "problema en configurar l'usuari de baixada %s (l'usuari no existeix)\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1295,37 +1295,37 @@ msgstr ""
 "                       Usa temps d'espera relaxats per a la baixada.\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
 "      --disable-sandbox\n"
-"                       Inhabilita l'entorn de proves usat per al procés de "
-"baixada.\n"
+"                       inhabilita totes les funcions d'entorn controlat "
+"usades per al procés de baixada\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       Inhabilita l'entorn de proves usat per al procés de "
-"baixada.\n"
+"      --disable-sandbox-filesystem\n"
+"                       inhabilita la part del sistema de fitxers de l'entorn "
+"controlat del procés de baixada\n"
 
 #: src/pacman/pacman.c:233
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-syscalls\n"
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       Inhabilita l'entorn de proves usat per al procés de "
-"baixada.\n"
+"      --disable-sandbox-syscalls\n"
+"                       inhabilita la part de crides al sistema de l'entorn "
+"controlat del procés de baixada\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1570,9 +1570,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "s'omet %s%s: el camí excedeix PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "no s'ha trobat el paquet \"%s\".\n"
+msgstr "no s'ha trobat el grup de paquets %s.\n"
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1686,7 +1686,7 @@ msgstr "ha fallat iniciar la transacció (%s).\n"
 #: src/pacman/util.c:104
 #, c-format
 msgid "could not lock database: %s\n"
-msgstr "no s'ha pogut bloquejar la base de dades: %s\n"
+msgstr "no s'ha pogut blocar la base de dades: %s\n"
 
 #: src/pacman/util.c:107
 #, c-format

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Vojtěch Gondžala <vojtech.gondzala@gmail.com>, 2011,2013\n"
 "Language-Team: Czech (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -374,7 +374,7 @@ msgstr "Diskový oddíl %s je připojen jen pro čtení\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "nepodařilo se vytvořit dočasný soubor pro stahování\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -432,24 +432,24 @@ msgstr "chyba přenosu curl : %d\n"
 #: lib/libalpm/dload.c:963
 #, c-format
 msgid "could not chdir to download directory %s\n"
-msgstr ""
+msgstr "nemohu přejít do složky stahování %s\n"
 
 #: lib/libalpm/dload.c:968
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "přepnutí do sandboxu uživatele '%s' selhalo!\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "nelze přejmenovat %s na %s (%s)\n"
+msgstr "nelze přesunout %s do %s (%s)\n"
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "selhalo získání některých souborů\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "stahování úspěšně dokončeno, ale soubor nenalezen v mezipaměti\n"
@@ -685,9 +685,9 @@ msgid "conflicting files"
 msgstr "konfliktní soubory"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "nepodařilo se vytvořit dočasný soubor pro stahování\n"
+msgstr "selhání inicializace stahování"
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -909,16 +909,18 @@ msgid ""
 "restricting filesystem access failed because Landlock is not supported by "
 "the kernel!\n"
 msgstr ""
+"omezení přístupu k systému souborů selhalo protože Landlock není podporován "
+"kernelem\n"
 
 #: lib/libalpm/sandbox_fs.c:119
 #, c-format
 msgid "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER není podporován\n"
 
 #: lib/libalpm/sandbox_fs.c:125
 #, c-format
 msgid "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE není podporován\n"
 
 #: lib/libalpm/sandbox_fs.c:132
 #, c-format
@@ -926,12 +928,16 @@ msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be created: %s\n"
 msgstr ""
+"omezení přístupu k systému souborů selhalo protože nelze vytvořit soubor "
+"pravidel pro Landlock: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:139
 #, c-format
 msgid ""
 "opening the root filesystem to make it read-only via Landlock failed: %s\n"
 msgstr ""
+"otevření kořene systému souborů pouze pro čtení pomocí Landlocku selhalo: "
+"%s\n"
 
 #: lib/libalpm/sandbox_fs.c:145
 #, c-format
@@ -939,12 +945,14 @@ msgid ""
 "restricting filesystem access failed because the Landlock rule for / could "
 "not be added: %s\n"
 msgstr ""
+"omezení přístupu k systému souborů selhalo protože pravidlo Landlock pro / "
+"nelze přidat: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:156
 #, c-format
 msgid ""
 "opening the download directory to make it writable via Landlock failed: %s\n"
-msgstr ""
+msgstr "otevření složky stahování pro zápis přes Landlock selhalo: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:167
 #, c-format
@@ -952,6 +960,8 @@ msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be applied: %s\n"
 msgstr ""
+"omezení přístupu k systému souborů selhalo protože soubor pravidel Landlock "
+"nelze aplikovat: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:171
 #, c-format
@@ -959,32 +969,35 @@ msgid ""
 "restricting filesystem access failed because the Landlock rule for the "
 "temporary download directory could not be added: %s\n"
 msgstr ""
+"omezení přístupu k systému souborů selhalo protože pravidlo Landlock pro "
+"dočasnou složku stahování nemohlo být přidáno: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:177
 #, c-format
 msgid "filesystem access has been restricted to %s, Landlock ABI is %d\n"
-msgstr ""
+msgstr "přístup k systému souborů byl omezen na %s, Landlock ABI je %d\n"
 
 #: lib/libalpm/sandbox_syscalls.c:139
 #, c-format
 msgid ""
 "error initializing seccomp to filter system calls in the download sandbox!\n"
 msgstr ""
+"chyba inicializace seccomp filtru systémových volání pro sandbox stahování!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:147
 #, c-format
 msgid "error restricting syscall %s via seccomp!\n"
-msgstr ""
+msgstr "chyba omezení systémového volání %s přes seccomp!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:157
 #, c-format
 msgid "error restricting syscalls via seccomp: %d!\n"
-msgstr ""
+msgstr "chyba omezení systémových volání přes seccomp: %d!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:160
 #, c-format
 msgid "successfully restricted %d syscalls via seccomp\n"
-msgstr ""
+msgstr "úspěšně omezena systémová volání %d přes seccomp\n"
 
 #: lib/libalpm/signing.c:163
 #, c-format
@@ -1234,19 +1247,19 @@ msgstr ""
 #: lib/libalpm/util.c:972
 #, c-format
 msgid "download user '%s' does not exist\n"
-msgstr ""
+msgstr "uživatel pro stahování '%s' neexistuje\n"
 
 #: lib/libalpm/util.c:975
 #, c-format
 msgid "failed to get download user '%s': %s\n"
-msgstr ""
+msgstr "selhání zjišťování uživatele pro stahování '%s': %s\n"
 
 #: lib/libalpm/util.c:988
 #, c-format
 msgid "failed to create temporary download directory %s: %s\n"
-msgstr ""
+msgstr "selhání vytvoření dočasné složky pro stahování %s: %s\n"
 
 #: lib/libalpm/util.c:996
 #, c-format
 msgid "failed to chown temporary download directory %s: %s\n"
-msgstr ""
+msgstr "selhání nastavení vlastníka dočasné složky pro stahování %s: %s\n"

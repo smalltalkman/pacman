@@ -9,7 +9,7 @@
 # d574d4bb40c84861791a694a999cce69_9aabecb <ec34fbc10d74f76d8160c2aae04a84b4_6702>, 2014
 # d574d4bb40c84861791a694a999cce69_9aabecb <ec34fbc10d74f76d8160c2aae04a84b4_6702>, 2014
 # Giovanni Scafora <scafora.giovanni@gmail.com>, 2011-2013,2015,2022
-# Giovanni Scafora <scafora.giovanni@gmail.com>, 2022-2024
+# Giovanni Scafora <scafora.giovanni@gmail.com>, 2022-2025
 # Massimiliano Torromeo <massimiliano.torromeo@gmail.com>, 2016
 # Pietro Lombardo <pietrolombardo1979@gmail.com>, 2015
 # Saverio <saverio.brancaccio@gmail.com>, 2016
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Giovanni Scafora <scafora.giovanni@gmail.com>, 2022-2024\n"
+"Last-Translator: Giovanni Scafora <scafora.giovanni@gmail.com>, 2022-2025\n"
 "Language-Team: Italian (http://app.transifex.com/toofishes/archlinux-pacman/"
 "language/it/)\n"
 "Language: it\n"
@@ -526,6 +526,8 @@ msgstr "non è stato configurato nessun '%s'\n"
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
 msgstr ""
+"Si è verificato un problema durante l'impostazione di DownloadUser '%s' "
+"(l'utente non esiste)\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1307,37 +1309,37 @@ msgstr ""
 "                       usa dei timeout meno restrittivi per i download\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
 "      --disable-sandbox\n"
-"                       disabilita la sandbox utilizzata per il processo di "
-"downloader\n"
+"                       disabilita tutte le funzionalità della sandbox "
+"utilizzate dal processo di download\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       disabilita la sandbox utilizzata per il processo di "
-"downloader\n"
+"      --disable-sandbox-filesystem\n"
+"                       disabilita la parte del filesystem della sandbox del "
+"processo di download\n"
 
 #: src/pacman/pacman.c:233
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-syscalls\n"
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       disabilita la sandbox utilizzata per il processo di "
-"downloader\n"
+"      --disable-sandbox-syscalls\n"
+"                       disabilita la sezione syscall della sandbox del "
+"processo di download\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1581,9 +1583,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "sto ignorando %s%s: il path eccede PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "impossibile trovare il pacchetto '%s'\n"
+msgstr "il gruppo di pacchetti '%s' non è stato trovato\n"
 
 #: src/pacman/sync.c:443
 #, c-format

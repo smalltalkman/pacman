@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Gwenn M <tornoz@laposte.net>, 2015,2018-2019\n"
 "Language-Team: Breton (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -371,7 +371,7 @@ msgstr "E mod lenn nemetken eo kenstrollet ar parzhad %s\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "fazi en ur c'hrouiñ ar restr padennek evit ar pellgargañ\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -437,16 +437,16 @@ msgid "switching to sandbox user '%s' failed!\n"
 msgstr ""
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "n'haller ket adenvel %s e %s (%s)\n"
+msgstr ""
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "c'hwitadenn war atoradur restroù 'zo\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr ""
@@ -683,9 +683,9 @@ msgid "conflicting files"
 msgstr "tabut er restroù"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "fazi en ur c'hrouiñ ar restr padennek evit ar pellgargañ\n"
+msgstr ""
 
 #: lib/libalpm/error.c:144
 #, c-format

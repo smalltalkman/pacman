@@ -12,7 +12,7 @@
 # Kiprianas Spiridonovas <k.spiridonovas@gmail.com>, 2012-2013
 # Moo, 2023
 # Moo, 2015-2020
-# Moo, 2023-2024
+# Moo, 2023-2025
 # Tautvydas Ž., 2019,2021
 # Tautvydas Ž., 2019,2021
 # Dan McGee <dpmcgee@gmail.com>, 2011
@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Moo, 2023-2024\n"
+"Last-Translator: Moo, 2023-2025\n"
 "Language-Team: Lithuanian (http://app.transifex.com/toofishes/archlinux-"
 "pacman/language/lt/)\n"
 "Language: lt\n"
@@ -1285,34 +1285,28 @@ msgstr ""
 "                       išjungti siuntimų laiko pasibaigimą\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       išjungti smėliadėžę, naudojamą atsisiuntimo procesui\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       išjungti smėliadėžę, naudojamą atsisiuntimo procesui\n"
 
 #: src/pacman/pacman.c:233
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-syscalls\n"
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       išjungti smėliadėžę, naudojamą atsisiuntimo procesui\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1555,9 +1549,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "praleidžiama %s%s: kelias viršija PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "paketas „%s“ nerastas\n"
+msgstr "paketų grupė „%s“ nerasta\n"
 
 #: src/pacman/sync.c:443
 #, c-format

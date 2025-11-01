@@ -7,8 +7,8 @@
 # Feng Chao <chaofeng111@qq.com>, 2018
 # Dan McGee <dpmcgee@gmail.com>, 2011
 # Feng Chao <chaofeng111@qq.com>, 2011,2018,2020
-# Jiachen YANG <farseerfc@gmail.com>, 2019,2024
-# lakejason0 <sunliyuan200402@outlook.com>, 2024
+# Jiachen YANG <farseerfc@gmail.com>, 2019,2024-2025
+# lakejason0 <sunliyuan200402@outlook.com>, 2024-2025
 # Feng Chao <chaofeng111@qq.com>, 2011
 # Feng Chao <chaofeng111@qq.com>, 2011,2018
 # Feng Chao <chaofeng111@qq.com>, 2011
@@ -22,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: 甘 露 <rhythm.gan@gmail.com>, 2011\n"
+"Last-Translator: Jiachen YANG <farseerfc@gmail.com>, 2019,2024-2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/toofishes/archlinux-"
 "pacman/language/zh_CN/)\n"
 "Language: zh_CN\n"
@@ -378,7 +378,7 @@ msgstr ""
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "无法创建下载用的临时文件\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -434,24 +434,24 @@ msgstr "curl 传输错误：%d\n"
 #: lib/libalpm/dload.c:963
 #, c-format
 msgid "could not chdir to download directory %s\n"
-msgstr ""
+msgstr "无法 chdir 到下载目录 %s\n"
 
 #: lib/libalpm/dload.c:968
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "切换到沙盒用户 '%s' 时失败！\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "无法将 %1$s 重命名为 %2$s (%3$s)\n"
+msgstr "无法将 %s 移动进 %s (%s)\n"
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "无法获取某些文件\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "下载已成功完成但缓存中没有文件\n"
@@ -494,12 +494,12 @@ msgstr "剩余空间不够"
 #: lib/libalpm/error.c:55
 #, c-format
 msgid "library not initialized"
-msgstr "仓库未初始化"
+msgstr "库未初始化"
 
 #: lib/libalpm/error.c:57
 #, c-format
 msgid "library already initialized"
-msgstr "仓库已初始化"
+msgstr "库已初始化"
 
 #: lib/libalpm/error.c:59
 #, c-format
@@ -687,9 +687,9 @@ msgid "conflicting files"
 msgstr "有冲突的文件"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "无法创建下载用的临时文件\n"
+msgstr "初始化下载失败"
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -905,83 +905,83 @@ msgstr "无法从缓存中删除记录 '%s'\n"
 msgid ""
 "restricting filesystem access failed because Landlock is not supported by "
 "the kernel!\n"
-msgstr ""
+msgstr "限制文件系统访问失败，因为内核不支持Landlock！\n"
 
 #: lib/libalpm/sandbox_fs.c:119
 #, c-format
 msgid "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 2，不支持 LANDLOCK_ACCESS_FS_REFER\n"
 
 #: lib/libalpm/sandbox_fs.c:125
 #, c-format
 msgid "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 3，不支持 LANDLOCK_ACCESS_FS_TRUNCATE\n"
 
 #: lib/libalpm/sandbox_fs.c:132
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be created: %s\n"
-msgstr ""
+msgstr "限制文件系统访问失败，因为无法创建 Landlock 规则集：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:139
 #, c-format
 msgid ""
 "opening the root filesystem to make it read-only via Landlock failed: %s\n"
-msgstr ""
+msgstr "通过 Landlock 将根文件系统设置为只读的操作失败：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:145
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock rule for / could "
 "not be added: %s\n"
-msgstr ""
+msgstr "限制文件系统访问失败，因为无法为根目录添加 Landlock 规则：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:156
 #, c-format
 msgid ""
 "opening the download directory to make it writable via Landlock failed: %s\n"
-msgstr ""
+msgstr "打开下载目录使其可通过 Landlock 写入的操作失败：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:167
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be applied: %s\n"
-msgstr ""
+msgstr "限制文件系统访问失败，因为无法应用 Landlock 规则集：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:171
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock rule for the "
 "temporary download directory could not be added: %s\n"
-msgstr ""
+msgstr "限制文件系统访问失败，因为无法为临时下载目录添加 Landlock 规则：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:177
 #, c-format
 msgid "filesystem access has been restricted to %s, Landlock ABI is %d\n"
-msgstr ""
+msgstr "文件系统访问已限制为 %s，Landlock ABI 为 %d\n"
 
 #: lib/libalpm/sandbox_syscalls.c:139
 #, c-format
 msgid ""
 "error initializing seccomp to filter system calls in the download sandbox!\n"
-msgstr ""
+msgstr "在下载沙盒中初始化 seccomp 以过滤系统调用时发生错误！\n"
 
 #: lib/libalpm/sandbox_syscalls.c:147
 #, c-format
 msgid "error restricting syscall %s via seccomp!\n"
-msgstr ""
+msgstr "通过 seccomp 限制系统调用 %s 时发生错误！\n"
 
 #: lib/libalpm/sandbox_syscalls.c:157
 #, c-format
 msgid "error restricting syscalls via seccomp: %d!\n"
-msgstr ""
+msgstr "通过 seccomp 限制系统调用时发生错误：%d！\n"
 
 #: lib/libalpm/sandbox_syscalls.c:160
 #, c-format
 msgid "successfully restricted %d syscalls via seccomp\n"
-msgstr ""
+msgstr "成功通过 seccomp 限制了 %d 个系统调用\n"
 
 #: lib/libalpm/signing.c:163
 #, c-format
@@ -1223,24 +1223,24 @@ msgstr "没有 %s 缓存存在，正在创建...\n"
 #: lib/libalpm/util.c:947
 #, c-format
 msgid "couldn't find or create package cache, using %s instead\n"
-msgstr "无法找到或创建软件包缓存，使用 %s 中\n"
+msgstr "无法找到或创建软件包缓存，正在使用 %s 代替\n"
 
 #: lib/libalpm/util.c:972
 #, c-format
 msgid "download user '%s' does not exist\n"
-msgstr ""
+msgstr "下载用户 '%s' 不存在\n"
 
 #: lib/libalpm/util.c:975
 #, c-format
 msgid "failed to get download user '%s': %s\n"
-msgstr ""
+msgstr "无法获取下载用户 '%s': %s\n"
 
 #: lib/libalpm/util.c:988
 #, c-format
 msgid "failed to create temporary download directory %s: %s\n"
-msgstr ""
+msgstr "无法创建临时下载目录 %s：%s\n"
 
 #: lib/libalpm/util.c:996
 #, c-format
 msgid "failed to chown temporary download directory %s: %s\n"
-msgstr ""
+msgstr "无法更改临时下载目录 %s 的拥有者：%s\n"

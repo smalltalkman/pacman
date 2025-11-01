@@ -14,19 +14,19 @@
 # ice, 2016
 # Leonel <leonelmalon@gmail.com>, 2013
 # neiko <neikokz+tsfx@gmail.com>, 2011
-# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2015-2016
-# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2015
-# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2015
-# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2015-2017
+# Pablo Lezaeta (Jota) <prflr88@gmail.com>, 2015-2016
+# Pablo Lezaeta (Jota) <prflr88@gmail.com>, 2015
+# Pablo Lezaeta (Jota) <prflr88@gmail.com>, 2015
+# Pablo Lezaeta (Jota) <prflr88@gmail.com>, 2015-2017
 # Pedro Román <roizheim@gmail.com>, 2013
 # picodotdev <pico.dev@gmail.com>, 2014
-# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2015
+# Pablo Lezaeta (Jota) <prflr88@gmail.com>, 2015
 # Rodrigo Cares <rcares@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Rodrigo Cares <rcares@gmail.com>, 2012\n"
 "Language-Team: Spanish (Latin America) (http://app.transifex.com/toofishes/"
@@ -1584,9 +1584,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "el paquete «%s» no se ha encontrado\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format

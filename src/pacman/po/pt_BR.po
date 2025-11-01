@@ -9,7 +9,7 @@
 # Antonio Fernandes C. Neto <fernandes@pelivre.org>, 2011
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2012-2014
 # Rafael Fontenelle <rafaelff@gnome.org>, 2018
-# Rafael Fontenelle <rffontenelle@gmail.com>, 2015-2017,2019,2021,2023-2024
+# Rafael Fontenelle <rffontenelle@gmail.com>, 2015-2017,2019,2021,2023-2025
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2011-2012
 # Sandro <sandrossv@hotmail.com>, 2011
 # Sandro <sandrossv@hotmail.com>, 2011
@@ -18,10 +18,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>, "
-"2015-2017,2019,2021,2023-2024\n"
+"2015-2017,2019,2021,2023-2025\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/pt_BR/)\n"
 "Language: pt_BR\n"
@@ -340,7 +340,7 @@ msgstr "%s: %s (informações da soma de verificação %s não disponível)\n"
 #: src/pacman/check.c:204 src/pacman/check.c:210
 #, c-format
 msgid "%s: %s (%s checksum mismatch)\n"
-msgstr "%s: %s (soma de verificação %s incompatível)\n"
+msgstr "%s: %s (soma de verificação %s incorreta)\n"
 
 #: src/pacman/check.c:250 src/pacman/check.c:265 src/pacman/check.c:309
 #: src/pacman/check.c:363
@@ -525,7 +525,7 @@ msgstr "nenhum \"%s\" configurado\n"
 #: src/pacman/conf.c:972
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
-msgstr ""
+msgstr "problema ao configurar o DownloadUser \"%s\" (usuário não existe)\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1305,37 +1305,37 @@ msgstr ""
 "                         usa tempos limites relaxados para download\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
 "      --disable-sandbox\n"
-"                       desabilita o isolamento usado para o processo do "
-"baixador\n"
+"                       desabilita todos os recursos de isolamento usados "
+"para o processo do baixador\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       desabilita o isolamento usado para o processo do "
-"baixador\n"
+"      --disable-sandbox-filesystem\n"
+"                       desabilita a parte do sistema de arquivos do "
+"isolamento do processo baixador\n"
 
 #: src/pacman/pacman.c:233
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-syscalls\n"
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       desabilita o isolamento usado para o processo do "
-"baixador\n"
+"      --disable-sandbox-syscalls\n"
+"                       desabilita a parte de chamadas do sistema do "
+"isolamento do processo baixador\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1577,9 +1577,11 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "pulando %s%s: o caminho excede PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "o pacote \"%s\" não foi encontrado\n"
+msgstr ""
+"grupo de pacotes \"%s\" não foi encontrado\n"
+"\n"
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1963,7 +1965,7 @@ msgstr " -S, --sysroot=<path> define uma raiz de sistema alternativa\n"
 #, c-format
 msgid "  -r, --repo=<remote>  query options for a specific repo\n"
 msgstr ""
-"  -r, --repo=<remote>  consulta opções para um repositório específico\n"
+"  -r, --repo=<remoto>  consulta opções para um repositório específico\n"
 
 #: src/pacman/pacman-conf.c:49
 #, c-format

@@ -7,6 +7,7 @@
 # Allan McRae <allan@archlinux.org>, 2020
 # Ger Schinkel, 2018
 # Ger Schinkel, 2018
+# Heimen Stoffels <vistausss@fastmail.com>, 2025
 # Jan-Jaap Korpershoek <jjkorpershoek96@gmail.com>, 2015
 # 19898fe33fe7bd3495cc8a6ab6d7183f_cf56265 <7523f9ebe0c10a9376d1ff73b8b55853_102487>, 2013
 # 19898fe33fe7bd3495cc8a6ab6d7183f_cf56265 <7523f9ebe0c10a9376d1ff73b8b55853_102487>, 2013
@@ -23,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: zenlord <zenlord@gmail.com>, 2013,2015\n"
 "Language-Team: Dutch (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -152,12 +153,12 @@ msgstr "%s vervangen door %s/%s?"
 #: src/pacman/callback.c:468
 #, c-format
 msgid "%s-%s%s%s and %s-%s%s%s are in conflict. Remove %s?"
-msgstr ""
+msgstr "%s-%s%s%s en %s-%s%s%s conflicteren. Wilt u %s verwijderen?"
 
 #: src/pacman/callback.c:479
 #, c-format
 msgid "%s-%s%s%s and %s-%s%s%s are in conflict (%s). Remove %s?"
-msgstr ""
+msgstr "%s-%s%s%s en %s-%s%s%s conflicteren (%s). Wilt u %s verwijderen?"
 
 #: src/pacman/callback.c:504
 #, c-format
@@ -392,7 +393,7 @@ msgstr[1] "malloc-fout: kon niet %zu bytes toewijzen\n"
 #: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "Het overschakelen naar sandboxgebruiker ‘%s’ is mislukt!\n"
 
 #: src/pacman/conf.c:348
 #, c-format
@@ -467,6 +468,7 @@ msgstr "kon database '%s' niet registreren (%s)\n"
 #, c-format
 msgid "could not add cache server URL to database '%s': %s (%s)\n"
 msgstr ""
+"de cacheserver-url kan niet worden toegevoegd aan de databank ‘%s’: %s (%s)\n"
 
 #: src/pacman/conf.c:875
 #, c-format
@@ -1282,24 +1284,20 @@ msgstr ""
 "                       gebruik versoepelde timeouts voor download\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       gebruik versoepelde timeouts voor download\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       gebruik versoepelde timeouts voor download\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1482,6 +1480,8 @@ msgstr "kon geen toegang krijgen tot de database map\n"
 #, c-format
 msgid "could not remove %s%s: path exceeds PATH_MAX\n"
 msgstr ""
+"%s%s kan niet worden verwijderd: de locatie overschrijdt de waarde van "
+"PATH_MAX\n"
 
 #: src/pacman/sync.c:142
 #, c-format
@@ -1547,11 +1547,12 @@ msgstr "kon geen toegang krijgen tot de cache map %s\n"
 #, c-format
 msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
+"%s%s wordt overgeslagen: de locatie overschrijdt de waarde van PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "pakket '%s' niet gevonden\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1609,12 +1610,12 @@ msgstr "pakket %s heeft geen geldige architectuur\n"
 #: src/pacman/sync.c:793
 #, c-format
 msgid "%s-%s and %s-%s are in conflict\n"
-msgstr ""
+msgstr "%s-%s en %s-%s conflicteren\n"
 
 #: src/pacman/sync.c:800
 #, c-format
 msgid "%s-%s and %s-%s are in conflict (%s)\n"
-msgstr ""
+msgstr "%s-%s en %s-%s conflicteren (%s)\n"
 
 #: src/pacman/sync.c:838
 #, c-format
@@ -1928,7 +1929,7 @@ msgstr "-R, --rootdir=<pad> gebruik een alternatief installatiepad\n"
 #: src/pacman/pacman-conf.c:47
 #, c-format
 msgid "  -S, --sysroot=<path> set an alternate system root\n"
-msgstr ""
+msgstr "-S, --sysroot=<pad> gebruik een alternatieve rootlocatie\n"
 
 #: src/pacman/pacman-conf.c:48
 #, c-format
@@ -1963,7 +1964,7 @@ msgstr "fout bij het instellen van rootdir '%s': onvoldoende geheugen\n"
 #: src/pacman/pacman-conf.c:91
 #, c-format
 msgid "error setting sysroot '%s': out of memory\n"
-msgstr ""
+msgstr "fout tijdens instellen van sysroot ‘%s’: onvoldoende geheugen\n"
 
 #: src/pacman/pacman-conf.c:121
 #, c-format

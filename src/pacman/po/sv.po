@@ -9,7 +9,7 @@
 # 5295d3138ea8e00b2d2de31bd11919f3_81fe320 <1c0cea16b463ff899b2572870c868ca5_659576>, 2018
 # Allan McRae <allan@archlinux.org>, 2021
 # August Wikerfors, 2019,2023
-# August Wikerfors, 2023
+# August Wikerfors, 2023,2025
 # Daniel Sandman <revoltism@gmail.com>, 2013,2015
 # Fredrik Halldal <f.halldal@gmail.com>, 2024
 # Johan R. <jreinhed@protonmail.com>, 2019
@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: riiga <riiga_92@hotmail.com>, 2024\n"
 "Language-Team: Swedish (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -393,7 +393,7 @@ msgstr[1] "malloc misslyckades: Kunde inte allokera %zu byte\n"
 #: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "byte till sandlådeanvändaren '%s' misslyckades!\n"
 
 #: src/pacman/conf.c:348
 #, c-format
@@ -1271,24 +1271,20 @@ msgstr ""
 "                       använd avslappnade timeouts för nedladdning\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       använd avslappnade timeouts för nedladdning\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       använd avslappnade timeouts för nedladdning\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1538,9 +1534,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "hoppar över %s%s: sökväg överstiger PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "Paketet \"%s\" finns inte\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format

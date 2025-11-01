@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the libalpm package.
 #
 # Translators:
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2021-2024
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2021,2024
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2021
+# xxmn77 <xxmn77@gmail.com>, 2021-2024
+# xxmn77 <xxmn77@gmail.com>, 2021,2024
+# xxmn77 <xxmn77@gmail.com>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>, 2021-2024\n"
+"Last-Translator: xxmn77 <xxmn77@gmail.com>, 2021-2024\n"
 "Language-Team: Azerbaijani (Azerbaijan) (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/az_AZ/)\n"
 "Language: az_AZ\n"
@@ -367,7 +367,7 @@ msgstr "%s bölməsi yalnız oxumaq üçün qoşuldu\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "endirmək üçün müvəqqəti fayl yaradıla bilmədi\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -432,16 +432,16 @@ msgid "switching to sandbox user '%s' failed!\n"
 msgstr "\"%s\"  təcrid mühiti istifadəçisinə keçid uğursuz oldu!\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "%s adı, %s kimi dəyişdirilə bilmədi (%s)\n"
+msgstr ""
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "bəzi fayllar alına bilmədi\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "endirmə uğurla tamamlandı, lakin keşdə fayl yoxdur\n"
@@ -677,9 +677,9 @@ msgid "conflicting files"
 msgstr "ziddiyyətli fayllar"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "endirmək üçün müvəqqəti fayl yaradıla bilmədi\n"
+msgstr ""
 
 #: lib/libalpm/error.c:144
 #, c-format

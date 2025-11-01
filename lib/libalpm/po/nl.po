@@ -4,6 +4,7 @@
 #
 # Translators:
 # 56d5d7c9ccc04394ef84fc87640272f6, 2011,2015
+# Heimen Stoffels <vistausss@fastmail.com>, 2025
 # Peter van den Hurk, 2014
 # a91dc94891efad958223abaf78f68e63_4458573, 2014-2015
 # Philip Goto <philip.goto@gmail.com>, 2021
@@ -18,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: zenlord <zenlord@gmail.com>, 2013,2015,2019\n"
 "Language-Team: Dutch (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -173,7 +174,7 @@ msgstr "database record '%s' corrupt\n"
 #: lib/libalpm/be_local.c:663
 #, c-format
 msgid "unknown install reason for package %s: %s\n"
-msgstr ""
+msgstr "onbekende installatiereden voor pakket %s: %s\n"
 
 #: lib/libalpm/be_local.c:743 lib/libalpm/be_local.c:856
 #: lib/libalpm/be_local.c:996 lib/libalpm/be_local.c:1102
@@ -203,12 +204,12 @@ msgstr "onbekend type van validatie voor pakket %s: %s\n"
 #: lib/libalpm/be_local.c:841
 #, c-format
 msgid "%s: unknown key '%s' in local database\n"
-msgstr ""
+msgstr "%s: onbekende sleutel ‘%s’ in lokale databank\n"
 
 #: lib/libalpm/be_package.c:255
 #, c-format
 msgid "%s: unknown key '%s' in package description\n"
-msgstr ""
+msgstr "%s: onbekende sleutel ‘%s’ in pakketbeschrijving\n"
 
 #: lib/libalpm/be_package.c:482 lib/libalpm/be_package.c:635
 #: lib/libalpm/be_package.c:647
@@ -289,7 +290,7 @@ msgstr "onbekend databasebestand: %s\n"
 #: lib/libalpm/be_sync.c:711
 #, c-format
 msgid "%s: unknown key '%s' in sync database\n"
-msgstr ""
+msgstr "%s: onbekende sleutel ‘%s’ in synchronisatiedatabank\n"
 
 #: lib/libalpm/db.c:413
 #, c-format
@@ -374,7 +375,7 @@ msgstr "Partitie %s is gekoppeld als alleen-lezen\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "aanmaken van tijdelijk bestand voor download mislukt\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -387,6 +388,7 @@ msgstr ""
 #, c-format
 msgid "fatal error from %s, skipping for the remainder of this transaction\n"
 msgstr ""
+"te veel fouten van %s - wordt overgeslagen voor de rest van deze overdracht\n"
 
 #: lib/libalpm/dload.c:313
 #, c-format
@@ -438,19 +440,19 @@ msgstr "kon de huidige map niet naar de downloadmap %s wijzigen\n"
 #: lib/libalpm/dload.c:968
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "Het overschakelen naar sandboxgebruiker ‘%s’ is mislukt!\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "kan %s niet hernoemen als %s (%s)\n"
+msgstr ""
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "Niet alle bestanden konden worden opgehaald\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "downloaden succesvol maar geen bestand in de cache\n"
@@ -686,9 +688,9 @@ msgid "conflicting files"
 msgstr "conflicterende bestanden"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "aanmaken van tijdelijk bestand voor download mislukt\n"
+msgstr ""
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -835,7 +837,7 @@ msgstr "kan de metadata voor het pakket %s-%s niet volledig laden\n"
 #: lib/libalpm/package.c:869
 #, c-format
 msgid "invalid package metadata (name or version missing)"
-msgstr ""
+msgstr "ongeldige pakketgegevens (naam of versie ontbreekt)"
 
 #: lib/libalpm/package.c:874
 #, c-format
@@ -843,6 +845,8 @@ msgid ""
 "invalid metadata for package %s-%s (package name cannot start with '.' or "
 "'-')\n"
 msgstr ""
+"ongeldige pakketgegevens in %s-%s (pakketnaam mag niet beginnen met ‘.’ of "
+"eindigen op ‘-’)\n"
 
 #: lib/libalpm/package.c:878
 #, c-format
@@ -850,6 +854,7 @@ msgid ""
 "invalid metadata for package %s-%s (package name contains invalid "
 "characters)\n"
 msgstr ""
+"ongeldige pakketgegevens in %s-%s (pakketnaam bevat ongeldige tekens)\n"
 
 #: lib/libalpm/package.c:885 lib/libalpm/package.c:889
 #, c-format
@@ -857,12 +862,14 @@ msgid ""
 "invalid metadata for package %s-%s (package version contains invalid "
 "characters)\n"
 msgstr ""
+"ongeldige pakketgegevens in %s-%s (pakketversie bevat ongeldige tekens)\n"
 
 #: lib/libalpm/package.c:895
 #, c-format
 msgid ""
 "invalid metadata for package %s-%s (package name and version too long)\n"
 msgstr ""
+"ongeldige pakketgegevens in %s-%s (pakketnaam en -versie zijn te lang)\n"
 
 #: lib/libalpm/remove.c:111
 #, c-format
@@ -1118,11 +1125,13 @@ msgstr "onoplosbaar conflict tussen paketten gevonden\n"
 #, c-format
 msgid "removing '%s-%s' from target list because it conflicts with '%s-%s'\n"
 msgstr ""
+"‘%s-%s’, wordt verwijderd van de doellijst, omdat het conflicteert met ‘%s-"
+"%s’\n"
 
 #: lib/libalpm/sync.c:1021 lib/libalpm/sync.c:1188
 #, c-format
 msgid "%s: could not find package in cache\n"
-msgstr ""
+msgstr "%s: het pakket is niet aanwezig in de cache\n"
 
 #: lib/libalpm/sync.c:1067
 #, c-format

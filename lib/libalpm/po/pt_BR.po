@@ -7,7 +7,7 @@
 # Dan McGee <dpmcgee@gmail.com>, 2011
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2011-2014
 # Rafael Fontenelle <rafaelff@gnome.org>, 2018
-# Rafael Fontenelle <rffontenelle@gmail.com>, 2011,2015,2017-2019,2021,2023-2024
+# Rafael Fontenelle <rffontenelle@gmail.com>, 2011,2015,2017-2019,2021,2023-2025
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2011
 # Sandro <sandrossv@hotmail.com>, 2011
 # Sandro <sandrossv@hotmail.com>, 2011
@@ -15,10 +15,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>, "
-"2011,2015,2017-2019,2021,2023-2024\n"
+"2011,2015,2017-2019,2021,2023-2025\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/pt_BR/)\n"
 "Language: pt_BR\n"
@@ -117,7 +117,7 @@ msgstr "não foi possível mudar para o diretório %s (%s)\n"
 #: lib/libalpm/add.c:571 lib/libalpm/util.c:431 lib/libalpm/util.c:808
 #, c-format
 msgid "could not restore working directory (%s)\n"
-msgstr "falha em recuperar o diretório de trabalho (%s)\n"
+msgstr "não foi possível recuperar o diretório de trabalho (%s)\n"
 
 #: lib/libalpm/add.c:579
 #, c-format
@@ -223,7 +223,7 @@ msgstr "erro ao ler mtree do pacote %s: %s\n"
 #: lib/libalpm/be_package.c:601
 #, c-format
 msgid "could not parse package description file in %s\n"
-msgstr "não foi possível interpretar o arquivo de descrição do pacote em %s\n"
+msgstr "não foi possível analisar o arquivo de descrição do pacote em %s\n"
 
 #: lib/libalpm/be_package.c:606
 #, c-format
@@ -381,7 +381,7 @@ msgstr "Partição %s está montada somente para leitura\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "falha ao criar arquivo temporário para download\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -446,16 +446,16 @@ msgid "switching to sandbox user '%s' failed!\n"
 msgstr "troca para usuário de isolamento \"%s\" falhou!\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "não foi possível renomear %s para %s (%s)\n"
+msgstr "não foi possível mover %s para %s (%s)\n"
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "falha ao obter alguns arquivos\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "download concluído com sucesso, mas nenhum arquivo no cache\n"
@@ -691,9 +691,9 @@ msgid "conflicting files"
 msgstr "arquivos conflitantes"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "falha em criar arquivo temporário para download\n"
+msgstr "falha ao iniciar o download"
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -835,7 +835,8 @@ msgstr "não foi possível ler o diretório : %s: %s\n"
 #: lib/libalpm/package.c:614
 #, c-format
 msgid "could not fully load metadata for package %s-%s\n"
-msgstr "falha em carregar completamente os metadados para o pacote %s-%s\n"
+msgstr ""
+"não foi possível carregar completamente os metadados para o pacote %s-%s\n"
 
 #: lib/libalpm/package.c:869
 #, c-format
@@ -918,16 +919,18 @@ msgid ""
 "restricting filesystem access failed because Landlock is not supported by "
 "the kernel!\n"
 msgstr ""
+"falha ao restringir acesso ao sistema de arquivos porque Landlock não é "
+"suportado pelo kernel!\n"
 
 #: lib/libalpm/sandbox_fs.c:119
 #, c-format
 msgid "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER não é suportado\n"
 
 #: lib/libalpm/sandbox_fs.c:125
 #, c-format
 msgid "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE não é suportado\n"
 
 #: lib/libalpm/sandbox_fs.c:132
 #, c-format
@@ -935,12 +938,16 @@ msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be created: %s\n"
 msgstr ""
+"falha ao restringir acesso ao sistema de arquivos porque o conjunto de "
+"regras de Landlock não pôde ser criado: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:139
 #, c-format
 msgid ""
 "opening the root filesystem to make it read-only via Landlock failed: %s\n"
 msgstr ""
+"falha ao abrir o sistema de arquivos raiz para torná-lo somente leitura via "
+"Landlock: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:145
 #, c-format
@@ -948,12 +955,16 @@ msgid ""
 "restricting filesystem access failed because the Landlock rule for / could "
 "not be added: %s\n"
 msgstr ""
+"falha ao restringir o acesso ao sistema de arquivos porque a regra de "
+"Landlock para / não pôde ser adicionada: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:156
 #, c-format
 msgid ""
 "opening the download directory to make it writable via Landlock failed: %s\n"
 msgstr ""
+"falha ao abrir o diretório de download para torná-lo gravável via Landlock: "
+"%s\n"
 
 #: lib/libalpm/sandbox_fs.c:167
 #, c-format
@@ -961,6 +972,8 @@ msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be applied: %s\n"
 msgstr ""
+"falha ao restringir o acesso ao sistema de arquivos porque o conjunto de "
+"regras de Landlock não pôde ser aplicado: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:171
 #, c-format
@@ -968,32 +981,38 @@ msgid ""
 "restricting filesystem access failed because the Landlock rule for the "
 "temporary download directory could not be added: %s\n"
 msgstr ""
+"falha ao restringir o acesso ao sistema de arquivos porque a regra de "
+"Landlock para o diretório temporário de download não pôde ser adicionado: "
+"%s\n"
 
 #: lib/libalpm/sandbox_fs.c:177
 #, c-format
 msgid "filesystem access has been restricted to %s, Landlock ABI is %d\n"
 msgstr ""
+"o acesso ao sistema de arquivos foi restrito a %s, a ABI de Landlock é %d\n"
 
 #: lib/libalpm/sandbox_syscalls.c:139
 #, c-format
 msgid ""
 "error initializing seccomp to filter system calls in the download sandbox!\n"
 msgstr ""
+"erro ao inicializar seccomp para filtrar chamadas do sistema isolamento de "
+"download!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:147
 #, c-format
 msgid "error restricting syscall %s via seccomp!\n"
-msgstr ""
+msgstr "erro ao restringir a chamadas de sistema %s via seccomp!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:157
 #, c-format
 msgid "error restricting syscalls via seccomp: %d!\n"
-msgstr ""
+msgstr "erro ao restringir chamadas de sistema via seccomp: %d!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:160
 #, c-format
 msgid "successfully restricted %d syscalls via seccomp\n"
-msgstr ""
+msgstr "restringidas com sucesso %d chamadas de sistema via seccomp\n"
 
 #: lib/libalpm/signing.c:163
 #, c-format
@@ -1242,19 +1261,19 @@ msgstr ""
 #: lib/libalpm/util.c:972
 #, c-format
 msgid "download user '%s' does not exist\n"
-msgstr ""
+msgstr "o usuário de download \"%s\" não existe\n"
 
 #: lib/libalpm/util.c:975
 #, c-format
 msgid "failed to get download user '%s': %s\n"
-msgstr ""
+msgstr "falha ao obter o usuário de download \"%s\": %s\n"
 
 #: lib/libalpm/util.c:988
 #, c-format
 msgid "failed to create temporary download directory %s: %s\n"
-msgstr ""
+msgstr "falha ao criar o diretório de temporário de download %s: %s\n"
 
 #: lib/libalpm/util.c:996
 #, c-format
 msgid "failed to chown temporary download directory %s: %s\n"
-msgstr ""
+msgstr "falha ao fazer chown o diretório de temporário de download %s: %s\n"

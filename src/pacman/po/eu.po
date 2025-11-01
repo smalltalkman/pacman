@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Osoitz <oelkoro@gmail.com>, 2013\n"
 "Language-Team: Basque (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -1524,9 +1524,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "'%s' paketea ez da aurkitu\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Sebastien Zurfluh <sebastien.zurfluh@gmail.com>, 2017\n"
 "Language-Team: Esperanto (http://app.transifex.com/toofishes/archlinux-"
@@ -367,7 +367,7 @@ msgstr "Subdisko %s estas surmetita nurlege\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "malsukcesis krei provizoran dosieron por elŝuto\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -433,16 +433,16 @@ msgid "switching to sandbox user '%s' failed!\n"
 msgstr ""
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "ne eblis renomi %s al %s (%s)\n"
+msgstr ""
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "malsukcesis ricevi kelkajn dosierojn\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr ""
@@ -678,9 +678,9 @@ msgid "conflicting files"
 msgstr "konfliktantaj dosieroj"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "malsukcesis krei provizoran dosieron por elŝuto\n"
+msgstr ""
 
 #: lib/libalpm/error.c:144
 #, c-format

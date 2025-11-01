@@ -7,10 +7,10 @@
 # Dan McGee <dpmcgee@gmail.com>, 2011
 # Jesse Jaara <jesse.jaara@gmail.com>, 2011-2012
 # J. S. Tuomisto <jstuomisto@gmail.com>, 2014
-# Lasse Liehu <larso@gmx.com>, 2013
-# Lasse Liehu <larso@gmx.com>, 2011-2012
-# Lasse Liehu <larso@gmx.com>, 2011,2013
-# Lasse Liehu <larso@gmx.com>, 2011,2013-2016
+# Lasse Liehu-Inui <larso@gmx.com>, 2013
+# Lasse Liehu-Inui <larso@gmx.com>, 2011-2012
+# Lasse Liehu-Inui <larso@gmx.com>, 2011,2013
+# Lasse Liehu-Inui <larso@gmx.com>, 2011,2013-2016
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011-2012
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011-2012, 2013
 # No User, 2011
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Sami Korkalainen, 2018\n"
 "Language-Team: Finnish (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -1513,9 +1513,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "pakettia '%s' ei löydy\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format

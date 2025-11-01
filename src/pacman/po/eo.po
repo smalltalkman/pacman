@@ -5,6 +5,7 @@
 # Translators:
 # 26d139cb1c2d98f71c81ecc5f1398607_ccbf632 <3f75bcc742e703df77b38f0e2e01b596_1004441>, 2022
 # LaPingvino <ikojba@gmail.com>, 2014
+# Jakub Szafranek Fabijan <jakubfabijan@tuta.io>, 2025
 # LaPingvino <ikojba@gmail.com>, 2014
 # LaPingvino <ikojba@gmail.com>, 2014
 # Kinsey Favre <kinseytamsin@tutanota.com>, 2020
@@ -22,10 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: 26d139cb1c2d98f71c81ecc5f1398607_ccbf632 "
-"<3f75bcc742e703df77b38f0e2e01b596_1004441>, 2022\n"
+"Last-Translator: Jakub Szafranek Fabijan <jakubfabijan@tuta.io>, 2025\n"
 "Language-Team: Esperanto (http://app.transifex.com/toofishes/archlinux-"
 "pacman/language/eo/)\n"
 "Language: eo\n"
@@ -154,12 +154,12 @@ msgstr "Anstataŭigi %s per %s/%s?"
 #: src/pacman/callback.c:468
 #, c-format
 msgid "%s-%s%s%s and %s-%s%s%s are in conflict. Remove %s?"
-msgstr ""
+msgstr "%s-%s%s%s kaj %s-%s%s%s konfliktas. Ĉu forigi %s?"
 
 #: src/pacman/callback.c:479
 #, c-format
 msgid "%s-%s%s%s and %s-%s%s%s are in conflict (%s). Remove %s?"
-msgstr ""
+msgstr "%s-%s%s%s kaj %s-%s%s%s konfliktas (%s). Ĉu forigi %s?"
 
 #: src/pacman/callback.c:504
 #, c-format
@@ -1088,6 +1088,9 @@ msgid ""
 "                       overwrite conflicting files (can be used more than "
 "once)\n"
 msgstr ""
+"      --overwrite <path>\n"
+"                       superskribi dosierojn kiuj konfliktas (oni povas uzi "
+"ĝin multfoje)\n"
 
 #: src/pacman/pacman.c:194
 #, c-format
@@ -1517,9 +1520,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "la pakaĵo '%s' ne estis trovita\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1561,12 +1564,12 @@ msgstr "Komencado de kompleta promociado de sistemo...\n"
 #: src/pacman/sync.c:750
 #, c-format
 msgid "unable to satisfy dependency '%s' required by %s\n"
-msgstr "ne povas plenumi dependaĵon '%s' postulita de %s\n"
+msgstr "ne povas plenumi dependaĵon '%s' postulitan de %s\n"
 
 #: src/pacman/sync.c:754
 #, c-format
 msgid "installing %s (%s) breaks dependency '%s' required by %s\n"
-msgstr "instalo de %s (%s) malplenumas dependaĵon '%s' postulita de %s\n"
+msgstr "instalo de %s (%s) malplenumas dependaĵon '%s' postulitan de %s\n"
 
 #: src/pacman/sync.c:778
 #, c-format
@@ -1576,12 +1579,12 @@ msgstr "la pakaĵo %s ne havas validan arkitekturon\n"
 #: src/pacman/sync.c:793
 #, c-format
 msgid "%s-%s and %s-%s are in conflict\n"
-msgstr ""
+msgstr "%s-%s kaj %s-%s konfliktas\n"
 
 #: src/pacman/sync.c:800
 #, c-format
 msgid "%s-%s and %s-%s are in conflict (%s)\n"
-msgstr ""
+msgstr "%s-%s kaj %s-%s konfliktas (%s)\n"
 
 #: src/pacman/sync.c:838
 #, c-format
@@ -1920,7 +1923,7 @@ msgstr "  -h, --help           montri tiun helpan informacion\n"
 #: src/pacman/pacman-conf.c:52
 #, c-format
 msgid "  -V, --version        display version information\n"
-msgstr "  -V, --version        montri versian informacion\n"
+msgstr "  -V, --version        montri versian informon\n"
 
 #: src/pacman/pacman-conf.c:83
 #, c-format
@@ -1963,7 +1966,7 @@ msgid ""
 "Test a pacman package for validity.\n"
 "\n"
 msgstr ""
-"Kontroli pakaĵon pacman por valideco.\n"
+"Kontroli validecon de pacman-pakaĵo.\n"
 "\n"
 
 #: src/util/testpkg.c:57

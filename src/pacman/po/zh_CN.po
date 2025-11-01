@@ -9,8 +9,8 @@
 # Feng Chao <chaofeng111@qq.com>, 2018-2019
 # Felix Yan <felixonmars@gmail.com>, 2015,2021
 # Feng Chao <chaofeng111@qq.com>, 2011,2013,2018
-# Jiachen YANG <farseerfc@gmail.com>, 2018-2021
-# lakejason0 <sunliyuan200402@outlook.com>, 2022-2024
+# Jiachen YANG <farseerfc@gmail.com>, 2018-2021,2025
+# lakejason0 <sunliyuan200402@outlook.com>, 2022-2025
 # Feng Chao <chaofeng111@qq.com>, 2011,2013
 # Feng Chao <chaofeng111@qq.com>, 2011,2013,2018
 # Feng Chao <chaofeng111@qq.com>, 2011,2013
@@ -30,9 +30,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: 张海, 2015,2018,2021\n"
+"Last-Translator: Jiachen YANG <farseerfc@gmail.com>, 2018-2021,2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/toofishes/archlinux-"
 "pacman/language/zh_CN/)\n"
 "Language: zh_CN\n"
@@ -388,7 +388,7 @@ msgstr[0] "malloc 失败：无法分配 %zu 字节\n"
 #: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "切换到沙盒用户 '%s' 时失败！\n"
 
 #: src/pacman/conf.c:348
 #, c-format
@@ -501,7 +501,7 @@ msgstr "没有配置 '%s' \n"
 #: src/pacman/conf.c:972
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
-msgstr ""
+msgstr "设置 DownloadUser '%s' 时发生问题（用户不存在）\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -542,7 +542,7 @@ msgstr "没有指定目标 (使用 -h 获取帮助) \n"
 #: src/pacman/database.c:59
 #, c-format
 msgid "no install reason specified (use -h for help)\n"
-msgstr "没有指定安装原因 ( 使用 -h 获取帮助 )\n"
+msgstr "没有指定安装原因 (使用 -h 获取帮助 )\n"
 
 #: src/pacman/database.c:73
 #, c-format
@@ -572,7 +572,7 @@ msgstr "%s 由 %s%s/%s%s %s%s%s 所拥有\n"
 #: src/pacman/files.c:129
 #, c-format
 msgid "invalid regular expression '%s'\n"
-msgstr "无效的正则表达式‘%s’\n"
+msgstr "无效的正则表达式 '%s'\n"
 
 #: src/pacman/files.c:253
 #, c-format
@@ -897,32 +897,31 @@ msgstr "  -k, --check          检查软件包的文件存在(-kk检查文件属
 #: src/pacman/pacman.c:143 src/pacman/pacman.c:180
 #, c-format
 msgid "  -l, --list           list the files owned by the queried package\n"
-msgstr "  -l, --list           列出被查询软件包的内容\n"
+msgstr "  -l, --list           列出被查询软件包的文件列表\n"
 
 #: src/pacman/pacman.c:144
 #, c-format
 msgid ""
 "  -m, --foreign        list installed packages not found in sync db(s) "
 "[filter]\n"
-msgstr ""
-"  -m, --foreign        列出没有在同步数据库时找到的已安装软件包 [过滤器]\n"
+msgstr "  -m, --foreign        列出不在同步数据库中的已安装软件包 [过滤器]\n"
 
 #: src/pacman/pacman.c:145
 #, c-format
 msgid ""
 "  -n, --native         list installed packages only found in sync db(s) "
 "[filter]\n"
-msgstr "  -n, --native         列出只在(同步)数据库中的已安装软件包 [过滤]\n"
+msgstr "  -n, --native         列出只在同步数据库中的已安装软件包 [过滤]\n"
 
 #: src/pacman/pacman.c:146
 #, c-format
 msgid "  -o, --owns <file>    query the package that owns <file>\n"
-msgstr "  -o, --owns <文件>    查询哪个软件包拥有<文件>\n"
+msgstr "  -o, --owns <file>    查询哪个软件包拥有 <file>\n"
 
 #: src/pacman/pacman.c:147
 #, c-format
 msgid "  -p, --file <package> query a package file instead of the database\n"
-msgstr "  -p, --file <软件包>  从某个软件包而不是数据库查询\n"
+msgstr "  -p, --file <package>  从某个软件包而不是数据库查询\n"
 
 #: src/pacman/pacman.c:148 src/pacman/pacman.c:161 src/pacman/pacman.c:181
 #, c-format
@@ -982,13 +981,13 @@ msgstr "  -l, --list <repo>    查看在该软件库中的软件包清单\n"
 #, c-format
 msgid ""
 "  -s, --search <regex> search remote repositories for matching strings\n"
-msgstr "  -s, --search <正则表达式> 按照指定字符串查询远端软件库\n"
+msgstr "  -s, --search <regex> 按照指定字符串查询远端软件库\n"
 
 #: src/pacman/pacman.c:163
 #, c-format
 msgid ""
 "  -u, --sysupgrade     upgrade installed packages (-uu enables downgrades)\n"
-msgstr "  -u, --sysupgrade     升级所有已安装的软件包 (-uu 可启用降级)\n"
+msgstr "  -u, --sysupgrade     升级所有已安装的软件包 (-uu 允许降级)\n"
 
 #: src/pacman/pacman.c:164 src/pacman/pacman.c:183
 #, c-format
@@ -1049,7 +1048,7 @@ msgid ""
 "                       overwrite conflicting files (can be used more than "
 "once)\n"
 msgstr ""
-" --overwrite <glob>\n"
+" --overwrite  <glob>\n"
 "                        覆盖冲突的文件（可以指定多次）\n"
 
 #: src/pacman/pacman.c:194
@@ -1067,7 +1066,7 @@ msgstr "      --asexplicit     作为单独指定安装的软件包安装\n"
 msgid ""
 "      --ignore <pkg>   ignore a package upgrade (can be used more than "
 "once)\n"
-msgstr "      --ignore <软件包>   升级时忽略某个软件包 (可多次使用) \n"
+msgstr "      --ignore <软件包>    升级时忽略某个软件包 (可多次使用) \n"
 
 #: src/pacman/pacman.c:197
 #, c-format
@@ -1091,8 +1090,8 @@ msgid ""
 "      --assume-installed <package=version>\n"
 "                       add a virtual package to satisfy dependencies\n"
 msgstr ""
-"      --assume-installed <package=version>\n"
-"                       添加一个虚拟包用以满足依赖要求\n"
+"      --assume-installed <软件包=版本>\n"
+"                       添加一个虚拟软件包用以满足依赖要求\n"
 
 #: src/pacman/pacman.c:204
 #, c-format
@@ -1156,7 +1155,7 @@ msgstr "      --sysroot        在一个已挂载的 guest 系统操作（仅 ro
 #: src/pacman/pacman.c:218
 #, c-format
 msgid "      --cachedir <dir> set an alternate package cache location\n"
-msgstr "      --cachedir <dir> 指定另外的软件包缓存位置\n"
+msgstr "      --cachedir <目录> 指定另外的软件包缓存位置\n"
 
 #: src/pacman/pacman.c:219
 #, c-format
@@ -1166,7 +1165,7 @@ msgstr "      --hookdir <目录>  指定另外的钩子位置\n"
 #: src/pacman/pacman.c:220
 #, c-format
 msgid "      --color <when>   colorize the output\n"
-msgstr "      --color <when>   彩色化输出\n"
+msgstr "      --color <when>  彩色化输出\n"
 
 #: src/pacman/pacman.c:221
 #, c-format
@@ -1208,24 +1207,24 @@ msgstr ""
 "                       下载时用宽松的超时\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       下载时用宽松的超时\n"
+"      --disable-sandbox\n"
+"                       禁用用于下载进程的所有沙盒功能\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       下载时用宽松的超时\n"
+"      --disable-sandbox-filesystem\n"
+"                       禁用下载进程沙盒的文件系统部分\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1234,6 +1233,8 @@ msgid ""
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
+"      --disable-sandbox-syscalls\n"
+"                       禁用下载进程沙盒的系统调用部分\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1475,9 +1476,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "正在跳过 %s%s：路径超过 PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "软件包 '%s' 未找到\n"
+msgstr "软件包组 '%s' 未找到\n"
 
 #: src/pacman/sync.c:443
 #, c-format

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Pablo Lezaeta Reyes <prflr88@gmail.com>, 2015,2017\n"
 "Language-Team: Spanish (Latin America) (http://app.transifex.com/toofishes/"
@@ -461,12 +461,12 @@ msgstr ""
 msgid "could not move %s into %s (%s)\n"
 msgstr "no se pudo renombrar %s a %s (%s)\n"
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "no se pudieron recibir algunos archivos\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr ""

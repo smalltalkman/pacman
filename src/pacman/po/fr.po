@@ -6,7 +6,7 @@
 # Allan McRae <allan@archlinux.org>, 2018
 # Antoine Lubineau <antoine@lubignon.info>, 2012-2013
 # Antoine Lubineau <antoine@lubignon.info>, 2012
-# Antoine Lubineau <antoine@lubignon.info>, 2012-2013,2015,2017,2024
+# Antoine Lubineau <antoine@lubignon.info>, 2012-2013,2015,2017,2024-2025
 # Cedric Girard <girard.cedric@gmail.com>, 2014
 # Charles Monzat <c.monzat@laposte.net>, 2018-2023
 # Charles Monzat <c.monzat@laposte.net>, 2015-2016,2018
@@ -28,9 +28,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: solstice <solstice.dhiver@gmail.com>, 2012\n"
+"Last-Translator: Antoine Lubineau <antoine@lubignon.info>, "
+"2012-2013,2015,2017,2024-2025\n"
 "Language-Team: French (http://app.transifex.com/toofishes/archlinux-pacman/"
 "language/fr/)\n"
 "Language: fr\n"
@@ -541,6 +542,7 @@ msgstr "« %s » n’est pas configuré\n"
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
 msgstr ""
+"erreur de passage au DownloadUser « %s » (l'utilisateur n'existe pas)\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1327,26 +1329,20 @@ msgstr ""
 "télécharger\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       utilise des délais d’attente relâchés pour "
-"télécharger\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       utilise des délais d’attente relâchés pour "
-"télécharger\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1599,11 +1595,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr ""
-"le paquet « %s » n’a pas été trouvé\n"
-"\n"
+msgstr "le groupe de paquets « %s » n'a pas été trouvé\n"
 
 #: src/pacman/sync.c:443
 #, c-format

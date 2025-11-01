@@ -12,7 +12,7 @@
 # IAmNotImportant, 2017
 # Jaroslav Lichtblau <l10n@lichtblau.cz>, 2014-2016
 # Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2014,2022
-# Jiří Podhorný <jp@email.cz>, 2023-2024
+# Jiří Podhorný <jp@email.cz>, 2023-2025
 # LiberteCzech <martin.kriz.czech@gmail.com>, 2018
 # LiberteCzech <martin.kriz.czech@gmail.com>, 2018
 # LiberteCzech <martin.kriz.czech@gmail.com>, 2018
@@ -27,9 +27,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Vojtěch Gondžala <vojtech.gondzala@gmail.com>, 2011,2013\n"
+"Last-Translator: Jiří Podhorný <jp@email.cz>, 2023-2025\n"
 "Language-Team: Czech (http://app.transifex.com/toofishes/archlinux-pacman/"
 "language/cs/)\n"
 "Language: cs\n"
@@ -415,7 +415,7 @@ msgstr[3] "malloc selhal: nelze alokovat %zu bytů\n"
 #: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "přepnutí do sandboxu uživatele '%s' selhalo!\n"
 
 #: src/pacman/conf.c:348
 #, c-format
@@ -534,7 +534,7 @@ msgstr "'%s' není nastaveno\n"
 #: src/pacman/conf.c:972
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
-msgstr ""
+msgstr "chyba při nastavování DownloadUser '%s' (uživatel neexistuje)\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1280,24 +1280,25 @@ msgstr ""
 "                       použít volnější časové limity pro stahování\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       použít volnější časové limity pro stahování\n"
+"      --disable-sandbox\n"
+"                       zakázat všechny funkce sandboxu pro proces stahování\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       použít volnější časové limity pro stahování\n"
+"       --disable-sandbox-filesystem\n"
+"                       zakázat funkce souborového systému sandboxu procesu "
+"stahování\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1306,6 +1307,8 @@ msgid ""
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
+"      --disable-sandbox-syscalls\n"
+"                       zakázat systémová volání sandboxu procesu stahování\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1547,9 +1550,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "vynechání %s%s: délka cesty přesahuje PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "balíček '%s' nebyl nalezen\n"
+msgstr "skupina balíčků '%s' nebyla nalezena\n"
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -2039,4 +2042,4 @@ msgstr "Balíček je platný.\n"
 #: src/util/testpkg.c:99
 #, c-format
 msgid "error releasing alpm\n"
-msgstr "uvolnění knihovny alpm se nezdařila\n"
+msgstr "uvolnění knihovny alpm se nezdařilo\n"

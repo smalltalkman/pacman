@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the libalpm package.
 #
 # Translators:
+# André Moreira <afrmscb@gmail.com>, 2025
 # ArchGalileu <geral@gasparsantos.eu>, 2011,2014
 # Bruno Guerreiro <american.jesus.pt@gmail.com>, 2016
 # ArchGalileu <geral@gasparsantos.eu>, 2011
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Rui <xymarior@yandex.com>, 2019\n"
+"Last-Translator: André Moreira <afrmscb@gmail.com>, 2025\n"
 "Language-Team: Portuguese (http://app.transifex.com/toofishes/archlinux-"
 "pacman/language/pt/)\n"
 "Language: pt\n"
@@ -167,9 +168,9 @@ msgid "corrupted database entry '%s'\n"
 msgstr "entrada da base de dados corrompida '%s'\n"
 
 #: lib/libalpm/be_local.c:663
-#, fuzzy, c-format
+#, c-format
 msgid "unknown install reason for package %s: %s\n"
-msgstr "tipo de validação desconhecida para o pacote %s: %s\n"
+msgstr "motivo desconhecido para a instalação do pacote %s: %s\n"
 
 #: lib/libalpm/be_local.c:743 lib/libalpm/be_local.c:856
 #: lib/libalpm/be_local.c:996 lib/libalpm/be_local.c:1102
@@ -198,12 +199,12 @@ msgstr "tipo de validação desconhecida para o pacote %s: %s\n"
 #: lib/libalpm/be_local.c:841
 #, c-format
 msgid "%s: unknown key '%s' in local database\n"
-msgstr ""
+msgstr "%s: chave desconhecida '%s' na base de dados local\n"
 
 #: lib/libalpm/be_package.c:255
 #, c-format
 msgid "%s: unknown key '%s' in package description\n"
-msgstr ""
+msgstr "%s: chave desconhecida '%s' na descrição do pacote\n"
 
 #: lib/libalpm/be_package.c:482 lib/libalpm/be_package.c:635
 #: lib/libalpm/be_package.c:647
@@ -265,7 +266,7 @@ msgstr ""
 #: lib/libalpm/be_sync.c:485
 #, c-format
 msgid "could not read db '%s' (%s)\n"
-msgstr ""
+msgstr "Não foi possível ler a base de dados '%s' (%s)\n"
 
 #: lib/libalpm/be_sync.c:518 lib/libalpm/be_sync.c:523
 #, c-format
@@ -289,7 +290,7 @@ msgstr "ficheiro desconhecido da base de dados: %s\n"
 #: lib/libalpm/be_sync.c:711
 #, c-format
 msgid "%s: unknown key '%s' in sync database\n"
-msgstr ""
+msgstr "%s: chave desconhecida '%s' na base de dados de sincronização\n"
 
 #: lib/libalpm/db.c:413
 #, c-format
@@ -377,18 +378,18 @@ msgstr "A partição %s está montada somente para leitura\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "erro ao criar ficheiro temporário para download\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
 msgid ""
 "too many errors from %s, skipping for the remainder of this transaction\n"
-msgstr ""
+msgstr "demasiados erros de %s, ignorando o restante desta transação\n"
 
 #: lib/libalpm/dload.c:218
 #, c-format
 msgid "fatal error from %s, skipping for the remainder of this transaction\n"
-msgstr ""
+msgstr "Erro fatal de %s, ignorando o restante desta transação\n"
 
 #: lib/libalpm/dload.c:313
 #, c-format
@@ -420,42 +421,43 @@ msgstr "url '%s' é inválida\n"
 #: lib/libalpm/dload.c:867
 #, c-format
 msgid "failed to setup a download payload for %s\n"
-msgstr ""
+msgstr "Falha ao configurar uma carga útil de download para %s\n"
 
 #: lib/libalpm/dload.c:879
 #, c-format
 msgid "curl returned error %d from transfer\n"
-msgstr ""
+msgstr "O curl retornou o erro %d da transferência\n"
 
 #: lib/libalpm/dload.c:902
 #, c-format
 msgid "curl transfer error: %d\n"
-msgstr ""
+msgstr "Erro de transferência do curl: %d\n"
 
 #: lib/libalpm/dload.c:963
-#, fuzzy, c-format
+#, c-format
 msgid "could not chdir to download directory %s\n"
-msgstr "não foi possível mudar o diretório raiz (%s)\n"
+msgstr "Não foi possível mudar para o diretório de download %s\n"
 
 #: lib/libalpm/dload.c:968
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "Falha ao mudar para o utilizador sandbox '%s'!\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "não foi possível renomear %s para %s (%s)\n"
+msgstr "Não foi possível mover %s para %s (%s)\n"
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "falha ao obter alguns ficheiros\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr ""
+"O download foi concluído com sucesso, mas não há nenhum ficheiro na cache\n"
 
 #: lib/libalpm/error.c:40
 #, c-format
@@ -585,7 +587,7 @@ msgstr "objeto alvo duplicado"
 #: lib/libalpm/error.c:94
 #, c-format
 msgid "duplicate filename"
-msgstr ""
+msgstr "nome de ficheiro duplicado"
 
 #: lib/libalpm/error.c:98
 #, c-format
@@ -688,9 +690,9 @@ msgid "conflicting files"
 msgstr "ficheiros em conflito"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "erro ao criar ficheiro temporário para download\n"
+msgstr "Falha ao inicializar o download"
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -725,7 +727,7 @@ msgstr "erro ao invocar o programa de descargas externo"
 #: lib/libalpm/error.c:161
 #, c-format
 msgid "compiled without signature support"
-msgstr ""
+msgstr "compilado sem suporte para assinatura"
 
 #: lib/libalpm/error.c:164
 #, c-format
@@ -745,69 +747,69 @@ msgstr "não foi possível remover o ficheiro bloqueado %s\n"
 #: lib/libalpm/hook.c:95
 #, c-format
 msgid "Missing trigger targets in hook: %s\n"
-msgstr ""
+msgstr "Alvos de acionamento ausentes no gancho: %s\n"
 
 #: lib/libalpm/hook.c:101
 #, c-format
 msgid "Missing trigger type in hook: %s\n"
-msgstr ""
+msgstr "Tipo de acionamento ausente no gancho: %s\n"
 
 #: lib/libalpm/hook.c:107
 #, c-format
 msgid "Missing trigger operation in hook: %s\n"
-msgstr ""
+msgstr "Operação de acionamento ausente no gancho: %s\n"
 
 #: lib/libalpm/hook.c:134
 #, c-format
 msgid "Missing Exec option in hook: %s\n"
-msgstr ""
+msgstr "Opção Exec ausente no gancho: %s\n"
 
 #: lib/libalpm/hook.c:140
 #, c-format
 msgid "Missing When option in hook: %s\n"
-msgstr ""
+msgstr "Opção Ausente Quando no gancho: %s\n"
 
 #: lib/libalpm/hook.c:143
 #, c-format
 msgid "AbortOnFail set for PostTransaction hook: %s\n"
-msgstr ""
+msgstr "AbortOnFail definido para o gancho PostTransaction: %s\n"
 
 #: lib/libalpm/hook.c:160
 #, c-format
 msgid "error while reading hook %s: %s\n"
-msgstr ""
+msgstr "Erro ao ler o gancho %s: %s\n"
 
 #: lib/libalpm/hook.c:162 lib/libalpm/hook.c:206 lib/libalpm/hook.c:248
 #, c-format
 msgid "hook %s line %d: invalid option %s\n"
-msgstr ""
+msgstr "gancho %s linha %d: opção inválida %s\n"
 
 #: lib/libalpm/hook.c:172
 #, c-format
 msgid "hook %s line %d: invalid section %s\n"
-msgstr ""
+msgstr "gancho %s linha %d: secção inválida %s\n"
 
 #: lib/libalpm/hook.c:184 lib/libalpm/hook.c:199 lib/libalpm/hook.c:218
 #: lib/libalpm/hook.c:241
 #, c-format
 msgid "hook %s line %d: invalid value %s\n"
-msgstr ""
+msgstr "gancho %s linha %d: valor inválido %s\n"
 
 #: lib/libalpm/hook.c:188 lib/libalpm/hook.c:211 lib/libalpm/hook.c:222
 #: lib/libalpm/hook.c:236
 #, c-format
 msgid "hook %s line %d: overwriting previous definition of %s\n"
-msgstr ""
+msgstr "gancho %s linha %d: substituindo a definição anterior de %s\n"
 
 #: lib/libalpm/hook.c:243
 #, c-format
 msgid "hook %s line %d: unable to set option (%s)\n"
-msgstr ""
+msgstr "gancho %s linha %d: impossível definir a opção (%s)\n"
 
 #: lib/libalpm/hook.c:513
 #, c-format
 msgid "unable to run hook %s: %s\n"
-msgstr ""
+msgstr "Não é possível executar o gancho %s: %s\n"
 
 #: lib/libalpm/hook.c:547 lib/libalpm/hook.c:559 lib/libalpm/remove.c:378
 #, c-format
@@ -817,7 +819,7 @@ msgstr "não foi possível aceder ao diretório: %s: %s\n"
 #: lib/libalpm/hook.c:575
 #, c-format
 msgid "could not open file: %s%s: %s\n"
-msgstr ""
+msgstr "Não foi possível abrir o ficheiro: %s%s: %s\n"
 
 #: lib/libalpm/hook.c:595 lib/libalpm/util.c:281
 #, c-format
@@ -827,7 +829,7 @@ msgstr "não foi possível obter o estado do ficheiro %s: %s\n"
 #: lib/libalpm/hook.c:621
 #, c-format
 msgid "could not read directory: %s: %s\n"
-msgstr ""
+msgstr "Não foi possível ler o diretório: %s: %s\n"
 
 #: lib/libalpm/package.c:614
 #, c-format
@@ -838,7 +840,7 @@ msgstr ""
 #: lib/libalpm/package.c:869
 #, c-format
 msgid "invalid package metadata (name or version missing)"
-msgstr ""
+msgstr "metadados do pacote inválidos (nome ou versão em falta)"
 
 #: lib/libalpm/package.c:874
 #, c-format
@@ -846,6 +848,8 @@ msgid ""
 "invalid metadata for package %s-%s (package name cannot start with '.' or "
 "'-')\n"
 msgstr ""
+"metadados inválidos para o pacote %s-%s (o nome do pacote não pode começar "
+"com '.' ou '-')\n"
 
 #: lib/libalpm/package.c:878
 #, c-format
@@ -853,6 +857,8 @@ msgid ""
 "invalid metadata for package %s-%s (package name contains invalid "
 "characters)\n"
 msgstr ""
+"metadados inválidos para o pacote %s-%s (o nome do pacote contém caracteres "
+"inválidos)\n"
 
 #: lib/libalpm/package.c:885 lib/libalpm/package.c:889
 #, c-format
@@ -860,12 +866,16 @@ msgid ""
 "invalid metadata for package %s-%s (package version contains invalid "
 "characters)\n"
 msgstr ""
+"metadados inválidos para o pacote %s-%s (a versão do pacote contém "
+"caracteres inválidos)\n"
 
 #: lib/libalpm/package.c:895
 #, c-format
 msgid ""
 "invalid metadata for package %s-%s (package name and version too long)\n"
 msgstr ""
+"metadados inválidos para o pacote %s-%s (nome e versão do pacote demasiado "
+"longos)\n"
 
 #: lib/libalpm/remove.c:111
 #, c-format
@@ -885,7 +895,7 @@ msgstr "não foi possível remover o ficheiro '%s': %s\n"
 #: lib/libalpm/remove.c:403 lib/libalpm/remove.c:412
 #, c-format
 msgid "could not backup %s due to PATH_MAX overflow\n"
-msgstr ""
+msgstr "Não foi possível fazer backup de %s devido a overflow de PATH_MAX\n"
 
 #: lib/libalpm/remove.c:570
 #, c-format
@@ -908,16 +918,18 @@ msgid ""
 "restricting filesystem access failed because Landlock is not supported by "
 "the kernel!\n"
 msgstr ""
+"A restrição do acesso ao sistema de ficheiros falhou porque o Landlock não é "
+"suportado pelo kernel!\n"
 
 #: lib/libalpm/sandbox_fs.c:119
 #, c-format
 msgid "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER não é suportado\n"
 
 #: lib/libalpm/sandbox_fs.c:125
 #, c-format
 msgid "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE não é suportado\n"
 
 #: lib/libalpm/sandbox_fs.c:132
 #, c-format
@@ -925,12 +937,16 @@ msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be created: %s\n"
 msgstr ""
+"Falha ao restringir o acesso ao sistema de ficheiros porque o conjunto de "
+"regras Landlock não pôde ser criado: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:139
 #, c-format
 msgid ""
 "opening the root filesystem to make it read-only via Landlock failed: %s\n"
 msgstr ""
+"Falha ao abrir o sistema de ficheiros raiz para torná-lo só de leitura "
+"através do Landlock: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:145
 #, c-format
@@ -938,12 +954,16 @@ msgid ""
 "restricting filesystem access failed because the Landlock rule for / could "
 "not be added: %s\n"
 msgstr ""
+"Falha ao restringir o acesso ao sistema de ficheiros porque a regra Landlock "
+"para / não pôde ser adicionada: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:156
 #, c-format
 msgid ""
 "opening the download directory to make it writable via Landlock failed: %s\n"
 msgstr ""
+"Falha ao abrir o diretório de downloads para torná-lo gravável através do "
+"Landlock: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:167
 #, c-format
@@ -951,6 +971,8 @@ msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be applied: %s\n"
 msgstr ""
+"Falha ao restringir o acesso ao sistema de ficheiros porque o conjunto de "
+"regras Landlock não pôde ser aplicado: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:171
 #, c-format
@@ -958,72 +980,77 @@ msgid ""
 "restricting filesystem access failed because the Landlock rule for the "
 "temporary download directory could not be added: %s\n"
 msgstr ""
+"Falha ao restringir o acesso ao sistema de ficheiros porque a regra Landlock "
+"para o diretório de downloads temporários não pôde ser adicionada: %s\n"
 
 #: lib/libalpm/sandbox_fs.c:177
 #, c-format
 msgid "filesystem access has been restricted to %s, Landlock ABI is %d\n"
 msgstr ""
+"O acesso ao sistema de ficheiros foi restringido a %s, Landlock ABI é %d\n"
 
 #: lib/libalpm/sandbox_syscalls.c:139
 #, c-format
 msgid ""
 "error initializing seccomp to filter system calls in the download sandbox!\n"
 msgstr ""
+"Erro ao inicializar o seccomp para filtrar chamadas do sistema na área "
+"restrita de downloads!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:147
 #, c-format
 msgid "error restricting syscall %s via seccomp!\n"
-msgstr ""
+msgstr "Erro ao restringir a chamada de sistema %s via seccomp!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:157
 #, c-format
 msgid "error restricting syscalls via seccomp: %d!\n"
-msgstr ""
+msgstr "erro ao restringir chamadas de sistema através do seccomp: %d!\n"
 
 #: lib/libalpm/sandbox_syscalls.c:160
 #, c-format
 msgid "successfully restricted %d syscalls via seccomp\n"
-msgstr ""
+msgstr "restringiu com sucesso %d chamadas de sistema através do seccomp\n"
 
 #: lib/libalpm/signing.c:163
 #, c-format
 msgid "Public keyring not found; have you run '%s'?\n"
-msgstr ""
+msgstr "Chave pública não encontrada; executou '%s'?\n"
 
 #: lib/libalpm/signing.c:199 lib/libalpm/signing.c:739
 #, c-format
 msgid "GPGME error: %s\n"
-msgstr ""
+msgstr "Erro GPGME: %s\n"
 
 #: lib/libalpm/signing.c:280
 #, c-format
 msgid "looking up key %s using WKD\n"
-msgstr ""
+msgstr "pesquisando a chave %s usando WKD\n"
 
 #: lib/libalpm/signing.c:294
 #, c-format
 msgid "gpg error: %s\n"
-msgstr ""
+msgstr "Erro gpg: %s\n"
 
 #: lib/libalpm/signing.c:406 lib/libalpm/signing.c:479
 #, c-format
 msgid "keyring is not writable\n"
-msgstr ""
+msgstr "o chaveiro não é gravável\n"
 
 #: lib/libalpm/signing.c:503
 #, c-format
 msgid "key \"%s\" on keyserver\n"
-msgstr ""
+msgstr "chave \"%s\" no servidor de chaves\n"
 
 #: lib/libalpm/signing.c:508
 #, c-format
 msgid "key \"%s\" could not be imported\n"
-msgstr ""
+msgstr "A chave \"%s\" não pôde ser importada\n"
 
 #: lib/libalpm/signing.c:512
 #, c-format
 msgid "key \"%s\" could not be looked up remotely\n"
-msgstr ""
+msgstr "A chave \"%s\" não pôde ser pesquisada remotamente\n"
 
 #: lib/libalpm/signing.c:898 lib/libalpm/sync.c:1053
 #, c-format
@@ -1033,49 +1060,49 @@ msgstr "%s: não tem a assinatura requerida\n"
 #: lib/libalpm/signing.c:912
 #, c-format
 msgid "%s: signature from \"%s\" is marginal trust\n"
-msgstr ""
+msgstr "%s: a assinatura de \"%s\" é de confiança marginal\n"
 
 #: lib/libalpm/signing.c:920
 #, c-format
 msgid "%s: signature from \"%s\" is unknown trust\n"
-msgstr ""
+msgstr "%s: a assinatura de \"%s\" tem confiança desconhecida\n"
 
 #: lib/libalpm/signing.c:927
 #, c-format
 msgid "%s: signature from \"%s\" should never be trusted\n"
-msgstr ""
+msgstr "%s: a assinatura de \"%s\" nunca deve ser confiada\n"
 
 #: lib/libalpm/signing.c:934 lib/libalpm/signing.c:962
 #, c-format
 msgid "%s: signature from \"%s\" is expired\n"
-msgstr ""
+msgstr "%s: a assinatura de \"%s\" está expirada\n"
 
 #: lib/libalpm/signing.c:949
 #, c-format
 msgid "%s: key \"%s\" is unknown\n"
-msgstr ""
+msgstr "%s: a chave \"%s\" é desconhecida\n"
 
 #: lib/libalpm/signing.c:958
 #, c-format
 msgid "%s: key \"%s\" is disabled\n"
-msgstr ""
+msgstr "%s: a chave \"%s\" está desabilitada\n"
 
 #: lib/libalpm/signing.c:966
 #, c-format
 msgid "%s: signature from \"%s\" is invalid\n"
-msgstr ""
+msgstr "%s: a assinatura de \"%s\" é inválida\n"
 
 #: lib/libalpm/signing.c:1024 lib/libalpm/signing.c:1085
 #: lib/libalpm/signing.c:1167
 #, c-format
 msgid "%s: signature format error\n"
-msgstr ""
+msgstr "%s: erro no formato da assinatura\n"
 
 #: lib/libalpm/signing.c:1117 lib/libalpm/signing.c:1150
 #: lib/libalpm/signing.c:1161
 #, c-format
 msgid "%s: unsupported signature format\n"
-msgstr ""
+msgstr "%s: formato de assinatura não suportado\n"
 
 #: lib/libalpm/sync.c:96
 #, c-format
@@ -1110,7 +1137,7 @@ msgstr "não foi possível substituir %s por %s\n"
 #: lib/libalpm/sync.c:477
 #, c-format
 msgid "packages %s and %s have the same filename: %s\n"
-msgstr ""
+msgstr "Os pacotes %s e %s têm o mesmo nome de ficheiro: %s\n"
 
 #: lib/libalpm/sync.c:546 lib/libalpm/sync.c:618
 #, c-format
@@ -1121,16 +1148,17 @@ msgstr "detetado conflito entre pacotes sem solução\n"
 #, c-format
 msgid "removing '%s-%s' from target list because it conflicts with '%s-%s'\n"
 msgstr ""
+"removendo '%s-%s' da lista de destinos porque entra em conflito com '%s-%s'\n"
 
 #: lib/libalpm/sync.c:1021 lib/libalpm/sync.c:1188
 #, c-format
 msgid "%s: could not find package in cache\n"
-msgstr ""
+msgstr "%s: não foi possível encontrar o pacote na cache\n"
 
 #: lib/libalpm/sync.c:1067
 #, c-format
 msgid "failed to read file %s: %s\n"
-msgstr ""
+msgstr "Falha ao ler o ficheiro %s: %s\n"
 
 #: lib/libalpm/sync.c:1325
 #, c-format
@@ -1232,19 +1260,20 @@ msgstr ""
 #: lib/libalpm/util.c:972
 #, c-format
 msgid "download user '%s' does not exist\n"
-msgstr ""
+msgstr "O utilizador de download '%s' não existe\n"
 
 #: lib/libalpm/util.c:975
 #, c-format
 msgid "failed to get download user '%s': %s\n"
-msgstr ""
+msgstr "Falha ao obter o utilizador de download '%s': %s\n"
 
 #: lib/libalpm/util.c:988
 #, c-format
 msgid "failed to create temporary download directory %s: %s\n"
-msgstr ""
+msgstr "Falha ao criar o diretório temporário de download %s: %s\n"
 
 #: lib/libalpm/util.c:996
 #, c-format
 msgid "failed to chown temporary download directory %s: %s\n"
 msgstr ""
+"Falha ao alterar o proprietário do diretório temporário de downloads %s: %s\n"

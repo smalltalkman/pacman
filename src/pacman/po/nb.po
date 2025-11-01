@@ -4,7 +4,7 @@
 #
 # Translators:
 # Alexander F. Rødseth <rodseth@gmail.com>, 2014-2021
-# Alexander F. Rødseth <rodseth@gmail.com>, 2021-2023
+# Alexander F. Rødseth <rodseth@gmail.com>, 2021-2023,2025
 # Alexander F. Rødseth <rodseth@gmail.com>, 2011-2014
 # Harald H. <haarektrans@gmail.com>, 2015
 # Harald H. <haarektrans@gmail.com>, 2015
@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Harald H. <haarektrans@gmail.com>, 2015\n"
+"Last-Translator: Alexander F. Rødseth <rodseth@gmail.com>, 2021-2023,2025\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/nb/)\n"
 "Language: nb\n"
@@ -33,7 +33,7 @@ msgstr "Innledningsvise kommandoer...\n"
 #: src/pacman/callback.c:230
 #, c-format
 msgid "Running post-transaction hooks...\n"
-msgstr "Avsluttningsvise kommandoer...\n"
+msgstr "Avsluttende kommandoer...\n"
 
 #: src/pacman/callback.c:243
 #, c-format
@@ -113,7 +113,7 @@ msgstr "Laster ned pakker...\n"
 #: src/pacman/callback.c:335
 #, c-format
 msgid "checking available disk space...\n"
-msgstr "ser etter ledig diskplass...\n"
+msgstr "ser om det er ledig diskplass...\n"
 
 #: src/pacman/callback.c:342
 #, c-format
@@ -133,7 +133,7 @@ msgstr "%s ble lagret som %s.pacsave\n"
 #: src/pacman/callback.c:446
 #, c-format
 msgid "%s is in IgnorePkg/IgnoreGroup. Install anyway?"
-msgstr "%s finnes i IgnorePkg/IgnoreGroup. Installer allikevel?"
+msgstr "%s finnes i IgnorePkg/IgnoreGroup. Skal den allikevel installeres?"
 
 #: src/pacman/callback.c:456
 #, c-format
@@ -143,12 +143,12 @@ msgstr "Erstatt %s med %s/%s?"
 #: src/pacman/callback.c:468
 #, c-format
 msgid "%s-%s%s%s and %s-%s%s%s are in conflict. Remove %s?"
-msgstr ""
+msgstr "%s-%s%s%s og %s-%s%s%s kolliderer. Fjerne %s?"
 
 #: src/pacman/callback.c:479
 #, c-format
 msgid "%s-%s%s%s and %s-%s%s%s are in conflict (%s). Remove %s?"
-msgstr ""
+msgstr "%s-%s%s%s og %s-%s%s%s kolliderer (%s). Fjerne %s?"
 
 #: src/pacman/callback.c:504
 #, c-format
@@ -182,8 +182,8 @@ msgid ""
 "File %s is corrupted (%s).\n"
 "Do you want to delete it?"
 msgstr ""
-"Filen %s er ødelagt (%s).\n"
-"Vil du slette den?"
+"Denne filen er ødelagt%s (%s).\n"
+"Skal den slettes?"
 
 #: src/pacman/callback.c:543
 #, c-format
@@ -228,7 +228,7 @@ msgstr "finner filkollisjoner"
 #: src/pacman/callback.c:626
 #, c-format
 msgid "checking available disk space"
-msgstr "kontrollerer diskplass"
+msgstr "ser om det er ledig diskplass"
 
 #: src/pacman/callback.c:629
 #, c-format
@@ -268,7 +268,7 @@ msgstr "kunne ikke laste ned %s"
 #: src/pacman/callback.c:1133
 #, c-format
 msgid "unknown callback event type %d for %s\n"
-msgstr "ukjent oppkallingshendelsestype %d for %s\n"
+msgstr "ukjent hendelsestype %d for tilbakekall %s\n"
 
 #: src/pacman/check.c:63 src/pacman/check.c:275
 #, c-format
@@ -382,7 +382,7 @@ msgstr[1] "malloc-feil: kan ikke sette av %zu bytes\n"
 #: src/pacman/conf.c:250
 #, c-format
 msgid "switching to sandbox user '%s' failed!\n"
-msgstr ""
+msgstr "bytte til sandkassebruker '%s' feilet!\n"
 
 #: src/pacman/conf.c:348
 #, c-format
@@ -455,6 +455,8 @@ msgstr "kan ikke registrere '%s'-databasen (%s)\n"
 #, c-format
 msgid "could not add cache server URL to database '%s': %s (%s)\n"
 msgstr ""
+"kunne ikke legge adressen til mellomlagrings-tjeneren inn i databasen '%s': "
+"%s (%s)\n"
 
 #: src/pacman/conf.c:875
 #, c-format
@@ -500,7 +502,7 @@ msgstr "ingen '%s' har blitt konfigurert\n"
 #: src/pacman/conf.c:972
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
-msgstr ""
+msgstr "problem ved valg av DownloadUser '%s' (bruker finnes ikke)\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1243,24 +1245,25 @@ msgstr ""
 "                       ingen tidsfrist for nedlastninger\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       ingen tidsfrist for nedlastninger\n"
+"      --disable-sandbox\n"
+"                       ikke bruk sandkassen for nedlastningsprosessen\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-download-timeout\n"
-"                       ingen tidsfrist for nedlastninger\n"
+"      --disable-sandbox-filesystem\n"
+"                       ikke bruk filsystemet for sandkassen til "
+"nedlastningsprosessen\n"
 
 #: src/pacman/pacman.c:233
 #, c-format
@@ -1269,6 +1272,9 @@ msgid ""
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
+"      --disable-sandbox-syscalls\n"
+"                       ikke bruk systemkall for sandkassen til "
+"nedlastningsprosessen\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1442,7 +1448,7 @@ msgstr "fikk ikke tilgang til databasemappen\n"
 #: src/pacman/sync.c:88
 #, c-format
 msgid "could not remove %s%s: path exceeds PATH_MAX\n"
-msgstr ""
+msgstr "kunne ikke fjerne %s%s: stien er lenger enn PATH_MAX\n"
 
 #: src/pacman/sync.c:142
 #, c-format
@@ -1507,12 +1513,12 @@ msgstr "kunne ikke lese mellomlagringsmappen %s\n"
 #: src/pacman/sync.c:249
 #, c-format
 msgid "skipping %s%s: path exceeds PATH_MAX\n"
-msgstr ""
+msgstr "hopper over %s%s: stien er lenger enn PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "fant ikke pakken '%s'\n"
+msgstr "fant ikke pakkegruppe '%s'\n"
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1569,12 +1575,12 @@ msgstr "pakken %s har ikke en gyldig arkitektur\n"
 #: src/pacman/sync.c:793
 #, c-format
 msgid "%s-%s and %s-%s are in conflict\n"
-msgstr ""
+msgstr "%s-%s og %s-%s kolliderer\n"
 
 #: src/pacman/sync.c:800
 #, c-format
 msgid "%s-%s and %s-%s are in conflict (%s)\n"
-msgstr ""
+msgstr "%s-%s og %s-%s kolliderer (%s)\n"
 
 #: src/pacman/sync.c:838
 #, c-format
@@ -1889,7 +1895,7 @@ msgstr "  -R, --rootdir=<path> bruk en alternativ rotkatalog\n"
 #: src/pacman/pacman-conf.c:47
 #, c-format
 msgid "  -S, --sysroot=<path> set an alternate system root\n"
-msgstr ""
+msgstr "  -S, --sysroot=<path> velg en annen rotkatalog for systemet\n"
 
 #: src/pacman/pacman-conf.c:48
 #, c-format
@@ -1924,7 +1930,7 @@ msgstr "feil ved bruk av rotkatalog '%s': tom for minne\n"
 #: src/pacman/pacman-conf.c:91
 #, c-format
 msgid "error setting sysroot '%s': out of memory\n"
-msgstr ""
+msgstr "feil ved bruk av sysroot '%s': tom for minne\n"
 
 #: src/pacman/pacman-conf.c:121
 #, c-format

@@ -13,14 +13,14 @@
 # 黃柏諺 <s8321414@gmail.com>, 2014-2015,2018
 # lakejason0 <sunliyuan200402@outlook.com>, 2023-2024
 # 黃柏諺 <s8321414@gmail.com>, 2014
-# 黃柏諺 <s8321414@gmail.com>, 2014,2019,2021-2022,2024
+# 黃柏諺 <s8321414@gmail.com>, 2014,2019,2021-2022,2024-2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 22:09+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2014,2019,2021-2022,2024\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2014,2019,2021-2022,2024-2025\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -371,7 +371,7 @@ msgstr "分區 %s 為唯讀\n"
 #: lib/libalpm/dload.c:110
 #, c-format
 msgid "failed to create temporary file for download\n"
-msgstr ""
+msgstr "無法建立下載暫存檔\n"
 
 #: lib/libalpm/dload.c:201
 #, c-format
@@ -435,16 +435,16 @@ msgid "switching to sandbox user '%s' failed!\n"
 msgstr "切換至沙盒使用者「%s」失敗！\n"
 
 #: lib/libalpm/dload.c:1126
-#, fuzzy, c-format
+#, c-format
 msgid "could not move %s into %s (%s)\n"
-msgstr "無法將 %s 重命名為 %s (%s)\n"
+msgstr "無法將 %s 移動進 %s (%s)\n"
 
-#: lib/libalpm/dload.c:1413 lib/libalpm/sync.c:863
+#: lib/libalpm/dload.c:1412 lib/libalpm/sync.c:863
 #, c-format
 msgid "failed to retrieve some files\n"
 msgstr "解開部分檔案失敗\n"
 
-#: lib/libalpm/dload.c:1436
+#: lib/libalpm/dload.c:1435
 #, c-format
 msgid "download completed successfully but no file in the cache\n"
 msgstr "下載成功完成，但快取中沒有檔案\n"
@@ -680,9 +680,9 @@ msgid "conflicting files"
 msgstr "有衝突的檔案"
 
 #: lib/libalpm/error.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "failed to initialize download"
-msgstr "無法建立下載暫存檔\n"
+msgstr "初始化下載失敗"
 
 #: lib/libalpm/error.c:144
 #, c-format
@@ -898,83 +898,83 @@ msgstr "無法從快取中刪除記錄 '%s'\n"
 msgid ""
 "restricting filesystem access failed because Landlock is not supported by "
 "the kernel!\n"
-msgstr ""
+msgstr "限制檔案系統存取失敗，因為核心不支援 Landlock！\n"
 
 #: lib/libalpm/sandbox_fs.c:119
 #, c-format
 msgid "Landlock ABI < 2, LANDLOCK_ACCESS_FS_REFER is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 2，不支援 LANDLOCK_ACCESS_FS_REFER\n"
 
 #: lib/libalpm/sandbox_fs.c:125
 #, c-format
 msgid "Landlock ABI < 3, LANDLOCK_ACCESS_FS_TRUNCATE is not supported\n"
-msgstr ""
+msgstr "Landlock ABI < 3，不支援 LANDLOCK_ACCESS_FS_TRUNCATE\n"
 
 #: lib/libalpm/sandbox_fs.c:132
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be created: %s\n"
-msgstr ""
+msgstr "限制檔案系統存取失敗，因為無法建立 Landlock 規則集：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:139
 #, c-format
 msgid ""
 "opening the root filesystem to make it read-only via Landlock failed: %s\n"
-msgstr ""
+msgstr "透過 Landlock 將根檔案系統設為唯讀的操作失敗：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:145
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock rule for / could "
 "not be added: %s\n"
-msgstr ""
+msgstr "限制檔案系統存取失敗，因為無法為根目錄新增 Landlock 規則：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:156
 #, c-format
 msgid ""
 "opening the download directory to make it writable via Landlock failed: %s\n"
-msgstr ""
+msgstr "開啟下載目錄使其可透過 Landlock 寫入失敗：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:167
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock ruleset could not "
 "be applied: %s\n"
-msgstr ""
+msgstr "限制檔案系統存取失敗，因為無法套用 Landlock 規則集：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:171
 #, c-format
 msgid ""
 "restricting filesystem access failed because the Landlock rule for the "
 "temporary download directory could not be added: %s\n"
-msgstr ""
+msgstr "限制檔案系統存取失敗，因為無法為臨時下載目錄新增 Landlock 規則：%s\n"
 
 #: lib/libalpm/sandbox_fs.c:177
 #, c-format
 msgid "filesystem access has been restricted to %s, Landlock ABI is %d\n"
-msgstr ""
+msgstr "檔案系統存取已限制為 %s，Landlock ABI 為 %d\n"
 
 #: lib/libalpm/sandbox_syscalls.c:139
 #, c-format
 msgid ""
 "error initializing seccomp to filter system calls in the download sandbox!\n"
-msgstr ""
+msgstr "在下載沙盒中初始化 seccomp 以過濾系統呼叫時發生錯誤！\n"
 
 #: lib/libalpm/sandbox_syscalls.c:147
 #, c-format
 msgid "error restricting syscall %s via seccomp!\n"
-msgstr ""
+msgstr "透過 seccomp 限制系統呼叫 %s 時發生錯誤！\n"
 
 #: lib/libalpm/sandbox_syscalls.c:157
 #, c-format
 msgid "error restricting syscalls via seccomp: %d!\n"
-msgstr ""
+msgstr "透過 seccomp 限制系統呼叫時發生錯誤：%d！\n"
 
 #: lib/libalpm/sandbox_syscalls.c:160
 #, c-format
 msgid "successfully restricted %d syscalls via seccomp\n"
-msgstr ""
+msgstr "成功透過 seccomp 限制系統呼叫 %d\n"
 
 #: lib/libalpm/signing.c:163
 #, c-format
@@ -1221,19 +1221,19 @@ msgstr "無法建立軟體包快取，以 %s 取代\n"
 #: lib/libalpm/util.c:972
 #, c-format
 msgid "download user '%s' does not exist\n"
-msgstr ""
+msgstr "下載使用者「%s」不存在\n"
 
 #: lib/libalpm/util.c:975
 #, c-format
 msgid "failed to get download user '%s': %s\n"
-msgstr ""
+msgstr "取得下載使用者「%s」失敗：%s\n"
 
 #: lib/libalpm/util.c:988
 #, c-format
 msgid "failed to create temporary download directory %s: %s\n"
-msgstr ""
+msgstr "無法建立臨時下載目錄 %s：%s\n"
 
 #: lib/libalpm/util.c:996
 #, c-format
 msgid "failed to chown temporary download directory %s: %s\n"
-msgstr ""
+msgstr "無法變更臨時下載目錄 %s 的擁有者：%s\n"

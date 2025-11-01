@@ -18,14 +18,14 @@
 # 黃柏諺 <s8321414@gmail.com>, 2014-2016,2018
 # lakejason0 <sunliyuan200402@outlook.com>, 2023
 # pan93412 <pan93412@gmail.com>, 2019
-# 黃柏諺 <s8321414@gmail.com>, 2019,2021,2023-2024
+# 黃柏諺 <s8321414@gmail.com>, 2019,2021,2023-2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2019,2021,2023-2024\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2019,2021,2023-2025\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -497,7 +497,7 @@ msgstr "「%s」未設定\n"
 #: src/pacman/conf.c:972
 #, c-format
 msgid "problem setting DownloadUser '%s' (user does not exist)\n"
-msgstr ""
+msgstr "設定 DownloadUser「%s」時發生問題（使用者不存在）\n"
 
 #: src/pacman/conf.c:998
 #, c-format
@@ -1205,34 +1205,34 @@ msgstr ""
 "                       使用較長的下載逾時\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
 "      --disable-sandbox\n"
-"                       停用用於下載程式處理程序的沙盒\n"
+"                       停用用於下載程式處理程序的所有沙盒功能\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       停用用於下載程式處理程序的沙盒\n"
+"      --disable-sandbox-filesystem\n"
+"                       停用下載程式處理程序沙盒的檔案系統部份\n"
 
 #: src/pacman/pacman.c:233
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-syscalls\n"
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       停用用於下載程式處理程序的沙盒\n"
+"      --disable-sandbox-syscalls\n"
+"                       停用下載程式處理程序沙盒的系統呼叫部份\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1474,9 +1474,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "略過 %s%s：路徑超過 PATH_MAX\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "軟體包「%s」未找到\n"
+msgstr "找不到軟體包群組「%s」\n"
 
 #: src/pacman/sync.c:443
 #, c-format

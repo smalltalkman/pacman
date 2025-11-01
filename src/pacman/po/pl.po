@@ -18,15 +18,15 @@
 # megamann, 2014
 # megamann, 2014,2016
 # megamann, 2016
-# Piotr Strębski <strebski@gmail.com>, 2013,2017-2018,2022-2023
-# Piotr Strębski <strebski@gmail.com>, 2013
+# Piotr Strebski <strebski@gmail.com>, 2013,2017-2018,2022-2024
+# Piotr Strebski <strebski@gmail.com>, 2013
 # Sebastian Jakubiak, 2019
 # Sebastian Jakubiak, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
 "Last-Translator: Sebastian Jakubiak, 2019\n"
 "Language-Team: Polish (http://app.transifex.com/toofishes/archlinux-pacman/"
@@ -1216,6 +1216,7 @@ msgstr "      --arch <arch>    ustaw alternatywną architekturę\n"
 #, c-format
 msgid "      --sysroot        operate on a mounted guest system (root-only)\n"
 msgstr ""
+"      --sysroot         działa na zamontowanym systemie gościa (tylko root)\n"
 
 #: src/pacman/pacman.c:218
 #, c-format
@@ -1537,9 +1538,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr ""
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "pakiet '%s' nie został odnaleziony\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format
@@ -1953,7 +1954,7 @@ msgstr "błąd podczas ustawiania '%s' jako root katalogu: brak pamięci\n"
 #: src/pacman/pacman-conf.c:91
 #, c-format
 msgid "error setting sysroot '%s': out of memory\n"
-msgstr ""
+msgstr "błąd podczas ustawiania katalogu sysroot '%s': brak pamięci\n"
 
 #: src/pacman/pacman-conf.c:121
 #, c-format

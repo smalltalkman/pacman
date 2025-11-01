@@ -5,17 +5,17 @@
 # Translators:
 # Emin Mastizada <emin@linux.com>, 2017-2018
 # Zaur_Baku, 2015
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2021-2024
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2024
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2021
+# xxmn77 <xxmn77@gmail.com>, 2021-2024
+# xxmn77 <xxmn77@gmail.com>, 2024
+# xxmn77 <xxmn77@gmail.com>, 2021
 # Zaur_Baku, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch Linux Pacman package manager\n"
 "Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
-"POT-Creation-Date: 2025-10-14 15:13+1000\n"
+"POT-Creation-Date: 2025-11-01 17:34+1000\n"
 "PO-Revision-Date: 2010-11-29 23:17+0000\n"
-"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>, 2021-2024\n"
+"Last-Translator: Zaur_Baku, 2015\n"
 "Language-Team: Azerbaijani (Azerbaijan) (http://app.transifex.com/toofishes/"
 "archlinux-pacman/language/az_AZ/)\n"
 "Language: az_AZ\n"
@@ -1266,37 +1266,28 @@ msgstr ""
 "                       endirmək üçün fasilə vaxtından istifadə etmək\n"
 
 #: src/pacman/pacman.c:229
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox\n"
 "                       disables all sandbox features used for the downloader "
 "process\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       endirmə prosesi üçün istifadə olunan təcrid mühitini "
-"söndürmək\n"
 
 #: src/pacman/pacman.c:231
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-filesystem\n"
 "                       disables the filesystem part of the downloader "
 "process sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       endirmə prosesi üçün istifadə olunan təcrid mühitini "
-"söndürmək\n"
 
 #: src/pacman/pacman.c:233
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      --disable-sandbox-syscalls\n"
 "                       disables the syscalls part of the downloader process "
 "sandbox\n"
 msgstr ""
-"      --disable-sandbox\n"
-"                       endirmə prosesi üçün istifadə olunan təcrid mühitini "
-"söndürmək\n"
 
 #: src/pacman/pacman.c:253
 #, c-format
@@ -1538,9 +1529,9 @@ msgid "skipping %s%s: path exceeds PATH_MAX\n"
 msgstr "%s%s ötürülür: fayla yol PATH_MAX dəyərini aşır\n"
 
 #: src/pacman/sync.c:368
-#, fuzzy, c-format
+#, c-format
 msgid "package group '%s' was not found\n"
-msgstr "'%s' paketi tapılmadı\n"
+msgstr ""
 
 #: src/pacman/sync.c:443
 #, c-format
