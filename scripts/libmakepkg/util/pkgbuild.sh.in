@@ -174,7 +174,7 @@ get_full_version() {
 
 ##
 #  usage : get_pkg_arch( [$pkgname] )
-# return : architecture of the package
+# return : architecture of the package if available for CARCH
 ##
 get_pkg_arch() {
 	if [[ -z $1 ]]; then
@@ -190,6 +190,10 @@ get_pkg_arch() {
 		if [[ $arch_override = "any" ]]; then
 			printf "%s\n" "any"
 		else
+			# Split package not relevant for current CARCH
+			if (( ! IGNOREARCH )) && ! in_array "$CARCH" "${arch_override[@]}"; then
+				return 1
+			fi
 			printf "%s\n" "$CARCH"
 		fi
 	fi
@@ -199,7 +203,10 @@ print_all_package_names() {
 	local version=$(get_full_version)
 	local architecture pkg opts a
 	for pkg in ${pkgname[@]}; do
-		architecture=$(get_pkg_arch $pkg)
+		# Split package not relevant for current CARCH
+		if ! architecture=$(get_pkg_arch $pkg); then
+			continue
+		fi
 		printf "%s/%s-%s-%s%s\n" "$PKGDEST" "$pkg" "$version" "$architecture" "$PKGEXT"
 	done
 	if check_option "debug" "y" && check_option "strip" "y"; then

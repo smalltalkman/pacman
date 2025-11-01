@@ -762,7 +762,10 @@ install_package() {
 
 	for pkg in ${pkgname[@]}; do
 		fullver=$(get_full_version)
-		pkgarch=$(get_pkg_arch $pkg)
+		# Split package not relevant for current CARCH
+		if ! pkgarch=$(get_pkg_arch $pkg); then
+			continue
+		fi
 		pkglist+=("$PKGDEST/${pkg}-${fullver}-${pkgarch}${PKGEXT}")
 
 		if [[ -f "$PKGDEST/${pkg}-@DEBUGSUFFIX@-${fullver}-${pkgarch}${PKGEXT}" ]]; then
@@ -797,7 +800,10 @@ check_build_status() {
 		somepkgbuilt=0
 		for pkg in ${pkgname[@]}; do
 			fullver=$(get_full_version)
-			pkgarch=$(get_pkg_arch $pkg)
+			# Split package not relevant for current CARCH
+			if ! pkgarch=$(get_pkg_arch $pkg); then
+				continue
+			fi
 			if [[ -f $PKGDEST/${pkg}-${fullver}-${pkgarch}${PKGEXT} ]]; then
 				somepkgbuilt=1
 			else
@@ -861,6 +867,10 @@ run_split_packaging() {
 	(( ${#pkgname[@]} > 1 )) && pkgtype=split
 	backup_package_variables
 	for pkgname in ${pkgname_backup[@]}; do
+		# Split package not relevant for current CARCH
+		if ! pkgarch=$(get_pkg_arch $pkgname); then
+			continue
+		fi
 		run_single_packaging $pkgname
 		restore_package_variables
 	done
@@ -997,7 +1007,7 @@ while true; do
 		--nosign)         SIGNPKG='n' ;;
 		-o|--nobuild)     BUILDPKG=0 NOBUILD=1 ;;
 		-p)               shift; BUILDFILE=$1 ;;
-		--packagelist)    BUILDPKG=0 PACKAGELIST=1 IGNOREARCH=1;;
+		--packagelist)    BUILDPKG=0 PACKAGELIST=1;;
 		--printsrcinfo)   BUILDPKG=0 PRINTSRCINFO=1 IGNOREARCH=1;;
 		-r|--rmdeps)      RMDEPS=1 ;;
 		-R|--repackage)   REPKG=1 ;;
