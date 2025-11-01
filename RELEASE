@@ -17,13 +17,13 @@ The following checklist should be used for making a pacman release.
 - Update .gitlab-ci.yml to point the website pages run at release branch
 
 Transifex updates are handled using the transifex client. The basic process is:
-- Pull updates from transifex ("tx pull -f --minimum-perc 75")
+- Pull updates from transifex ("tx-cli pull -a -f --minimum-perc 75")
 - Update po files ("./build-aux/update-po")
 - Fix all translation errors found (e.g. using "mint-check-translations")
 - Add any new locales to the relevant LINGUAS file
 - Optional: Make any manual changes needed (e.g. fixing spacing in a string)
   and update po files again
-- Push updated po files to transifex ("tx push -s -t --skip")
+- Push updated po files to transifex ("tx-cli push -s -t --skip")
 
 Point releases:
 - all bugs fixes slated for the release branch must first land on master
