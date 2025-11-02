@@ -1035,6 +1035,8 @@ static int parseargs(int argc, char *argv[])
 		{"color",      required_argument, 0, OP_COLOR},
 		{"disable-download-timeout", no_argument, 0, OP_DISABLEDLTIMEOUT},
 		{"disable-sandbox", no_argument, 0, OP_DISABLESANDBOX},
+		{"disable-sandbox-filesystem", no_argument, 0, OP_DISABLESANDBOXFILESYSTEM},
+		{"disable-sandbox-syscalls", no_argument, 0, OP_DISABLESANDBOXSYSCALLS},
 		{0, 0, 0, 0}
 	};
 
