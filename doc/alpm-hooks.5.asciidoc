@@ -55,8 +55,7 @@ defined the hook will run if the transaction matches *any* of the triggers.
 
 *Type =* Path|Package::
 	Select whether targets are matched against transaction packages or files.
-	See CAVEATS for special notes regarding Path triggers. 'File' is a deprecated
-	alias for 'Path' and will be removed in a future release.  Required.
+	See CAVEATS for special notes regarding Path triggers. Required.
 
 *Target =* <path|package>::
 	The path or package name to match against the active transaction.

@@ -189,10 +189,6 @@ static int _alpm_hook_parse_cb(const char *file, int line,
 			}
 			if(strcmp(value, "Package") == 0) {
 				t->type = ALPM_HOOK_TYPE_PACKAGE;
-			} else if(strcmp(value, "File") == 0) {
-				_alpm_log(handle, ALPM_LOG_DEBUG,
-						"File targets are deprecated, use Path instead\n");
-				t->type = ALPM_HOOK_TYPE_PATH;
 			} else if(strcmp(value, "Path") == 0) {
 				t->type = ALPM_HOOK_TYPE_PATH;
 			} else {
