@@ -754,7 +754,7 @@ API CHANGES BETWEEN 7.0 AND 7.1
 ===============================
 
 [ADDED]
-Fine-grained sandbox controls:
+- Fine-grained sandbox controls:
   - alpm_option_get_disable_sandbox_filesystem()
   - alpm_option_set_disable_sandbox_filesystem()
   - alpm_option_get_disable_sandbox_syscalls()

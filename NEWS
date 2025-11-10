@@ -1,7 +1,7 @@
 VERSION         DESCRIPTION
 -----------------------------------------------------------------------------
 7.1.0         - Set default SigLevel for databases and packages to Required
-              - Various improvements to the downloader sandbox
+              - Various improvements to the downloader sandbox:
                 - Restrict syscalls
                 - Use NO_NEW_PRIVS flag
                 - Provide fine-grained control of sandboxing with options in
@@ -780,7 +780,7 @@ VERSION         DESCRIPTION
                 - add zsh completion
 4.0.3         - frontend database cleanup enhancements (FS#28714)
               - frontend package cleanup enhancements (FS#25166)
-              - back out changes related to SyncFirst in 4.0.0
+              - back out changes related to SyncFirst in 4.0.0:
                 - remove recursive/needed automatic flags on SyncFirst
                 - remove poorly implemented `-S --recursive` option
               - improve error messages on database locking failures
@@ -859,7 +859,7 @@ VERSION         DESCRIPTION
               - fix selection entry for long values (FS#25253)
               - make config parsing two-pass process, enhance error messages
               - print helpful tips on -Qi <filename> or -S <filename>
-              - replace libfetch with libcurl for backend download library
+              - replace libfetch with libcurl for backend download library:
                 - timeout when mirror is not responding (FS#15369)
                 - full HTTPS protocol support (FS#22435)
                 - support of non-traditional/redirected URLs (FS#22645)
@@ -965,24 +965,24 @@ VERSION         DESCRIPTION
               - build system: ensure libtool respects LDFLAGS (FS#23325)
 3.5.0         - sync DBs read directly from the database tarball
                 (FS#8586, FS#20233)
-              - local DB "depends" file has been merged into the "desc" file
+              - local DB "depends" file has been merged into the "desc" file:
                 - pacman-db-upgrade script provided to update the local
                   database format
-              - sync database extension is .db (without compression suffix)
+              - sync database extension is .db (without compression suffix):
                 - requires repo-add from pacman-3.4+
               - package versions can have an 'epoch' value defined that will
-                overrule any version comparison
+                overrule any version comparison:
                 - this replaces the use of the "force" option in allowing for
                   package updates with versions that do not conform to the
                   default version comparison operations
                 - package versions have the format [epoch:]pkgver-pkgrel
-              - check available disk space before installing packages (FS#11639)
+              - check available disk space before installing packages (FS#11639):
                 - enabled by the "CheckSpace" option in pacman.conf
                 - attempt to stop install if we hit an extraction issue
                   (FS#7692, FS#22034)
               - improved interactive selection for groups/provides
                 (FS#19704, FS#19853)
-              - finer grained control of ignoring dependency resolution
+              - finer grained control of ignoring dependency resolution:
                 - -Sd to ignore dependency versions only
                 - -Sdd to ignore all dependency information
               - clean-up of --help output (FS#19526)
@@ -994,7 +994,7 @@ VERSION         DESCRIPTION
               - use OpenSSL crypto functions if available
               - makepkg:
                 - add support for running testsuites in a check() function
-                  (FS#15145)
+                  (FS#15145):
                   - controlled by BUILDENV option 'check' in makepkg.conf
                     which may be overridden by --check/--nocheck on the
                     command-line
@@ -1099,7 +1099,7 @@ VERSION         DESCRIPTION
                 - add --skipinteg option (FS#15830)
                 - fix .PKGINFO creation with -R option (FS#15851)
                 - always keep symlinks to sources when unpacking
-3.3.0         - xdelta: many fixes and improvements
+3.3.0         - xdelta: many fixes and improvements:
                 - new pkgdelta script to create deltas
                 - repo-add can add both deltas and packages to a database
               - xz archive format supported for packages and databases
@@ -1135,7 +1135,7 @@ VERSION         DESCRIPTION
                 - check PKGBUILD for CRLF line endings
                 - fix reading PKGBUILD from pipe
                 - increase compatibility with BSDs & Mac OSX
-              - contrib
+              - contrib:
                 - pacdiff - improvements and new -l flag for using locate
                 - pacscripts - print install scripts for a package
 3.2.2         - log pacsave warnings to pacman.log (FS#12531)
@@ -1323,7 +1323,7 @@ VERSION         DESCRIPTION
               - allow multiple pacman cache directories
               - all manpages are now generated using Asciidoc (FS#7312)
               - moved parseconfig from backend library to frontend
-              - clean up and refactoring of the ENTIRE codebase
+              - clean up and refactoring of the ENTIRE codebase:
                 - remove many useless #ifdefs
                 - split many too-long functions
                 - portability updates: compiles and passes tests on BSD and
@@ -1516,7 +1516,7 @@ VERSION         DESCRIPTION
               - Added checks for additional hyphens in package versions
               - mktemp was failing if %pmo_root%/tmp was missing -- fixed
 2.8.4         - Added updatesync script from Jason Chu
-              - Changed the pacman binary to be dynamically linked
+              - Changed the pacman binary to be dynamically linked:
                 - Included a pacman.static binary as well
                 - Added fakeroot checks when seeing if we're root
               - Fixed makepkg to use 'tail -n 1' instead of 'tail -1'
@@ -1577,10 +1577,10 @@ VERSION         DESCRIPTION
               - cleaned up the download progress bar a bit
               - added %o parameter to XferCommand so wget can resume properly
               - fixed a segfault in downloadfiles() (FS#787)
-              - patches from Oliver Burnett-Hall
+              - patches from Oliver Burnett-Hall:
                 - gensync uses a better temp dir (FS#774)
                 - PKGDEST can be set in makepkg.conf (FS#783)
-              - patches from Aurelien Foret
+              - patches from Aurelien Foret:
                 - segfault fix, couple memory leaks
                 - more sanity checks in "provides" searches
                 - fixed a little display bug in the progress bar
