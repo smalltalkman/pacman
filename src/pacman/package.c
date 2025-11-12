@@ -56,7 +56,6 @@ enum {
 	T_INSTALL_SCRIPT,
 	T_INSTALLED_SIZE,
 	T_LICENSES,
-	T_MD5_SUM,
 	T_NAME,
 	T_OPTIONAL_DEPS,
 	T_OPTIONAL_FOR,
@@ -110,7 +109,6 @@ static void make_aligned_titles(void)
 	buf[T_INSTALL_SCRIPT] = _("Install Script");
 	buf[T_INSTALLED_SIZE] = _("Installed Size");
 	buf[T_LICENSES] = _("Licenses");
-	buf[T_MD5_SUM] = _("MD5 Sum");
 	buf[T_NAME] = _("Name");
 	buf[T_OPTIONAL_DEPS] = _("Optional Deps");
 	buf[T_OPTIONAL_FOR] = _("Optional For");
@@ -235,9 +233,6 @@ void dump_pkg_full(alpm_pkg_t *pkg, int extra)
 		if(v & ALPM_PKG_VALIDATION_NONE) {
 			validation = alpm_list_add(validation, _("None"));
 		} else {
-			if(v & ALPM_PKG_VALIDATION_MD5SUM) {
-				validation = alpm_list_add(validation, _("MD5 Sum"));
-			}
 			if(v & ALPM_PKG_VALIDATION_SHA256SUM) {
 				validation = alpm_list_add(validation, _("SHA-256 Sum"));
 			}
@@ -321,7 +316,6 @@ void dump_pkg_full(alpm_pkg_t *pkg, int extra)
 			keys = alpm_list_add(keys, _("None"));
 		}
 
-		string_display(titles[T_MD5_SUM], alpm_pkg_get_md5sum(pkg), cols);
 		string_display(titles[T_SHA_256_SUM], alpm_pkg_get_sha256sum(pkg), cols);
 		list_display(titles[T_SIGNATURES], keys, cols);
 
