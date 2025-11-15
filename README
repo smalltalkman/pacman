@@ -767,3 +767,5 @@ API CHANGES BETWEEN 7.0 AND 7.1
 [CHANGED]
 - alpm_pubkey_t - removed pubkey_algo member
 - alpm_sandbox_setup_child() - added parameter to restrict syscalls
+- alpm_option_get_disable_standbox() - returns 1 if any component is
+  disabled, 2 if all components are disabled.
