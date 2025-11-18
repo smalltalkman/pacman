@@ -765,7 +765,5 @@ API CHANGES BETWEEN 7.0 AND 7.1
 - ALPM_ERR_RETRUEVE_PREPARE
 
 [CHANGED]
-- error codes:
-    PM_ERR_TRANS_COMMITING renamed to PM_ERR_TRANS_COMMITTING
 - alpm_pubkey_t - removed pubkey_algo member
 - alpm_sandbox_setup_child() - added parameter to restrict syscalls
