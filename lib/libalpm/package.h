@@ -96,7 +96,6 @@ struct _alpm_pkg_t {
 	char *desc;
 	char *url;
 	char *packager;
-	char *md5sum;
 	char *sha256sum;
 	char *base64_sig;
 	char *arch;

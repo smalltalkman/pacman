@@ -2437,12 +2437,6 @@ alpm_pkg_t *alpm_pkg_find(alpm_list_t *haystack, const char *needle);
  */
 int alpm_pkg_free(alpm_pkg_t *pkg);
 
-/** Check the integrity (with md5) of a package from the sync cache.
- * @param pkg package pointer
- * @return 0 on success, -1 on error (pm_errno is set accordingly)
- */
-int alpm_pkg_checkmd5sum(alpm_pkg_t *pkg);
-
 /** Compare two version strings and determine which one is 'newer'.
  * Returns a value comparable to the way strcmp works. Returns 1
  * if a is newer than b, 0 if a and b are the same version, or -1
@@ -2560,13 +2554,6 @@ alpm_time_t alpm_pkg_get_installdate(alpm_pkg_t *pkg);
  * @return a reference to an internal string
  */
 const char *alpm_pkg_get_packager(alpm_pkg_t *pkg);
-
-/** Returns the package's MD5 checksum as a string.
- * The returned string is a sequence of 32 lowercase hexadecimal digits.
- * @param pkg a pointer to package
- * @return a reference to an internal string
- */
-const char *alpm_pkg_get_md5sum(alpm_pkg_t *pkg);
 
 /** Returns the package's SHA256 checksum as a string.
  * The returned string is a sequence of 64 lowercase hexadecimal digits.

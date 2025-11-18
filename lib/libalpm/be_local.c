@@ -795,8 +795,6 @@ static int local_db_read(alpm_pkg_t *info, int inforeq)
 				{
 					if(strcmp(i->data, "none") == 0) {
 						info->validation |= ALPM_PKG_VALIDATION_NONE;
-					} else if(strcmp(i->data, "md5") == 0) {
-						info->validation |= ALPM_PKG_VALIDATION_MD5SUM;
 					} else if(strcmp(i->data, "sha256") == 0) {
 						info->validation |= ALPM_PKG_VALIDATION_SHA256SUM;
 					} else if(strcmp(i->data, "pgp") == 0) {
@@ -1059,9 +1057,6 @@ int _alpm_local_db_write(alpm_db_t *db, alpm_pkg_t *info, int inforeq)
 			fputs("%VALIDATION%\n", fp);
 			if(info->validation & ALPM_PKG_VALIDATION_NONE) {
 				fputs("none\n", fp);
-			}
-			if(info->validation & ALPM_PKG_VALIDATION_MD5SUM) {
-				fputs("md5\n", fp);
 			}
 			if(info->validation & ALPM_PKG_VALIDATION_SHA256SUM) {
 				fputs("sha256\n", fp);

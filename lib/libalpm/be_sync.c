@@ -284,9 +284,6 @@ static int _sync_get_validation(alpm_pkg_t *pkg)
 		return pkg->validation;
 	}
 
-	if(pkg->md5sum) {
-		pkg->validation |= ALPM_PKG_VALIDATION_MD5SUM;
-	}
 	if(pkg->sha256sum) {
 		pkg->validation |= ALPM_PKG_VALIDATION_SHA256SUM;
 	}
@@ -646,7 +643,8 @@ static int sync_db_read(alpm_db_t *db, struct archive *archive,
 				READ_NEXT();
 				pkg->isize = _alpm_strtoofft(line);
 			} else if(strcmp(line, "%MD5SUM%") == 0) {
-				READ_AND_STORE(pkg->md5sum);
+				/* Field is deprecated, skip */
+				READ_NEXT();
 			} else if(strcmp(line, "%SHA256SUM%") == 0) {
 				READ_AND_STORE(pkg->sha256sum);
 			} else if(strcmp(line, "%PGPSIG%") == 0) {

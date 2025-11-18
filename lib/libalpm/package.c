@@ -47,31 +47,6 @@ int SYMEXPORT alpm_pkg_free(alpm_pkg_t *pkg)
 	return 0;
 }
 
-int SYMEXPORT alpm_pkg_checkmd5sum(alpm_pkg_t *pkg)
-{
-	char *fpath;
-	int retval;
-
-	ASSERT(pkg != NULL, return -1);
-	pkg->handle->pm_errno = ALPM_ERR_OK;
-	/* We only inspect packages from sync repositories */
-	ASSERT(pkg->origin == ALPM_PKG_FROM_SYNCDB,
-			RET_ERR(pkg->handle, ALPM_ERR_WRONG_ARGS, -1));
-
-	fpath = _alpm_filecache_find(pkg->handle, pkg->filename);
-
-	retval = _alpm_test_checksum(fpath, pkg->md5sum, ALPM_PKG_VALIDATION_MD5SUM);
-
-	FREE(fpath);
-
-	if(retval == 1) {
-		pkg->handle->pm_errno = ALPM_ERR_PKG_INVALID;
-		retval = -1;
-	}
-
-	return retval;
-}
-
 /* Default package accessor functions. These will get overridden by any
  * backend logic that needs lazy access, such as the local database through
  * a lazy-load cache. However, the defaults will work just fine for fully-
@@ -254,13 +229,6 @@ const char SYMEXPORT *alpm_pkg_get_packager(alpm_pkg_t *pkg)
 	ASSERT(pkg != NULL, return NULL);
 	pkg->handle->pm_errno = ALPM_ERR_OK;
 	return pkg->ops->get_packager(pkg);
-}
-
-const char SYMEXPORT *alpm_pkg_get_md5sum(alpm_pkg_t *pkg)
-{
-	ASSERT(pkg != NULL, return NULL);
-	pkg->handle->pm_errno = ALPM_ERR_OK;
-	return pkg->md5sum;
 }
 
 const char SYMEXPORT *alpm_pkg_get_sha256sum(alpm_pkg_t *pkg)
@@ -629,7 +597,6 @@ int _alpm_pkg_dup(alpm_pkg_t *pkg, alpm_pkg_t **new_ptr)
 	newpkg->builddate = pkg->builddate;
 	newpkg->installdate = pkg->installdate;
 	STRDUP(newpkg->packager, pkg->packager, goto cleanup);
-	STRDUP(newpkg->md5sum, pkg->md5sum, goto cleanup);
 	STRDUP(newpkg->sha256sum, pkg->sha256sum, goto cleanup);
 	STRDUP(newpkg->arch, pkg->arch, goto cleanup);
 	newpkg->size = pkg->size;
@@ -724,7 +691,6 @@ void _alpm_pkg_free(alpm_pkg_t *pkg)
 	FREE(pkg->desc);
 	FREE(pkg->url);
 	FREE(pkg->packager);
-	FREE(pkg->md5sum);
 	FREE(pkg->sha256sum);
 	FREE(pkg->base64_sig);
 	FREE(pkg->arch);
