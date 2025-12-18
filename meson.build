@@ -467,41 +467,37 @@ subdir('test/pacman')
 subdir('test/scripts')
 subdir('test/util')
 
-message('\n    '.join([
-  '@0@ @1@'.format(meson.project_name(), meson.project_version()),
-  'Build information:',
-  '   prefix                  : @0@'.format(PREFIX),
-  '   sysconfdir              : @0@'.format(SYSCONFDIR),
-  '       conf file           : @0@'.format(join_paths(SYSCONFDIR, 'pacman.conf')),
-  '   localstatedir           : @0@'.format(LOCALSTATEDIR),
-  '       database dir        : @0@'.format(join_paths(LOCALSTATEDIR, 'lib/pacman/')),
-  '       cache dir           : @0@'.format(join_paths(LOCALSTATEDIR, 'cache/pacman/pkg/')),
-  '   keyringdir              : @0@'.format(KEYRINGDIR),
-  '   compiler                : @0@ @1@'.format(cc.get_id(), cc.version()),
-  '',
-  '   Architecture            : @0@'.format(carch),
-  '   Host Type               : @0@'.format(chost),
-  '   File inode command      : @0@'.format(inodecmd),
-  '   File seccomp command    : @0@'.format(filecmd),
-  '   libalpm version         : @0@'.format(libalpm_version),
-  '   pacman version          : @0@'.format(PACKAGE_VERSION),
-  '',
-  'Directory and file information:',
-  '   root working directory  : @0@'.format(ROOTDIR),
-  '   package extension       : @0@'.format(get_option('pkg-ext')),
-  '   source pkg extension    : @0@'.format(get_option('src-ext')),
-  '   build script name       : @0@'.format(BUILDSCRIPT),
-  '   template directory      : @0@'.format(get_option('makepkg-template-dir')),
-  '',
-  'Compilation options:',
-  '  i18n support             : @0@'.format(get_option('i18n')),
-  '  Build docs               : @0@'.format(build_doc),
-  '  debug build              : @0@'.format(get_option('buildtype') == 'debug'),
-  '  Use libcurl              : @0@'.format(conf.get('HAVE_LIBCURL')),
-  '  Use GPGME                : @0@'.format(conf.get('HAVE_LIBGPGME')),
-  '  Use OpenSSL              : @0@'.format(conf.has('HAVE_LIBSSL') and
-                                            conf.get('HAVE_LIBSSL') == 1),
-  '  Use nettle               : @0@'.format(conf.has('HAVE_LIBNETTLE') and
-                                            conf.get('HAVE_LIBNETTLE') == 1),
-  '',
-]))
+summary({
+  'prefix': PREFIX,
+  'sysconfdir': SYSCONFDIR,
+  '    conf file': join_paths(SYSCONFDIR, 'pacman.conf'),
+  'localstatedir': LOCALSTATEDIR,
+  '    database dir': join_paths(LOCALSTATEDIR, 'lib/pacman/'),
+  '    cache dir': join_paths(LOCALSTATEDIR, 'cache/pacman/pkg/'),
+  'keyringdir': KEYRINGDIR,
+  'compiler': '@0@ @1@\n'.format(cc.get_id(), cc.version()),
+  'Architecture': carch,
+  'Host Type': chost,
+  'File inode command': inodecmd,
+  'File seccomp command': filecmd,
+  'libalpm version': libalpm_version,
+  'pacman version': PACKAGE_VERSION,
+}, section: 'Build information')
+
+summary({
+  'root working directory': ROOTDIR,
+  'package extension': get_option('pkg-ext'),
+  'source pkg extension': get_option('src-ext'),
+  'build script name': BUILDSCRIPT,
+  'template directory': get_option('makepkg-template-dir'),
+}, section: 'Directory and file information')
+
+summary({
+  'i18n support': get_option('i18n'),
+  'Build docs': build_doc,
+  'debug build': get_option('buildtype') == 'debug',
+  'Use libcurl': conf.get('HAVE_LIBCURL'),
+  'Use GPGME': conf.get('HAVE_LIBGPGME'),
+  'Use OpenSSL': conf.has('HAVE_LIBSSL') and conf.get('HAVE_LIBSSL') == 1,
+  'Use nettle': conf.has('HAVE_LIBNETTLE') and conf.get('HAVE_LIBNETTLE') == 1,
+}, section: 'Compilation options')
