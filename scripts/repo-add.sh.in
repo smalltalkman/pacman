@@ -363,7 +363,8 @@ db_remove_entry() {
 		msg2 "$(gettext "Removing existing entry '%s'...")" \
 		"${pkgentry##*/}"
 
-		if (( RMEXISTING )); then
+		# only remove file for repo-remove - it is handled separately for repo-add
+		if [[ $cmd == "repo-remove" ]] && (( RMEXISTING )); then
 			local oldfilename="$(sed -n '/^%FILENAME%$/ {n;p;q;}' "$pkgentry/desc")"
 			local oldfile="$repodir/$oldfilename"
 
