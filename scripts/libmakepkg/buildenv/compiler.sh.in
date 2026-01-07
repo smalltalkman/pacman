@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 #
-#   compiler.sh - CCache and DistCC compilation
+#   compiler.sh - CCache, Sccache and DistCC compilation
 #   ccache - Cache compilations and reuse them to save time on repetitions
+#	sccache - Cache compilations and reuse them to save time on repetitions
 #   distcc - Distribute compilation of C and C++ across machines
 #
 #   Copyright (c) 2007-2025 Pacman Development Team <pacman-dev@lists.archlinux.org>
@@ -27,8 +28,8 @@ MAKEPKG_LIBRARY=${MAKEPKG_LIBRARY:-'@libmakepkgdir@'}
 
 source "$MAKEPKG_LIBRARY/util/option.sh"
 
-build_options+=('ccache' 'distcc')
-buildenv_functions+=('buildenv_ccache' 'buildenv_distcc')
+build_options+=('ccache' 'distcc' 'sccache')
+buildenv_functions+=('buildenv_ccache' 'buildenv_distcc' 'buildenv_sccache')
 
 using_ccache=0
 
@@ -54,5 +55,20 @@ buildenv_distcc() {
 		fi
 
 		export DISTCC_HOSTS
+	fi
+}
+
+buildenv_sccache() {
+	if check_buildoption "sccache" "y"; then
+		if check_buildoption "ccache" "y"; then
+			error "$(gettext "%s and %s cannot be used together.")" "sccache" "ccache"
+			return 1
+		elif check_buildoption "distcc" "y"; then
+			error "$(gettext "%s and %s cannot be used together.")" "sccache" "distcc"
+			return 1
+		elif [ -d /usr/lib/sccache/bin ]; then
+			export PATH="/usr/lib/sccache/bin:$PATH"
+			using_sccache=1
+		fi
 	fi
 }

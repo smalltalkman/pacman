@@ -26,6 +26,7 @@ scripts/libmakepkg/executable/gpg.sh.in
 scripts/libmakepkg/executable/gzip.sh.in
 scripts/libmakepkg/executable/pacman.sh.in
 scripts/libmakepkg/executable.sh.in
+scripts/libmakepkg/executable/sccache.sh.in
 scripts/libmakepkg/executable/strip.sh.in
 scripts/libmakepkg/executable/sudo.sh.in
 scripts/libmakepkg/executable/vcs.sh.in

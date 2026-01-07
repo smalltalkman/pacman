@@ -286,6 +286,11 @@ underscore and the architecture name e.g., 'replaces_x86_64=()'.
 		form `!ccache` with select packages that have problems building
 		with ccache.
 
+	*sccache*;;
+		Allow the use of sccache during `build()`. More useful in its negative
+		form `!sccache` with select packages that have problems building
+		with sccache. Cannot be used alongside `distcc` and `ccache`.
+
 	*distcc*;;
 		Allow the use of distcc during `build()`. More useful in its negative
 		form `!distcc` with select packages that have problems building

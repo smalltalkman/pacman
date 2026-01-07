@@ -128,6 +128,12 @@ Options
 		enabled or disabled for individual packages through the use of
 		makepkg's '\--check' and '\--nocheck' options, respectively.
 
+	*sccache*;;
+		Use sccache to cache compilation by default. This allows for faster
+		compiles if you are continuously recompiling the same packages. It can
+		be disabled for individual packages by placing `!sccache` in the
+		PKGBUILD options array. Cannot be used alongside `distcc` and `ccache`.
+
 	*sign*;;
 		Generate a PGP signature file using GnuPG. This will execute 'gpg
 		\--detach-sign' on the built package to generate a detached

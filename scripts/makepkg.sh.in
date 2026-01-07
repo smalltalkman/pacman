@@ -1251,7 +1251,7 @@ if (( INFAKEROOT )); then
 		exit $E_OK
 	fi
 
-	prepare_buildenv
+	prepare_buildenv || exit $E_INVALID_OPTION
 
 	chmod 755 "$pkgdirbase"
 	if (( ! SPLITPKG )); then
@@ -1403,7 +1403,7 @@ else
 	chmod a-srw "$pkgdirbase"
 	cd_safe "$startdir"
 
-	prepare_buildenv
+	prepare_buildenv || exit $E_INVALID_OPTION
 
 	if (( ! REPKG )); then
 		(( BUILDFUNC )) && run_build

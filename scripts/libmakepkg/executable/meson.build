@@ -9,6 +9,7 @@ sources = [
   'gpg.sh.in',
   'gzip.sh.in',
   'pacman.sh.in',
+  'sccache.sh.in',
   'strip.sh.in',
   'sudo.sh.in',
   'vcs.sh.in',
