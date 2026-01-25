@@ -825,11 +825,14 @@ cleanup:
 static int compare_dload_payload_sizes(const void *left_ptr, const void *right_ptr)
 {
 	struct dload_payload *left, *right;
+	off_t diff;
 
 	left = (struct dload_payload *) left_ptr;
 	right = (struct dload_payload *) right_ptr;
 
-	return right->max_size - left->max_size;
+	diff = right->max_size - left->max_size;
+
+	return (diff < 0) ? -1 : (diff > 0) ? 1 : 0;
 }
 
 /* Returns -1 if an error happened for a required file
